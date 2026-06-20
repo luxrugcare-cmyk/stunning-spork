@@ -77,7 +77,7 @@ export default function Footer() {
               {SECTORS.map((sector) => (
                 <li key={sector.id}>
                   <Link
-                    href="#sectors"
+                    href={`/sectors/${sector.id}`}
                     className="text-sm text-emerald-100/80 transition-colors hover:text-white focus-visible:text-white"
                   >
                     {sector.title}
@@ -96,7 +96,7 @@ export default function Footer() {
               {SERVICES.map((service) => (
                 <li key={service.id}>
                   <Link
-                    href="#services"
+                    href={`/services/${service.id}`}
                     className="text-sm text-emerald-100/80 transition-colors hover:text-white focus-visible:text-white"
                   >
                     {service.title}
