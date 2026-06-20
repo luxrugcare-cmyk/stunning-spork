@@ -1,0 +1,300 @@
+     1→Hotels sector
+     2→Hi Kathy! I manage a hotel and am interested in your curtain cleaning service.
+     3→Corporate sector
+     4→Hi Kathy! I'm the facilities manager and would like a quote for our office curtains.
+     5→Healthcare sector
+     6→Hi Kathy! We're a healthcare facility needing infection-control curtain cleaning.
+     7→Schools sector
+     8→Hi Kathy! I'm enquiring about curtain cleaning for our school.
+     9→Theatres sector
+    10→Hi Kathy! We have theatrical drapes that need specialist cleaning.
+    11→Residential
+    12→Hi Kathy! I'd like a free assessment for my home curtains.
+    13→Services
+    14→Hi Kathy! I'm interested in [service name]. Can you tell me more?
+    15→9. FAQ SCHEMA & QUICK ANSWERS
+    16→Component Description
+    17→Structured FAQ section for use on the FAQ page and potentially as a dropdown on other pages.
+    18→H2
+    19→Frequently Asked Questions
+    20→FAQ Items
+    21→Q: How much does curtain cleaning cost in Johannesburg? A: Costs vary depending on fabric type, curtain size, and soiling level. That’s why we offer a free, no-obligation on-site assessment — Kathy visits your property, evaluates your curtains, and provides a detailed written quote with no surprises. Most residential clients are pleasantly surprised at how affordable professional on-site cleaning is compared to replacement.
+    22→Q: Do I need to take my curtains down? A: Not at all. This is our specialty. We clean your curtains exactly where they hang using our proprietary on-site cleaning system. No removal, no re-hanging, no downtime. Your curtains are clean and dry in place — perfect for homes, hotels, and offices where downtime isn’t an option.
+    23→Q: How long does the cleaning process take? A: Most residential jobs are completed within 2–3 hours. Commercial properties vary depending on the number of rooms and curtain types. Kathy will give you a clear time estimate during your free assessment.
+    24→Q: Is your cleaning process safe for delicate fabrics? A: Absolutely. With 15+ years of fabric expertise, Kathy assesses every fabric before cleaning — from delicate silk sheers to heavy theatrical velour. We match our cleaning method to your specific fabric type for completely safe treatment. Our no-shrinkage and no-damage guarantees apply to every job.
+    25→Q: Which areas of Johannesburg do you service? A: We cover all major Johannesburg suburbs including Sandton, Randburg, Fourways, Roodepoort, Bryanston, Rosebank, Parktown, Edenvale, Bedfordview, Alberton, Midrand, and Pretoria. Not sure if we service your area? Send us a WhatsApp — if you’re in Gauteng, we can help.
+    26→Q: How quickly can you come out for an assessment? A: Kathy personally visits for free assessments within 48 hours of booking, often sooner. For urgent commercial requests, we prioritise accordingly — just let us know your timeline.
+    27→Q: Do you offer services for hotels and commercial properties? A: Yes — commercial clients make up a significant portion of our business. We offer after-hours and weekend service for offices, fire-code compliant cleaning for hotels, infection-control protocols for healthcare, and specialist theatrical drape cleaning. All with minimal disruption to your operations.
+    28→Q: What is Master Guarding protection? A: Master Guarding is an invisible nano-coating that we apply to your freshly cleaned curtains. It repels liquids, oils, and dust, extends fabric life by up to 40%, and keeps your curtains looking cleaner for longer. It’s especially valuable for high-traffic commercial spaces and homes with children or pets. Ask Kathy about adding it to your quote.
+    29→Q: How do I book a free assessment? A: Simply click “Book Your Free On-Site Assessment” and complete our 4-step booking form. Alternatively, WhatsApp Kathy directly on 075 011 9200 or email info@curtaincleaning.org. Kathy will contact you within 24 hours to confirm your booking.
+    30→Q: What payment methods do you accept? A: We accept EFT (bank transfer), cash, and all major credit/debit cards. Payment is due on completion of service unless otherwise agreed for commercial accounts.
+    31→10. BREADCRUMB COPY
+    32→Component Description
+    33→SEO-friendly breadcrumb navigation for all pages.
+    34→Pattern
+    35→Home > [Parent Category] > [Current Page]
+    36→Examples
+    37→Page
+    38→Breadcrumb
+    39→Contact
+    40→Home > Contact
+    41→Book Assessment
+    42→Home > Book Free Assessment
+    43→Privacy
+    44→Home > Privacy Policy
+    45→FAQ
+    46→Home > FAQ
+    47→Hotels
+    48→Home > Sectors > Hotels & Hospitality
+    49→Curtain Cleaning
+    50→Home > Services > Curtain & Blind Cleaning
+    51→Schema Markup
+    52→Include BreadcrumbList structured data for all pages.
+    53→11. SCHEMA MARKUP (JSON-LD)
+    54→LocalBusiness Schema (all pages)
+    55→{  "@context": "https://schema.org",  "@type": "LocalBusiness",  "name": "On The Spot Curtain Cleaning Specialists",  "image": "https://curtaincleaning.org/assets/logo.jpg",  "url": "https://curtaincleaning.org",  "telephone": "+27750119200",  "email": "info@curtaincleaning.org",  "address": {    "@type": "PostalAddress",    "streetAddress": "Martha North Rd",    "addressLocality": "Randburg",    "addressRegion": "GP",    "postalCode": "2194",    "addressCountry": "ZA"  },  "geo": {    "@type": "GeoCoordinates",    "latitude": -26.0936,    "longitude": 27.9992  },  "openingHoursSpecification": [    {      "@type": "OpeningHoursSpecification",      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],      "opens": "07:00",      "closes": "18:00"    },    {      "@type": "OpeningHoursSpecification",      "dayOfWeek": "Saturday",      "opens": "08:00",      "closes": "14:00"    }  ],  "priceRange": "$$",  "areaServed": {    "@type": "City",    "name": "Johannesburg"  },  "founder": {    "@type": "Person",    "name": "Kathy Dunlop"  },  "aggregateRating": {    "@type": "AggregateRating",    "ratingValue": "4.9",    "reviewCount": "5000"  }}
+    56→ContactPage Schema (contact page only)
+    57→{  "@context": "https://schema.org",  "@type": "ContactPage",  "mainEntity": {    "@type": "LocalBusiness",    "name": "On The Spot Curtain Cleaning Specialists",    "telephone": "+27750119200",    "email": "info@curtaincleaning.org",    "address": {      "@type": "PostalAddress",      "streetAddress": "Martha North Rd",      "addressLocality": "Randburg",      "addressRegion": "GP",      "postalCode": "2194",      "addressCountry": "ZA"    }  }}
+    58→FAQPage Schema (FAQ section)
+    59→{  "@context": "https://schema.org",  "@type": "FAQPage",  "mainEntity": [    {      "@type": "Question",      "name": "How much does curtain cleaning cost in Johannesburg?",      "acceptedAnswer": {        "@type": "Answer",        "text": "Costs vary depending on fabric type, curtain size, and soiling level. We offer a free, no-obligation on-site assessment where Kathy visits your property, evaluates your curtains, and provides a detailed written quote."      }    },    {      "@type": "Question",      "name": "Do I need to take my curtains down?",      "acceptedAnswer": {        "@type": "Answer",        "text": "Not at all. We clean your curtains exactly where they hang using our proprietary on-site cleaning system. No removal, no re-hanging, no downtime."      }    }  ]}
+    60→— END OF DELIVERABLE —
+    61→File: utility-pages-copy.md Prepared for: On The Spot Curtain Cleaning Specialists Scope: Contact Page, Quote/Booking Page (4-step wizard), Privacy & POPIA Page, 11 Shared Components Tone: Professional, reassuring, efficient, warm South African English Compliance: POPIA Act 4 of 2013 (South Africa) SEO Target: “curtain cleaning Johannesburg” + related local keywords
+    62→PART 3: SECTOR PAGES
+    63→On The Spot Curtain Cleaning Specialists — Complete Sector Page Copy
+    64→All 6 B2B Sector Landing Pages
+    65→Brand: On The Spot Curtain Cleaning Specialists, Johannesburg Contact: Kathy Dunlop — 075 011 9200 — info@curtaincleaning.org Date: June 2025 — —
+    66→SECTOR 1: HOTELS & HOSPITALITY
+    67→Meta Title: Hotel Curtain Cleaning Johannesburg | Zero Disruption | On The Spot Meta Description: Professional on-site hotel curtain cleaning Johannesburg. Zero guest disruption, after-hours available, fire certificate included. Free assessment. Page URL: /curtain-cleaning-johannesburg/hotels-hospitality/
+    68→Hero Section — #0A369D Deep Blue Background
+    69→[Tag — white text, uppercase, tracking wide] Hotels & Hospitality
+    70→[H1 — white text, 48-56px bold] Hotel Curtain Cleaning — Zero Guest Disruption
+    71→[Subtext — white text, 18-20px, 80% opacity] On-site in the room. Same-day return. Fire certificate included.
+    72→[Video Label — small white text with play icon] Watch our process in action
+    73→[CTA Buttons] [Primary — white bg, blue text] Request Your Free Hotel Assessment [Secondary — transparent, white border] WhatsApp 075 011 9200
+    74→Trust Strip — White Background
+    75→Trusted by leading Johannesburg hospitality brands:
+    76→[Logo Grid — 4-6 greyscale logos or text marks] Southern Sun Group | Tsogo Sun | City Lodge | Protea Hotels | Radisson Blu | Sandton Sun
+    77→Guarantee Badges — Light Grey Background #F8F9FA
+    78→Badge
+    79→Label
+    80→[Shield Icon]
+    81→100% No-Shrinkage Guarantee
+    82→[Clock Icon]
+    83→After-Hours Available
+    84→[Flame Icon]
+    85→Fire Certificate Included
+    86→[Checkmark Icon]
+    87→Same-Day Room Return
+    88→Key Stats Checklist — White Background
+    89→Why General Managers Choose On The Spot
+    90→Zero Room Downtime — Curtains cleaned in situ. Rooms stay rentable. No revenue loss, no room-blocking headaches.
+    91→Fire Certificate Included — Every hotel clean includes a fire-retardancy compliance certificate for your insurer and fire officer.
+    92→After-Hours Available — We clean through the night. Check-in the next morning to fresh, compliant curtains.
+    93→Same-Day Return — No waiting, no follow-up visits. One appointment, one completion, one less thing on your list.
+    94→Decision-Maker Section — Two-Column Layout
+    95→Left Column: GM-Targeted Copy
+    96→Built for Hotel Operations — Not Disruption
+    97→As a General Manager, your reputation lives and dies by guest experience. Every room out of service is lost revenue. Every complaint about odour, dust, or stained drapery is a review you don’t want. And when the fire officer visits, you need documentation that holds up.
+    98→That’s why leading Johannesburg hotels trust On The Spot Curtain Cleaning Specialists. We clean curtains right there in the room — no removal, no off-site delays, no bare windows the next morning. Our team works with your housekeeping schedule, not against it. After-hours, through-the-night, or between check-out and check-in — we fit around your occupancy, never the other way around.
+    99→Kathy Dunlop, our founder and a qualified interior decorator, understands hospitality fabric. From blackout lining to decorative sheers, from smoke-damaged conference drapes to guest room valances — we handle every textile with the care your brand demands. And because we issue a fire-retardancy certificate on completion, your compliance file stays current without a second thought.
+   100→With 15+ years in the industry and over 5,000 completed cleans, we’ve learned that hotel curtain cleaning in Johannesburg isn’t just about clean fabric — it’s about operational continuity, guest satisfaction, and peace of mind.
+   101→Right Column: Assessment CTA Box — #0A369D Background
+   102→[White text]
+   103→Request Your Free Hotel Assessment
+   104→We’ll visit your property within 48 hours, assess every curtain type, and provide a detailed scope and quote — no obligation.
+   105→On-site at your hotel
+   106→Every curtain assessed
+   107→Detailed scope & pricing
+   108→No obligation
+   109→[CTA Button — white bg, blue text] Request Your Free Hotel Assessment
+   110→[Secondary link — white text] Or WhatsApp Kathy: 075 011 9200
+   111→FAQ Preview — Light Background
+   112→Questions Every General Manager Asks
+   113→Q: Do you clean during occupied stays? A: We prefer to clean during changeovers or with rooms blocked for maintenance. However, we can work around guests who have requested extended stays — our process is quiet, fast, and non-intrusive.
+   114→Q: Is the fire certificate accepted by insurers and fire officers? A: Yes. Our fire-retardancy certificate is issued in line with SANS standards and is accepted by all major South African hospitality insurers and municipal fire services.
+   115→Q: How many rooms can you clean per night? A: Depending on curtain type and room configuration, our team typically completes 8–15 rooms per shift. We’ll confirm exact capacity during your assessment.
+   116→Q: Do you work with our housekeeping schedule? A: Absolutely. We coordinate directly with your housekeeping manager and front office to slot into your operational rhythm seamlessly.
+   117→Newsletter Strip — #0A369D Background
+   118→Stay Compliant. Stay Informed. Get hospitality maintenance tips, compliance updates, and seasonal reminders — delivered quarterly.
+   119→[Email Input] [Subscribe Button]
+   120→CTA Band — Dark Footer Background #1A1A2E
+   121→Ready to Keep Every Room Rentable?
+   122→Your guests deserve fresh curtains. Your P&L deserves zero downtime.
+   123→[Primary CTA] Request Your Free Hotel Assessment [Secondary] Call Kathy: 075 011 9200 [Tertiary] Email: info@curtaincleaning.org
+   124→SECTOR 2: CORPORATE OFFICES
+   125→Meta Title: Office Curtain Cleaning Johannesburg | Facilities Management | On The Spot Meta Description: Corporate curtain cleaning Johannesburg with quarterly programmes. Air quality improvement, zero disruption. Free facilities assessment. Page URL: /curtain-cleaning-johannesburg/corporate-offices/
+   126→Hero Section — #082D84 Darker Blue Background
+   127→[Tag — white text, uppercase, tracking wide] Corporate Offices
+   128→[H1 — white text, 48-56px bold] Office Curtain Cleaning — Facilities Management
+   129→[Subtext — white text, 18-20px, 80% opacity] Quarterly programmes, air quality improvement, zero disruption.
+   130→[CTA Buttons] [Primary — white bg, blue text] Book a Free Facilities Assessment [Secondary — transparent, white border] WhatsApp 075 011 9200
+   131→Trust Strip — White Background
+   132→Trusted by Johannesburg’s leading corporate facilities teams:
+   133→[Logo Grid or Text Marks] Growthpoint | Redefine | Attacq | Old Mutual | Discovery | Sasol
+   134→Guarantee Badges — Light Grey Background #F8F9FA
+   135→Badge
+   136→Label
+   137→[Chart Icon]
+   138→Quarterly Programme Available
+   139→[Wind Icon]
+   140→Air Quality Improvement
+   141→[Desktop Icon]
+   142→Zero Operational Disruption
+   143→[File Icon]
+   144→Compliance Documentation
+   145→Key Stats Checklist — White Background
+   146→Why Facilities Managers Choose On The Spot
+   147→Air Quality Improvement — Curtain fabric traps airborne particles, pollen, and HVAC residue. Our deep-clean extraction removes allergens, contributing to healthier indoor air quality and fewer sick-day reports.
+   148→Quarterly Programme — Lock in a year-round maintenance schedule. We plan around your calendar, from quarterly light maintenance to annual deep cleans — fully documented for your file.
+   149→Zero Disruption — We clean during lunch breaks, after hours, or over weekends. No noisy equipment during presentations. No cordoned-off boardrooms. No complaints from tenants.
+   150→Compliance Docs — Every clean comes with a detailed service report. Use it for ISO audits, tenant satisfaction reports, and landlord maintenance records.
+   151→Decision-Maker Section — Two-Column Layout
+   152→Left Column: Facilities Manager Targeted Copy
+   153→Curtain Cleaning That Fits Your Facilities Calendar
+   154→As a Facilities Manager, you’re judged by uptime, tenant satisfaction, and how invisible your maintenance feels. The last thing you need is a curtain cleaning crew disrupting a client pitch or leaving the boardroom drapes at some off-site workshop for a week.
+   155→On The Spot Curtain Cleaning Specialists was built for exactly this reality. We clean curtains where they hang — in the boardroom, the reception, the executive suites, and the tenant floors. No removal. No bare windows. No logistical nightmare of labelling, transporting, and reinstalling. Our team arrives with portable, hospital-grade extraction equipment, works quietly through your space, and hands you a compliance-ready service report on completion.
+   156→Air quality is increasingly under the spotlight in modern office environments. Curtain fabric acts as a passive air filter, trapping dust, pollen, HVAC particulate, and urban pollution. Over time, that buildup affects indoor air quality and can contribute to tenant complaints about odour, stuffiness, and allergy symptoms. Our deep-clean process extracts these contaminants at source — and if you opt into our quarterly programme, we monitor and report on fabric condition year-round so you can demonstrate proactive facilities management to landlords and tenants alike.
+   157→Kathy Dunlop brings 15+ years of fabric expertise to every site. She understands the difference between a wool blend boardroom drape and a polyester tenant blind — and our process is calibrated to each. We’ve completed over 5,000 cleans across Johannesburg, from Sandton skyscrapers to Rosebank corporate parks, and we’ve never shrunk a single curtain. That’s not luck. That’s process.
+   158→Right Column: Assessment CTA Box — #082D84 Background
+   159→[White text]
+   160→Book a Free Facilities Assessment
+   161→We’ll walk your floors, assess every curtain and blind type, and build a scope that fits your facilities calendar — no obligation.
+   162→Walk-through of all floors
+   163→Every textile assessed
+   164→Programme proposal & pricing
+   165→No obligation
+   166→[CTA Button — white bg, blue text] Book a Free Facilities Assessment
+   167→[Secondary link — white text] Or WhatsApp Kathy: 075 011 9200
+   168→FAQ Preview — Light Background
+   169→Questions Every Facilities Manager Asks
+   170→Q: Can you work outside office hours? A: Yes — we regularly clean from 18h00 through the night and on weekends. Your team arrives Monday to fresh curtains and zero evidence we were there.
+   171→Q: Do you provide documentation for audits? A: Every clean generates a detailed service report including fabric type, cleaning method, before/after condition notes, and sign-off. Perfect for ISO 14001, landlord reporting, and tenant SLA evidence.
+   172→Q: Can you handle multi-tenant buildings? A: Absolutely. We work in some of Johannesburg’s largest multi-tenant offices, coordinating with building management and individual tenant requirements per floor.
+   173→Q: What about noise during cleaning? A: Our extraction equipment is designed for hospital and hotel environments. Noise levels are comparable to standard vacuum cleaning — suitable for open-plan cleaning during business hours if needed.
+   174→Newsletter Strip — #082D84 Background
+   175→Facilities Management Insights Get quarterly tips on textile maintenance, air quality compliance, and facilities scheduling — straight from Kathy.
+   176→[Email Input] [Subscribe Button]
+   177→CTA Band — Dark Footer Background #1A1A2E
+   178→Keep Your Building Running Smoothly
+   179→Fresh curtains. Cleaner air. Zero disruption to operations.
+   180→[Primary CTA] Book a Free Facilities Assessment [Secondary] Call Kathy: 075 011 9200 [Tertiary] Email: info@curtaincleaning.org
+   181→SECTOR 3: HEALTHCARE
+   182→Meta Title: Hospital Curtain Cleaning Johannesburg | Infection Control | On The Spot Meta Description: SANS-compliant hospital curtain cleaning Johannesburg. No chemical residue, dust-mite reports. Infection control safe. Free assessment. Page URL: /curtain-cleaning-johannesburg/healthcare/
+   183→Hero Section — #059669 Green Background
+   184→[Tag — white text, uppercase, tracking wide] Healthcare
+   185→[H1 — white text, 48-56px bold] Hospital Curtain Cleaning — Infection Control Compliant
+   186→[Subtext — white text, 18-20px, 80% opacity] SANS compliant, no chemical residue, dust-mite report provided.
+   187→[CTA Buttons] [Primary — white bg, green text] Request a Free Compliance Assessment [Secondary — transparent, white border] WhatsApp 075 011 9200
+   188→Trust Strip — White Background
+   189→Trusted by Johannesburg healthcare facilities:
+   190→[Logo Grid or Text Marks] Netcare | Mediclinic | Life Healthcare | Charlotte Maxeke | Helen Joseph | private practices
+   191→Guarantee Badges — Light Grey Background #F8F9FA
+   192→Badge
+   193→Label
+   194→[Certificate Icon]
+   195→SANS Compliant
+   196→[Leaf Icon]
+   197→No Chemical Residue
+   198→[Microscope Icon]
+   199→Dust-Mite Report
+   200→[Star Icon]
+   201→Priority Scheduling
+   202→Key Stats Checklist — White Background
+   203→Why Infection Control Officers Choose On The Spot
+   204→SANS Compliant — Our cleaning processes align with SANS 10177-12 fire safety standards and healthcare textile management protocols. Documentation-ready for every audit.
+   205→No Chemical Residue — We use low-moisture, neutral-pH extraction that leaves zero harmful residue. Safe for immunocompromised patients, paediatric wards, and maternity units.
+   206→Dust-Mite Report — Every healthcare clean includes a pre- and post-clean dust-mite assessment report. Quantifiable evidence of hygiene improvement for your infection control file.
+   207→Priority Scheduling — We understand that healthcare never pauses. Our priority scheduling ensures your curtains are cleaned during the quietest clinical windows, with same-day turnaround.
+   208→Decision-Maker Section — Two-Column Layout
+   209→Left Column: Infection Control Officer Targeted Copy
+   210→Clinical-Grade Curtain Cleaning for Healthcare Environments
+   211→As an Infection Control Officer, you carry the weight of patient safety on every decision. Curtains in hospitals, clinics, and day wards are high-touch, high-traffic surfaces that harbour dust mites, airborne pathogens, and allergens — yet they’re often overlooked in routine cleaning protocols. Until now.
+   212→On The Spot Curtain Cleaning Specialists delivers clinical-grade curtain cleaning without a single curtain leaving the ward. Our on-site process means no risk of cross-contamination during transport. No bare cubicles or windows while drapes are away. No delays that push your cleaning cycle into the next quarter. We clean right there in the patient area, during your quietest hours, with equipment and chemistry calibrated for healthcare environments.
+   213→The chemistry matters. We use a neutral-pH, low-moisture extraction system that eliminates dust mites, bacteria, and allergen load — and leaves absolutely no chemical residue behind. That’s critical in immunocompromised wards, neonatal units, oncology departments, and paediatric care where residue sensitivity can be life-threatening. Our process is safe enough for the most vulnerable patients and rigorous enough to satisfy your infection control committee.
+   214→Every healthcare clean includes a dust-mite report documenting pre- and post-clean allergen levels. It’s quantifiable proof of hygiene improvement — the kind of documentation that stands up in JNC accreditation reviews, insurer inspections, and internal clinical governance meetings. Kathy Dunlop, our founder, works directly with healthcare facilities across Johannesburg to ensure every clean meets your specific clinical protocols.
+   215→With 15+ years of experience, 5,000+ completed cleans, and a 100% no-shrinkage guarantee, we bring the precision your infection control standards demand — without the operational disruption you can’t afford.
+   216→Right Column: Assessment CTA Box — #059669 Background
+   217→[White text]
+   218→Request a Free Compliance Assessment
+   219→We’ll assess your curtain inventory, review your current cycle, and provide a SANS-compliant scope — no obligation.
+   220→Ward-by-ward assessment
+   221→Current cycle review
+   222→SANS-compliant scope
+   223→No obligation
+   224→[CTA Button — white bg, green text] Request a Free Compliance Assessment
+   225→[Secondary link — white text] Or WhatsApp Kathy: 075 011 9200
+   226→FAQ Preview — Light Background
+   227→Questions Every Infection Control Officer Asks
+   228→Q: Is your process safe for maternity and neonatal wards? A: Yes. Our neutral-pH, residue-free extraction is specifically chosen for sensitive clinical environments. We clean maternity, neonatal, paediatric, and oncology curtains with the same clinical rigour.
+   229→Q: Do you provide documentation for JNC and accreditation audits? A: Every clean generates a comprehensive report including dust-mite counts, cleaning methodology, chemical profile, and sign-off — fully documented for JNC, COHSASA, and internal governance requirements.
+   230→Q: Can you clean cubicle curtains without removing them? A: Absolutely. Cubicle curtains are cleaned in situ — no removal rails, no lost hooks, no bare patient bays. The track stays intact and the cubicle stays operational.
+   231→Q: How do you handle isolation ward curtains? A: We follow your facility’s isolation protocol. Our team is equipped for barrier nursing environments and cleans in sequence from low-risk to high-risk areas with full PPE and equipment sanitation between wards.
+   232→Newsletter Strip — #059669 Background
+   233→Healthcare Compliance Updates Stay current with infection control textile standards, SANS updates, and seasonal allergen alerts — for healthcare professionals only.
+   234→[Email Input] [Subscribe Button]
+   235→CTA Band — Dark Footer Background #1A1A2E
+   236→Patient Safety Starts With Clean Curtains
+   237→SANS-compliant. Residue-free. Documented for your audit.
+   238→[Primary CTA] Request a Free Compliance Assessment [Secondary] Call Kathy: 075 011 9200 [Tertiary] Email: info@curtaincleaning.org
+   239→SECTOR 4: SCHOOLS & EDUCATION
+   240→Meta Title: School Curtain Cleaning Johannesburg | Holiday Scheduling | On The Spot Meta Description: School curtain cleaning Johannesburg with holiday scheduling and bulk pricing. Allergen audit included. Free assessment for schools. Page URL: /curtain-cleaning-johannesburg/schools-education/
+   241→Hero Section — #D97706 Amber/Orange Background
+   242→[Tag — white text, uppercase, tracking wide] Schools & Education
+   243→[H1 — white text, 48-56px bold] School Curtain Cleaning — Holiday Scheduling Available
+   244→[Subtext — white text, 18-20px, 80% opacity] Bulk pricing, holiday-only scheduling, allergen audit included.
+   245→[CTA Buttons] [Primary — white bg, amber text] Book Your Free School Assessment [Secondary — transparent, white border] WhatsApp 075 011 9200
+   246→Trust Strip — White Background
+   247→Serving Johannesburg’s educational community:
+   248→[Logo Grid or Text Marks] ISASA Schools | GDE Schools | Private Colleges | Pre-Schools | Church Schools
+   249→Guarantee Badges — Light Grey Background #F8F9FA
+   250→Badge
+   251→Label
+   252→[Calendar Icon]
+   253→Holiday Scheduling
+   254→[Users Icon]
+   255→Bulk Pricing
+   256→[Search Icon]
+   257→Allergen Audit
+   258→[Bell Icon]
+   259→Minimal Disruption
+   260→Key Stats Checklist — White Background
+   261→Why Principals & Bursars Choose On The Spot
+   262→Holiday Scheduling — We clean exclusively during school holidays. Your learners return to fresh classrooms, and your operational staff never has to work around our team.
+   263→Bulk Pricing — Multi-classroom, multi-building, and multi-phase discounts. The more curtains we clean, the more you save — structured quotes that fit your annual budget cycle.
+   264→Allergen Audit — Every school clean includes a dust and allergen audit report. Documented evidence of improved air quality for parents, inspectors, and your health & safety file.
+   265→Minimal Disruption — No contractors on site during term time. No noise during exams. No interruption to teaching and learning. Ever.
+   266→Decision-Maker Section — Two-Column Layout
+   267→Left Column: Principal / Bursar Targeted Copy
+   268→School Curtain Cleaning That Respects the Academic Calendar
+   269→As a Principal or Bursar, you balance learner welfare, parent expectations, tight budgets, and an academic calendar that doesn’t bend for anyone. The last thing you need is a maintenance contractor disrupting lessons, assemblies, or exam week — or quoting for work that blows next year’s facilities budget.
+   270→On The Spot Curtain Cleaning Specialists understands schools. We’ve built our education service around one non-negotiable: we only clean during school holidays. April, June/July, September, December — whenever your gates are closed to learners, we’re on site. Your staff arrive back to classrooms, halls, and administration blocks with curtains that smell fresh, look crisp, and contribute to a healthier learning environment.
+   271→Why does curtain cleaning matter in schools? Classroom curtains are dust reservoirs. They trap chalk dust (yes, still), HVAC particulate, pollen from open windows, and urban pollution. For learners with asthma, allergies, or respiratory sensitivity, that dusty curtain is a daily trigger. Our deep-clean extraction removes these allergens at source — and we prove it with a before-and-after allergen audit report you can file in your health & safety documentation and share with concerned parents.
+   272→Kathy Dunlop, a qualified interior decorator with 15+ years of textile expertise, knows that school budgets don’t have margin for error. That’s why we offer structured bulk pricing — the more classrooms, halls, and administration blocks you include, the lower your per-curtain rate. We quote once for the year, schedule around your confirmed holiday dates, and deliver exactly what we promised. No variation orders. No surprises. No shrinkage — guaranteed.
+   273→From pre-school reading corners to high school halls, from admin block sheers to auditorium stage drapes — we’ve cleaned curtains in schools across Johannesburg. Let us add yours to the list.
+   274→Right Column: Assessment CTA Box — #D97706 Background
+   275→[White text]
+   276→Book Your Free School Assessment
+   277→We’ll visit during term time (at your convenience), assess every curtain on campus, and provide a holiday-scheduled scope with bulk pricing — no obligation.
+   278→Full campus walk-through
+   279→Every building assessed
+   280→Holiday-scheduled scope
+   281→Bulk pricing included
+   282→No obligation
+   283→[CTA Button — white bg, amber text] Book Your Free School Assessment
+   284→[Secondary link — white text] Or WhatsApp Kathy: 075 011 9200
+   285→FAQ Preview — Light Background
+   286→Questions Every Principal & Bursar Asks
+   287→Q: Do you only clean during holidays, or can you work term-time? A: For schools, we exclusively clean during holidays. No exceptions. Your academic calendar is sacred, and we plan our entire education schedule around confirmed school holiday dates.
+   288→Q: Is the allergen audit useful for parent communication? A: Absolutely. The report documents pre- and post-clean dust and allergen levels per classroom. Many of our school clients share these results in newsletters and board reports to demonstrate proactive learner welfare.
+   289→Q: Can you handle stage curtains and auditorium drapes? A: Yes. We clean everything from classroom sheers to full auditorium stage curtains — including fire-retardancy certification for stage drapes, which is often required for your event insurance.
+   290→Q: How does bulk pricing work for multi-phase schools? A: We structure pricing per building, per phase, with progressive discounts as volume increases. Your quote will clearly show per-curtain, per-classroom, and total campus pricing so you can budget accurately.
+   291→Newsletter Strip — #D97706 Background
+   292→School Facilities Tips Termly reminders on textile care, holiday maintenance planning, and budget-friendly facilities management — written for Principals and Bursars.
+   293→[Email Input] [Subscribe Button]
+   294→CTA Band — Dark Footer Background #1A1A2E
+   295→Give Your Learners a Fresher Classroom
+   296→Holiday-only scheduling. Bulk pricing. Allergen audit included.
+   297→[Primary CTA] Book Your Free School Assessment [Secondary] Call Kathy: 075 011 9200 [Tertiary] Email: info@curtaincleaning.org
+   298→SECTOR 5: THEATRES & VENUES
+   299→Meta Title: Theatre Curtain Cleaning Johannesburg | Fire Compliance | On The Spot Meta Description: Theatre curtain cleaning Johannesburg with acoustic restoration and fire compliance certificates. Dark-week scheduling. Free venue assessment. Page URL: /curtain-cleaning-johannesburg/theatres-venues/
+   300→Hero Section — #6C3483 Purple Background

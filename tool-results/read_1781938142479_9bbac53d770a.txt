@@ -1,0 +1,844 @@
+     1→"use client";
+     2→
+     3→import React, { useState } from "react";
+     4→import { useForm, Controller } from "react-hook-form";
+     5→import { z } from "zod";
+     6→import { zodResolver } from "@hookform/resolvers/zod";
+     7→import { motion, AnimatePresence } from "framer-motion";
+     8→import {
+     9→  Hotel,
+    10→  Building2,
+    11→  Heart,
+    12→  GraduationCap,
+    13→  Theater,
+    14→  Home,
+    15→  Phone,
+    16→  Mail,
+    17→  MapPin,
+    18→  Clock,
+    19→  MessageCircle,
+    20→  ChevronLeft,
+    21→  ChevronRight,
+    22→  CheckCircle2,
+    23→  Send,
+    24→  Loader2,
+    25→  User,
+    26→  type LucideIcon,
+    27→} from "lucide-react";
+    28→import {
+    29→  Card,
+    30→  CardContent,
+    31→  CardHeader,
+    32→} from "@/components/ui/card";
+    33→import { Input } from "@/components/ui/input";
+    34→import { Label } from "@/components/ui/label";
+    35→import { Textarea } from "@/components/ui/textarea";
+    36→import { Checkbox } from "@/components/ui/checkbox";
+    37→import { Button } from "@/components/ui/button";
+    38→import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+    39→import {
+    40→  Select,
+    41→  SelectContent,
+    42→  SelectItem,
+    43→  SelectTrigger,
+    44→  SelectValue,
+    45→} from "@/components/ui/select";
+    46→import {
+    47→  FacebookIcon,
+    48→  InstagramIcon,
+    49→  YoutubeIcon,
+    50→  LinkedinIcon,
+    51→  TiktokIcon,
+    52→  PinterestIcon,
+    53→  TwitterIcon,
+    54→} from "@/components/social-icons";
+    55→import { SITE_CONFIG, SECTORS, AREAS } from "@/lib/site-data";
+    56→
+    57→// ── Icon resolver ──
+    58→const SECTOR_ICON_MAP: Record<string, LucideIcon> = {
+    59→  Hotel,
+    60→  Building2,
+    61→  Heart,
+    62→  GraduationCap,
+    63→  Theater,
+    64→  Home,
+    65→};
+    66→
+    67→const SOCIAL_LINKS = [
+    68→  { icon: FacebookIcon, href: SITE_CONFIG.social.facebook, label: "Facebook" },
+    69→  { icon: InstagramIcon, href: SITE_CONFIG.social.instagram, label: "Instagram" },
+    70→  { icon: YoutubeIcon, href: SITE_CONFIG.social.youtube, label: "YouTube" },
+    71→  { icon: LinkedinIcon, href: SITE_CONFIG.social.linkedin, label: "LinkedIn" },
+    72→  { icon: TiktokIcon, href: SITE_CONFIG.social.tiktok, label: "TikTok" },
+    73→  { icon: PinterestIcon, href: SITE_CONFIG.social.pinterest, label: "Pinterest" },
+    74→  { icon: TwitterIcon, href: SITE_CONFIG.social.twitter, label: "X / Twitter" },
+    75→];
+    76→
+    77→// ── Zod schema ──
+    78→const contactSchema = z.object({
+    79→  sector: z.string().min(1, "Please select a sector"),
+    80→  area: z.string().min(1, "Please select your area"),
+    81→  name: z.string().min(2, "Name must be at least 2 characters"),
+    82→  email: z.string().email("Please enter a valid email address"),
+    83→  phone: z.string().min(7, "Please enter a valid phone number"),
+    84→  propertyType: z.string().min(1, "Please select a property type"),
+    85→  windowCount: z.string().min(1, "Please select number of windows"),
+    86→  notes: z.string().optional(),
+    87→  popiaConsent: z.literal(true, {
+    88→    errorMap: () => ({ message: "You must consent to proceed" }),
+    89→  }),
+    90→});
+    91→
+    92→type ContactFormData = z.infer<typeof contactSchema>;
+    93→
+    94→const PROPERTY_TYPES = [
+    95→  "Private Home",
+    96→  "Townhouse / Complex",
+    97→  "Estate / Large Property",
+    98→  "Hotel / B&B",
+    99→  "Office Building",
+   100→  "Medical Facility",
+   101→  "School / University",
+   102→  "Theatre / Venue",
+   103→  "Other",
+   104→];
+   105→
+   106→const WINDOW_COUNTS = [
+   107→  "1–5",
+   108→  "6–10",
+   109→  "11–20",
+   110→  "21–50",
+   111→  "50+",
+   112→];
+   113→
+   114→// ── Step labels ──
+   115→const STEP_LABELS = ["Your Sector", "Your Area", "Your Details", "Confirmation"];
+   116→
+   117→// ── Slide animation variants ──
+   118→const slideVariants = {
+   119→  enter: (direction: number) => ({
+   120→    x: direction > 0 ? 80 : -80,
+   121→    opacity: 0,
+   122→  }),
+   123→  center: {
+   124→    x: 0,
+   125→    opacity: 1,
+   126→  },
+   127→  exit: (direction: number) => ({
+   128→    x: direction > 0 ? -80 : 80,
+   129→    opacity: 0,
+   130→  }),
+   131→};
+   132→
+   133→// ── Component ──
+   134→export default function ContactSection() {
+   135→  const [currentStep, setCurrentStep] = useState(0);
+   136→  const [direction, setDirection] = useState(1);
+   137→  const [isSubmitting, setIsSubmitting] = useState(false);
+   138→  const [submitSuccess, setSubmitSuccess] = useState(false);
+   139→  const [submitError, setSubmitError] = useState<string | null>(null);
+   140→
+   141→  const form = useForm<ContactFormData>({
+   142→    resolver: zodResolver(contactSchema),
+   143→    defaultValues: {
+   144→      sector: "",
+   145→      area: "",
+   146→      name: "",
+   147→      email: "",
+   148→      phone: "",
+   149→      propertyType: "",
+   150→      windowCount: "",
+   151→      notes: "",
+   152→      popiaConsent: undefined as unknown as true,
+   153→    },
+   154→    mode: "onChange",
+   155→  });
+   156→
+   157→  const { control, trigger, watch, formState: { errors }, getValues } = form;
+   158→  const watchedValues = watch();
+   159→
+   160→  // ── Step validation ──
+   161→  const validateStep = async (step: number): Promise<boolean> => {
+   162→    switch (step) {
+   163→      case 0:
+   164→        return trigger("sector");
+   165→      case 1:
+   166→        return trigger("area");
+   167→      case 2:
+   168→        return trigger(["name", "email", "phone", "propertyType", "windowCount"]);
+   169→      case 3:
+   170→        return trigger("popiaConsent");
+   171→      default:
+   172→        return true;
+   173→    }
+   174→  };
+   175→
+   176→  const goNext = async () => {
+   177→    const isValid = await validateStep(currentStep);
+   178→    if (isValid) {
+   179→      setDirection(1);
+   180→      setCurrentStep((prev) => Math.min(prev + 1, 3));
+   181→    }
+   182→  };
+   183→
+   184→  const goBack = () => {
+   185→    setDirection(-1);
+   186→    setCurrentStep((prev) => Math.max(prev - 1, 0));
+   187→  };
+   188→
+   189→  const onSubmit = async () => {
+   190→    const isValid = await validateStep(3);
+   191→    if (!isValid) return;
+   192→
+   193→    setIsSubmitting(true);
+   194→    setSubmitError(null);
+   195→
+   196→    try {
+   197→      const data = getValues();
+   198→      const res = await fetch("/api/contact", {
+   199→        method: "POST",
+   200→        headers: { "Content-Type": "application/json" },
+   201→        body: JSON.stringify(data),
+   202→      });
+   203→
+   204→      if (!res.ok) {
+   205→        throw new Error("Failed to submit. Please try again.");
+   206→      }
+   207→
+   208→      setSubmitSuccess(true);
+   209→    } catch (err) {
+   210→      setSubmitError(err instanceof Error ? err.message : "Something went wrong");
+   211→    } finally {
+   212→      setIsSubmitting(false);
+   213→    }
+   214→  };
+   215→
+   216→  // ── Helper: find sector/area label from id ──
+   217→  const getSectorLabel = (id: string) => SECTORS.find((s) => s.id === id)?.title ?? id;
+   218→  const getAreaLabel = (id: string) => AREAS.find((a) => a.id === id)?.title ?? id;
+   219→
+   220→  return (
+   221→    <section
+   222→      id="contact"
+   223→      aria-labelledby="contact-heading"
+   224→      className="relative w-full bg-brand-surface-ivory py-20 md:py-28"
+   225→    >
+   226→      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+   227→        {/* ── Heading ── */}
+   228→        <div className="mb-14 text-center">
+   229→          <h2
+   230→            id="contact-heading"
+   231→            className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
+   232→          >
+   233→            Get Your Free Assessment
+   234→          </h2>
+   235→          <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-brand-bronze" aria-hidden="true" />
+   236→          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+   237→            Book a free, no-obligation assessment with one of our certified technicians.
+   238→          </p>
+   239→        </div>
+   240→
+   241→        {/* ── Two-column layout ── */}
+   242→        <div className="grid gap-8 lg:grid-cols-3">
+   243→          {/* ── Form (2/3) ── */}
+   244→          <div className="lg:col-span-2">
+   245→            <Card className="border-border bg-card shadow-md">
+   246→              <CardHeader className="border-b border-border pb-4">
+   247→                {/* ── Progress bar ── */}
+   248→                <div className="mb-2 flex items-center justify-between text-sm text-muted-foreground">
+   249→                  <span>Step {currentStep + 1} of 4</span>
+   250→                  <span className="font-medium text-brand-emerald">
+   251→                    {STEP_LABELS[currentStep]}
+   252→                  </span>
+   253→                </div>
+   254→                <div className="relative flex gap-2" aria-hidden="true">
+   255→                  {STEP_LABELS.map((_, idx) => (
+   256→                    <div
+   257→                      key={idx}
+   258→                      className={`h-2 flex-1 rounded-full transition-colors duration-300 ${
+   259→                        idx <= currentStep
+   260→                          ? "bg-brand-emerald"
+   261→                          : "bg-brand-surface-dim"
+   262→                      }`}
+   263→                    />
+   264→                  ))}
+   265→                </div>
+   266→              </CardHeader>
+   267→
+   268→              <CardContent className="min-h-[340px] pt-6">
+   269→                {submitSuccess ? (
+   270→                  <motion.div
+   271→                    initial={{ opacity: 0, scale: 0.95 }}
+   272→                    animate={{ opacity: 1, scale: 1 }}
+   273→                    className="flex flex-col items-center justify-center py-12 text-center"
+   274→                  >
+   275→                    <CheckCircle2 className="mb-4 h-16 w-16 text-brand-emerald" />
+   276→                    <h3 className="mb-2 text-2xl font-bold text-foreground">
+   277→                      Thank You!
+   278→                    </h3>
+   279→                    <p className="max-w-md text-muted-foreground">
+   280→                      Your assessment request has been received. Kathy or a member of our team will contact you within 24 hours.
+   281→                    </p>
+   282→                  </motion.div>
+   283→                ) : (
+   284→                  <AnimatePresence mode="wait" custom={direction}>
+   285→                    <motion.div
+   286→                      key={currentStep}
+   287→                      custom={direction}
+   288→                      variants={slideVariants}
+   289→                      initial="enter"
+   290→                      animate="center"
+   291→                      exit="exit"
+   292→                      transition={{ duration: 0.3, ease: "easeInOut" }}
+   293→                    >
+   294→                      {/* ── Step 1: Your Sector ── */}
+   295→                      {currentStep === 0 && (
+   296→                        <div>
+   297→                          <h3 className="mb-1 text-lg font-semibold text-foreground">
+   298→                            Which sector best describes your property?
+   299→                          </h3>
+   300→                          <p className="mb-6 text-sm text-muted-foreground">
+   301→                            Select the option that best matches your needs.
+   302→                          </p>
+   303→                          <Controller
+   304→                            name="sector"
+   305→                            control={control}
+   306→                            render={({ field }) => (
+   307→                              <RadioGroup
+   308→                                value={field.value}
+   309→                                onValueChange={field.onChange}
+   310→                                className="grid gap-3 sm:grid-cols-2"
+   311→                              >
+   312→                                {SECTORS.map((sector) => {
+   313→                                  const Icon = SECTOR_ICON_MAP[sector.icon] ?? Home;
+   314→                                  const isSelected = field.value === sector.id;
+   315→                                  return (
+   316→                                    <label
+   317→                                      key={sector.id}
+   318→                                      className={`flex cursor-pointer items-start gap-3 rounded-lg border p-4 transition-all ${
+   319→                                        isSelected
+   320→                                          ? "border-brand-emerald bg-brand-emerald/5 shadow-sm"
+   321→                                          : "border-border bg-card hover:border-brand-bronze/40 hover:shadow-sm"
+   322→                                      }`}
+   323→                                    >
+   324→                                      <RadioGroupItem
+   325→                                        value={sector.id}
+   326→                                        className="mt-0.5 shrink-0"
+   327→                                      />
+   328→                                      <div className="flex items-start gap-3">
+   329→                                        <div
+   330→                                          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${
+   331→                                            isSelected
+   332→                                              ? "bg-brand-emerald/15"
+   333→                                              : "bg-muted"
+   334→                                          }`}
+   335→                                        >
+   336→                                          <Icon
+   337→                                            className={`h-5 w-5 ${
+   338→                                              isSelected
+   339→                                                ? "text-brand-emerald"
+   340→                                                : "text-muted-foreground"
+   341→                                            }`}
+   342→                                          />
+   343→                                        </div>
+   344→                                        <div>
+   345→                                          <span className="text-sm font-medium text-foreground">
+   346→                                            {sector.title}
+   347→                                          </span>
+   348→                                          <p className="mt-0.5 text-xs text-muted-foreground line-clamp-2">
+   349→                                            {sector.shortDesc}
+   350→                                          </p>
+   351→                                        </div>
+   352→                                      </div>
+   353→                                    </label>
+   354→                                  );
+   355→                                })}
+   356→                              </RadioGroup>
+   357→                            )}
+   358→                          />
+   359→                          {errors.sector && (
+   360→                            <p className="mt-3 text-sm text-destructive">{errors.sector.message}</p>
+   361→                          )}
+   362→                        </div>
+   363→                      )}
+   364→
+   365→                      {/* ── Step 2: Your Area ── */}
+   366→                      {currentStep === 1 && (
+   367→                        <div>
+   368→                          <h3 className="mb-1 text-lg font-semibold text-foreground">
+   369→                            Which area are you located in?
+   370→                          </h3>
+   371→                          <p className="mb-6 text-sm text-muted-foreground">
+   372→                            Select the region closest to your property.
+   373→                          </p>
+   374→                          <Controller
+   375→                            name="area"
+   376→                            control={control}
+   377→                            render={({ field }) => (
+   378→                              <div className="space-y-4">
+   379→                                <Select
+   380→                                  value={field.value}
+   381→                                  onValueChange={field.onChange}
+   382→                                >
+   383→                                  <SelectTrigger className="w-full">
+   384→                                    <SelectValue placeholder="Select your area" />
+   385→                                  </SelectTrigger>
+   386→                                  <SelectContent>
+   387→                                    {AREAS.map((area) => (
+   388→                                      <SelectItem key={area.id} value={area.id}>
+   389→                                        {area.title}
+   390→                                      </SelectItem>
+   391→                                    ))}
+   392→                                  </SelectContent>
+   393→                                </Select>
+   394→
+   395→                                {/* Show suburbs for selected area */}
+   396→                                {field.value && (
+   397→                                  <div className="rounded-lg border border-border bg-muted/50 p-4">
+   398→                                    <p className="mb-2 text-sm font-medium text-foreground">
+   399→                                      Suburbs served in {getAreaLabel(field.value)}:
+   400→                                    </p>
+   401→                                    <div className="flex flex-wrap gap-1.5">
+   402→                                      {AREAS.find((a) => a.id === field.value)?.suburbs.map((suburb) => (
+   403→                                        <span
+   404→                                          key={suburb}
+   405→                                          className="inline-block rounded-md bg-brand-emerald/8 px-2 py-0.5 text-xs font-medium text-brand-emerald"
+   406→                                        >
+   407→                                          {suburb}
+   408→                                        </span>
+   409→                                      ))}
+   410→                                    </div>
+   411→                                    <p className="mt-2 text-xs text-muted-foreground">
+   412→                                      {AREAS.find((a) => a.id === field.value)?.focus}
+   413→                                    </p>
+   414→                                  </div>
+   415→                                )}
+   416→                              </div>
+   417→                            )}
+   418→                          />
+   419→                          {errors.area && (
+   420→                            <p className="mt-3 text-sm text-destructive">{errors.area.message}</p>
+   421→                          )}
+   422→                        </div>
+   423→                      )}
+   424→
+   425→                      {/* ── Step 3: Your Details ── */}
+   426→                      {currentStep === 2 && (
+   427→                        <div>
+   428→                          <h3 className="mb-1 text-lg font-semibold text-foreground">
+   429→                            Tell us about yourself
+   430→                          </h3>
+   431→                          <p className="mb-6 text-sm text-muted-foreground">
+   432→                            We&apos;ll use this to arrange your free assessment.
+   433→                          </p>
+   434→                          <div className="grid gap-5 sm:grid-cols-2">
+   435→                            {/* Name */}
+   436→                            <div className="space-y-2">
+   437→                              <Label htmlFor="contact-name">
+   438→                                Full Name <span className="text-destructive">*</span>
+   439→                              </Label>
+   440→                              <div className="relative">
+   441→                                <User className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+   442→                                <Input
+   443→                                  id="contact-name"
+   444→                                  placeholder="e.g. Sarah Mokoena"
+   445→                                  className="pl-9"
+   446→                                  {...form.register("name")}
+   447→                                  aria-invalid={!!errors.name}
+   448→                                />
+   449→                              </div>
+   450→                              {errors.name && (
+   451→                                <p className="text-xs text-destructive">{errors.name.message}</p>
+   452→                              )}
+   453→                            </div>
+   454→
+   455→                            {/* Email */}
+   456→                            <div className="space-y-2">
+   457→                              <Label htmlFor="contact-email">
+   458→                                Email Address <span className="text-destructive">*</span>
+   459→                              </Label>
+   460→                              <div className="relative">
+   461→                                <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+   462→                                <Input
+   463→                                  id="contact-email"
+   464→                                  type="email"
+   465→                                  placeholder="e.g. sarah@company.co.za"
+   466→                                  className="pl-9"
+   467→                                  {...form.register("email")}
+   468→                                  aria-invalid={!!errors.email}
+   469→                                />
+   470→                              </div>
+   471→                              {errors.email && (
+   472→                                <p className="text-xs text-destructive">{errors.email.message}</p>
+   473→                              )}
+   474→                            </div>
+   475→
+   476→                            {/* Phone */}
+   477→                            <div className="space-y-2">
+   478→                              <Label htmlFor="contact-phone">
+   479→                                Phone Number <span className="text-destructive">*</span>
+   480→                              </Label>
+   481→                              <div className="relative">
+   482→                                <Phone className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+   483→                                <Input
+   484→                                  id="contact-phone"
+   485→                                  type="tel"
+   486→                                  placeholder="e.g. 072 123 4567"
+   487→                                  className="pl-9"
+   488→                                  {...form.register("phone")}
+   489→                                  aria-invalid={!!errors.phone}
+   490→                                />
+   491→                              </div>
+   492→                              {errors.phone && (
+   493→                                <p className="text-xs text-destructive">{errors.phone.message}</p>
+   494→                              )}
+   495→                            </div>
+   496→
+   497→                            {/* Property Type */}
+   498→                            <div className="space-y-2">
+   499→                              <Label>
+   500→                                Property Type <span className="text-destructive">*</span>
+   501→                              </Label>
+   502→                              <Controller
+   503→                                name="propertyType"
+   504→                                control={control}
+   505→                                render={({ field }) => (
+   506→                                  <Select
+   507→                                    value={field.value}
+   508→                                    onValueChange={field.onChange}
+   509→                                  >
+   510→                                    <SelectTrigger className="w-full">
+   511→                                      <SelectValue placeholder="Select type" />
+   512→                                    </SelectTrigger>
+   513→                                    <SelectContent>
+   514→                                      {PROPERTY_TYPES.map((type) => (
+   515→                                        <SelectItem key={type} value={type}>
+   516→                                          {type}
+   517→                                        </SelectItem>
+   518→                                      ))}
+   519→                                    </SelectContent>
+   520→                                  </Select>
+   521→                                )}
+   522→                              />
+   523→                              {errors.propertyType && (
+   524→                                <p className="text-xs text-destructive">{errors.propertyType.message}</p>
+   525→                              )}
+   526→                            </div>
+   527→
+   528→                            {/* Window Count */}
+   529→                            <div className="space-y-2 sm:col-span-2">
+   530→                              <Label>
+   531→                                Number of Windows <span className="text-destructive">*</span>
+   532→                              </Label>
+   533→                              <Controller
+   534→                                name="windowCount"
+   535→                                control={control}
+   536→                                render={({ field }) => (
+   537→                                  <Select
+   538→                                    value={field.value}
+   539→                                    onValueChange={field.onChange}
+   540→                                  >
+   541→                                    <SelectTrigger className="w-full">
+   542→                                      <SelectValue placeholder="How many windows?" />
+   543→                                    </SelectTrigger>
+   544→                                    <SelectContent>
+   545→                                      {WINDOW_COUNTS.map((count) => (
+   546→                                        <SelectItem key={count} value={count}>
+   547→                                          {count} windows
+   548→                                        </SelectItem>
+   549→                                      ))}
+   550→                                    </SelectContent>
+   551→                                  </Select>
+   552→                                )}
+   553→                              />
+   554→                              {errors.windowCount && (
+   555→                                <p className="text-xs text-destructive">{errors.windowCount.message}</p>
+   556→                              )}
+   557→                            </div>
+   558→
+   559→                            {/* Notes */}
+   560→                            <div className="space-y-2 sm:col-span-2">
+   561→                              <Label htmlFor="contact-notes">Additional Notes</Label>
+   562→                              <Textarea
+   563→                                id="contact-notes"
+   564→                                placeholder="Any special requirements, preferred times, or questions..."
+   565→                                className="min-h-[80px]"
+   566→                                {...form.register("notes")}
+   567→                              />
+   568→                            </div>
+   569→                          </div>
+   570→                        </div>
+   571→                      )}
+   572→
+   573→                      {/* ── Step 4: Confirmation ── */}
+   574→                      {currentStep === 3 && (
+   575→                        <div>
+   576→                          <h3 className="mb-1 text-lg font-semibold text-foreground">
+   577→                            Review &amp; Confirm
+   578→                          </h3>
+   579→                          <p className="mb-6 text-sm text-muted-foreground">
+   580→                            Please review your details before submitting.
+   581→                          </p>
+   582→
+   583→                          {/* Summary card */}
+   584→                          <div className="rounded-lg border border-border bg-muted/30 p-5">
+   585→                            <div className="grid gap-4 text-sm sm:grid-cols-2">
+   586→                              <div>
+   587→                                <span className="font-medium text-muted-foreground">Sector</span>
+   588→                                <p className="mt-0.5 text-foreground">{getSectorLabel(watchedValues.sector)}</p>
+   589→                              </div>
+   590→                              <div>
+   591→                                <span className="font-medium text-muted-foreground">Area</span>
+   592→                                <p className="mt-0.5 text-foreground">{getAreaLabel(watchedValues.area)}</p>
+   593→                              </div>
+   594→                              <div>
+   595→                                <span className="font-medium text-muted-foreground">Name</span>
+   596→                                <p className="mt-0.5 text-foreground">{watchedValues.name}</p>
+   597→                              </div>
+   598→                              <div>
+   599→                                <span className="font-medium text-muted-foreground">Email</span>
+   600→                                <p className="mt-0.5 text-foreground">{watchedValues.email}</p>
+   601→                              </div>
+   602→                              <div>
+   603→                                <span className="font-medium text-muted-foreground">Phone</span>
+   604→                                <p className="mt-0.5 text-foreground">{watchedValues.phone}</p>
+   605→                              </div>
+   606→                              <div>
+   607→                                <span className="font-medium text-muted-foreground">Property Type</span>
+   608→                                <p className="mt-0.5 text-foreground">{watchedValues.propertyType}</p>
+   609→                              </div>
+   610→                              <div>
+   611→                                <span className="font-medium text-muted-foreground">Windows</span>
+   612→                                <p className="mt-0.5 text-foreground">{watchedValues.windowCount}</p>
+   613→                              </div>
+   614→                              {watchedValues.notes && (
+   615→                                <div className="sm:col-span-2">
+   616→                                  <span className="font-medium text-muted-foreground">Notes</span>
+   617→                                  <p className="mt-0.5 text-foreground">{watchedValues.notes}</p>
+   618→                                </div>
+   619→                              )}
+   620→                            </div>
+   621→                          </div>
+   622→
+   623→                          {/* POPIA Consent */}
+   624→                          <div className="mt-6 rounded-lg border border-border p-4">
+   625→                            <div className="flex items-start gap-3">
+   626→                              <Controller
+   627→                                name="popiaConsent"
+   628→                                control={control}
+   629→                                render={({ field }) => (
+   630→                                  <Checkbox
+   631→                                    id="popia-consent"
+   632→                                    checked={field.value as boolean}
+   633→                                    onCheckedChange={field.onChange}
+   634→                                    className="mt-0.5"
+   635→                                    aria-invalid={!!errors.popiaConsent}
+   636→                                  />
+   637→                                )}
+   638→                              />
+   639→                              <Label
+   640→                                htmlFor="popia-consent"
+   641→                                className="text-sm leading-relaxed text-muted-foreground cursor-pointer"
+   642→                              >
+   643→                                I consent to On The Spot Curtain Cleaning Specialists collecting and processing my personal information in accordance with the Protection of Personal Information Act (POPIA). My data will only be used to respond to my enquiry and will not be shared with third parties.
+   644→                              </Label>
+   645→                            </div>
+   646→                            {errors.popiaConsent && (
+   647→                              <p className="ml-7 mt-2 text-xs text-destructive">
+   648→                                {errors.popiaConsent.message}
+   649→                              </p>
+   650→                            )}
+   651→                          </div>
+   652→
+   653→                          {/* Submit error */}
+   654→                          {submitError && (
+   655→                            <div className="mt-4 rounded-md bg-destructive/10 p-3 text-sm text-destructive">
+   656→                              {submitError}
+   657→                            </div>
+   658→                          )}
+   659→                        </div>
+   660→                      )}
+   661→                    </motion.div>
+   662→                  </AnimatePresence>
+   663→                )}
+   664→
+   665→                {/* ── Navigation Buttons ── */}
+   666→                {!submitSuccess && (
+   667→                  <div className="mt-8 flex items-center justify-between border-t border-border pt-4">
+   668→                    <Button
+   669→                      type="button"
+   670→                      variant="outline"
+   671→                      onClick={goBack}
+   672→                      disabled={currentStep === 0}
+   673→                      className="gap-1"
+   674→                    >
+   675→                      <ChevronLeft className="h-4 w-4" />
+   676→                      Back
+   677→                    </Button>
+   678→
+   679→                    {currentStep < 3 ? (
+   680→                      <Button
+   681→                        type="button"
+   682→                        onClick={goNext}
+   683→                        className="gap-1 bg-brand-emerald text-white hover:bg-brand-emerald/90"
+   684→                      >
+   685→                        Next
+   686→                        <ChevronRight className="h-4 w-4" />
+   687→                      </Button>
+   688→                    ) : (
+   689→                      <Button
+   690→                        type="button"
+   691→                        onClick={onSubmit}
+   692→                        disabled={isSubmitting}
+   693→                        className="gap-2 bg-brand-bronze text-white hover:bg-brand-bronze/90"
+   694→                      >
+   695→                        {isSubmitting ? (
+   696→                          <>
+   697→                            <Loader2 className="h-4 w-4 animate-spin" />
+   698→                            Submitting...
+   699→                          </>
+   700→                        ) : (
+   701→                          <>
+   702→                            <Send className="h-4 w-4" />
+   703→                            Submit Request
+   704→                          </>
+   705→                        )}
+   706→                      </Button>
+   707→                    )}
+   708→                  </div>
+   709→                )}
+   710→              </CardContent>
+   711→            </Card>
+   712→          </div>
+   713→
+   714→          {/* ── Contact Info Sidebar (1/3) ── */}
+   715→          <div className="lg:col-span-1">
+   716→            <Card className="border-border bg-card shadow-md">
+   717→              <CardContent className="p-6">
+   718→                {/* Director */}
+   719→                <div className="mb-6 text-center">
+   720→                  <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-brand-emerald/10">
+   721→                    <User className="h-8 w-8 text-brand-emerald" />
+   722→                  </div>
+   723→                  <h3 className="text-lg font-semibold text-foreground">
+   724→                    Kathy Dunlop
+   725→                  </h3>
+   726→                  <p className="text-sm text-muted-foreground">
+   727→                    Managing Director
+   728→                  </p>
+   729→                </div>
+   730→
+   731→                {/* Contact details */}
+   732→                <div className="space-y-3">
+   733→                  {/* Phone */}
+   734→                  <a
+   735→                    href={`tel:${SITE_CONFIG.phoneLink}`}
+   736→                    className="flex items-center gap-3 rounded-lg p-2 transition-colors hover:bg-brand-emerald/5"
+   737→                  >
+   738→                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-emerald/10">
+   739→                      <Phone className="h-4 w-4 text-brand-emerald" />
+   740→                    </div>
+   741→                    <div>
+   742→                      <p className="text-xs text-muted-foreground">Phone</p>
+   743→                      <p className="text-sm font-medium text-foreground">{SITE_CONFIG.phone}</p>
+   744→                    </div>
+   745→                  </a>
+   746→
+   747→                  {/* Office */}
+   748→                  <a
+   749→                    href={`tel:${SITE_CONFIG.officePhoneLink}`}
+   750→                    className="flex items-center gap-3 rounded-lg p-2 transition-colors hover:bg-brand-emerald/5"
+   751→                  >
+   752→                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-emerald/10">
+   753→                      <Phone className="h-4 w-4 text-brand-emerald" />
+   754→                    </div>
+   755→                    <div>
+   756→                      <p className="text-xs text-muted-foreground">Office</p>
+   757→                      <p className="text-sm font-medium text-foreground">{SITE_CONFIG.officePhone}</p>
+   758→                    </div>
+   759→                  </a>
+   760→
+   761→                  {/* Email */}
+   762→                  <a
+   763→                    href={`mailto:${SITE_CONFIG.email}`}
+   764→                    className="flex items-center gap-3 rounded-lg p-2 transition-colors hover:bg-brand-emerald/5"
+   765→                  >
+   766→                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-emerald/10">
+   767→                      <Mail className="h-4 w-4 text-brand-emerald" />
+   768→                    </div>
+   769→                    <div>
+   770→                      <p className="text-xs text-muted-foreground">Email</p>
+   771→                      <p className="text-sm font-medium text-foreground">{SITE_CONFIG.email}</p>
+   772→                    </div>
+   773→                  </a>
+   774→
+   775→                  {/* Address */}
+   776→                  <div className="flex items-start gap-3 rounded-lg p-2">
+   777→                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-emerald/10">
+   778→                      <MapPin className="h-4 w-4 text-brand-emerald" />
+   779→                    </div>
+   780→                    <div>
+   781→                      <p className="text-xs text-muted-foreground">Address</p>
+   782→                      <p className="text-sm font-medium text-foreground">{SITE_CONFIG.address}</p>
+   783→                    </div>
+   784→                  </div>
+   785→
+   786→                  {/* Hours */}
+   787→                  <div className="flex items-start gap-3 rounded-lg p-2">
+   788→                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-emerald/10">
+   789→                      <Clock className="h-4 w-4 text-brand-emerald" />
+   790→                    </div>
+   791→                    <div>
+   792→                      <p className="text-xs text-muted-foreground">Operating Hours</p>
+   793→                      <p className="text-sm font-medium text-foreground">{SITE_CONFIG.hours.weekday}</p>
+   794→                      <p className="text-sm font-medium text-foreground">{SITE_CONFIG.hours.saturday}</p>
+   795→                    </div>
+   796→                  </div>
+   797→                </div>
+   798→
+   799→                {/* Divider */}
+   800→                <div className="my-5 h-px bg-border" />
+   801→
+   802→                {/* Social icons */}
+   803→                <div>
+   804→                  <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+   805→                    Follow Us
+   806→                  </p>
+   807→                  <div className="flex flex-wrap gap-2">
+   808→                    {SOCIAL_LINKS.map((social) => (
+   809→                      <a
+   810→                        key={social.label}
+   811→                        href={social.href}
+   812→                        target="_blank"
+   813→                        rel="noopener noreferrer"
+   814→                        aria-label={social.label}
+   815→                        className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-brand-bronze hover:bg-brand-bronze/10 hover:text-brand-bronze"
+   816→                      >
+   817→                        <social.icon className="h-4 w-4" />
+   818→                      </a>
+   819→                    ))}
+   820→                  </div>
+   821→                </div>
+   822→
+   823→                {/* Divider */}
+   824→                <div className="my-5 h-px bg-border" />
+   825→
+   826→                {/* WhatsApp CTA */}
+   827→                <a
+   828→                  href={SITE_CONFIG.whatsappLink}
+   829→                  target="_blank"
+   830→                  rel="noopener noreferrer"
+   831→                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#20bd5a] hover:shadow-lg"
+   832→                >
+   833→                  <MessageCircle className="h-5 w-5" />
+   834→                  WhatsApp Us
+   835→                </a>
+   836→              </CardContent>
+   837→            </Card>
+   838→          </div>
+   839→        </div>
+   840→      </div>
+   841→    </section>
+   842→  );
+   843→}
+   844→
