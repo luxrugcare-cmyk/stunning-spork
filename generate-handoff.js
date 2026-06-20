@@ -797,7 +797,7 @@ function section12() {
   return [
     heading1("12. Third-Party Configurations"),
     heading2("12.1 Stitch (Google)"),
-    boldBullet("Stitch API Key: ", "REDACTED"),
+    boldBullet("Stitch API Key: ", "[REDACTED - See secure vault]"),
     boldBullet("Stitch Project URL: ", "https://stitch.withgoogle.com/projects/13681111782633686811"),
     boldBullet("Purpose: ", "Data integration (referenced in technical specification)"),
 
