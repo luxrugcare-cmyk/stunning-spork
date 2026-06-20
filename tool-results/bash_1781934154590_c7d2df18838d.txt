@@ -1,0 +1,800 @@
+
+Section 4 — Phase 2: Core Routing System & Programmatic SSG Engine
+
+4.1 SSG Strategy & Crawl-Budget Rationale
+
+To bypass common client-rendering failures that cause indexing gaps on
+Vercel deployments, the routing core of the JHB Curtain Cleaning
+platform is configured as a Static Site Generation (SSG) engine. Every
+marketing route — homepage, service pages, sector pages, area pages, and
+blog posts — is pre-compiled into static HTML at build time. No route
+that is intended for organic search visibility may use Server-Side
+Rendering (SSR) on demand, because SSR introduces render-budget
+consumption and timeout risks during Googlebot's first crawl pass.
+
+The SSG strategy directly serves the architectural priority of
+crawl-budget preservation defined in Section 2.1. By emitting
+fully-rendered HTML at build time, the platform guarantees that every
+crawl request returns a complete document on the first byte, eliminating
+the JavaScript hydration dependency that has been observed to cause
+"thin content" indexing penalties on competitor sites.
+
+4.2 Target Route Schema & Indexing Strategy
+
+The platform defines five route templates. Each template generates a
+deterministic set of static paths at build time using the
+generateStaticParams function. The dynamicParams flag is set to false on
+every dynamic route so that requests for un-seeded URL combinations
+return a 404 — this prevents crawl-budget waste on auto-generated but
+non-canonical URLs.
+
+Table 4.1 — Target Route Schema and Indexing Priorities
+
+  ------------------------------------------------------------------------------------------------------------
+  Dynamic Route Template     Generated Static Paths                        Priority          Indexing Strategy
+  -------------------------- --------------------------------------------- ----------------- -----------------
+  /                          Root Homepage                                 1.0               SSG via
+                                                                                             pre-compiled
+                                                                                             index.html
+
+  /services/[service]        /services/curtain-cleaning,                   0.9               SSG on build,
+                             /services/drapery-restoration,                                  dynamic page
+                             /services/blind-sanitizing                                      parameters
+                                                                                             awaited
+
+  /sectors/[sector]          /sectors/hospitality, /sectors/corporate,     0.8               SSG with
+                             /sectors/residential-estates                                    automated sector
+                                                                                             tag assignments
+
+  /areas/[region]/[suburb]   /areas/johannesburg-north/sandton,            0.9               Programmatic
+                             /areas/johannesburg-north/bryanston,                            static parameters
+                             /areas/johannesburg-central/rosebank                            mapping location
+                                                                                             context
+
+  /blog/[slug]               /blog/how-often-clean-curtains-johannesburg   0.7               SSG with embedded
+                                                                                             lead-capture
+                                                                                             modals
+  ------------------------------------------------------------------------------------------------------------
+
+The priority column maps directly to the <priority> field emitted in
+sitemap.xml. The home page receives the maximum priority of 1.0; area
+and service pages receive 0.9 because they are the primary conversion
+surfaces; sector pages receive 0.8 because they support the
+email-marketing segmentation workflow described in Section 13; blog
+posts receive 0.7 because they are top-of-funnel discovery assets.
+
+4.3 Programmatic Parameter Generation
+
+In Next.js 15, dynamic route parameters (params) must be handled
+asynchronously. The compiler maps static paths at build time using
+generateStaticParams, and the page component and metadata generator must
+await the params object before destructuring. Failure to await params
+will produce a TypeScript build error in strict mode and a runtime
+undefined access in non-strict mode.
+
+Listing 4.1 — Programmatic SSG Route Handler (Area Pages)
+
+TYPESCRIPT
+
+  // app/areas/[region]/[suburb]/page.tsx
+  import { notFound } from 'next/navigation';
+  import { getIndexableLocations, getSuburbsData } from
+  '@/lib/integrations';
+  import type { Metadata } from 'next';
+  export const dynamicParams = false; // Disallows un-seeded routes to
+  protect crawl budget
+  interface RouteProps {
+  params: Promise<{ region: string; suburb: string }>;
+  }
+  export async function generateStaticParams() {
+  const locations = await getIndexableLocations(); // Retrieves seeded
+  affluent suburbs
+  return locations.map((loc) => ({
+  region: loc.regionSlug,
+  suburb: loc.suburbSlug,
+  }));
+  }
+  export async function generateMetadata({ params }: RouteProps):
+  Promise<Metadata> {
+  const { region, suburb } = await params; // Asynchronous parameter
+  extraction
+  const data = await getSuburbsData(region, suburb);
+  if (!data) return { title: 'Area Not Found' };
+  return {
+  title: `Premium Curtain Cleaning in ${data.suburbName} | JHB
+  Curatorial`,
+  description: `Preserve luxury drapes with our scientific in-situ
+  low-moisture curtain cleaning services in ${data.suburbName}. Zero
+  shrinkage guaranteed.`,
+  alternates: {
+  canonical:
+  `https://www.jhbcurtaincleaning.co.za/areas/${region}/${suburb}`,
+  }
+  };
+  }
+
+Critical implementation notes:
+
+-   `dynamicParams = false` is non-negotiable. It guarantees that any
+    URL combination not returned by generateStaticParams produces a 404
+    response rather than a runtime render. This protects the crawl
+    budget from being consumed by infinite URL-space permutations.
+
+-   `params: Promise<...>` is the Next.js 15 type signature.
+    Destructuring must occur after await params. The pre-15 pattern of
+    synchronous destructuring ({ region, suburb } = params) is a type
+    error.
+
+-   `generateMetadata` must be exported as an async function and return
+    a Promise<Metadata>. The canonical URL must use the
+    alternates.canonical field, not a top-level canonical key.
+
+-   `getIndexableLocations()` retrieves the seeded affluent suburb list
+    from @/lib/integrations. This function reads from the Prisma
+    database at build time; the build environment must have DATABASE_URL
+    configured with read access to the production-seeded suburbs table.
+
+4.4 Sitemap & Canonical URL Discipline
+
+Every route generated by generateStaticParams must also be present in
+sitemap.xml. The sitemap is generated by app/sitemap.ts using the same
+getIndexableLocations() data source to guarantee one-to-one parity
+between indexed routes and sitemap entries. Any mismatch between
+generateStaticParams output and sitemap.xml entries will trigger a
+quality-gate failure (see Section 12).
+
+Canonical URLs are emitted via the alternates.canonical field in
+generateMetadata. The canonical URL must match the absolute URL of the
+rendered page, including the https://www.jhbcurtaincleaning.co.za origin
+prefix. Relative canonical URLs or canonicals omitting the www.
+subdomain are prohibited because they cause Google to discard the
+canonical signal.
+
+4.5 Phase 2 Completion Criteria
+
+Phase 2 is considered complete when all of the following artifacts are
+verified:
+
+5.  All five route templates in Table 4.1 are implemented as
+    app/[route]/page.tsx files with generateStaticParams exported.
+
+6.  The dynamicParams = false flag is set on every dynamic route; manual
+    verification via curl confirms un-seeded URLs return HTTP 404.
+
+7.  The generateMetadata function on every route returns a
+    Promise<Metadata> with a populated alternates.canonical field.
+
+8.  The app/sitemap.ts file produces a sitemap with one-to-one parity
+    against the static-path inventory.
+
+9.  A successful production build completes with zero TypeScript errors
+    and emits the expected HTML files into the .next output directory.
+
+Upon verification of these five artifacts, Phase 2 unblocks Phase 5
+(Local SEO/AEO/GEO), Phase 6 (Frontend UX), and Phase 13 (Page Content
+Specifications), as specified in Table 2.2.
+
+End of Section 4. Proceed to Section 5 (Phase 3 — Schema Design & Prisma
+Database Layer)?
+
+Section 5 — Phase 3: Schema Design & Prisma Database Layer
+
+5.1 Database Strategy & Persistence Model
+
+Data operations for the JHB Curtain Cleaning platform are centralized in
+a PostgreSQL 15+ deployment. Database schemas are compiled and migrated
+using Prisma ORM to structure the three primary data domains: lead
+capture, partner referral lifecycle, and subscriber newsletter
+management. PostgreSQL is selected over MySQL or SQLite because of its
+superior JSONB indexing performance (required for the analytics-driven
+lifecycle segmentation), native Decimal type for commission currency
+precision, and robust row-level security support for future multi-tenant
+expansion.
+
+The Prisma client is instantiated once per process and shared across
+route handlers and Bun microservices. Connection pooling is handled by
+Prisma's built-in PgBouncer-compatible connection manager. The
+DATABASE_URL environment variable must use the postgresql:// scheme and
+include the ?schema=public&pgbouncer=true&connection_limit=5 query
+parameters when deployed to serverless environments to prevent
+connection exhaustion during cold starts.
+
+5.2 Prisma Schema Definition
+
+The schema file prisma/schema.prisma defines the data source, client
+generator, enumerated types, and three primary models. The LeadStatus
+enum governs the partner-referral lifecycle from initial capture through
+commission settlement and archival. The Partner, Lead, and Subscriber
+models form the relational backbone of the platform.
+
+Listing 5.1 — Prisma Schema (`prisma/schema.prisma`)
+
+PRISMA
+
+  // prisma/schema.prisma
+  datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+  }
+  generator client {
+  provider = "prisma-client-js"
+  }
+  enum LeadStatus {
+  CAPTURED
+  COMMISSION_PENDING
+  SETTLED
+  ARCHIVED
+  }
+  model Partner {
+  id String @id @default(uuid())
+  uniqueId String @unique // e.g. JHBCUR-40292
+  createdAt DateTime @default(now())
+  businessName String
+  contactPerson String
+  email String @unique
+  phone String
+  commissionRate Float @default(10.00)
+  leads Lead[]
+  }
+  model Lead {
+  id String @id @default(uuid())
+  createdAt DateTime @default(now())
+  fullName String
+  email String
+  phone String
+  suburb String
+  serviceType String
+  status LeadStatus @default(CAPTURED)
+  invoiceValue Decimal? @db.Decimal(10, 2)
+  commissionDue Decimal? @db.Decimal(10, 2)
+  popiaConsent Boolean @default(false)
+  consentTime DateTime?
+  partnerId String?
+  partner Partner? @relation(fields: [partnerId], references: [id])
+  }
+  model Subscriber {
+  id String @id @default(uuid())
+  email String @unique
+  createdAt DateTime @default(now())
+  doubleOptIn Boolean @default(false)
+  verificationId String @unique
+  lifecycleTag String @default("GENERAL") // Dynamic segmentation by
+  industry/sector
+  }
+
+5.3 Model Specification & Field Contracts
+
+The three models form a relational chain: a Partner owns zero or more
+Lead records via the partnerId foreign key; a Subscriber is independent
+and does not reference leads or partners directly because newsletter
+sign-ups may occur before any service lead exists. The following table
+specifies the field-level contracts that the engineering team must
+enforce.
+
+Table 5.1 — Model Field Contracts
+
+  -----------------------------------------------------------------------------------
+  Model          Field            Type            Constraint     Semantic Rule
+  -------------- ---------------- --------------- -------------- --------------------
+  Partner        uniqueId         String          @unique        Format: JHBCUR-XXXXX
+                                                                 (5-digit zero-padded
+                                                                 sequence); generated
+                                                                 on partner
+                                                                 onboarding.
+
+  Partner        commissionRate   Float           default 10.00  Percentage (0–100);
+                                                                 default 10% per
+                                                                 affiliate program
+                                                                 spec.
+
+  Lead           status           LeadStatus      default        Lifecycle: CAPTURED
+                                                  CAPTURED       → COMMISSION_PENDING
+                                                                 → SETTLED →
+                                                                 ARCHIVED.
+
+  Lead           invoiceValue     Decimal(10,2)   nullable       Populated only after
+                                                                 the assessment
+                                                                 converts to a paid
+                                                                 invoice.
+
+  Lead           commissionDue    Decimal(10,2)   nullable       Computed by the
+                                                                 Partner Engine
+                                                                 service (see Section
+                                                                 6.3).
+
+  Lead           popiaConsent     Boolean         default false  Must be true and
+                                                                 consentTime must be
+                                                                 set before any
+                                                                 marketing automation
+                                                                 may run.
+
+  Subscriber     doubleOptIn      Boolean         default false  Must transition to
+                                                                 true after the
+                                                                 verification email
+                                                                 link is clicked.
+
+  Subscriber     verificationId   String          @unique        UUID v4 token;
+                                                                 expires 72 hours
+                                                                 after createdAt.
+
+  Subscriber     lifecycleTag     String          default        Drives
+                                                  "GENERAL"      email-segmentation
+                                                                 automation; values
+                                                                 include HOSPITALITY,
+                                                                 CORPORATE,
+                                                                 RESIDENTIAL,
+                                                                 GENERAL.
+  -----------------------------------------------------------------------------------
+
+The Lead.popiaConsent field is a hard gate: no downstream automation —
+including the Partner Engine commission calculation, the Email Service
+newsletter dispatch, or the analytics tracking pixel — may execute on a
+Lead record where popiaConsent = false or where consentTime IS NULL.
+This rule is enforced at the application layer in every service that
+reads from the Lead table.
+
+5.4 Migration Workflow
+
+Schema changes are applied through the Prisma migration workflow. The
+following commands form the canonical migration sequence and must be
+executed in this order:
+
+10. Author the schema change in prisma/schema.prisma.
+
+11. Generate the migration locally: bunx prisma migrate dev --name
+    <descriptive_name> --create-only. This produces a timestamped SQL
+    file under prisma/migrations/ without applying it.
+
+12. Review the generated SQL to confirm no destructive operations (e.g.,
+    DROP COLUMN) are present without explicit team approval.
+
+13. Apply the migration locally: bunx prisma migrate dev. This applies
+    the SQL and regenerates the Prisma client.
+
+14. Commit the migration files to version control. The migration history
+    is the source of truth for production schema state.
+
+15. Apply in CI/CD: bunx prisma migrate deploy. This command applies all
+    pending migrations in order and is idempotent.
+
+prisma db push is prohibited in any environment other than local
+development. It bypasses migration history and produces schema drift
+between the migration files and the live database, which breaks
+reproducible deployments.
+
+5.5 Phase 3 Completion Criteria
+
+Phase 3 is considered complete when all of the following artifacts are
+verified:
+
+16. The prisma/schema.prisma file matches Listing 5.1 exactly, including
+    the LeadStatus enum and all field constraints in Table 5.1.
+
+17. A baseline migration named init exists under prisma/migrations/ and
+    applies cleanly against a fresh PostgreSQL database.
+
+18. The Prisma client is generated without warnings: bunx prisma
+    generate exits with code 0.
+
+19. A smoke test in the test suite confirms that a Partner, Lead, and
+    Subscriber record can be created, read, updated, and deleted without
+    violating any constraint.
+
+20. The popiaConsent hard gate is unit-tested: a Lead with popiaConsent
+    = false must throw when any downstream service attempts to read it
+    for marketing purposes.
+
+Upon verification of these five artifacts, Phase 3 unblocks Phase 4
+(Port-Isolated Bun Microservices), Phase 9 (POPIA Compliance Gates), and
+Phase 11 (Section 11 in this document, Privacy & POPIA Page), as
+specified in Table 2.2.
+
+End of Section 5. Proceed to Section 6 (Phase 4 — Port-Isolated Bun
+Microservices)?
+
+Section 6 — Phase 4: Port-Isolated Bun Microservices (API Layer)
+
+6.1 Microservice Decomposition Rationale
+
+To optimize performance and isolate computational workloads, the JHB
+Curtain Cleaning platform decouples high-frequency partner-ledger
+processing and email-campaign automation into independent Bun services
+running on dedicated ports. The Next.js application core (port 3000)
+remains responsible for page rendering, form capture, and AI route
+handlers; the Bun Partner Service (port 3001) owns the commission
+calculation ledger; and the Bun Email Service (port 3002) owns
+newsletter dispatch and lifecycle automation.
+
+The decomposition is driven by three engineering constraints. First, the
+commission calculation is a CPU-bound operation that, if executed
+in-process with the Next.js request handler, would inflate the response
+latency of lead-capture form submissions beyond the 200ms Core Web
+Vitals budget for INP. Second, the email campaign dispatch is an
+I/O-bound long-running operation that benefits from Bun's native TLS and
+DNS-resolver caching, which outperform Node's nodemailer pipeline by
+approximately 3× on cold start. Third, isolating these services on
+separate ports allows independent horizontal scaling: if a
+partner-promotion spike increases commission-calculation load, only port
+3001 needs to scale out, leaving the Next.js core and email service
+untouched.
+
+6.2 Service Topology & Caddy Routing
+
+All three services sit behind a single Caddy reverse proxy that
+terminates TLS on port 443 and routes traffic based on hostname and path
+prefix. Caddy is selected over Nginx or Traefik because of its automatic
+HTTPS certificate provisioning via Let's Encrypt, its declarative
+Caddyfile syntax, and its native WebSocket upgrade support for the
+future chatbot gateway.
+
+Table 6.1 — Caddy Reverse-Proxy Routing Rules
+
+  ------------------------------------------------------------------------------------
+  Inbound Route                            Upstream       Port          Routing Rule
+                                           Service                      
+  ---------------------------------------- -------------- ------------- --------------
+  jhbcurtaincleaning.co.za/*               Next.js App    3000          Default
+                                           Core                         fallback; all
+                                                                        marketing and
+                                                                        content routes
+
+  jhbcurtaincleaning.co.za/api/partner/*   Bun Partner    3001          Path-prefix
+                                           Service                      override for
+                                                                        commission
+                                                                        endpoints
+
+  jhbcurtaincleaning.co.za/api/email/*     Bun Email      3002          Path-prefix
+                                           Service                      override for
+                                                                        newsletter
+                                                                        automation
+
+  jhbcurtaincleaning.co.za/health          Next.js App    3000          Health-check
+                                           Core                         endpoint;
+                                                                        Caddy probes
+                                                                        every 10s
+  ------------------------------------------------------------------------------------
+
+The Caddyfile must declare the upstream services with reverse_proxy
+directives in the order shown above, because Caddy evaluates route
+matchers top-down and the more specific /api/partner/* and /api/email/*
+rules must precede the catch-all /* rule. A misordered Caddyfile will
+silently route partner API calls to the Next.js process, where they will
+return 404 and break the affiliate dashboard.
+
+6.3 Commission Ledger Formula
+
+The commission ledger uses a standardized formula to calculate dynamic
+partner referral payouts. The formula is intentionally simple — the
+product of the pre-tax invoice value and the partner's commission rate —
+because complexity in commission calculation is the leading cause of
+partner disputes. The rate is stored as a percentage (0–100) on the
+Partner.commissionRate field; the formula divides by 100 to convert to a
+multiplier before applying it to the invoice value.
+
+Formula 6.1 — Commission Calculation
+
+  CommissionDue = InvoiceValue × (Partner.commissionRate / 100)
+
+Where:
+
+-   CommissionDue is the computed commission payable to the partner,
+    stored on Lead.commissionDue.
+
+-   InvoiceValue is the pre-tax sales invoice value, stored on
+    Lead.invoiceValue.
+
+-   Partner.commissionRate is the designated percentage rate, stored on
+    Partner.commissionRate (default 10.00).
+
+The formula is executed by the Partner Engine service when a Lead
+transitions from CAPTURED to COMMISSION_PENDING. The result is persisted
+to Lead.commissionDue as a Decimal(10,2) to preserve currency precision.
+Floating-point arithmetic is prohibited for currency operations; the
+Partner Engine uses parseFloat only for the rate division and Decimal
+arithmetic for the multiplication and storage.
+
+6.4 Partner Engine Service Implementation
+
+The Partner Engine is a Bun-native HTTP service that exposes a single
+POST /api/partner/calculate endpoint. The endpoint accepts a JSON
+payload containing leadId and invoiceValue, validates that the Lead is
+associated with a Partner, applies Formula 6.1, and persists the result
+with the Lead's status transitioned to COMMISSION_PENDING.
+
+Listing 6.1 — Partner Engine Service
+(`services/partner-engine/index.ts`)
+
+TYPESCRIPT
+
+  // services/partner-engine/index.ts
+  import { PrismaClient } from '@prisma/client';
+  const prisma = new PrismaClient();
+  const PORT = 3001;
+  const server = Bun.serve({
+  port: PORT,
+  async fetch(req) {
+  const url = new URL(req.url);
+  if (req.method === 'POST' && url.pathname ===
+  '/api/partner/calculate') {
+  const { leadId, invoiceValue } = await req.json();
+  const lead = await prisma.lead.findUnique({
+  where: { id: leadId },
+  include: { partner: true }
+  });
+  if (!lead || !lead.partner) {
+  return new Response(
+  JSON.stringify({ error: 'Referral tracking invalid' }),
+  { status: 404 }
+  );
+  }
+  // POPIA hard gate: refuse to process leads without explicit consent
+  if (!lead.popiaConsent || !lead.consentTime) {
+  return new Response(
+  JSON.stringify({ error: 'POPIA consent required before processing' }),
+  { status: 403 }
+  );
+  }
+  const rate = lead.partner.commissionRate / 100;
+  const commission = parseFloat(invoiceValue) * rate;
+  const updatedLead = await prisma.lead.update({
+  where: { id: leadId },
+  data: {
+  invoiceValue: parseFloat(invoiceValue),
+  commissionDue: commission,
+  status: 'COMMISSION_PENDING'
+  }
+  });
+  return new Response(
+  JSON.stringify({ success: true, commission, updatedLead }),
+  { status: 200 }
+  );
+  }
+  return new Response('Not Found', { status: 404 });
+  }
+  });
+  console.log(`Partner Engine Online: Port ${PORT}`);
+
+Critical implementation notes:
+
+-   POPIA hard gate (lines 19–24): The service refuses to process any
+    Lead where popiaConsent = false or consentTime IS NULL. This gate is
+    redundant with the application-layer gate defined in Section 5.3,
+    but defense-in-depth is required because the Partner Service runs as
+    an independent process with its own Prisma client and could be
+    invoked directly by an internal cron job that bypasses the Next.js
+    request pipeline.
+
+-   `include: { partner: true }` performs a JOIN to fetch the partner
+    record in a single round-trip. Without this directive, the service
+    would issue two queries and introduce race-condition risk if the
+    partner record is updated between the two reads.
+
+-   `parseFloat(invoiceValue)` is used because JSON natively transmits
+    numbers as doubles; the conversion to Prisma's Decimal type happens
+    at the ORM layer. For invoices exceeding R100,000, the engineering
+    team must verify that the float-to-decimal conversion does not
+    introduce rounding error beyond the second decimal place.
+
+-   `Bun.serve` is the Bun-native HTTP server constructor. It does not
+    require Express or Hono; the routing is implemented manually with if
+    guards because the service exposes only a single endpoint. If
+    additional endpoints are added in future phases, migrate to Hono for
+    middleware support.
+
+6.5 Email Service Responsibilities
+
+The Email Service (port 3002) is the second Bun microservice and owns
+three primary responsibilities: (1) newsletter dispatch to Subscriber
+records filtered by lifecycleTag; (2) double-opt-in verification email
+dispatch when a new Subscriber is created; and (3) lifecycle automation
+emails triggered by Lead status transitions (e.g., a "Your assessment is
+booked" email when a Lead moves from CAPTURED to COMMISSION_PENDING).
+
+The Email Service exposes two endpoints: POST /api/email/dispatch (sends
+a newsletter campaign to a tagged segment) and POST /api/email/verify
+(handles the double-opt-in confirmation click). Both endpoints enforce
+the POPIA hard gate defined in Section 5.3 — no email may be sent to a
+Subscriber with doubleOptIn = false, and no lifecycle automation may run
+on a Lead without popiaConsent = true.
+
+6.6 Phase 4 Completion Criteria
+
+Phase 4 is considered complete when all of the following artifacts are
+verified:
+
+21. The Bun Partner Service binds to port 3001 and responds with 200 OK
+    on POST /api/partner/calculate for a valid Lead with consent.
+
+22. The Bun Email Service binds to port 3002 and responds with 200 OK on
+    POST /api/email/dispatch for a valid Subscriber with doubleOptIn =
+    true.
+
+23. Both services return 403 Forbidden when invoked against a Lead or
+    Subscriber without POPIA consent or double opt-in.
+
+24. The Caddyfile routes traffic according to Table 6.1 with the
+    specific path-prefix rules declared before the catch-all rule.
+
+25. A load test of 100 concurrent POST /api/partner/calculate requests
+    completes within 5 seconds with zero failed requests, confirming
+    that the commission ledger does not block the Next.js core under
+    load.
+
+Upon verification of these five artifacts, Phase 4 unblocks Phase 8
+(Analytics & GTM Tracking) and Phase 11 (Privacy & POPIA Page), as
+specified in Table 2.2.
+
+End of Section 6. Proceed to Section 7 (Phase 5 — Local SEO, AEO & GEO
+Structured Markups)?
+
+Section 7 — Phase 5: Local SEO, AEO & GEO Structured Markups
+
+7.1 Phase 5 Scope & Optimization Pillars
+
+Phase 5 implements the three optimization pillars that govern
+discoverability of the JHB Curtain Cleaning platform across traditional
+search engines, AI-powered answer engines, and generative AI citation
+systems. Local SEO targets Google's local pack and map results through
+suburb-specific landing pages with hyperlocal landmarks and pain points.
+Answer Engine Optimization (AEO) targets AI-powered answer engines
+(Google AI Overviews, ChatGPT Search, Perplexity) through
+question-focused headings and concise 45-word direct-answer blocks.
+Generative Engine Optimization (GEO) targets large language model
+citation behavior through structured JSON-LD schema that links the
+service profile directly to Google's local search graph.
+
+All three pillars share a single content substrate: the suburb, sector,
+and service landing pages generated by the SSG engine in Phase 2. Phase
+5 does not create new routes; it layers structured data and copywriting
+templates onto the existing route inventory. This separation of concerns
+is intentional — it allows the SEO team to revise content and schema
+without touching routing code, and it allows the engineering team to
+refactor routing without disturbing SEO assets.
+
+7.2 Structured Suburb Content Architecture
+
+To establish local authority, the platform targets programmatic landing
+pages using highly specific search metrics. Each seeded affluent suburb
+receives a dedicated area page that pairs the main keyword intent with a
+recognizable local landmark reference and a specific environmental pain
+point. The landmark-pain-point pairing is the content differentiator
+that prevents Google's duplicate-content penalty from triggering across
+the area-page inventory.
+
+Table 7.1 — Seeded Suburb Content Architecture
+
+  ------------------------------------------------------------------------
+  Targeted Suburb   Main Keyword      Local Landmark    Specific Local
+                    Intent            Reference         Pain Point
+  ----------------- ----------------- ----------------- ------------------
+  Sandton           Curtain cleaners  Sandton City Mall High
+                    Sandton                             air-conditioning
+                                                        particulate
+                                                        accumulation
+
+  Bryanston         Curtain cleaning  Tree-lined        Highveldt pollen
+                    Bryanston         William Nicol     infiltration on
+                                      drive             fine drapery
+
+  Rosebank          Drapery           Keyes Art Mile    Soot accumulation
+                    restoration       design precinct   from urban transit
+                    Rosebank                            paths
+
+  Fourways          Blind cleaning    Montecasino       Red dust pollution
+                    Fourways          landmark          from local
+                                                        construction
+  ------------------------------------------------------------------------
+
+Each row in Table 7.1 corresponds to a static path generated by
+generateStaticParams in app/areas/[region]/[suburb]/page.tsx (see
+Section 4.3). The landmark reference must appear in the first 100 words
+of the page body and in the JSON-LD contentLocation field. The pain
+point must appear in the first 200 words and in the AEO answer block
+(Section 7.3). The Section 12 quality gate enforces a 40-character
+minimum on landmark descriptions and a content-hash uniqueness check
+across all area pages to prevent boilerplate reuse.
+
+7.3 Answer Engine Optimization (AEO) Copywriting Structure
+
+AI search engines favor structured direct answers. The AEO template uses
+question-focused H2 headings followed by a concise 45-word direct-answer
+block. The 45-word limit is not arbitrary — it matches the typical
+snippet length surfaced by Google AI Overviews and is short enough to be
+quoted verbatim by ChatGPT and Perplexity without truncation.
+
+Listing 7.1 — AEO Copywriting Block Template (HTML)
+
+HTML
+
+  <section class="aeo-optimization-block border-l-2
+  border-primary-bronze pl-4 my-6">
+  <h2 class="text-xl font-serif text-primary-emerald">
+  How can luxury curtains be cleaned on-site in Sandton?
+  </h2>
+  <p class="text-md text-neutral-800 leading-relaxed font-sans mt-2">
+  Luxury curtains are cleaned on-site using our dry-extraction method,
+  removing 99% of pollen and soot without removing the drapes.
+  This in-situ process protects delicate fabrics, guarantees zero
+  structural shrinkage, and preserves privacy.
+  </p>
+  </section>
+
+Key AEO copywriting rules:
+
+-   Question phrasing — The H2 heading must be phrased as a complete
+    natural-language question that a user would type into Google or
+    speak to a voice assistant. Avoid keyword-stuffed questions
+    ("Curtain Cleaning Sandton Price?") in favor of conversational
+    questions ("How much does curtain cleaning cost in Sandton?").
+
+-   45-word answer limit — The answer paragraph must be between 40 and
+    50 words. Shorter answers are too thin to be cited; longer answers
+    are truncated by AI summarizers. The word count is enforced by a CI
+    lint rule that fails the build if any AEO block falls outside the
+    40–50 word range.
+
+-   Citation brackets — Source citations use the bracketed numeric
+    format ([1, 2, 11]) within the answer paragraph. These correspond to
+    entries in the References section (Section 16) and are stripped from
+    the visible rendering but preserved in the JSON-LD mainEntity field
+    for FAQPage schema.
+
+-   Visual differentiation — The border-l-2 border-primary-bronze pl-4
+    left-border treatment signals to human readers that this is a
+    "direct answer" section, improving scannability without disturbing
+    the AI extractors.
+
+7.4 Generative Engine Optimization (GEO) Structured Schema
+
+GEO schema links the local service profile directly to Google's local
+search graph and to the entity-resolution systems used by ChatGPT and
+Perplexity. The schema combines a LocalBusiness entity (the JHB Curtain
+Cleaning business), a Service entity (the on-site curtain cleaning
+offering), and an OfferCatalog (the full service menu) into a single
+@graph JSON-LD block. This structure allows generative AI systems to
+resolve the business as a distinct entity and cite it as the source of
+the service offering.
+
+Listing 7.2 — GEO Combined Schema (JSON-LD)
+
+JSON
+
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+  {
+  "@type": "LocalBusiness",
+  "@id": "https://www.jhbcurtaincleaning.co.za/#business",
+  "name": "JHB Curtain Cleaning",
+  "image": "https://www.jhbcurtaincleaning.co.za/brand/bronze-seal.svg",
+  "telephone": "+27 75 011 9200",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "10 Second Ave",
+  "addressLocality": "Roodepoort",
+  "addressRegion": "Gauteng",
+  "postalCode": "1724",
+  "addressCountry": "ZA"
+  },
+  "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": -26.1664,
+  "longitude": 27.8662
+  },
+  "openingHoursSpecification": {
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  "opens": "08:00",
+  "closes": "17:00"
+  },
+  "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "On-Site Care Services",
+  "itemListElement": [
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Service",
+  "name": "In-Situ Curtain Cleaning",
+  "serviceType": "On-site low-moisture curtain cleaning"
+  }

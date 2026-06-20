@@ -1,0 +1,55 @@
+// JHB Curtain Cleaning - Database Schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum LeadStatus {
+  CAPTURED
+  COMMISSION_PENDING
+  SETTLED
+  ARCHIVED
+}
+
+model Partner {
+  id             String   @id @default(uuid())
+  uniqueId       String   @unique
+  createdAt      DateTime @default(now())
+  businessName   String
+  contactPerson  String
+  email          String   @unique
+  phone          String
+  commissionRate Float    @default(10.0)
+  leads          Lead[]
+}
+
+model Lead {
+  id            String     @id @default(uuid())
+  createdAt     DateTime   @default(now())
+  fullName      String
+  email         String
+  phone         String
+  suburb        String?
+  serviceType   String?
+  message       String?
+  status        LeadStatus @default(CAPTURED)
+  invoiceValue  Float?
+  commissionDue Float?
+  popiaConsent  Boolean    @default(false)
+  consentTime   DateTime?
+  partnerId     String?
+  partner       Partner?   @relation(fields: [partnerId], references: [id])
+}
+
+model Subscriber {
+  id             String   @id @default(uuid())
+  email          String   @unique
+  createdAt      DateTime @default(now())
+  doubleOptIn    Boolean  @default(false)
+  verificationId String   @unique
+  lifecycleTag   String   @default("GENERAL")
+}

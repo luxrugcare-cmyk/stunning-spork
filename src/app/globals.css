@@ -1,0 +1,220 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* JHB Curtain Cleaning Brand Tokens */
+  --color-brand-emerald: #064e3b;
+  --color-brand-bronze: #a87d43;
+  --color-brand-bronze-highlight: #c69c6d;
+  --color-brand-surface-base: #ffffff;
+  --color-brand-surface-ivory: #f9f9f6;
+  --color-brand-surface-dim: #dadad7;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #064e3b;
+  --primary-foreground: #f9f9f6;
+  --secondary: #f9f9f6;
+  --secondary-foreground: #064e3b;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #a87d43;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #dadad7;
+  --input: #e5e7eb;
+  --ring: #a87d43;
+  --chart-1: #064e3b;
+  --chart-2: #a87d43;
+  --chart-3: #c69c6d;
+  --chart-4: #064e3b;
+  --chart-5: #dadad7;
+  --sidebar: #f9f9f6;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #064e3b;
+  --sidebar-primary-foreground: #f9f9f6;
+  --sidebar-accent: #f3f4f6;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #dadad7;
+  --sidebar-ring: #a87d43;
+}
+
+.dark {
+  --background: #0a0f0d;
+  --foreground: #f9f9f6;
+  --card: #111a15;
+  --card-foreground: #f9f9f6;
+  --popover: #111a15;
+  --popover-foreground: #f9f9f6;
+  --primary: #c69c6d;
+  --primary-foreground: #0a0f0d;
+  --secondary: #1a2e22;
+  --secondary-foreground: #f9f9f6;
+  --muted: #1a2e22;
+  --muted-foreground: #9ca3af;
+  --accent: #a87d43;
+  --accent-foreground: #f9f9f6;
+  --destructive: #ef4444;
+  --border: #1a2e22;
+  --input: #1a2e22;
+  --ring: #a87d43;
+  --chart-1: #064e3b;
+  --chart-2: #a87d43;
+  --chart-3: #c69c6d;
+  --chart-4: #34d399;
+  --chart-5: #dadad7;
+  --sidebar: #111a15;
+  --sidebar-foreground: #f9f9f6;
+  --sidebar-primary: #c69c6d;
+  --sidebar-primary-foreground: #0a0f0d;
+  --sidebar-accent: #1a2e22;
+  --sidebar-accent-foreground: #f9f9f6;
+  --sidebar-border: #1a2e22;
+  --sidebar-ring: #a87d43;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Metallic Sweep Animation */
+.metallic-sweep {
+  background: linear-gradient(
+    135deg,
+    #a87d43 0%,
+    #c69c6d 25%,
+    #a87d43 50%,
+    #f9f9f6 75%,
+    #a87d43 100%
+  );
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: foilSweep 6s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+@keyframes foilSweep {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.metallic-sweep-border {
+  background: linear-gradient(
+    135deg,
+    #a87d43 0%,
+    #c69c6d 25%,
+    #a87d43 50%,
+    #f9f9f6 75%,
+    #a87d43 100%
+  );
+  background-size: 400% 100%;
+  animation: foilSweep 6s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metallic-sweep,
+  .metallic-sweep-border {
+    animation: none;
+    background: #a87d43;
+    color: #a87d43;
+  }
+}
+
+/* Trust Strip Auto Scroll */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.trust-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.trust-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f9f9f6;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #dadad7;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a87d43;
+}
+
+/* Section transitions */
+.section-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
