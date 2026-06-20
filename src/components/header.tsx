@@ -4,17 +4,204 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, Phone, MessageCircle } from 'lucide-react'
+import {
+  Menu,
+  Phone,
+  MessageCircle,
+  ChevronDown,
+  Blinds,
+  Bed,
+  Armchair,
+  Shield,
+  Flame,
+  Square,
+  Hotel,
+  Building2,
+  Heart,
+  GraduationCap,
+  Drama,
+  Home,
+  MapPin,
+} from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
-import { NAV_LINKS, SITE_CONFIG } from '@/lib/site-data'
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from '@/components/ui/navigation-menu'
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible'
+import { SERVICES, SECTORS, AREAS, SITE_CONFIG } from '@/lib/site-data'
+import { cn } from '@/lib/utils'
 
+/* ── Icon map for dynamic rendering ─────────────────────────── */
+const serviceIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+  Curtains: Blinds,
+  Bed,
+  Armchair,
+  Shield,
+  Flame,
+  Square,
+}
+
+const sectorIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+  Hotel,
+  Building2,
+  Heart,
+  GraduationCap,
+  Drama,
+  Home,
+}
+
+/* ── Navigation data ────────────────────────────────────────── */
+const serviceNavItems = SERVICES.map((s) => ({
+  href: `/services/${s.id}`,
+  title: s.title,
+  description: s.shortDesc,
+  icon: s.icon,
+  isPrimary: s.isPrimary,
+}))
+
+const sectorNavItems = SECTORS.map((s) => ({
+  href: `/sectors/${s.id}`,
+  title: s.title,
+  description: s.shortDesc,
+  icon: s.icon,
+}))
+
+const areaNavItems = AREAS.map((a) => ({
+  href: `/areas/${a.id}`,
+  title: a.title,
+  description: a.focus,
+  icon: 'MapPin',
+}))
+
+/* ── Dropdown item component ────────────────────────────────── */
+function DropdownItem({
+  href,
+  title,
+  description,
+  icon,
+  isPrimary,
+}: {
+  href: string
+  title: string
+  description: string
+  icon: string
+  isPrimary?: boolean
+}) {
+  const IconComp =
+    (serviceIcons[icon] ?? sectorIcons[icon] ?? MapPin) as React.ComponentType<
+      React.SVGProps<SVGSVGElement>
+    >
+
+  return (
+    <NavigationMenuLink asChild>
+      <Link
+        href={href}
+        className={cn(
+          'group flex items-start gap-3 rounded-lg p-3 transition-all duration-200 hover:bg-brand-emerald/5 focus:bg-brand-emerald/5',
+          isPrimary && 'bg-brand-emerald/5 border border-brand-bronze/20'
+        )}
+      >
+        <div
+          className={cn(
+            'mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-md transition-colors',
+            isPrimary
+              ? 'bg-brand-emerald text-white'
+              : 'bg-muted text-muted-foreground group-hover:bg-brand-emerald/10 group-hover:text-brand-emerald'
+          )}
+        >
+          <IconComp className="h-4 w-4" />
+        </div>
+        <div className="space-y-0.5">
+          <div
+            className={cn(
+              'text-sm font-medium leading-tight transition-colors',
+              isPrimary
+                ? 'text-brand-emerald'
+                : 'text-foreground group-hover:text-brand-emerald'
+            )}
+          >
+            {title}
+            {isPrimary && (
+              <span className="ml-2 inline-flex items-center rounded-full bg-brand-bronze/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-bronze">
+                Primary
+              </span>
+            )}
+          </div>
+          <p className="line-clamp-2 text-xs text-muted-foreground leading-relaxed">
+            {description}
+          </p>
+        </div>
+      </Link>
+    </NavigationMenuLink>
+  )
+}
+
+/* ── Mobile collapsible section ─────────────────────────────── */
+function MobileNavSection({
+  label,
+  items,
+  iconMap,
+  onClose,
+}: {
+  label: string
+  items: { href: string; title: string; description: string; icon: string; isPrimary?: boolean }[]
+  iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>>
+  onClose: () => void
+}) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <Collapsible open={open} onOpenChange={setOpen}>
+      <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-foreground/70 transition-colors hover:bg-muted hover:text-foreground">
+        {label}
+        <ChevronDown
+          className={cn(
+            'h-4 w-4 transition-transform duration-200',
+            open && 'rotate-180'
+          )}
+        />
+      </CollapsibleTrigger>
+      <CollapsibleContent className="pl-4 space-y-0.5">
+        {items.map((item) => {
+          const IconComp = (iconMap[item.icon] ?? MapPin) as React.ComponentType<
+            React.SVGProps<SVGSVGElement>
+          >
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm transition-colors',
+                item.isPrimary
+                  ? 'bg-brand-emerald/5 text-brand-emerald font-medium'
+                  : 'text-foreground/60 hover:bg-muted hover:text-foreground'
+              )}
+            >
+              <IconComp className="h-4 w-4 shrink-0" />
+              <span>{item.title}</span>
+            </Link>
+          )
+        })}
+      </CollapsibleContent>
+    </Collapsible>
+  )
+}
+
+/* ── Header Component ───────────────────────────────────────── */
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  // Track scroll position for glass effect and shrink
+  // Track scroll position for glass effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
@@ -26,7 +213,7 @@ export default function Header() {
 
   // IntersectionObserver for active section highlighting
   useEffect(() => {
-    const sectionIds = NAV_LINKS.map((link) => link.href.replace('#', ''))
+    const sectionIds = ['about', 'faq', 'contact']
     const observers: IntersectionObserver[] = []
 
     sectionIds.forEach((id) => {
@@ -67,10 +254,16 @@ export default function Header() {
         const offsetPosition = elementPosition + window.scrollY - headerOffset
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
       }
-      setMobileOpen(false)
+      setMobileOpenState(false)
     },
     []
   )
+
+  const simpleLinks = [
+    { href: '#about', label: 'About' },
+    { href: '#faq', label: 'FAQ' },
+    { href: '#contact', label: 'Contact' },
+  ]
 
   return (
     <motion.header
@@ -87,7 +280,7 @@ export default function Header() {
         <Link
           href="/"
           className="flex items-center gap-3 transition-opacity hover:opacity-80"
-          aria-label={`${SITE_CONFIG.name} — Home`}
+          aria-label={`${SITE_CONFIG.shortName} — Home`}
         >
           <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-brand-bronze shadow-md sm:h-12 sm:w-12">
             <Image
@@ -109,39 +302,101 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav
-          className="hidden items-center gap-1 lg:flex"
-          role="navigation"
-          aria-label="Main navigation"
-        >
-          {NAV_LINKS.map((link) => {
-            const sectionId = link.href.replace('#', '')
-            const isActive = activeSection === sectionId
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md ${
-                  isActive
-                    ? 'text-brand-bronze'
-                    : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'
-                }`}
-                aria-current={isActive ? 'page' : undefined}
-              >
-                {link.label}
-                {isActive && (
-                  <motion.div
-                    layoutId="activeNav"
-                    className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-brand-bronze"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </Link>
-            )
-          })}
-        </nav>
+        {/* Desktop Navigation with Dropdowns */}
+        <div className="hidden items-center lg:flex">
+          <NavigationMenu className="relative">
+            <NavigationMenuList>
+              {/* Home */}
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/"
+                    className="inline-flex h-9 items-center rounded-md px-3 text-sm font-medium text-foreground/70 transition-colors hover:bg-muted/50 hover:text-foreground"
+                  >
+                    Home
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              {/* Services Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted/50 bg-transparent data-[state=open]:bg-muted/50 data-[state=open]:text-foreground">
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[480px] gap-1 p-2 md:w-[540px] md:grid-cols-2">
+                    {serviceNavItems.map((item) => (
+                      <li key={item.href}>
+                        <DropdownItem {...item} />
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Sectors Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted/50 bg-transparent data-[state=open]:bg-muted/50 data-[state=open]:text-foreground">
+                  Sectors
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[480px] gap-1 p-2 md:w-[540px] md:grid-cols-2">
+                    {sectorNavItems.map((item) => (
+                      <li key={item.href}>
+                        <DropdownItem {...item} />
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Areas Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted/50 bg-transparent data-[state=open]:bg-muted/50 data-[state=open]:text-foreground">
+                  Areas
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[480px] gap-1 p-2 md:w-[540px] md:grid-cols-2">
+                    {areaNavItems.map((item) => (
+                      <li key={item.href}>
+                        <DropdownItem {...item} />
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Simple Links: About, FAQ, Contact */}
+              {simpleLinks.map((link) => {
+                const sectionId = link.href.replace('#', '')
+                const isActive = activeSection === sectionId
+                return (
+                  <NavigationMenuItem key={link.href}>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href={link.href}
+                        onClick={(e) => handleNavClick(e, link.href)}
+                        className={cn(
+                          'inline-flex h-9 items-center rounded-md px-3 text-sm font-medium transition-colors',
+                          isActive
+                            ? 'text-brand-bronze'
+                            : 'text-foreground/70 hover:bg-muted/50 hover:text-foreground'
+                        )}
+                        aria-current={isActive ? 'page' : undefined}
+                      >
+                        {link.label}
+                        {isActive && (
+                          <span className="ml-1.5 h-1.5 w-1.5 rounded-full bg-brand-bronze" />
+                        )}
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                )
+              })}
+            </NavigationMenuList>
+            <NavigationMenuViewport />
+          </NavigationMenu>
+        </div>
 
         {/* Desktop CTA + Phone */}
         <div className="hidden items-center gap-3 lg:flex">
@@ -213,7 +468,65 @@ export default function Header() {
                   aria-label="Mobile navigation"
                 >
                   <ul className="space-y-1">
-                    {NAV_LINKS.map((link, index) => {
+                    {/* Home */}
+                    <motion.li
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0, duration: 0.2 }}
+                    >
+                      <Link
+                        href="/"
+                        onClick={() => setMobileOpen(false)}
+                        className="flex items-center rounded-lg px-4 py-3 text-base font-medium text-foreground/70 transition-colors hover:bg-muted hover:text-foreground"
+                      >
+                        Home
+                      </Link>
+                    </motion.li>
+
+                    {/* Services (expandable) */}
+                    <motion.li
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.03, duration: 0.2 }}
+                    >
+                      <MobileNavSection
+                        label="Services"
+                        items={serviceNavItems}
+                        iconMap={serviceIcons}
+                        onClose={() => setMobileOpen(false)}
+                      />
+                    </motion.li>
+
+                    {/* Sectors (expandable) */}
+                    <motion.li
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.06, duration: 0.2 }}
+                    >
+                      <MobileNavSection
+                        label="Sectors"
+                        items={sectorNavItems}
+                        iconMap={sectorIcons}
+                        onClose={() => setMobileOpen(false)}
+                      />
+                    </motion.li>
+
+                    {/* Areas (expandable) */}
+                    <motion.li
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.09, duration: 0.2 }}
+                    >
+                      <MobileNavSection
+                        label="Areas"
+                        items={areaNavItems}
+                        iconMap={{ MapPin }}
+                        onClose={() => setMobileOpen(false)}
+                      />
+                    </motion.li>
+
+                    {/* Simple Links */}
+                    {simpleLinks.map((link, index) => {
                       const sectionId = link.href.replace('#', '')
                       const isActive = activeSection === sectionId
                       return (
@@ -221,7 +534,7 @@ export default function Header() {
                           key={link.href}
                           initial={{ opacity: 0, x: 20 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.05, duration: 0.2 }}
+                          transition={{ delay: 0.12 + index * 0.03, duration: 0.2 }}
                         >
                           <Link
                             href={link.href}

@@ -1,12 +1,13 @@
 "use client";
 
 import { useRef, useState, useCallback } from "react";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { AREAS } from "@/lib/site-data";
-import type { AreaData } from "@/lib/site-data";
 
 /* ── Animation variants ────────────────────────────────────────────── */
 const containerVariants = {
@@ -30,7 +31,7 @@ function AreaCard({
   area,
   isHighlighted,
 }: {
-  area: AreaData;
+  area: typeof AREAS[number];
   isHighlighted: boolean;
 }) {
   return (
@@ -71,7 +72,7 @@ function AreaCard({
                   color: "#ffffff",
                 }}
               >
-                {area.focusBadge}
+                {area.focus}
               </Badge>
             </div>
           </div>
@@ -88,8 +89,22 @@ function AreaCard({
               Suburbs:
             </span>
             <p className="text-xs leading-relaxed text-muted-foreground">
-              {area.suburbs}
+              {area.suburbs.join(', ')}
             </p>
+          </div>
+
+          {/* View area page link */}
+          <div className="mt-auto pt-2">
+            <Link href={`/areas/${area.id}`}>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="group/btn gap-1.5 px-0 text-sm font-medium text-brand-emerald hover:bg-transparent hover:text-brand-bronze hover:underline"
+              >
+                Explore This Area
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
+              </Button>
+            </Link>
           </div>
         </CardContent>
       </Card>
@@ -111,7 +126,6 @@ export default function AreasSection() {
       el.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
-    // Clear highlight after 3 seconds
     setTimeout(() => {
       setHighlightedId((prev) => (prev === id ? null : prev));
     }, 3000);
@@ -125,7 +139,7 @@ export default function AreasSection() {
       className="relative overflow-hidden bg-background py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* ── Heading ───────────────────────────────────────────── */}
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -149,7 +163,7 @@ export default function AreasSection() {
           </p>
         </motion.div>
 
-        {/* ── Cards grid ────────────────────────────────────────── */}
+        {/* Cards grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -165,7 +179,7 @@ export default function AreasSection() {
           ))}
         </motion.div>
 
-        {/* ── Area tags strip ───────────────────────────────────── */}
+        {/* Area tags strip */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -173,14 +187,13 @@ export default function AreasSection() {
           className="mt-12 rounded-xl border bg-brand-surface-ivory p-4 sm:p-6"
         >
           <p className="mb-3 text-center text-sm font-medium text-muted-foreground">
-            Quick jump — click an area to scroll:
+            Quick jump — click an area to explore:
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             {AREAS.map((area) => (
-              <button
+              <Link
                 key={area.id}
-                onClick={() => handleTagClick(area.id)}
-                aria-label={`Scroll to ${area.title}`}
+                href={`/areas/${area.id}`}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-bronze focus-visible:ring-offset-2 ${
                   highlightedId === area.id
                     ? "border-brand-bronze bg-brand-bronze text-white shadow-sm"
@@ -189,7 +202,7 @@ export default function AreasSection() {
               >
                 <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
                 {area.title}
-              </button>
+              </Link>
             ))}
           </div>
         </motion.div>

@@ -1,0 +1,500 @@
+500: Section 3: Contact Fallback Box
+501: [HIGHLIGHTED CONTACT BOX]
+502: H3: Still Have Questions?
+503: We’d love to help. Kathy is always happy to chat about your specific curtains, fabric concerns, or booking requirements.
+504: Call or WhatsApp Kathy directly: 📱 075 011 9200
+505: Or reach us via: - Office: 071 622 6723 - Email: info@curtaincleaning.org - WhatsApp: 075 011 9200
+506: Hours: - Monday–Friday: 07:00 – 18:00 - Saturday: 08:00 – 14:00 - Sunday: Closed
+507: Address: Martha North Road, Randburg, Johannesburg 2194
+508: [Book Free Assessment] [WhatsApp Kathy]
+509: Section 4: CTA Band (Dark Blue Background)
+510: [ICON: Clipboard / checklist]
+511: H2: Every Curtain Is Different. That’s Why We Come to You.
+512: No two curtain jobs are the same. Fabric type, lining condition, soiling level, hardware state — Kathy assesses every factor in person before recommending the right treatment. It’s why our results are consistently exceptional.
+513: Primary CTA: Book Your Free On-Site Assessment Secondary CTA: WhatsApp 075 011 9200
+514: Micro-trust row: - Free assessment — no cost, no commitment - No obligation — walk away if it’s not for you - Written quote — transparent pricing, guaranteed
+515: END OF ALL 4 PAGES
+516: All copy written for On The Spot Curtain Cleaning Specialists Primary keyword: “curtain cleaning Johannesburg” Target: Local SEO + Conversion optimization Voice: Professional, warm, South African English
+517: PART 2: UTILITY PAGES & SHARED COMPONENTS
+518: On The Spot Curtain Cleaning Specialists — Utility Pages & Shared Components
+519: Complete Website Copy Deliverable
+520: Production-Ready | SEO-Optimized | POPIA Compliant | South African English
+521: PAGE 1: CONTACT PAGE
+522: Meta Information
+523: Element
+524: Copy
+525: Meta Title
+526: Contact On The Spot Curtain Cleaning | Johannesburg | Kathy Dunlop
+527: Meta Description
+528: Contact Kathy Dunlop directly for curtain cleaning in Johannesburg. WhatsApp, call, or email. Free on-site assessment within 48 hours. All JHB suburbs.
+529: Canonical URL
+530: https://curtaincleaning.org/contact
+531: Open Graph Title
+532: Contact Kathy Dunlop — On The Spot Curtain Cleaning Johannesburg
+533: Open Graph Description
+534: Need curtain cleaning in Johannesburg? Contact Kathy directly via WhatsApp, phone, or email. Free on-site assessment within 48 hours.
+535: Hero Section
+536: H1
+537: Get in Touch
+538: Subtext
+539: Kathy personally responds to every enquiry within 24 hours. Whether you need a quick quote or a full on-site assessment, we’re here to help — across all Johannesburg suburbs.
+540: Two-Column Layout: Contact Details (Left) + Contact Form (Right)
+541: LEFT COLUMN — Contact Details
+542: WhatsApp / Phone (Primary)
+543: 075 011 9200 Kathy Direct · WhatsApp Available Best for instant response
+544: Office Phone
+545: 071 622 6723 Office Landline Available during business hours
+546: Email
+547: info@curtaincleaning.org Send us an email anytime Replies within 24 hours
+548: Visit Us
+549: Martha North Rd, Randburg Johannesburg 2194, South Africa By appointment only
+550: Operating Hours
+551: Day
+552: Hours
+553: Monday – Friday
+554: 07:00 – 18:00
+555: Saturday
+556: 08:00 – 14:00
+557: Sunday
+558: Closed
+559: After-hours enquiries via WhatsApp are responded to first thing the next business day.
+560: Connect With Us
+561: Facebook: facebook.com/onthespotcurtains
+562: Instagram: instagram.com/onthespotcurtains
+563: YouTube: youtube.com/@onthespotcurtains
+564: LinkedIn: linkedin.com/company/onthespotcurtains
+565: TikTok: tiktok.com/@onthespotcurtains
+566: Pinterest: pinterest.com/onthespotcurtains
+567: X (Twitter): x.com/onthespotcurtains
+568: Service Area Note
+569: We cover all major Johannesburg suburbs including Sandton, Randburg, Fourways, Roodepoort, Rosebank, Parktown, Edenvale, Bedfordview, Alberton, Midrand, Centurion, and Pretoria. Not sure if we service your area? Send us a message — if you’re in Gauteng, we can help.
+570: RIGHT COLUMN — Contact Form
+571: H2
+572: Send a Message
+573: Form Fields
+574: Field
+575: Type
+576: Required
+577: Placeholder / Options
+578: Your Name
+579: text
+580: Yes
+581: e.g. Sarah van der Merwe
+582: Phone Number
+583: tel
+584: Yes
+585: e.g. 082 123 4567
+586: Email Address
+587: email
+588: Yes
+589: e.g. sarah@example.co.za
+590: Suburb
+591: text
+592: No
+593: e.g. Sandton, Johannesburg
+594: Service Required
+595: select
+596: No
+597: Choose a service…
+598: ↳ Options
+599: —
+600: —
+601: Curtain & Blind Cleaning
+602: ↳
+603: —
+604: —
+605: Deep Mattress Sanitisation
+606: ↳
+607: —
+608: —
+609: Upholstery & Carpet Cleaning
+610: ↳
+611: —
+612: —
+613: Master Guarding Protection
+614: ↳
+615: —
+616: —
+617: Fire Proofing
+618: ↳
+619: —
+620: —
+621: Persian & Oriental Rug Care
+622: ↳
+623: —
+624: —
+625: Other / Not Sure
+626: Your Message
+627: textarea
+628: No
+629: Tell us about your curtains, fabric type, or any questions…
+630: Submit Button
+631: Send Message
+632: Alternative CTA (Below Form)
+633: Or for instant response: [WhatsApp Kathy Directly — 075 011 9200]
+634: Success Message
+635: ✓ Message sent successfully! Kathy will be in touch within 24 hours. For urgent requests, WhatsApp her directly on 075 011 9200.
+636: Error Message
+637: ⚠ Something went wrong. Please try again, or contact Kathy directly via WhatsApp on 075 011 9200.
+638: Form Note
+639: Your information is protected under POPIA. We never sell or share your data. Read our Privacy Policy.
+640: CTA Band (Contact Page Bottom)
+641: Headline
+642: Every curtain is different. That’s why we come to you.
+643: Subtext
+644: Free, no-obligation on-site assessment anywhere in Johannesburg. Kathy personally visits within 48 hours. Written quote guaranteed.
+645: Primary CTA Button
+646: Book Your Free On-Site Assessment →
+647: Secondary CTA Button
+648: WhatsApp Kathy — 075 011 9200
+649: Micro-Trust Line
+650: Free assessment · No obligation · Written quote
+651: PAGE 2: QUOTE / BOOKING PAGE (Multi-Step Wizard)
+652: Meta Information
+653: Element
+654: Copy
+655: Meta Title
+656: Book Free On-Site Curtain Cleaning Assessment | Johannesburg
+657: Meta Description
+658: Book your free, no-obligation on-site curtain cleaning assessment in Johannesburg. Kathy personally visits within 48 hours. Written quote guaranteed.
+659: Canonical URL
+660: https://curtaincleaning.org/book-assessment
+661: Open Graph Title
+662: Book Your Free Curtain Cleaning Assessment — Johannesburg
+663: Open Graph Description
+664: Free on-site curtain cleaning assessment anywhere in Johannesburg. No obligation, written quote guaranteed. Kathy visits within 48 hours.
+665: Hero Section
+666: H1
+667: Book Your Free On-Site Assessment
+668: Subtext
+669: Free, no-obligation. Kathy personally visits within 48 hours. Written quote guaranteed. Your curtains stay right where they are — we clean them on-site, with zero downtime.
+670: Trust Micro-Line
+671: 15+ years experience · 5,000+ clients · 100% no-shrinkage guarantee
+672: Progress Bar (4 Steps)
+673: Step
+674: Label
+675: Status
+676: 1
+677: Sector
+678: Active
+679: 2
+680: Area
+681: Upcoming
+682: 3
+683: Details
+684: Upcoming
+685: 4
+686: Confirm
+687: Upcoming
+688: *Progress indicator text: “Step 1 of 4 — Takes less than 2 minutes”
+689: STEP 1: Select Sector
+690: H2
+691: What type of property?
+692: Subtext
+693: This helps Kathy prepare the right equipment and cleaning solutions for your specific environment. Each sector has unique requirements — from hotel fire regulations to healthcare infection control standards.
+694: Selectable Cards (6 options, single select)
+695: Icon
+696: Card Title
+697: Role / Subtitle
+698: 🏨
+699: Hotels & Hospitality
+700: General Manager
+701: 🏢
+702: Corporate Offices
+703: Facilities Manager
+704: 🏥
+705: Healthcare
+706: Infection Control Officer
+707: 🎓
+708: Schools & Education
+709: Principal / Bursar
+710: 🎭
+711: Theatres & Venues
+712: Stage Manager
+713: 🏠
+714: Residential
+715: Homeowner
+716: Card Micro-Copy (on hover/select)
+717: Hotels: Full fire-code compliance. Downtime-free cleaning for guest rooms, lobbies, and function venues.
+718: Corporate: After-hours and weekend service available. Minimal disruption to operations.
+719: Healthcare: Certified infection-control protocols. HAI prevention for patient areas and theatres.
+720: Schools: Holiday period scheduling available. Child-safe, non-toxic cleaning solutions.
+721: Theatres: Specialist knowledge for theatrical drapes, velour, and sound-absorbing fabrics.
+722: Residential: Personal, discreet service. Your home, treated with expert care.
+723: Navigation
+724: Continue → (disabled until selection made)
+725: STEP 2: Select Area
+726: H2
+727: Which area are you in?
+728: Subtext
+729: This helps Kathy plan her route efficiently and confirm travel time to your property. We cover all of Greater Johannesburg and Pretoria.
+730: Selectable Area Cards (6 options, single select)
+731: Area
+732: Suburbs Covered
+733: Johannesburg North
+734: Sandton, Randburg, Fourways, Bryanston, Douglasdale, Lonehill, Sunninghill, Woodmead, Morningside, Parkmore
+735: Johannesburg East
+736: Edenvale, Bedfordview, Boksburg, Benoni, Kempton Park, Germiston, Linksfield, Orange Grove
+737: Johannesburg South
+738: Alberton, Meyersdal, Glenvista, Glenanda, Bassonia, Oakdene, Winchester Hills, Ridgeway
+739: Johannesburg West
+740: Roodepoort, Florida, Northcliff, Linden, Fairland, Weltevredenpark, Constantia Kloof, Wilgeheuwel
+741: Johannesburg Central
+742: Rosebank, Parktown, Melville, Greenside, Emmarentia, Auckland Park, Westcliff, Killarney
+743: Pretoria & Midrand
+744: Midrand, Centurion, Pretoria East, Pretoria Central, Menlyn, Brooklyn, Hatfield, Lynnwood
+745: Area Note
+746: Don’t see your suburb? Select the nearest area — we’ll confirm coverage when Kathy calls you back.
+747: Navigation
+748: ← Back | Continue →
+749: STEP 3: Your Details
+750: H2
+751: Your Details
+752: Subtext
+753: Almost done. Fill in your contact details and any specific requirements. Kathy will use this to confirm your booking and prepare for the assessment.
+754: Form Fields
+755: Field
+756: Type
+757: Required
+758: Placeholder
+759: Full Name
+760: text
+761: Yes
+762: e.g. John van Niekerk
+763: Phone Number
+764: tel
+765: Yes
+766: e.g. 083 456 7890
+767: Email Address
+768: email
+769: Yes
+770: e.g. john@company.co.za
+771: Number of Rooms / Curtains
+772: text
+773: No
+774: e.g. 3 bedrooms, 2 living rooms
+775: Preferred Assessment Date
+776: date
+777: No
+778: Select a date
+779: Additional Notes
+780: textarea
+781: No
+782: Fabric type, last cleaned, specific concerns, access instructions…
+783: POPIA Micro-Notice (below form fields)
+784: 🔒 Your information is collected solely to arrange your free assessment. POPIA compliant. Read our Privacy Policy.
+785: Navigation
+786: ← Back | Continue →
+787: STEP 4: Confirm Your Assessment
+788: H2
+789: Confirm Your Assessment
+790: Subtext
+791: Please review your details below. Once confirmed, Kathy will receive your booking and contact you within 24 hours.
+792: Summary Display (populated dynamically from Steps 1–3)
+793: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  YOUR BOOKING SUMMARY━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━Sector:        [Sector selected in Step 1]Area:          [Area selected in Step 2]Suburb:        [Suburb from Step 3]Contact:  Name:        [Name from Step 3]  Phone:       [Phone from Step 3]  Email:       [Email from Step 3]Details:  Rooms/Curtains:  [From Step 3 or "Not specified"]  Preferred Date:  [From Step 3 or "Flexible"]  Notes:           [From Step 3 or "None provided"]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+794: POPIA Consent Notice (Full)
+795: 🔒 Your Data Is Protected
+796: Your personal information is collected and processed in accordance with the Protection of Personal Information Act 4 of 2013 (POPIA). We use your information solely to: - Contact you to confirm your assessment booking - Conduct your free on-site assessment - Provide your written quotation - Deliver the services you have requested
+797: We never sell, rent, or share your personal information with third parties.
+798: Marketing Opt-In (Optional, Unchecked by Default)
+799: □ Yes, I’d like to receive: - Seasonal curtain care tips - Exclusive subscriber-only offers - My 10% first-clean discount code
+800: This is entirely optional. You can unsubscribe at any time. POPIA compliant.
+801: Final Confirmation Button
+802: Book My Free Assessment Kathy will contact you within 24 hours
+803: Navigation
+804: ← Back (to edit details)
+805: THANK YOU / SUCCESS STATE
+806: Success Icon
+807: ✓ Large animated checkmark
+808: H1
+809: Assessment Booked!
+810: Confirmation Message
+811: Thank you! Your free on-site assessment request has been received.
+812: Kathy will contact you within 24 hours to confirm your booking and arrange a convenient time to visit.
+813: Reference Number
+814: Your booking reference: #OTS-[DATE]-[RANDOM] (e.g. #OTS-250515-A7B2)
+815: Action Buttons
+816: [← Back to Home] — Primary outline button
+817: [💬 WhatsApp Kathy Now] — Primary green button → https://wa.me/27750119200?text=Hi%20Kathy!%20I%27ve%20just%20booked%20a%20free%20assessment%20(Ref:%20#OTS-XXXX).%20Looking%20forward%20to%20hearing%20from%20you!
+818: Upsell Section: “While You Wait — Add Master Guarding”
+819: H3
+820: Protect Your Investment with Master Guarding
+821: Body
+822: While Kathy is preparing for your assessment, consider adding Master Guarding fabric protection to your quote. This invisible shield repels stains, extends fabric life, and keeps your curtains looking pristine for years — especially valuable for high-traffic commercial spaces and homes with children or pets.
+823: Key Benefits
+824: ✓ Invisible nano-coating protection
+825: ✓ Repels liquids, oils, and dust
+826: ✓ Extends fabric lifespan by up to 40%
+827: ✓ Perfect for hotels, offices, and family homes
+828: CTA
+829: [💬 Ask About Master Guarding on WhatsApp] No obligation — Kathy will include it in your written quote
+830: What’s Next Section
+831: H3
+832: What Happens Next?
+833: Step
+834: What to Expect
+835: Timing
+836: 1
+837: Kathy calls or WhatsApps you to confirm
+838: Within 24 hours
+839: 2
+840: Kathy arrives for your free on-site assessment
+841: Within 48 hours
+842: 3
+843: You receive a detailed written quote
+844: At the assessment
+845: 4
+846: If happy, cleaning is scheduled
+847: Your preferred date
+848: Note
+849: There’s no obligation to proceed after your assessment. The quote is completely free, and you’re under no pressure to book. Kathy believes in earning your trust first.
+850: Need Help?
+851: Questions about your booking? Contact Kathy directly: - 📱 WhatsApp: 075 011 9200 - 📧 Email: info@curtaincleaning.org - 📞 Office: 071 622 6723
+852: PAGE 3: PRIVACY & POPIA PAGE
+853: Meta Information
+854: Element
+855: Copy
+856: Meta Title
+857: Privacy Policy | On The Spot Curtain Cleaning | POPIA Compliant
+858: Meta Description
+859: Our privacy policy and POPIA compliance statement. How we collect, use and protect your data. On The Spot Curtain Cleaning Specialists Johannesburg.
+860: Canonical URL
+861: https://curtaincleaning.org/privacy
+862: Open Graph Title
+863: Privacy Policy & POPIA Compliance Statement
+864: Open Graph Description
+865: Learn how On The Spot Curtain Cleaning protects your personal information under South African POPIA legislation.
+866: Hero Section
+867: H1
+868: Privacy Policy
+869: Subtext
+870: POPIA Compliant — Effective May 2026
+871: Trust Badge
+872: 🔒 Responsible Party registered under POPIA (Protection of Personal Information Act 4 of 2013)
+873: Policy Navigation (Jump Links)
+874: Quick links to sections: 1. Who We Are 2. What We Collect 3. How We Use Your Data 4. Data Sharing 5. Cookies 6. Your Rights (POPIA) 7. Data Retention 8. Security 9. Changes to This Policy 10. Contact Us
+875: 1. Who We Are
+876: Section Title
+877: Who We Are
+878: Content
+879: On The Spot Curtain Cleaning Specialists (hereinafter referred to as “we”, “us”, or “our”) is a professional on-site curtain cleaning service based in Johannesburg, South Africa.
+880: Registered Business Details: - Business Name: On The Spot Curtain Cleaning Specialists - Physical Address: Martha North Rd, Randburg, Johannesburg 2194, South Africa - Managing Director: Kathy Dunlop, Interior Decorator & Fabric Expert - Contact Email: info@curtaincleaning.org - Contact Phone: 075 011 9200 (Kathy Direct) / 071 622 6723 (Office) - Website: curtaincleaning.org
+881: We are the Responsible Party as defined in the Protection of Personal Information Act 4 of 2013 (POPIA). This means we determine the purpose and means for processing your personal information and are accountable for ensuring your data is handled lawfully.
+882: Our Information Officer can be contacted at info@curtaincleaning.org for any privacy-related concerns or POPIA enquiries.
+883: 2. What We Collect
+884: Section Title
+885: What Personal Information We Collect
+886: Content
+887: We collect only the personal information that is necessary to provide our services and communicate with you effectively. We do not collect sensitive personal information (special personal information as defined by POPIA) unless specifically required and with your explicit consent.
+888: Information You Provide Directly:
+889: Information Type
+890: When We Collect It
+891: Why We Need It
+892: Full name
+893: Assessment booking form, contact form
+894: To identify you and personalise our communication
+895: Phone number
+896: Assessment booking form, contact form
+897: To contact you to confirm your booking and arrange your assessment
+898: Email address
+899: Assessment booking form, contact form, newsletter signup
+900: To send confirmations, quotes, and (with consent) service communications
+901: Physical address / suburb
+902: Assessment booking form
+903: To plan travel route and confirm we service your area
+904: Property details
+905: Assessment booking form
+906: To prepare appropriate equipment and cleaning solutions
+907: Service preferences
+908: Assessment booking form
+909: To tailor our service to your specific needs
+910: Marketing consent preference
+911: Assessment booking form (Step 4)
+912: To ensure we only send marketing communications with your explicit permission
+913: Information Collected Automatically:
+914: Information Type
+915: How We Collect It
+916: Why We Collect It
+917: IP address
+918: Server logs, Google Analytics
+919: Website security and usage analytics
+920: Browser type and version
+921: Google Analytics
+922: To improve website compatibility and user experience
+923: Device information
+924: Google Analytics
+925: To optimise our website for different devices
+926: Pages visited and time spent
+927: Google Analytics
+928: To understand which content is most helpful to our visitors
+929: Referring website
+930: Google Analytics
+931: To measure the effectiveness of our marketing efforts
+932: What We Do NOT Collect: - Identity numbers or passport details - Banking or credit card information (we do not process payments through our website) - Race, gender, or demographic information - Health information (unless voluntarily shared in relation to allergy-sensitive cleaning requirements) - Location data beyond the suburb you provide
+933: 3. How We Use Your Data
+934: Section Title
+935: How We Use Your Personal Information
+936: Content
+937: We process your personal information in accordance with the lawful grounds for processing set out in POPIA, primarily with your consent and for the performance of our services at your request.
+938: Primary Purposes (Legitimate Service Provision):
+939: To arrange your free on-site assessment — We use your contact details to reach you, confirm your booking, and coordinate a suitable time for Kathy to visit your property.
+940: To conduct your assessment — Your property details and service requirements help Kathy prepare the correct equipment, cleaning solutions, and fabric expertise for your specific needs.
+941: To provide your written quotation — Your contact details allow us to deliver your detailed, written quote following the assessment.
+942: To deliver our services — If you proceed with booking, we use your information to schedule, execute, and invoice for our cleaning services.
+943: To communicate about your booking — We may contact you via phone, WhatsApp, or email regarding appointment confirmations, changes, or service updates.
+944: Secondary Purposes (With Your Explicit Consent Only):
+945: Marketing communications — If you opt in, we send:
+946: Seasonal curtain and fabric care tips
+947: Subscriber-exclusive special offers
+948: Your 10% first-clean discount code
+949: Occasional service updates and new offering announcements
+950: You may withdraw this consent at any time by clicking “Unsubscribe” in any email or contacting info@curtaincleaning.org.
+951: Service improvement — With your permission, we may follow up after service completion to request feedback or a review.
+952: We will never: - Use your data for purposes not disclosed in this policy - Send you marketing communications without your explicit opt-in consent - Process your data in a manner that is incompatible with the purposes for which it was originally collected
+953: 4. Data Sharing
+954: Section Title
+955: Data Sharing and Third Parties
+956: Content
+957: We do not sell, rent, trade, or otherwise share your personal information with third parties for their marketing purposes.
+958: Third Parties Who May Process Your Data:
+959: Third Party
+960: Purpose
+961: Data Shared
+962: Safeguards
+963: Google Analytics
+964: Website usage analytics
+965: Anonymised IP address, browser data, page views
+966: Data is aggregated and anonymised. You may opt out via our cookie banner.
+967: WhatsApp Inc. (Meta)
+968: Communication delivery
+969: Phone number (when you message us)
+970: End-to-end encrypted messaging. Standard Meta privacy policy applies.
+971: Website hosting provider
+972: Secure data storage
+973: Form submission data
+974: SSL encryption, secure server environment, access limited to authorised personnel only.
+975: Legal Disclosure: We may disclose your personal information if required to do so by law, court order, or in response to a valid request by a public authority (including for national security or law enforcement purposes). This is in accordance with Section 11 of POPIA.
+976: Business Transfer: In the unlikely event of a merger, acquisition, or sale of our business, your information may be transferred as a business asset. We will notify you via email and/or a prominent notice on our website of any change in ownership or use of your personal information.
+977: 5. Cookies
+978: Section Title
+979: Cookies and Tracking Technologies
+980: Content
+981: Our website uses cookies and similar tracking technologies to improve your browsing experience and understand how our website is used. You can control cookies through your browser settings and our cookie consent banner.
+982: Essential Cookies (Required):
+983: These cookies are necessary for the website to function properly. They cannot be disabled.
+984: Cookie Name
+985: Purpose
+986: Duration
+987: ots_session
+988: Maintains your booking form progress across steps
+989: Session
+990: ots_cookie_consent
+991: Records your cookie preference
+992: 1 year
+993: csrf_token
+994: Security token for form submissions
+995: Session
+996: Analytics Cookies (Optional — Requires Consent):
+997: These cookies help us understand how visitors interact with our website. All data is collected in an anonymised form.
+998: Cookie Name
+999: Purpose

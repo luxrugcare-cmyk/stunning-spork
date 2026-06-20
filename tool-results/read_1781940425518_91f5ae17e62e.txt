@@ -1,0 +1,402 @@
+   600→   600→      ],
+   601→   601→      concerns: [
+   602→   602→        { question: "How long does fire proofing last?", answer: "Our fire proofing treatment is valid for the period specified by SANS regulations. We provide renewal reminders and discounted reapplication." },
+   603→   603→        { question: "Is it required by law?", answer: "Yes, for most public venues including hotels, theatres, schools, and healthcare facilities. Non-compliance can result in fines and insurance claim rejections." },
+   604→   604→        { question: "Can you work after hours?", answer: "Absolutely. We specialise in after-hours application for hospitality and entertainment venues to ensure zero operational disruption." },
+   605→   605→      ],
+   606→   606→    },
+   607→   607→    sidebar: {
+   608→   608→      assessmentHeading: "Free Fire Safety Assessment",
+   609→   609→      assessmentItems: ["Current compliance review", "Item identification", "Fabric compatibility testing", "Written quote with timeline", "Certificate samples"],
+   610→   610→      guarantees: ["SANS Compliant", "Fire Certificates Issued", "Insurance Recognised", "After-Hours Available", "5-Step Certified Process"],
+   611→   611→    },
+   612→   612→    ctaBand: { heading: "Ensure Your Venue Is Fire Safety Compliant", subtext: "Book your free fire safety assessment today. We'll review your compliance and provide a detailed quote." },
+   613→   613→    newsletter: { heading: "Compliance Updates", subtext: "Subscribe for fire safety regulation updates and compliance reminders." },
+   614→   614→  },
+   615→   615→  "rug-care": {
+   616→   616→    slug: "rug-care",
+   617→   617→    metaTitle: "Persian & Oriental Rug Cleaning Johannesburg | On The Spot",
+   618→   618→    metaDescription: "Expert Persian and Oriental rug cleaning Johannesburg. Dye stability testing, hand-woven specialist care, on-site or collection service. Free assessment. Call 075 011 9200.",
+   619→   619→    heroTag: "Persian & Oriental Rug Care",
+   620→   620→    heroHeading: "Expert Care for Your Most Precious Rugs",
+   621→   621→    heroSubtext: "Hand-woven rugs deserve hand-selected cleaning methods.",
+   622→   622→    heroParagraph: "Persian, Oriental, and hand-woven rugs are works of art — often passed down through generations or acquired at significant expense. They require a completely different approach to standard carpet cleaning. At On The Spot, we understand the construction, dyes, and fibres of these specialist pieces and apply cleaning methods that preserve their beauty, colour, and value.",
+   623→   623→    trustStrip: ["Specialist Rug Care", "Dye Stability Testing", "On-Site or Collection", "Free Assessment Within 48 Hours"],
+   624→   624→    guarantees: [
+   625→   625→      { icon: "Shield", label: "Dye Stability Tested" },
+   626→   626→      { icon: "Heart", label: "Hand-Woven Specialist" },
+   627→   627→      { icon: "Lock", label: "No Hidden Costs" },
+   628→   628→      { icon: "Home", label: "On-Site or Collection" },
+   629→   629→      { icon: "Award", label: "6-Step Process" },
+   630→   630→    ],
+   631→   631→    mainContent: {
+   632→   632→      heading: "Why Hand-Woven Rugs Need Specialist Care",
+   633→   633→      paragraphs: [
+   634→   634→        "Machine-made carpets can withstand aggressive cleaning methods. Hand-woven rugs cannot. The dyes in Persian and Oriental rugs can bleed if exposed to the wrong chemicals or excessive moisture. The natural fibres — wool, silk, cotton — each require specific pH-balanced treatments. The hand-knotted construction can be damaged by heavy equipment.",
+   635→   635→        "That's why our rug care process begins with dye stability testing — we apply a tiny amount of cleaning solution to an inconspicuous area and check for colour movement before we begin. Only when we've confirmed the dyes are stable do we proceed with cleaning.",
+   636→   636→      ],
+   637→   637→      includes: [
+   638→   638→        { title: "Dye stability testing", description: "Every rug is tested for colourfastness before any cleaning begins. We never skip this step." },
+   639→   639→        { title: "Specialist cleaning methods", description: "pH-balanced, fibre-specific solutions matched to wool, silk, cotton, and blended constructions." },
+   640→   640→        { title: "On-site or collection service", description: "Choose the option that suits you — we can clean smaller rugs on-site or arrange collection for larger pieces." },
+   641→   641→        { title: "Expert handling", description: "Our technicians are trained specifically in the care of hand-woven and antique rugs." },
+   642→   642→        { title: "6-step specialist process", description: "A meticulous, multi-stage process designed for the unique needs of valuable rugs." },
+   643→   643→      ],
+   644→   644→      processSteps: [
+   645→   645→        { step: 1, title: "Rug Assessment", description: "Identify construction type, fibre content, and any existing damage or wear patterns." },
+   646→   646→        { step: 2, title: "Dye Stability Test", description: "Apply test solution to inconspicuous area and check for colour movement." },
+   647→   647→        { step: 3, title: "Dust Extraction", description: "Specialist vibration equipment removes deep-set dust and grit from the rug foundation." },
+   648→   648→        { step: 4, title: "Gentle Cleaning", description: "pH-balanced, fibre-specific solutions applied by hand for thorough yet gentle cleaning." },
+   649→   649→        { step: 5, title: "Rinse & Moisture Extraction", description: "Thorough rinse with controlled water extraction to remove all cleaning residue." },
+   650→   650→        { step: 6, title: "Drying & Final Inspection", description: "Flat drying to maintain shape, followed by Kathy's personal inspection of every rug." },
+   651→   651→      ],
+   652→   652→      concerns: [
+   653→   653→        { question: "Will the colours bleed?", answer: "We perform dye stability testing before every clean. If we identify any risk, we adjust our method accordingly. Your rug's colours are protected." },
+   654→   654→        { question: "Can you clean silk rugs?", answer: "Yes. Silk rugs require the most delicate approach, and our technicians are specifically trained in silk rug care." },
+   655→   655→        { question: "Do I need to bring the rug to you?", answer: "No. We offer on-site cleaning for smaller rugs and a collection service for larger pieces that need more intensive treatment." },
+   656→   656→      ],
+   657→   657→      tableData: {
+   658→   658→        headers: ["Rug Type", "Construction"],
+   659→   659→        rows: [
+   660→   660→          ["Persian rugs", "Hand-knotted wool"],
+   661→   661→          ["Oriental rugs", "Hand-knotted silk"],
+   662→   662→          ["Turkish kilims", "Flat-woven wool"],
+   663→   663→          ["Moroccan rugs", "Hand-knotted wool/cotton"],
+   664→   664→          ["Indian dhurries", "Flat-woven cotton"],
+   665→   665→          ["Caucasian rugs", "Hand-knotted wool"],
+   666→   666→          ["Chinese art deco", "Hand-knotted silk/wool"],
+   667→   667→          ["Berber rugs", "Hand-knotted wool"],
+   668→   668→        ],
+   669→   669→      },
+   670→   670→    },
+   671→   671→    sidebar: {
+   672→   672→      assessmentHeading: "Free Rug Assessment",
+   673→   673→      assessmentItems: ["Construction type identification", "Fibre content analysis", "Dye stability pre-test", "Written quote", "Service option recommendation"],
+   674→   674→      guarantees: ["Dye Stability Tested", "Hand-Woven Specialist", "No Hidden Costs", "On-Site or Collection", "6-Step Specialist Process"],
+   675→   675→    },
+   676→   676→    ctaBand: { heading: "Your Rugs Deserve Expert Care", subtext: "Book your free rug assessment today. We'll evaluate your rug and recommend the best treatment approach." },
+   677→   677→    newsletter: { heading: "Rug Care Tips from Kathy", subtext: "Subscribe for seasonal advice on maintaining the beauty and value of your hand-woven rugs." },
+   678→   678→  },
+   679→   679→};
+   680→   680→
+   681→   681→export const SECTOR_LANDING_DATA: Record<string, {
+   682→   682→  slug: string;
+   683→   683→  metaTitle: string;
+   684→   684→  metaDescription: string;
+   685→   685→  heroTag: string;
+   686→   686→  heroHeading: string;
+   687→   687→  heroSubtext: string;
+   688→   688→  heroParagraph: string;
+   689→   689→  color: string;
+   690→   690→  trustStrip: string[];
+   691→   691→  guarantees: { icon: string; label: string }[];
+   692→   692→  keyStats: { label: string; description: string }[];
+   693→   693→  decisionMaker: {
+   694→   694→    role: string;
+   695→   695→    heading: string;
+   696→   696→    paragraphs: string[];
+   697→   697→    ctaBox: { heading: string; items: string[] };
+   698→   698→  };
+   699→   699→  faqs: { question: string; answer: string }[];
+   700→   700→  ctaBand: { heading: string; subtext: string };
+   701→   701→  newsletter: { heading: string; subtext: string };
+   702→   702→}> = {
+   703→   703→  "hotels": {
+   704→   704→    slug: "hotels",
+   705→   705→    metaTitle: "Hotel Curtain Cleaning Johannesburg | Zero Disruption | On The Spot",
+   706→   706→    metaDescription: "Professional on-site hotel curtain cleaning Johannesburg. Zero guest disruption, after-hours available, fire certificate included. Free assessment.",
+   707→   707→    heroTag: "Hotels & Hospitality",
+   708→   708→    heroHeading: "Hotel Curtain Cleaning — Zero Guest Disruption",
+   709→   709→    heroSubtext: "On-site in the room. Same-day return. Fire certificate included.",
+   710→   710→    heroParagraph: "Your hotel's curtains are one of the first things guests notice — and one of the last things that get professionally cleaned. Between high occupancy rates, tight turnaround schedules, and the absolute requirement for zero guest disruption, curtain cleaning often falls to the bottom of the maintenance list. On The Spot changes that completely.",
+   711→   711→    color: "#0A369D",
+   712→   712→    trustStrip: ["Zero Room Downtime", "After-Hours Available", "Fire Certificates Included", "Same-Day Room Return"],
+   713→   713→    guarantees: [
+   714→   714→      { icon: "Shield", label: "100% No-Shrinkage Guarantee" },
+   715→   715→      { icon: "Clock", label: "After-Hours Available" },
+   716→   716→      { icon: "Flame", label: "Fire Certificate Included" },
+   717→   717→      { icon: "CheckCircle", label: "Same-Day Room Return" },
+   718→   718→    ],
+   719→   719→    keyStats: [
+   720→   720→      { label: "Zero Room Downtime", description: "Curtains cleaned in situ. Rooms stay rentable. No revenue loss, no room-blocking headaches." },
+   721→   721→      { label: "After-Hours Service", description: "Our teams work night shifts to clean curtains while guests sleep. Zero disruption to operations." },
+   722→   722→      { label: "Fire Compliance", description: "We issue fire safety certificates required by the hospitality sector. One service, two compliance boxes ticked." },
+   723→   723→      { label: "Same-Day Completion", description: "Curtains are cleaned, fresh, and ready before housekeeping turns the room. No drying time." },
+   724→   724→    ],
+   725→   725→    decisionMaker: {
+   726→   726→      role: "General Manager",
+   727→   727→      heading: "Why General Managers Choose On The Spot",
+   728→   728→      paragraphs: [
+   729→   729→        "As a General Manager, you're accountable for guest satisfaction scores, room revenue, compliance, and operating costs. Traditional curtain cleaning forces you to choose between clean curtains and occupied rooms — On The Spot eliminates that compromise entirely.",
+   730→   730→        "Our on-site dry-cleaning process means curtains are cleaned in the room, while the room remains available. No removing curtains, no bare windows, no out-of-order rooms, no lost revenue. Our teams can work during the day in empty rooms or after hours during full occupancy — whatever suits your property best.",
+   731→   731→        "We also provide the fire compliance certificates that the hospitality sector requires, making us a single-service solution for both cleanliness and compliance. One booking, two boxes ticked.",
+   732→   732→      ],
+   733→   733→      ctaBox: { heading: "Request Your Free Hotel Assessment", items: ["Full property curtain audit", "Room-by-room quote", "Fire compliance review", "After-hours scheduling", "Revenue impact analysis"] },
+   734→   734→    },
+   735→   735→    faqs: [
+   736→   736→      { question: "Can you clean hotel curtains after hours?", answer: "Yes — after-hours service is our standard for the hospitality industry. Our teams work night shifts to ensure zero guest disruption. We coordinate with your front desk and housekeeping schedule." },
+   737→   737→      { question: "Do you issue fire compliance certificates?", answer: "Yes. We provide SANS-compliant fire retardant treatment and issue the necessary certificates recognised by insurance companies and regulatory bodies." },
+   738→   738→      { question: "How many rooms can you clean in one night?", answer: "Depending on curtain type and soiling level, our team can typically clean 8-15 rooms per night shift. We'll provide a detailed schedule during your free assessment." },
+   739→   739→      { question: "What about blackout curtains?", answer: "Blackout-lined curtains are one of our specialities. Our dry-cleaning process won't damage thermal backing or cause peeling and cracking." },
+   740→   740→    ],
+   741→   741→    ctaBand: { heading: "Zero Disruption. Full Compliance. Clean Curtains.", subtext: "Book your free hotel assessment today. We'll audit your property and provide a detailed schedule and quote." },
+   742→   742→    newsletter: { heading: "Hospitality Maintenance Insights", subtext: "Subscribe for seasonal tips on maintaining guest room fabrics and compliance updates." },
+   743→   743→  },
+   744→   744→  "corporate": {
+   745→   745→    slug: "corporate",
+   746→   746→    metaTitle: "Office Curtain Cleaning Johannesburg | Facilities Management | On The Spot",
+   747→   747→    metaDescription: "Professional on-site office curtain cleaning Johannesburg. Quarterly maintenance, indoor air quality reports, minimal disruption. Free assessment.",
+   748→   748→    heroTag: "Corporate Offices",
+   749→   749→    heroHeading: "Office Curtain Cleaning — Facilities Management Made Simple",
+   750→   750→    heroSubtext: "Quarterly programmes. Air quality reports. Minimal disruption.",
+   751→   751→    heroParagraph: "Corporate environments demand a different approach to curtain cleaning. Boardrooms, executive offices, and reception areas project your company's image — and dirty, dusty curtains undermine that image entirely. On The Spot provides scheduled maintenance programmes designed for facilities managers who need reliable, professional service with minimal workplace disruption.",
+   752→   752→    color: "#082D84",
+   753→   753→    trustStrip: ["Quarterly Maintenance", "Air Quality Reports", "Minimal Disruption", "Professional Standards"],
+   754→   754→    guarantees: [
+   755→   755→      { icon: "Shield", label: "No-Shrinkage Guarantee" },
+   756→   756→      { icon: "Clock", label: "After-Hours Available" },
+   757→   757→      { icon: "FileText", label: "Air Quality Reports" },
+   758→   758→      { icon: "Calendar", label: "Quarterly Scheduling" },
+   759→   759→    ],
+   760→   760→    keyStats: [
+   761→   761→      { label: "Quarterly Programmes", description: "Scheduled maintenance ensures your office curtains are always clean. No more forgotten cleaning cycles." },
+   762→   762→      { label: "Indoor Air Quality", description: "We provide before-and-after air quality reports documenting the improvement in your workspace environment." },
+   763→   763→      { label: "Minimal Disruption", description: "We work after hours or during low-occupancy periods. Your business continues uninterrupted." },
+   764→   764→      { label: "Professional Standards", description: "Reception areas, boardrooms, and executive offices maintained to the highest standard." },
+   765→   765→    ],
+   766→   766→    decisionMaker: {
+   767→   767→      role: "Facilities Manager",
+   768→   768→      heading: "Why Facilities Managers Choose On The Spot",
+   769→   769→      paragraphs: [
+   770→   770→        "As a Facilities Manager, you need reliable service providers who deliver on schedule, on budget, and without disruption. On The Spot's quarterly maintenance programmes are designed to integrate seamlessly with your existing building maintenance schedule.",
+   771→   771→        "We provide detailed indoor air quality reports with every service — documentation you can present to management as evidence of a healthier, more productive workspace. Our technicians are professional, uniformed, and trained to work in corporate environments.",
+   772→   772→      ],
+   773→   773→      ctaBox: { heading: "Request Your Free Office Assessment", items: ["Full office curtain audit", "Air quality baseline report", "Quarterly maintenance proposal", "After-hours scheduling", "Budget-friendly pricing"] },
+   774→   774→    },
+   775→   775→    faqs: [
+   776→   776→      { question: "Do you offer quarterly maintenance contracts?", answer: "Yes. Our quarterly programmes include scheduled visits, priority booking, and preferential pricing. Your curtains stay clean year-round." },
+   777→   777→      { question: "Can you work after hours?", answer: "Absolutely. We routinely work after hours in corporate environments to ensure zero disruption to your business operations." },
+   778→   778→      { question: "What are air quality reports?", answer: "We measure airborne allergen and dust levels before and after cleaning, providing you with documented evidence of improved indoor air quality." },
+   779→   779→      { question: "Do you clean boardroom curtains?", answer: "Yes — boardrooms, executive offices, reception areas, and common spaces. We handle all corporate curtain types." },
+   780→   780→    ],
+   781→   781→    ctaBand: { heading: "Professional Curtain Care for Professional Spaces", subtext: "Book your free office assessment. We'll audit your workspace and design a maintenance programme." },
+   782→   782→    newsletter: { heading: "Facilities Management Insights", subtext: "Subscribe for tips on maintaining professional workspaces and indoor air quality." },
+   783→   783→  },
+   784→   784→  "healthcare": {
+   785→   785→    slug: "healthcare",
+   786→   786→    metaTitle: "Hospital Curtain Cleaning Johannesburg | Infection Control | On The Spot",
+   787→   787→    metaDescription: "Clinical-grade hospital curtain cleaning Johannesburg. HAI prevention, infection-control protocols, medical compliance. Free assessment.",
+   788→   788→    heroTag: "Healthcare",
+   789→   789→    heroHeading: "Hospital Curtain Cleaning — Infection Control Compliant",
+   790→   790→    heroSubtext: "Clinical standards. Infection-control protocols. Compliance documentation.",
+   791→   791→    heroParagraph: "Healthcare environments have the highest hygiene standards of any sector — and your curtain cleaning must meet those standards. On The Spot provides clinical-grade curtain cleaning services specifically designed for hospitals, clinics, and medical facilities, with infection-control protocols that align with your facility's hygiene requirements.",
+   792→   792→    color: "#059669",
+   793→   793→    trustStrip: ["Clinical-Grade Sanitisation", "HAI Prevention", "Infection-Control Protocols", "Compliance Documentation"],
+   794→   794→    guarantees: [
+   795→   795→      { icon: "Shield", label: "Infection-Control Compliant" },
+   796→   796→      { icon: "Heart", label: "HAI Prevention" },
+   797→   797→      { icon: "FileText", label: "Compliance Documentation" },
+   798→   798→      { icon: "Clock", label: "Flexible Scheduling" },
+   799→   799→    ],
+   800→   800→    keyStats: [
+   801→   801→      { label: "Clinical-Grade", description: "Our cleaning meets healthcare hygiene standards. Solvent-based dry cleaning eliminates pathogens without introducing moisture." },
+   802→   802→      { label: "HAI Prevention", description: "Healthcare-Associated Infections can be linked to contaminated soft furnishings. Our service is part of your infection-control arsenal." },
+   803→   803→      { label: "Compliance Documentation", description: "Full documentation of cleaning protocols, products used, and schedules maintained for your compliance records." },
+   804→   804→      { label: "Flexible Scheduling", description: "We work around ward schedules, theatre availability, and clinic hours." },
+   805→   805→    ],
+   806→   806→    decisionMaker: {
+   807→   807→      role: "Infection Control Officer",
+   808→   808→      heading: "Why Infection Control Officers Trust On The Spot",
+   809→   809→      paragraphs: [
+   810→   810→        "Infection control is about eliminating vectors — and curtains in patient areas are a documented vector for pathogen transmission. Traditional wet cleaning can introduce moisture that promotes bacterial growth. Our dry-cleaning process eliminates pathogens without creating the damp conditions that bacteria thrive in.",
+   811→   811→        "We provide full documentation of our cleaning protocols, the products used, and the schedule maintained — exactly the kind of records infection control officers need for compliance audits.",
+   812→   812→      ],
+   813→   813→      ctaBox: { heading: "Request Your Free Healthcare Assessment", items: ["Infection-control review", "Protocol documentation", "Compliance gap analysis", "Scheduling plan", "Quote"] },
+   814→   814→    },
+   815→   815→    faqs: [
+   816→   816→      { question: "Do you follow infection-control protocols?", answer: "Yes. Our protocols are designed to align with healthcare facility infection-control requirements, including PPE, pathogen elimination, and full documentation." },
+   817→   817→      { question: "Can you clean patient area curtains?", answer: "Absolutely. Our dry-cleaning process eliminates pathogens without introducing moisture, making it ideal for patient areas." },
+   818→   818→      { question: "Do you provide compliance documentation?", answer: "Yes. We provide full documentation including cleaning protocols, products used, and schedule records for your compliance files." },
+   819→   819→    ],
+   820→   820→    ctaBand: { heading: "Infection-Control Compliant Curtain Cleaning", subtext: "Book your free healthcare facility assessment today." },
+   821→   821→    newsletter: { heading: "Healthcare Hygiene Updates", subtext: "Subscribe for infection-control updates and compliance information." },
+   822→   822→  },
+   823→   823→  "education": {
+   824→   824→    slug: "education",
+   825→   825→    metaTitle: "School Curtain Cleaning Johannesburg | Holiday Scheduling | On The Spot",
+   826→   826→    metaDescription: "School curtain cleaning Johannesburg. Holiday scheduling, allergen audits, child-safe products. Free assessment within 48 hours.",
+   827→   827→    heroTag: "Schools & Education",
+   828→   828→    heroHeading: "School Curtain Cleaning — Holiday Scheduling Available",
+   829→   829→    heroSubtext: "Child-safe products. Holiday scheduling. Allergen audits included.",
+   830→   830→    heroParagraph: "Schools, crèches, and universities present unique curtain cleaning challenges: large volumes of fabric, tight term-time schedules, and the absolute requirement for child-safe cleaning products. On The Spot provides scheduled holiday-period cleaning with allergen audit documentation and non-toxic, child-safe cleaning solutions.",
+   831→   831→    color: "#D97706",
+   832→   832→    trustStrip: ["Holiday Scheduling", "Child-Safe Products", "Allergen Audits", "Term-Time Flexibility"],
+   833→   833→    guarantees: [
+   834→   834→      { icon: "Shield", label: "Child-Safe Products" },
+   835→   835→      { icon: "Calendar", label: "Holiday Scheduling" },
+   836→   836→      { icon: "FileText", label: "Allergen Audits" },
+   837→   837→      { icon: "Clock", label: "Term-Time Flexibility" },
+   838→   838→    ],
+   839→   839→    keyStats: [
+   840→   840→      { label: "Holiday Scheduling", description: "We schedule cleanings during school holidays to ensure zero disruption to the academic calendar." },
+   841→   841→      { label: "Child-Safe Products", description: "All cleaning products are non-toxic and safe for environments where children are present." },
+   842→   842→      { label: "Allergen Audits", description: "Before-and-after allergen testing documents the improvement in your school's indoor air quality." },
+   843→   843→      { label: "Flexible Booking", description: "Priority booking during holiday periods ensures your preferred dates are always available." },
+   844→   844→    ],
+   845→   845→    decisionMaker: {
+   846→   846→      role: "Principal / Bursar",
+   847→   847→      heading: "Why Principals and Bursars Choose On The Spot",
+   848→   848→      paragraphs: [
+   849→   849→        "School budgets are tight and schedules are inflexible. On The Spot works within your term calendar, scheduling cleanings during holidays when classrooms and halls are empty. Our child-safe cleaning products ensure that when students return, the environment is not just clean — it's healthy.",
+   850→   850→        "We also provide allergen audit documentation that can support your school's health and safety compliance records.",
+   851→   851→      ],
+   852→   852→      ctaBox: { heading: "Request Your Free School Assessment", items: ["Full curtain audit", "Allergen baseline test", "Holiday scheduling plan", "Child-safe product certification", "Budget-friendly quote"] },
+   853→   853→    },
+   854→   854→    faqs: [
+   855→   855→      { question: "Do you clean during school holidays?", answer: "Yes — holiday scheduling is our standard for schools. We prioritise school bookings during holiday periods to ensure availability." },
+   856→   856→      { question: "Are your products safe for children?", answer: "Absolutely. All products used in school environments are non-toxic, hypoallergenic, and certified child-safe." },
+   857→   857→      { question: "Can you clean assembly hall curtains?", answer: "Yes — assembly halls, classrooms, libraries, and administrative offices. We handle all school curtain types and sizes." },
+   858→   858→    ],
+   859→   859→    ctaBand: { heading: "Clean, Safe Curtains for Every Classroom", subtext: "Book your free school assessment before the next holiday period." },
+   860→   860→    newsletter: { heading: "School Maintenance Tips", subtext: "Subscribe for holiday maintenance reminders and school facility care advice." },
+   861→   861→  },
+   862→   862→  "theatres": {
+   863→   863→    slug: "theatres",
+   864→   864→    metaTitle: "Theatre Curtain Cleaning Johannesburg | Fire Compliance | On The Spot",
+   865→   865→    metaDescription: "Theatre curtain cleaning Johannesburg. Fire certificate compliance, acoustic restoration, dark-week scheduling. Free assessment.",
+   866→   866→    heroTag: "Theatres & Venues",
+   867→   867→    heroHeading: "Theatre Curtain Cleaning — Acoustic & Fire Compliance",
+   868→   868→    heroSubtext: "Fire certificates. Acoustic restoration. Dark-week scheduling.",
+   869→   869→    heroParagraph: "Theatres and performance venues present unique challenges: heavy stage curtains that affect acoustics, strict fire safety regulations, and limited scheduling windows during dark weeks. On The Spot specialises in cleaning the curtains that matter most to your venue's safety, sound quality, and visual impact.",
+   870→   870→    color: "#6C3483",
+   871→   871→    trustStrip: ["Fire Certificate Compliance", "Acoustic Restoration", "Dark-Week Scheduling", "Stage Curtain Specialists"],
+   872→   872→    guarantees: [
+   873→   873→      { icon: "Flame", label: "Fire Certificate Compliance" },
+   874→   874→      { icon: "Music", label: "Acoustic Restoration" },
+   875→   875→      { icon: "Calendar", label: "Dark-Week Scheduling" },
+   876→   876→      { icon: "Theater", label: "Stage Curtain Specialists" },
+   877→   877→    ],
+   878→   878→    keyStats: [
+   879→   879→      { label: "Fire Compliance", description: "SANS-compliant fire retardant treatment with certificates required for public performance venues." },
+   880→   880→      { label: "Acoustic Restoration", description: "Dust-laden stage curtains absorb sound differently. Cleaning restores their acoustic properties." },
+   881→   881→      { label: "Dark-Week Scheduling", description: "We schedule during dark weeks and maintenance periods when the stage is available." },
+   882→   882→      { label: "Stage Curtain Specialists", description: "Main curtains, legs, borders, backdrops, and cycloramas — we clean them all." },
+   883→   883→    ],
+   884→   884→    decisionMaker: {
+   885→   885→      role: "Stage Manager",
+   886→   886→      heading: "Why Stage Managers Trust On The Spot",
+   887→   887→      paragraphs: [
+   888→   888→        "Stage curtains are not just window treatments — they're critical to both safety and acoustics. Heavy velvet main curtains, flying legs, and cycloramas require specialist handling that ordinary curtain cleaners cannot provide. Our technicians understand theatre terminology, work around rigging and fly systems, and schedule during your dark weeks.",
+   889→   889→        "We also provide fire compliance certificates that are essential for maintaining your venue's operating licence.",
+   890→   890→      ],
+   891→   891→      ctaBox: { heading: "Request Your Free Venue Assessment", items: ["Full curtain inventory", "Fire compliance review", "Acoustic assessment", "Dark-week scheduling", "Quote"] },
+   892→   892→    },
+   893→   893→    faqs: [
+   894→   894→      { question: "Can you clean main stage curtains?", answer: "Yes — main curtains, legs, borders, backdrops, and cycloramas. Our technicians are trained to work with fly systems and rigging." },
+   895→   895→      { question: "Do you provide fire certificates?", answer: "Yes. SANS-compliant fire retardant treatment and certificates for public performance venues." },
+   896→   896→      { question: "What is dark-week scheduling?", answer: "We schedule cleanings during your venue's dark weeks — periods when there are no performances and the stage is available for maintenance." },
+   897→   897→    ],
+   898→   898→    ctaBand: { heading: "Safe, Clean, Acoustically Perfect Curtains", subtext: "Book your free venue assessment during your next dark week." },
+   899→   899→    newsletter: { heading: "Venue Maintenance Insights", subtext: "Subscribe for fire compliance updates and venue maintenance advice." },
+   900→   900→  },
+   901→   901→  "residential": {
+   902→   902→    slug: "residential",
+   903→   903→    metaTitle: "Home Curtain Cleaning Johannesburg | No Removal | On The Spot",
+   904→   904→    metaDescription: "Residential curtain cleaning Johannesburg. No removal, no shrinkage guarantee, hardware repair included. Free assessment within 48 hours. Call 075 011 9200.",
+   905→   905→    heroTag: "Residential",
+   906→   906→    heroHeading: "Home Curtain Cleaning — No Removal, No Shrinkage",
+   907→   907→    heroSubtext: "Cleaned where they hang. Hardware repair included. 100% guaranteed.",
+   908→   908→    heroParagraph: "Your home deserves the same professional care that we provide to Johannesburg's top hotels and corporate offices — and that's exactly what On The Spot delivers. Our on-site dry-cleaning process means your curtains are cleaned perfectly without ever leaving your windows. No bare rooms, no waiting for curtains to be returned, no risk of shrinkage.",
+   909→   909→    color: "#0A369D",
+   910→   910→    trustStrip: ["No Removal Needed", "No-Shrinkage Guarantee", "Hardware Repair Included", "Free Assessment Within 48 Hours"],
+   911→   911→    guarantees: [
+   912→   912→      { icon: "Shield", label: "100% No-Shrinkage Guarantee" },
+   913→   913→      { icon: "Wrench", label: "Hardware Repair Included" },
+   914→   914→      { icon: "Heart", label: "All Fabric Types" },
+   915→   915→      { icon: "Home", label: "Convenient Scheduling" },
+   916→   916→    ],
+   917→   917→    keyStats: [
+   918→   918→      { label: "No Removal", description: "Curtains cleaned where they hang. Your windows are never bare, your rooms never exposed." },
+   919→   919→      { label: "No Shrinkage", description: "Our dry-cleaning process contains zero water. Shrinkage is impossible. We guarantee it." },
+   920→   920→      { label: "Hardware Included", description: "Tracks, rods, rings, and pulleys inspected and minor repairs included at no extra charge." },
+   921→   921→      { label: "48-Hour Response", description: "We aim to schedule your free assessment within 48 hours of your call or WhatsApp." },
+   922→   922→    ],
+   923→   923→    decisionMaker: {
+   924→   924→      role: "Homeowner",
+   925→   925→      heading: "Why 5,000+ Johannesburg Homeowners Trust On The Spot",
+   926→   926→      paragraphs: [
+   927→   927→        "Your curtains are one of the most significant investments in your home's interior — and conventional cleaning puts that investment at risk. Removing curtains from their tracks can damage hardware, stretch fabric, and introduce shrinkage. Transporting them to a cleaning facility exposes them to damage and loss. Waiting days or weeks for their return leaves your windows bare.",
+   928→   928→        "On The Spot eliminates all of these risks. Our on-site dry-cleaning process means your curtains never leave your home. They're cleaned, refreshed, and looking their best before we leave — typically within 2-4 hours for a standard residential clean.",
+   929→   929→      ],
+   930→   930→      ctaBox: { heading: "Book Your Free Home Assessment", items: ["Fabric type identification", "Hardware condition check", "Written, itemised quote", "Recommended treatment plan", "Scheduling within 48 hours"] },
+   931→   931→    },
+   932→   932→    faqs: [
+   933→   933→      { question: "Will my curtains shrink?", answer: "Absolutely not — we guarantee it. Our dry-cleaning process uses no water, which means zero shrinkage risk. If your curtains shrink after our cleaning, we replace them at our cost." },
+   934→   934→      { question: "Do I need to take my curtains down?", answer: "No — that's our entire business model. We clean your curtains where they hang. No removal, no re-hanging, no hassle." },
+   935→   935→      { question: "How long does it take?", answer: "A standard residential clean takes 2-4 hours for an average home. Your windows are never bare." },
+   936→   936→      { question: "What does the hardware check include?", answer: "We inspect tracks, rods, rings, pulleys, and mechanisms. Minor repairs like replacing rings or lubricating tracks are included at no extra charge." },
+   937→   937→    ],
+   938→   938→    ctaBand: { heading: "Fresh Curtains Without the Fuss", subtext: "Book your free home assessment today. Kathy will visit within 48 hours." },
+   939→   939→    newsletter: { heading: "Home Fabric Care Tips", subtext: "Subscribe for seasonal curtain care advice and exclusive offers for Johannesburg homeowners." },
+   940→   940→  },
+   941→   941→};
+   942→   942→
+   943→   943→export const AREA_LANDING_DATA: Record<string, {
+   944→   944→  slug: string;
+   945→   945→  metaTitle: string;
+   946→   946→  metaDescription: string;
+   947→   947→  heroTag: string;
+   948→   948→  heroHeading: string;
+   949→   949→  heroSubtext: string;
+   950→   950→  heroParagraph: string;
+   951→   951→  suburbs: string[];
+   952→   952→  focus: string;
+   953→   953→  mainContent: {
+   954→   954→    heading: string;
+   955→   955→    paragraphs: string[];
+   956→   956→    servicesTable: { service: string; description: string; priceRange: string }[];
+   957→   957→  };
+   958→   958→  sidebar: {
+   959→   959→    assessmentHeading: string;
+   960→   960→    assessmentItems: string[];
+   961→   961→    guarantees: string[];
+   962→   962→    contact: { phone: string; email: string; response: string };
+   963→   963→  };
+   964→   964→  ctaBand: { heading: string; subtext: string };
+   965→   965→  newsletter: { heading: string; subtext: string };
+   966→   966→}> = {
+   967→   967→  "jhb-north": {
+   968→   968→    slug: "jhb-north",
+   969→   969→    metaTitle: "Curtain Cleaning Johannesburg North | Sandton, Randburg, Fourways | On The Spot",
+   970→   970→    metaDescription: "On-site curtain cleaning Johannesburg North. Sandton, Randburg, Fourways, Bryanston. No removal, no shrinkage. Free assessment within 48 hours.",
+   971→   971→    heroTag: "Curtain Cleaning Johannesburg North",
+   972→   972→    heroHeading: "Curtain Cleaning Johannesburg North | Free On-Site Assessment",
+   973→   973→    heroSubtext: "Serving Sandton, Randburg, Fourways, Bryanston, Hyde Park, Morningside & more. Free assessment within 48 hours.",
+   974→   974→    heroParagraph: "Johannesburg North is the city's premium address — and the place where curtains work hardest. From the glass-walled penthouses of Sandton to the family estates of Bryanston, from the executive homes of Hyde Park to the modern townhouses of Sunninghill and Rivonia, this region has the highest concentration of full-length sheers, layered voiles, and imported designer drapes in Gauteng.",
+   975→   975→    suburbs: ["Sandton", "Randburg", "Fourways", "Bryanston", "Hyde Park", "Morningside", "Lone Hill", "Sunninghill", "Midstream", "Rivonia", "Wendywood", "Houghton Estate"],
+   976→   976→    focus: "Highveld dust on premium fabrics",
+   977→   977→    mainContent: {
+   978→   978→      heading: "The Northern Suburbs Deserve Specialist Curtain Care",
+   979→   979→      paragraphs: [
+   980→   980→        "Those beautiful floor-to-ceiling fabrics are also the most exposed to the relentless Highveld dust that settles across the northern ridge every single day. Johannesburg sits at 1,753 metres above sea level on the Highveld plateau, and the combination of altitude, dry winters, and persistent wind means that fine dust particles settle on curtains year-round — particularly on the north-facing windows that capture the most sunlight.",
+   981→   981→        "Standard cleaning methods can't remove this dust effectively, and washing premium fabrics risks shrinkage, colour fading, and texture damage. On The Spot's on-site dry-cleaning process is specifically designed for this environment: we remove Highveld dust completely without introducing any moisture that could damage delicate fibres.",
+   982→   982→        "Whether you're in a Sandton penthouse with imported Italian sheers, a Bryanston estate with hand-stitched velvet drapes, or a Fourways family home with practical blackout curtains, we bring the same level of expertise and care to every job.",
+   983→   983→      ],
+   984→   984→      servicesTable: [
+   985→   985→        { service: "Curtain & Blind Cleaning", description: "On-site dry cleaning for all curtain and blind types", priceRange: "R800–R5,500" },
+   986→   986→        { service: "Deep Mattress Sanitisation", description: "Clinical dust-mite removal and hypoallergenic treatment", priceRange: "R600–R2,200" },
+   987→   987→        { service: "Upholstery & Carpet Cleaning", description: "Fabric-specific deep cleaning for all furniture", priceRange: "R500–R3,500" },
+   988→   988→        { service: "Master Guarding Protection", description: "12-month stain-repellent coating", priceRange: "R450–R1,800" },
+   989→   989→        { service: "Fire Proofing", description: "SANS-compliant fire retardant treatment", priceRange: "R1,200–R4,500" },
+   990→   990→        { service: "Persian & Oriental Rug Care", description: "Expert handling with dye stability testing", priceRange: "R900–R6,000" },
+   991→   991→      ],
+   992→   992→    },
+   993→   993→    sidebar: {
+   994→   994→      assessmentHeading: "Free Assessment in Johannesburg North",
+   995→   995→      assessmentItems: ["Fabric type identification", "Hardware condition check", "Written quote", "Scheduling within 48 hours"],
+   996→   996→      guarantees: ["No-Shrinkage Guarantee", "No Fabric Damage", "100% Satisfaction", "On-Time Guarantee", "Price Lock Promise"],
+   997→   997→      contact: { phone: "075 011 9200", email: "info@curtaincleaning.org", response: "Within 48 hours" },
+   998→   998→    },
+   999→   999→    ctaBand: { heading: "Johannesburg North's Trusted Curtain Cleaning Specialists", subtext: "Book your free on-site assessment today. We serve all northern suburbs." },
+
+[showing lines 600-999 of 1176; use offset=1000 with limit to continue reading]

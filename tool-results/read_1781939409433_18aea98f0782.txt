@@ -1,0 +1,502 @@
+     1→   401→400: Micro-trust row: - Free assessment — no cost, no commitment - No obligation — walk away if it’s not for you - Written quote — transparent pricing, guaranteed
+     2→   402→401: PAGE 4: FAQ PAGE (Full)
+     3→   403→402: Meta Title & Description
+     4→   404→403: Meta Title: Curtain Cleaning FAQ | Johannesburg | On The Spot
+     5→   405→404: Meta Description: Everything you need to know about on-site curtain cleaning in Johannesburg. Cost, shrinkage, process, areas served. Free assessment available.
+     6→   406→405: Section 1: Hero Section
+     7→   407→406: H1: Frequently Asked Questions About Curtain Cleaning
+     8→   408→407: Subtext: Everything you need to know about our on-site curtain cleaning service in Johannesburg — from pricing and process to guarantees and booking. Can’t find your answer? WhatsApp Kathy directly on 075 011 9200.
+     9→   409→408: CTA: Book Free Assessment
+    10→   410→409: Section 2: FAQ Accordion (9 Questions)
+    11→   411→410: FAQ 1
+    12→   412→411: Q: How much does curtain cleaning cost in Johannesburg?
+    13→   413→412: A: The cost of curtain cleaning in Johannesburg depends on several factors: fabric type, curtain size, soiling level, whether you have interlining or blackout backing, and the total number of panels.
+    14→   414→413: As a general guide:
+    15→   415→414: Small residential jobs (1–2 rooms, standard fabrics): R800 – R1,500
+    16→   416→415: Medium homes (3–4 bedrooms, mixed fabrics): R1,500 – R3,000
+    17→   417→416: Large homes & small offices (5+ rooms or heavily soiled): R3,000 – R5,500
+    18→   418→417: Commercial jobs (hotels, offices, venues): Custom quote based on scope
+    19→   419→418: The only way to give you an accurate price is to assess your curtains in person — which is why we offer a free on-site assessment with a written, no-obligation quote. Kathy visits your property, examines your curtains, and provides transparent pricing within 24 hours. No hidden costs. No surprises.
+    20→   420→419: Tip: First-time clients receive 10% off when they sign up for our free Fabric Care Guide.
+    21→   421→420: FAQ 2
+    22→   422→421: Q: Will my curtains shrink?
+    23→   423→422: A: Absolutely not. This is our most important guarantee.
+    24→   424→423: Our proprietary on-site dry-cleaning process uses zero water penetration. Traditional wet cleaning saturates fabric with water, which causes natural fibres (cotton, linen, silk) to contract as they dry — this is where shrinkage happens.
+    25→   425→424: Our process: - Uses specialist dry-cleaning solutions applied directly to the fabric - Never saturates or penetrates the backing/lining - Extracts soil and solution simultaneously — fabric stays structurally stable - Is suitable for silk, velvet, linen, and all delicate fabrics
+    26→   426→425: We guarantee 100% no shrinkage in writing on every single job. In 15+ years and over 5,000 cleans across Johannesburg, we have never had a single shrinkage complaint.
+    27→   427→426: If your curtains shrink — we replace them. That’s our promise.
+    28→   428→427: FAQ 3
+    29→   429→428: Q: Do you really clean curtains without taking them down?
+    30→   430→429: A: Yes, really. That’s exactly what we do, and it’s what makes On The Spot different from every other curtain cleaning service in Johannesburg.
+    31→   431→430: Here’s how it works:
+    32→   432→431: We arrive at your property with professional-grade, portable cleaning equipment
+    33→   433→432: Your curtains stay exactly where they are — on their tracks, rods, or rails
+    34→   434→433: We apply our specialist dry-cleaning solution section by section
+    35→   435→434: Extraction removes soil and solution — fabric is clean and dry immediately
+    36→   436→435: We inspect and repair hardware (tracks, hooks, rings) before we leave
+    37→   437→436: Your curtains are back in service the same day
+    38→   438→437: No ladders for you to climb. No heavy curtains to wrestle down. No waiting days for drying. No re-hanging struggles. Just clean, fresh curtains with zero inconvenience.
+    39→   439→438: This is especially valuable for: - Large or high curtains — chandeliers, double-volume spaces, stairwells - Delicate fabrics — silk, velvet, and antique textiles that shouldn’t be handled - Busy homes and businesses — zero downtime means life carries on normally - Commercial spaces — hotels can check in guests that same evening
+    40→   440→439: FAQ 4
+    41→   441→440: Q: How long does an on-site curtain clean take?
+    42→   442→441: A: Most residential jobs are completed in 2 to 4 hours, depending on the number of rooms and fabric types. Commercial jobs vary by scope — a hotel ballroom may take a full day, while a boardroom could be 2 hours.
+    43→   443→442: Here’s a rough guide:
+    44→   444→443: Job Type
+    45→   445→444: Estimated Duration
+    46→   446→445: 1–2 rooms (residential)
+    47→   447→446: 1.5 – 2.5 hours
+    48→   448→447: 3–4 bedrooms (residential)
+    49→   449→448: 2.5 – 4 hours
+    50→   450→449: Large home or small office
+    51→   451→450: 4 – 6 hours
+    52→   452→451: Hotel (per floor)
+    53→   453→452: 3 – 5 hours
+    54→   454→453: Theatre or large venue
+    55→   455→454: Full day
+    56→   456→455: Because we clean on-site with no drying time required, your curtains are back in service immediately. There’s no “come back tomorrow” — the job is done when we leave.
+    57→   457→456: We also offer after-hours and weekend scheduling for commercial clients who need zero disruption during business hours.
+    58→   458→457: FAQ 5
+    59→   459→458: Q: Which areas do you serve?
+    60→   460→459: A: We serve all of Johannesburg and surrounding areas, including Pretoria and Midrand. No suburb is too far for a free assessment.
+    61→   461→460: Johannesburg North: Sandton, Bryanston, Morningside, Rosebank, Fourways, Randburg, Linden, Parkhurst, Hyde Park, Northriding, Olivedale
+    62→   462→461: Johannesburg East: Bedfordview, Edenvale, Kensington, Linksfield, Orange Grove, Norwood, Houghton
+    63→   463→462: Johannesburg South: Glenvista, Mondeor, Alberton, Meyersdal, Oakdene, Bassonia, Linmeyer
+    64→   464→463: Johannesburg West: Roodepoort, Florida, Constantia Kloof, Wilgeheuwel, Clearwater, Northcliff, Melville
+    65→   465→464: Johannesburg Central: Braamfontein, Newtown, Parktown, Doornfontein, Marshalltown, Fordsburg
+    66→   466→465: Pretoria & Midrand: Midrand, Centurion, Pretoria East, Menlyn, Brooklyn, Lynnwood, Hatfield, Waterkloof
+    67→   467→466: If you’re searching for “curtain cleaning near me” anywhere in Gauteng — we come to you.
+    68→   468→467: FAQ 6
+    69→   469→468: Q: Do you clean hotel curtains after hours?
+    70→   470→469: A: Yes, absolutely. After-hours cleaning is one of our most popular services for the hospitality industry.
+    71→   471→470: We understand that hotel curtains need to be pristine for guest check-in — which is why we offer:
+    72→   472→471: Evening cleans (after 18:00) for occupied floors
+    73→   473→472: Night cleaning (22:00 – 06:00) for full floor refreshes
+    74→   474→473: Holiday and low-occupancy scheduling to minimise guest impact
+    75→   475→474: Floor-by-floor rotation so your hotel never has a wing out of service
+    76→   476→475: Fire certification documentation for insurance and compliance audits
+    77→   477→476: Same-day return — rooms are guest-ready by check-in time
+    78→   478→477: We’ve serviced luxury boutique hotels in Sandton, 200-room properties in Rosebank, and budget hotel groups across Johannesburg. Every hotel receives a custom maintenance programme with quarterly scheduling, priority booking, and volume pricing.
+    79→   479→478: Contact Kathy on 075 011 9200 to discuss a tailored hotel cleaning programme.
+    80→   480→479: FAQ 7
+    81→   481→480: Q: What is Master Guarding fabric protection?
+    82→   482→481: A: Master Guarding is the industry gold standard for fabric stain protection. It’s an invisible, odourless treatment we apply on-site after cleaning that creates a protective barrier around each fibre.
+    83→   483→482: How it works: - Spills and liquids bead up on the fabric surface instead of soaking in - You have time to blot the spill before it becomes a stain - The protection lasts for 12 months under normal use - Does not change the look, feel, or drape of your curtains
+    84→   484→483: Ideal for: - Homes with children or pets - Restaurants and hospitality venues - High-traffic commercial spaces - Light-coloured or delicate fabrics - Any space where spills are likely
+    85→   485→484: Master Guarding is certified and guaranteed — if a spill penetrates the protection within 12 months, we’ll treat the stain at no charge.
+    86→   486→485: Ask Kathy about adding Master Guarding to your clean during your free assessment.
+    87→   487→486: FAQ 8
+    88→   488→487: Q: Do you offer fire proofing certificates?
+    89→   489→488: A: Yes. We provide SANS-compliant fire proofing treatment with full certification documentation — essential for hotels, theatres, schools, and any public venue.
+    90→   490→489: What’s included: - Professional fire retardant treatment applied on-site - Treatment effective for 12 months (annual re-certification recommended) - Full SANS compliance documentation provided - Certificate suitable for insurance audits and safety inspections - Available as a standalone service or combined with cleaning
+    91→   491→490: Fire proofing is a legal requirement for many commercial venues in South Africa. Our certification is accepted by all major insurers and municipal fire departments across Johannesburg and Pretoria.
+    92→   492→491: For venues with existing fire proofing, we can also test and re-certify existing treatments.
+    93→   493→492: FAQ 9
+    94→   494→493: Q: How do I book a free assessment?
+    95→   495→494: A: Booking your free assessment is easy — and there’s absolutely no obligation.
+    96→   496→495: Option 1: WhatsApp (Fastest) Send a message to Kathy on 075 011 9200 with your name, suburb, and a photo of your curtains. Kathy will confirm availability within a few hours.
+    97→   497→496: Option 2: Phone Call Kathy on 075 011 9200 (mobile) or 071 622 6723 (office), Monday–Friday 07:00–18:00, Saturday 08:00–14:00.
+    98→   498→497: Option 3: Email Send details to info@curtaincleaning.org and we’ll respond within 24 hours.
+    99→   499→498: What happens next: 1. Kathy visits your property within 48 hours 2. She assesses your curtains, fabric type, soiling, and hardware 3. You receive a written quote within 24 hours 4. If you’re happy, we schedule your clean at a convenient time 5. If you decide not to proceed — no problem, no charge
+   100→   500→499: Address: Martha North Road, Randburg, Johannesburg 2194
+   101→   501→500: Section 3: Contact Fallback Box
+   102→   502→501: [HIGHLIGHTED CONTACT BOX]
+   103→   503→502: H3: Still Have Questions?
+   104→   504→503: We’d love to help. Kathy is always happy to chat about your specific curtains, fabric concerns, or booking requirements.
+   105→   505→504: Call or WhatsApp Kathy directly: 📱 075 011 9200
+   106→   506→505: Or reach us via: - Office: 071 622 6723 - Email: info@curtaincleaning.org - WhatsApp: 075 011 9200
+   107→   507→506: Hours: - Monday–Friday: 07:00 – 18:00 - Saturday: 08:00 – 14:00 - Sunday: Closed
+   108→   508→507: Address: Martha North Road, Randburg, Johannesburg 2194
+   109→   509→508: [Book Free Assessment] [WhatsApp Kathy]
+   110→   510→509: Section 4: CTA Band (Dark Blue Background)
+   111→   511→510: [ICON: Clipboard / checklist]
+   112→   512→511: H2: Every Curtain Is Different. That’s Why We Come to You.
+   113→   513→512: No two curtain jobs are the same. Fabric type, lining condition, soiling level, hardware state — Kathy assesses every factor in person before recommending the right treatment. It’s why our results are consistently exceptional.
+   114→   514→513: Primary CTA: Book Your Free On-Site Assessment Secondary CTA: WhatsApp 075 011 9200
+   115→   515→514: Micro-trust row: - Free assessment — no cost, no commitment - No obligation — walk away if it’s not for you - Written quote — transparent pricing, guaranteed
+   116→   516→515: END OF ALL 4 PAGES
+   117→   517→516: All copy written for On The Spot Curtain Cleaning Specialists Primary keyword: “curtain cleaning Johannesburg” Target: Local SEO + Conversion optimization Voice: Professional, warm, South African English
+   118→   518→517: PART 2: UTILITY PAGES & SHARED COMPONENTS
+   119→   519→518: On The Spot Curtain Cleaning Specialists — Utility Pages & Shared Components
+   120→   520→519: Complete Website Copy Deliverable
+   121→   521→520: Production-Ready | SEO-Optimized | POPIA Compliant | South African English
+   122→   522→521: PAGE 1: CONTACT PAGE
+   123→   523→522: Meta Information
+   124→   524→523: Element
+   125→   525→524: Copy
+   126→   526→525: Meta Title
+   127→   527→526: Contact On The Spot Curtain Cleaning | Johannesburg | Kathy Dunlop
+   128→   528→527: Meta Description
+   129→   529→528: Contact Kathy Dunlop directly for curtain cleaning in Johannesburg. WhatsApp, call, or email. Free on-site assessment within 48 hours. All JHB suburbs.
+   130→   530→529: Canonical URL
+   131→   531→530: https://curtaincleaning.org/contact
+   132→   532→531: Open Graph Title
+   133→   533→532: Contact Kathy Dunlop — On The Spot Curtain Cleaning Johannesburg
+   134→   534→533: Open Graph Description
+   135→   535→534: Need curtain cleaning in Johannesburg? Contact Kathy directly via WhatsApp, phone, or email. Free on-site assessment within 48 hours.
+   136→   536→535: Hero Section
+   137→   537→536: H1
+   138→   538→537: Get in Touch
+   139→   539→538: Subtext
+   140→   540→539: Kathy personally responds to every enquiry within 24 hours. Whether you need a quick quote or a full on-site assessment, we’re here to help — across all Johannesburg suburbs.
+   141→   541→540: Two-Column Layout: Contact Details (Left) + Contact Form (Right)
+   142→   542→541: LEFT COLUMN — Contact Details
+   143→   543→542: WhatsApp / Phone (Primary)
+   144→   544→543: 075 011 9200 Kathy Direct · WhatsApp Available Best for instant response
+   145→   545→544: Office Phone
+   146→   546→545: 071 622 6723 Office Landline Available during business hours
+   147→   547→546: Email
+   148→   548→547: info@curtaincleaning.org Send us an email anytime Replies within 24 hours
+   149→   549→548: Visit Us
+   150→   550→549: Martha North Rd, Randburg Johannesburg 2194, South Africa By appointment only
+   151→   551→550: Operating Hours
+   152→   552→551: Day
+   153→   553→552: Hours
+   154→   554→553: Monday – Friday
+   155→   555→554: 07:00 – 18:00
+   156→   556→555: Saturday
+   157→   557→556: 08:00 – 14:00
+   158→   558→557: Sunday
+   159→   559→558: Closed
+   160→   560→559: After-hours enquiries via WhatsApp are responded to first thing the next business day.
+   161→   561→560: Connect With Us
+   162→   562→561: Facebook: facebook.com/onthespotcurtains
+   163→   563→562: Instagram: instagram.com/onthespotcurtains
+   164→   564→563: YouTube: youtube.com/@onthespotcurtains
+   165→   565→564: LinkedIn: linkedin.com/company/onthespotcurtains
+   166→   566→565: TikTok: tiktok.com/@onthespotcurtains
+   167→   567→566: Pinterest: pinterest.com/onthespotcurtains
+   168→   568→567: X (Twitter): x.com/onthespotcurtains
+   169→   569→568: Service Area Note
+   170→   570→569: We cover all major Johannesburg suburbs including Sandton, Randburg, Fourways, Roodepoort, Rosebank, Parktown, Edenvale, Bedfordview, Alberton, Midrand, Centurion, and Pretoria. Not sure if we service your area? Send us a message — if you’re in Gauteng, we can help.
+   171→   571→570: RIGHT COLUMN — Contact Form
+   172→   572→571: H2
+   173→   573→572: Send a Message
+   174→   574→573: Form Fields
+   175→   575→574: Field
+   176→   576→575: Type
+   177→   577→576: Required
+   178→   578→577: Placeholder / Options
+   179→   579→578: Your Name
+   180→   580→579: text
+   181→   581→580: Yes
+   182→   582→581: e.g. Sarah van der Merwe
+   183→   583→582: Phone Number
+   184→   584→583: tel
+   185→   585→584: Yes
+   186→   586→585: e.g. 082 123 4567
+   187→   587→586: Email Address
+   188→   588→587: email
+   189→   589→588: Yes
+   190→   590→589: e.g. sarah@example.co.za
+   191→   591→590: Suburb
+   192→   592→591: text
+   193→   593→592: No
+   194→   594→593: e.g. Sandton, Johannesburg
+   195→   595→594: Service Required
+   196→   596→595: select
+   197→   597→596: No
+   198→   598→597: Choose a service…
+   199→   599→598: ↳ Options
+   200→   600→599: —
+   201→   601→600: —
+   202→   602→601: Curtain & Blind Cleaning
+   203→   603→602: ↳
+   204→   604→603: —
+   205→   605→604: —
+   206→   606→605: Deep Mattress Sanitisation
+   207→   607→606: ↳
+   208→   608→607: —
+   209→   609→608: —
+   210→   610→609: Upholstery & Carpet Cleaning
+   211→   611→610: ↳
+   212→   612→611: —
+   213→   613→612: —
+   214→   614→613: Master Guarding Protection
+   215→   615→614: ↳
+   216→   616→615: —
+   217→   617→616: —
+   218→   618→617: Fire Proofing
+   219→   619→618: ↳
+   220→   620→619: —
+   221→   621→620: —
+   222→   622→621: Persian & Oriental Rug Care
+   223→   623→622: ↳
+   224→   624→623: —
+   225→   625→624: —
+   226→   626→625: Other / Not Sure
+   227→   627→626: Your Message
+   228→   628→627: textarea
+   229→   629→628: No
+   230→   630→629: Tell us about your curtains, fabric type, or any questions…
+   231→   631→630: Submit Button
+   232→   632→631: Send Message
+   233→   633→632: Alternative CTA (Below Form)
+   234→   634→633: Or for instant response: [WhatsApp Kathy Directly — 075 011 9200]
+   235→   635→634: Success Message
+   236→   636→635: ✓ Message sent successfully! Kathy will be in touch within 24 hours. For urgent requests, WhatsApp her directly on 075 011 9200.
+   237→   637→636: Error Message
+   238→   638→637: ⚠ Something went wrong. Please try again, or contact Kathy directly via WhatsApp on 075 011 9200.
+   239→   639→638: Form Note
+   240→   640→639: Your information is protected under POPIA. We never sell or share your data. Read our Privacy Policy.
+   241→   641→640: CTA Band (Contact Page Bottom)
+   242→   642→641: Headline
+   243→   643→642: Every curtain is different. That’s why we come to you.
+   244→   644→643: Subtext
+   245→   645→644: Free, no-obligation on-site assessment anywhere in Johannesburg. Kathy personally visits within 48 hours. Written quote guaranteed.
+   246→   646→645: Primary CTA Button
+   247→   647→646: Book Your Free On-Site Assessment →
+   248→   648→647: Secondary CTA Button
+   249→   649→648: WhatsApp Kathy — 075 011 9200
+   250→   650→649: Micro-Trust Line
+   251→   651→650: Free assessment · No obligation · Written quote
+   252→   652→651: PAGE 2: QUOTE / BOOKING PAGE (Multi-Step Wizard)
+   253→   653→652: Meta Information
+   254→   654→653: Element
+   255→   655→654: Copy
+   256→   656→655: Meta Title
+   257→   657→656: Book Free On-Site Curtain Cleaning Assessment | Johannesburg
+   258→   658→657: Meta Description
+   259→   659→658: Book your free, no-obligation on-site curtain cleaning assessment in Johannesburg. Kathy personally visits within 48 hours. Written quote guaranteed.
+   260→   660→659: Canonical URL
+   261→   661→660: https://curtaincleaning.org/book-assessment
+   262→   662→661: Open Graph Title
+   263→   663→662: Book Your Free Curtain Cleaning Assessment — Johannesburg
+   264→   664→663: Open Graph Description
+   265→   665→664: Free on-site curtain cleaning assessment anywhere in Johannesburg. No obligation, written quote guaranteed. Kathy visits within 48 hours.
+   266→   666→665: Hero Section
+   267→   667→666: H1
+   268→   668→667: Book Your Free On-Site Assessment
+   269→   669→668: Subtext
+   270→   670→669: Free, no-obligation. Kathy personally visits within 48 hours. Written quote guaranteed. Your curtains stay right where they are — we clean them on-site, with zero downtime.
+   271→   671→670: Trust Micro-Line
+   272→   672→671: 15+ years experience · 5,000+ clients · 100% no-shrinkage guarantee
+   273→   673→672: Progress Bar (4 Steps)
+   274→   674→673: Step
+   275→   675→674: Label
+   276→   676→675: Status
+   277→   677→676: 1
+   278→   678→677: Sector
+   279→   679→678: Active
+   280→   680→679: 2
+   281→   681→680: Area
+   282→   682→681: Upcoming
+   283→   683→682: 3
+   284→   684→683: Details
+   285→   685→684: Upcoming
+   286→   686→685: 4
+   287→   687→686: Confirm
+   288→   688→687: Upcoming
+   289→   689→688: *Progress indicator text: “Step 1 of 4 — Takes less than 2 minutes”
+   290→   690→689: STEP 1: Select Sector
+   291→   691→690: H2
+   292→   692→691: What type of property?
+   293→   693→692: Subtext
+   294→   694→693: This helps Kathy prepare the right equipment and cleaning solutions for your specific environment. Each sector has unique requirements — from hotel fire regulations to healthcare infection control standards.
+   295→   695→694: Selectable Cards (6 options, single select)
+   296→   696→695: Icon
+   297→   697→696: Card Title
+   298→   698→697: Role / Subtitle
+   299→   699→698: 🏨
+   300→   700→699: Hotels & Hospitality
+   301→   701→700: General Manager
+   302→   702→701: 🏢
+   303→   703→702: Corporate Offices
+   304→   704→703: Facilities Manager
+   305→   705→704: 🏥
+   306→   706→705: Healthcare
+   307→   707→706: Infection Control Officer
+   308→   708→707: 🎓
+   309→   709→708: Schools & Education
+   310→   710→709: Principal / Bursar
+   311→   711→710: 🎭
+   312→   712→711: Theatres & Venues
+   313→   713→712: Stage Manager
+   314→   714→713: 🏠
+   315→   715→714: Residential
+   316→   716→715: Homeowner
+   317→   717→716: Card Micro-Copy (on hover/select)
+   318→   718→717: Hotels: Full fire-code compliance. Downtime-free cleaning for guest rooms, lobbies, and function venues.
+   319→   719→718: Corporate: After-hours and weekend service available. Minimal disruption to operations.
+   320→   720→719: Healthcare: Certified infection-control protocols. HAI prevention for patient areas and theatres.
+   321→   721→720: Schools: Holiday period scheduling available. Child-safe, non-toxic cleaning solutions.
+   322→   722→721: Theatres: Specialist knowledge for theatrical drapes, velour, and sound-absorbing fabrics.
+   323→   723→722: Residential: Personal, discreet service. Your home, treated with expert care.
+   324→   724→723: Navigation
+   325→   725→724: Continue → (disabled until selection made)
+   326→   726→725: STEP 2: Select Area
+   327→   727→726: H2
+   328→   728→727: Which area are you in?
+   329→   729→728: Subtext
+   330→   730→729: This helps Kathy plan her route efficiently and confirm travel time to your property. We cover all of Greater Johannesburg and Pretoria.
+   331→   731→730: Selectable Area Cards (6 options, single select)
+   332→   732→731: Area
+   333→   733→732: Suburbs Covered
+   334→   734→733: Johannesburg North
+   335→   735→734: Sandton, Randburg, Fourways, Bryanston, Douglasdale, Lonehill, Sunninghill, Woodmead, Morningside, Parkmore
+   336→   736→735: Johannesburg East
+   337→   737→736: Edenvale, Bedfordview, Boksburg, Benoni, Kempton Park, Germiston, Linksfield, Orange Grove
+   338→   738→737: Johannesburg South
+   339→   739→738: Alberton, Meyersdal, Glenvista, Glenanda, Bassonia, Oakdene, Winchester Hills, Ridgeway
+   340→   740→739: Johannesburg West
+   341→   741→740: Roodepoort, Florida, Northcliff, Linden, Fairland, Weltevredenpark, Constantia Kloof, Wilgeheuwel
+   342→   742→741: Johannesburg Central
+   343→   743→742: Rosebank, Parktown, Melville, Greenside, Emmarentia, Auckland Park, Westcliff, Killarney
+   344→   744→743: Pretoria & Midrand
+   345→   745→744: Midrand, Centurion, Pretoria East, Pretoria Central, Menlyn, Brooklyn, Hatfield, Lynnwood
+   346→   746→745: Area Note
+   347→   747→746: Don’t see your suburb? Select the nearest area — we’ll confirm coverage when Kathy calls you back.
+   348→   748→747: Navigation
+   349→   749→748: ← Back | Continue →
+   350→   750→749: STEP 3: Your Details
+   351→   751→750: H2
+   352→   752→751: Your Details
+   353→   753→752: Subtext
+   354→   754→753: Almost done. Fill in your contact details and any specific requirements. Kathy will use this to confirm your booking and prepare for the assessment.
+   355→   755→754: Form Fields
+   356→   756→755: Field
+   357→   757→756: Type
+   358→   758→757: Required
+   359→   759→758: Placeholder
+   360→   760→759: Full Name
+   361→   761→760: text
+   362→   762→761: Yes
+   363→   763→762: e.g. John van Niekerk
+   364→   764→763: Phone Number
+   365→   765→764: tel
+   366→   766→765: Yes
+   367→   767→766: e.g. 083 456 7890
+   368→   768→767: Email Address
+   369→   769→768: email
+   370→   770→769: Yes
+   371→   771→770: e.g. john@company.co.za
+   372→   772→771: Number of Rooms / Curtains
+   373→   773→772: text
+   374→   774→773: No
+   375→   775→774: e.g. 3 bedrooms, 2 living rooms
+   376→   776→775: Preferred Assessment Date
+   377→   777→776: date
+   378→   778→777: No
+   379→   779→778: Select a date
+   380→   780→779: Additional Notes
+   381→   781→780: textarea
+   382→   782→781: No
+   383→   783→782: Fabric type, last cleaned, specific concerns, access instructions…
+   384→   784→783: POPIA Micro-Notice (below form fields)
+   385→   785→784: 🔒 Your information is collected solely to arrange your free assessment. POPIA compliant. Read our Privacy Policy.
+   386→   786→785: Navigation
+   387→   787→786: ← Back | Continue →
+   388→   788→787: STEP 4: Confirm Your Assessment
+   389→   789→788: H2
+   390→   790→789: Confirm Your Assessment
+   391→   791→790: Subtext
+   392→   792→791: Please review your details below. Once confirmed, Kathy will receive your booking and contact you within 24 hours.
+   393→   793→792: Summary Display (populated dynamically from Steps 1–3)
+   394→   794→793: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  YOUR BOOKING SUMMARY━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━Sector:        [Sector selected in Step 1]Area:          [Area selected in Step 2]Suburb:        [Suburb from Step 3]Contact:  Name:        [Name from Step 3]  Phone:       [Phone from Step 3]  Email:       [Email from Step 3]Details:  Rooms/Curtains:  [From Step 3 or "Not specified"]  Preferred Date:  [From Step 3 or "Flexible"]  Notes:           [From Step 3 or "None provided"]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   395→   795→794: POPIA Consent Notice (Full)
+   396→   796→795: 🔒 Your Data Is Protected
+   397→   797→796: Your personal information is collected and processed in accordance with the Protection of Personal Information Act 4 of 2013 (POPIA). We use your information solely to: - Contact you to confirm your assessment booking - Conduct your free on-site assessment - Provide your written quotation - Deliver the services you have requested
+   398→   798→797: We never sell, rent, or share your personal information with third parties.
+   399→   799→798: Marketing Opt-In (Optional, Unchecked by Default)
+   400→   800→799: □ Yes, I’d like to receive: - Seasonal curtain care tips - Exclusive subscriber-only offers - My 10% first-clean discount code
+   401→   801→800: This is entirely optional. You can unsubscribe at any time. POPIA compliant.
+   402→   802→801: Final Confirmation Button
+   403→   803→802: Book My Free Assessment Kathy will contact you within 24 hours
+   404→   804→803: Navigation
+   405→   805→804: ← Back (to edit details)
+   406→   806→805: THANK YOU / SUCCESS STATE
+   407→   807→806: Success Icon
+   408→   808→807: ✓ Large animated checkmark
+   409→   809→808: H1
+   410→   810→809: Assessment Booked!
+   411→   811→810: Confirmation Message
+   412→   812→811: Thank you! Your free on-site assessment request has been received.
+   413→   813→812: Kathy will contact you within 24 hours to confirm your booking and arrange a convenient time to visit.
+   414→   814→813: Reference Number
+   415→   815→814: Your booking reference: #OTS-[DATE]-[RANDOM] (e.g. #OTS-250515-A7B2)
+   416→   816→815: Action Buttons
+   417→   817→816: [← Back to Home] — Primary outline button
+   418→   818→817: [💬 WhatsApp Kathy Now] — Primary green button → https://wa.me/27750119200?text=Hi%20Kathy!%20I%27ve%20just%20booked%20a%20free%20assessment%20(Ref:%20#OTS-XXXX).%20Looking%20forward%20to%20hearing%20from%20you!
+   419→   819→818: Upsell Section: “While You Wait — Add Master Guarding”
+   420→   820→819: H3
+   421→   821→820: Protect Your Investment with Master Guarding
+   422→   822→821: Body
+   423→   823→822: While Kathy is preparing for your assessment, consider adding Master Guarding fabric protection to your quote. This invisible shield repels stains, extends fabric life, and keeps your curtains looking pristine for years — especially valuable for high-traffic commercial spaces and homes with children or pets.
+   424→   824→823: Key Benefits
+   425→   825→824: ✓ Invisible nano-coating protection
+   426→   826→825: ✓ Repels liquids, oils, and dust
+   427→   827→826: ✓ Extends fabric lifespan by up to 40%
+   428→   828→827: ✓ Perfect for hotels, offices, and family homes
+   429→   829→828: CTA
+   430→   830→829: [💬 Ask About Master Guarding on WhatsApp] No obligation — Kathy will include it in your written quote
+   431→   831→830: What’s Next Section
+   432→   832→831: H3
+   433→   833→832: What Happens Next?
+   434→   834→833: Step
+   435→   835→834: What to Expect
+   436→   836→835: Timing
+   437→   837→836: 1
+   438→   838→837: Kathy calls or WhatsApps you to confirm
+   439→   839→838: Within 24 hours
+   440→   840→839: 2
+   441→   841→840: Kathy arrives for your free on-site assessment
+   442→   842→841: Within 48 hours
+   443→   843→842: 3
+   444→   844→843: You receive a detailed written quote
+   445→   845→844: At the assessment
+   446→   846→845: 4
+   447→   847→846: If happy, cleaning is scheduled
+   448→   848→847: Your preferred date
+   449→   849→848: Note
+   450→   850→849: There’s no obligation to proceed after your assessment. The quote is completely free, and you’re under no pressure to book. Kathy believes in earning your trust first.
+   451→   851→850: Need Help?
+   452→   852→851: Questions about your booking? Contact Kathy directly: - 📱 WhatsApp: 075 011 9200 - 📧 Email: info@curtaincleaning.org - 📞 Office: 071 622 6723
+   453→   853→852: PAGE 3: PRIVACY & POPIA PAGE
+   454→   854→853: Meta Information
+   455→   855→854: Element
+   456→   856→855: Copy
+   457→   857→856: Meta Title
+   458→   858→857: Privacy Policy | On The Spot Curtain Cleaning | POPIA Compliant
+   459→   859→858: Meta Description
+   460→   860→859: Our privacy policy and POPIA compliance statement. How we collect, use and protect your data. On The Spot Curtain Cleaning Specialists Johannesburg.
+   461→   861→860: Canonical URL
+   462→   862→861: https://curtaincleaning.org/privacy
+   463→   863→862: Open Graph Title
+   464→   864→863: Privacy Policy & POPIA Compliance Statement
+   465→   865→864: Open Graph Description
+   466→   866→865: Learn how On The Spot Curtain Cleaning protects your personal information under South African POPIA legislation.
+   467→   867→866: Hero Section
+   468→   868→867: H1
+   469→   869→868: Privacy Policy
+   470→   870→869: Subtext
+   471→   871→870: POPIA Compliant — Effective May 2026
+   472→   872→871: Trust Badge
+   473→   873→872: 🔒 Responsible Party registered under POPIA (Protection of Personal Information Act 4 of 2013)
+   474→   874→873: Policy Navigation (Jump Links)
+   475→   875→874: Quick links to sections: 1. Who We Are 2. What We Collect 3. How We Use Your Data 4. Data Sharing 5. Cookies 6. Your Rights (POPIA) 7. Data Retention 8. Security 9. Changes to This Policy 10. Contact Us
+   476→   876→875: 1. Who We Are
+   477→   877→876: Section Title
+   478→   878→877: Who We Are
+   479→   879→878: Content
+   480→   880→879: On The Spot Curtain Cleaning Specialists (hereinafter referred to as “we”, “us”, or “our”) is a professional on-site curtain cleaning service based in Johannesburg, South Africa.
+   481→   881→880: Registered Business Details: - Business Name: On The Spot Curtain Cleaning Specialists - Physical Address: Martha North Rd, Randburg, Johannesburg 2194, South Africa - Managing Director: Kathy Dunlop, Interior Decorator & Fabric Expert - Contact Email: info@curtaincleaning.org - Contact Phone: 075 011 9200 (Kathy Direct) / 071 622 6723 (Office) - Website: curtaincleaning.org
+   482→   882→881: We are the Responsible Party as defined in the Protection of Personal Information Act 4 of 2013 (POPIA). This means we determine the purpose and means for processing your personal information and are accountable for ensuring your data is handled lawfully.
+   483→   883→882: Our Information Officer can be contacted at info@curtaincleaning.org for any privacy-related concerns or POPIA enquiries.
+   484→   884→883: 2. What We Collect
+   485→   885→884: Section Title
+   486→   886→885: What Personal Information We Collect
+   487→   887→886: Content
+   488→   888→887: We collect only the personal information that is necessary to provide our services and communicate with you effectively. We do not collect sensitive personal information (special personal information as defined by POPIA) unless specifically required and with your explicit consent.
+   489→   889→888: Information You Provide Directly:
+   490→   890→889: Information Type
+   491→   891→890: When We Collect It
+   492→   892→891: Why We Need It
+   493→   893→892: Full name
+   494→   894→893: Assessment booking form, contact form
+   495→   895→894: To identify you and personalise our communication
+   496→   896→895: Phone number
+   497→   897→896: Assessment booking form, contact form
+   498→   898→897: To contact you to confirm your booking and arrange your assessment
+   499→   899→898: Email address
+   500→   900→899: Assessment booking form, contact form, newsletter signup
+
+[showing lines 1-500 of 502; use offset=501 with limit to continue reading]

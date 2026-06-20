@@ -101,7 +101,7 @@ function SectorCard({ sector }: { sector: typeof SECTORS[number] }) {
 
           {/* CTA */}
           <div className="mt-auto pt-2">
-            <a href="#contact" aria-label={`Get a quote for ${sector.title}`}>
+            <a href={`/sectors/${sector.id}`} aria-label={`Get a quote for ${sector.title}`}>
               <Button
                 variant="ghost"
                 size="sm"

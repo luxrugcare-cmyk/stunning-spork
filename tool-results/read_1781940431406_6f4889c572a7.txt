@@ -1,0 +1,502 @@
+   314→export const SERVICE_LANDING_DATA: Record<string, {
+   315→  slug: string;
+   316→  metaTitle: string;
+   317→  metaDescription: string;
+   318→  heroTag: string;
+   319→  heroHeading: string;
+   320→  heroSubtext: string;
+   321→  heroParagraph: string;
+   322→  trustStrip: string[];
+   323→  guarantees: { icon: string; label: string }[];
+   324→  mainContent: {
+   325→    heading: string;
+   326→    paragraphs: string[];
+   327→    includes: { title: string; description: string }[];
+   328→    processSteps: { step: number; title: string; description: string }[];
+   329→    concerns: { question: string; answer: string }[];
+   330→    tableData?: { headers: string[]; rows: string[][] };
+   331→  };
+   332→  sidebar: {
+   333→    assessmentHeading: string;
+   334→    assessmentItems: string[];
+   335→    guarantees: string[];
+   336→  };
+   337→  ctaBand: { heading: string; subtext: string };
+   338→  newsletter: { heading: string; subtext: string };
+   339→}> = {
+   340→  "curtain-blind-cleaning": {
+   341→    slug: "curtain-blind-cleaning",
+   342→    metaTitle: "Curtain Cleaning Johannesburg | On-Site | No Removal | On The Spot",
+   343→    metaDescription: "Professional on-site curtain cleaning Johannesburg. No removal, no shrinkage. All fabric types — voiles, sheers, velvet, blackout, lined drapes. Hardware inspection & repair included. Free assessment within 48 hours.",
+   344→    heroTag: "Curtain & Blind Cleaning",
+   345→    heroHeading: "Johannesburg's Trusted On-Site Curtain Cleaning Specialists",
+   346→    heroSubtext: "Cleaned exactly where they hang — no removal, no downtime, no fuss.",
+   347→    heroParagraph: "For over 15 years, Kathy Dunlop and the team at On The Spot Curtain Cleaning Specialists have been transforming tired, dusty curtains and blinds into fresh, clean window treatments — all without ever taking them down. Our on-site dry-cleaning process means your windows are never bare, your rooms never exposed, and your life never interrupted.",
+   348→    trustStrip: ["15+ Years Experience", "5,000+ Happy Clients", "100% No-Shrinkage Guarantee", "Free On-Site Assessment Within 48 Hours"],
+   349→    guarantees: [
+   350→      { icon: "Shield", label: "100% No-Shrinkage Guarantee" },
+   351→      { icon: "Clock", label: "Same-Day Completion" },
+   352→      { icon: "Lock", label: "No Hidden Costs" },
+   353→      { icon: "Heart", label: "Fabric-Safe Methods" },
+   354→      { icon: "Wrench", label: "Hardware Checked" },
+   355→    ],
+   356→    mainContent: {
+   357→      heading: "What Makes Our On-Site Curtain Cleaning Different",
+   358→      paragraphs: [
+   359→        "Unlike traditional curtain cleaners who require you to remove your curtains, transport them to a facility, wait days or weeks, and then rehang them yourself, On The Spot does everything right there in your home or commercial space. Our mobile dry-cleaning equipment is designed to clean curtains and blinds while they remain hanging — meaning zero disruption to your space and zero risk of shrinkage from incorrect handling.",
+   360→      ],
+   361→      includes: [
+   362→        { title: "Cleaned exactly where they hang", description: "No removal or takedown required. We work around your existing hardware, tracks, and fittings." },
+   363→        { title: "All fabric types safely handled", description: "Voiles, sheers, lined drapes, velvet, blackout curtains, linen, cotton, silk blends, and synthetic fabrics." },
+   364→        { title: "Hardware inspection & repair included", description: "Tracks, rods, rings, pulleys, and mechanisms are checked and minor repairs carried out on the spot." },
+   365→        { title: "100% no-shrinkage guarantee", description: "Our dry-cleaning process contains zero water, which means zero shrinkage risk." },
+   366→        { title: "Dry-cleaning process", description: "Zero water damage risk. No wet patches, no water stains, no mildew concerns." },
+   367→        { title: "Same-day completion", description: "Your curtains are cleaned, refreshed, and back to looking their best before we leave." },
+   368→      ],
+   369→      processSteps: [
+   370→        { step: 1, title: "Visual Assessment", description: "Thorough inspection of every curtain and blind — identify fabric type, note existing damage, inspect hardware, determine optimal cleaning approach." },
+   371→        { step: 2, title: "Area Preparation", description: "Protecting floors, furniture, and nearby surfaces. Set up portable dry-cleaning equipment." },
+   372→        { step: 3, title: "Deep Cleaning", description: "Fabric-specific solutions lift dust, odours, stains, and allergens without introducing moisture." },
+   373→        { step: 4, title: "Hardware & Final Inspection", description: "Tracks, runners, cords, and mechanisms inspected. Minor repairs handled at no extra charge." },
+   374→      ],
+   375→      concerns: [
+   376→        { question: "Will my curtains shrink?", answer: "Absolutely not. Our 100% no-shrinkage guarantee has never been breached in 15 years. Because we use a dry-cleaning process with no water, there is no fibre contraction." },
+   377→        { question: "Can you clean delicate fabrics?", answer: "Yes. Kathy's background as an interior decorator means she personally trains the team on fabric identification. Delicate sheers, expensive velvet drapes, and fine linen curtains are all handled with specialist care." },
+   378→        { question: "What about blackout lining?", answer: "Blackout-lined curtains are one of our specialities. Dry-cleaning won't damage the thermal backing or cause peeling and cracking that wet cleaning can." },
+   379→        { question: "Do I need to take my curtains down?", answer: "Never. That's the whole point of our on-site service. We clean them exactly where they hang." },
+   380→      ],
+   381→      tableData: {
+   382→        headers: ["Curtain Type", "Blind Type"],
+   383→        rows: [
+   384→          ["Voiles & sheers", "Venetian blinds"],
+   385→          ["Lined drapes", "Vertical blinds"],
+   386→          ["Velvet curtains", "Roller blinds"],
+   387→          ["Blackout curtains", "Roman blinds"],
+   388→          ["Linen curtains", "Pleated blinds"],
+   389→          ["Silk & silk-blend drapes", "Panel glide blinds"],
+   390→          ["Synthetic curtains", "All fabric blinds"],
+   391→          ["Custom-made drapes", "Outdoor blinds"],
+   392→        ],
+   393→      },
+   394→    },
+   395→    sidebar: {
+   396→      assessmentHeading: "Free On-Site Assessment",
+   397→      assessmentItems: ["Fabric type identification", "Hardware condition check", "Scope of work confirmation", "Written, itemised quote", "Recommended treatment plan", "Timeline confirmation"],
+   398→      guarantees: ["100% No-Shrinkage Guarantee", "Same-Day Completion", "No Hidden Costs", "Fabric-Safe Methods", "Hardware Checked"],
+   399→    },
+   400→    ctaBand: { heading: "Ready for Fresh, Clean Curtains Without the Hassle?", subtext: "Book your free on-site assessment today. Kathy will visit your property anywhere in Johannesburg within 48 hours." },
+   401→    newsletter: { heading: "Stay Fresh — Curtain Care Tips & Special Offers", subtext: "Subscribe for seasonal curtain care advice, special offers, and updates from Kathy and the team." },
+   402→  },
+   403→  "mattress-sanitisation": {
+   404→    slug: "mattress-sanitisation",
+   405→    metaTitle: "Mattress Cleaning Johannesburg | Dust Mite Removal | On The Spot",
+   406→    metaDescription: "Deep mattress sanitisation Johannesburg. Clinical dust-mite removal, allergen elimination, and hypoallergenic treatment. Removes 4.5kg of annual skin shedding. Free assessment within 48 hours.",
+   407→    heroTag: "Deep Mattress Sanitisation",
+   408→    heroHeading: "Clinical Dust-Mite Removal & Hypoallergenic Treatment",
+   409→    heroSubtext: "Breathe cleaner. Sleep deeper. Live healthier.",
+   410→    heroParagraph: "You spend roughly one-third of your life in bed — but when was the last time your mattress was professionally cleaned? Every night, your mattress absorbs sweat, dead skin cells, dust mites, and allergens. The average person sheds approximately 4.5 kilograms of skin annually — and much of it ends up in your mattress, creating the perfect breeding ground for dust mites.",
+   411→    trustStrip: ["15+ Years Experience", "5,000+ Happy Clients", "Clinical-Grade Equipment", "Free On-Site Assessment Within 48 Hours"],
+   412→    guarantees: [
+   413→      { icon: "Shield", label: "Clinical-Grade Results" },
+   414→      { icon: "Heart", label: "Safe for Allergy Sufferers" },
+   415→      { icon: "Lock", label: "No Hidden Costs" },
+   416→      { icon: "Clock", label: "Same-Day Service" },
+   417→      { icon: "Award", label: "Experienced Technicians" },
+   418→    ],
+   419→    mainContent: {
+   420→      heading: "The Hidden Health Risk in Your Mattress",
+   421→      paragraphs: [
+   422→        "Your mattress is one of the most overlooked items in your home when it comes to hygiene. While you regularly wash your sheets, the mattress beneath absorbs everything — sweat, body oils, skin cells, pet dander, pollen, and dust. Over time, this creates a warm, humid environment where dust mites thrive.",
+   423→        "Dust mites are microscopic arachnids that feed on dead human skin. Their waste products are one of the most common indoor allergens, triggering allergic rhinitis, asthma attacks, eczema flare-ups, morning congestion, and poor sleep quality. A single mattress can harbour millions of dust mites.",
+   424→      ],
+   425→      includes: [
+   426→        { title: "Clinical dust-mite removal", description: "High-powered extraction equipment penetrates deep into mattress fibres, physically removing dust mites and their waste from every layer." },
+   427→        { title: "Bacterial & allergen elimination", description: "Medical-grade sanitisation neutralises bacteria, fungal spores, and allergens that standard vacuuming cannot reach." },
+   428→        { title: "Removes 4.5kg annual skin shedding", description: "Our extraction process pulls out years of accumulated organic matter from deep within your mattress." },
+   429→        { title: "Hypoallergenic treatment", description: "A gentle, non-toxic treatment that creates an inhospitable environment for dust mites, safe for asthma and allergy sufferers." },
+   430→        { title: "Healthier sleep environment", description: "Many clients report improved sleep quality and reduced allergy symptoms within days." },
+   431→      ],
+   432→      processSteps: [
+   433→        { step: 1, title: "Deep Vacuum Extraction", description: "Industrial-strength vacuum extraction removes loose debris, dust, and surface contaminants from the entire mattress surface." },
+   434→        { step: 2, title: "Stain Treatment", description: "Visible stains treated with fabric-safe, enzyme-based solutions that break down organic matter." },
+   435→        { step: 3, title: "Clinical Sanitisation", description: "Medical-grade sanitising treatment applied evenly, penetrating deep into fibres to neutralise bacteria, dust mites, and allergens." },
+   436→        { step: 4, title: "Hypoallergenic Treatment", description: "Non-toxic, hypoallergenic treatment creates a protective barrier that discourages dust mite recolonisation." },
+   437→        { step: 5, title: "Drying & Final Inspection", description: "Mattress left to dry naturally — typically ready for use the same evening. Kathy personally inspects every job." },
+   438→      ],
+   439→      concerns: [
+   440→        { question: "Is the treatment safe for children?", answer: "Absolutely. Our hypoallergenic treatment is non-toxic and specifically designed to be safe for asthma and allergy sufferers, including children." },
+   441→        { question: "How long until I can use the mattress?", answer: "Most mattresses are ready for use the same evening. We ensure proper drying before completing the job." },
+   442→        { question: "How often should I sanitise my mattress?", answer: "We recommend annual professional sanitisation, or every 6 months for allergy sufferers." },
+   443→      ],
+   444→    },
+   445→    sidebar: {
+   446→      assessmentHeading: "Free Mattress Assessment",
+   447→      assessmentItems: ["Mattress type and condition evaluation", "Stain and contamination assessment", "Recommended treatment plan", "Written, itemised quote", "Timeline confirmation"],
+   448→      guarantees: ["Clinical-Grade Results", "Safe for Allergy Sufferers", "No Hidden Costs", "Same-Day Service", "Experienced Technicians"],
+   449→    },
+   450→    ctaBand: { heading: "Sleep Healthier Tonight — Book Your Mattress Sanitisation", subtext: "Don't let dust mites and allergens steal another night's rest. Book your free on-site assessment today." },
+   451→    newsletter: { heading: "Healthier Home Tips from Kathy", subtext: "Subscribe for seasonal advice on keeping your home allergen-free and exclusive offers." },
+   452→  },
+   453→  "upholstery-carpet-cleaning": {
+   454→    slug: "upholstery-carpet-cleaning",
+   455→    metaTitle: "Upholstery Cleaning Johannesburg | Sofa & Carpet | On The Spot",
+   456→    metaDescription: "Professional upholstery and carpet cleaning Johannesburg. Fabric-safe specialist chemicals, dry & wet cleaning options. Master Guarding available. Free assessment.",
+   457→    heroTag: "Upholstery & Carpet Cleaning",
+   458→    heroHeading: "Fabric-Safe Cleaning for All Your Upholstered Furniture",
+   459→    heroSubtext: "Restore, refresh, and protect your furniture investment.",
+   460→    heroParagraph: "Your sofa, armchairs, dining chairs, and upholstered headboards are among the most-used items in your home — and they absorb everything. Daily sitting transfers body oils, sweat, food particles, and dust deep into fabric fibres. Over time, even the most beautiful upholstery begins to look tired, smell stale, and harbour allergens.",
+   461→    trustStrip: ["15+ Years Experience", "5,000+ Happy Clients", "Fabric-Safe Specialist Methods", "Free On-Site Assessment Within 48 Hours"],
+   462→    guarantees: [
+   463→      { icon: "Shield", label: "Fabric-Safe Methods" },
+   464→      { icon: "Heart", label: "All Fabric Types" },
+   465→      { icon: "Lock", label: "No Hidden Costs" },
+   466→      { icon: "Clock", label: "Flexible Scheduling" },
+   467→      { icon: "Award", label: "Master Guarding Available" },
+   468→    ],
+   469→    mainContent: {
+   470→      heading: "Specialist Upholstery Cleaning — Not Just a Standard Wash",
+   471→      paragraphs: [
+   472→        "Upholstery fabrics are vastly different from one another. A linen sofa requires a completely different approach to a leather armchair or a velvet ottoman. Using the wrong cleaning chemical or method can cause discolouration, shrinkage, texture damage, or water staining that permanently ruins expensive furniture.",
+   473→        "That's why Kathy personally trains every technician in fabric identification and appropriate treatment selection. Before any cleaning begins, we identify your upholstery fabric type, test a small inconspicuous area, and select the optimal cleaning method.",
+   474→      ],
+   475→      includes: [
+   476→        { title: "Sofas, chairs, all upholstered pieces", description: "Comprehensive fabric care for every upholstered item — three-piece suites, dining chairs, ottomans, and headboards." },
+   477→        { title: "Dry & wet cleaning options", description: "Matched to fabric type. Delicate fabrics receive dry cleaning; hardier fabrics benefit from controlled wet extraction." },
+   478→        { title: "Specialist chemicals", description: "Professional-grade, fabric-specific cleaning solutions that lift dirt and stains without degrading fibres or causing colour fade." },
+   479→        { title: "Master Guarding available", description: "Add our 12-month professional stain-repellent coating to protect your freshly cleaned furniture from future spills." },
+   480→        { title: "Doubles furniture lifespan", description: "Regular professional cleaning removes abrasive dirt particles that wear down fabric fibres with every sit." },
+   481→      ],
+   482→      processSteps: [
+   483→        { step: 1, title: "Fabric Identification & Testing", description: "Identify upholstery fabric type and conduct a spot test to ensure chemical compatibility." },
+   484→        { step: 2, title: "Pre-Treatment", description: "Stains and high-traffic areas receive targeted pre-treatment with fabric-appropriate solutions." },
+   485→        { step: 3, title: "Deep Cleaning", description: "Thorough cleaning using the selected method — dry cleaning, low-moisture extraction, or controlled wet cleaning." },
+   486→        { step: 4, title: "Extraction & Drying", description: "Excess moisture extracted and drying techniques applied for quickest possible readiness." },
+   487→        { step: 5, title: "Optional Master Guarding", description: "Apply professional 12-month stain-repellent coating to protect from future spills." },
+   488→      ],
+   489→      concerns: [
+   490→        { question: "Can you clean leather furniture?", answer: "Yes, we offer specialist leather cleaning and conditioning. We use pH-balanced leather-specific products that clean without drying or cracking." },
+   491→        { question: "Will cleaning change the texture?", answer: "No. Our fabric-specific approach ensures the texture and feel of your upholstery is preserved." },
+   492→        { question: "How long until furniture is dry?", answer: "Dry-cleaned items are ready immediately. Wet-cleaned items typically dry within 2-6 hours depending on fabric type." },
+   493→      ],
+   494→      tableData: {
+   495→        headers: ["Furniture Type", "Fabric Types"],
+   496→        rows: [
+   497→          ["Sofas & couches", "Cotton & cotton blends"],
+   498→          ["Armchairs & recliners", "Linen & linen blends"],
+   499→          ["Dining chairs", "Velvet & velour"],
+   500→          ["Ottomans & footstools", "Leather & faux leather"],
+   501→          ["Headboards", "Wool & wool blends"],
+   502→          ["Cushions & throws", "Silk & silk blends"],
+   503→          ["Office chairs", "Microfibre & synthetic"],
+   504→          ["Bar stools", "Outdoor fabrics"],
+   505→        ],
+   506→      },
+   507→    },
+   508→    sidebar: {
+   509→      assessmentHeading: "Free Upholstery Assessment",
+   510→      assessmentItems: ["Furniture type identification", "Fabric testing", "Stain assessment", "Written, itemised quote", "Recommended treatment plan"],
+   511→      guarantees: ["Fabric-Safe Methods", "All Fabric Types", "No Hidden Costs", "Flexible Scheduling", "Master Guarding Available"],
+   512→    },
+   513→    ctaBand: { heading: "Restore Your Furniture to Its Best", subtext: "Book your free on-site upholstery assessment today. Kathy will evaluate your furniture and provide a detailed written quote." },
+   514→    newsletter: { heading: "Furniture Care Tips from Kathy", subtext: "Subscribe for seasonal advice on keeping your furniture looking its best and exclusive offers." },
+   515→  },
+   516→  "master-guarding": {
+   517→    slug: "master-guarding",
+   518→    metaTitle: "Fabric Protection Johannesburg | Master Guarding | On The Spot",
+   519→    metaDescription: "Master Guarding fabric protection Johannesburg. 12-month stain-repellent coating. Fluoropolymer barrier repels water & oil. Professional application. Free assessment.",
+   520→    heroTag: "Master Guarding Protection",
+   521→    heroHeading: "12-Month Professional Stain Protection for Your Fabrics",
+   522→    heroSubtext: "Spills bead up. Stains wipe away. Your fabrics stay pristine.",
+   523→    heroParagraph: "Master Guarding is a professional-grade fluoropolymer barrier applied to your freshly cleaned curtains, upholstery, and carpets. It creates an invisible shield that repels both water-based and oil-based stains — so when accidents happen, spills bead up and wipe away instead of soaking in and becoming permanent stains.",
+   524→    trustStrip: ["12-Month Certified Protection", "Fluoropolymer Technology", "Professional Application", "Free On-Site Assessment"],
+   525→    guarantees: [
+   526→      { icon: "Shield", label: "12-Month Certification" },
+   527→      { icon: "Droplets", label: "Water & Oil Repellent" },
+   528→      { icon: "Sun", label: "UV Fade Reduction" },
+   529→      { icon: "Lock", label: "No Hidden Costs" },
+   530→      { icon: "Award", label: "Professional Application" },
+   531→    ],
+   532→    mainContent: {
+   533→      heading: "How Master Guarding Works",
+   534→      paragraphs: [
+   535→        "Master Guarding uses advanced fluoropolymer technology to create an invisible, breathable barrier on your fabric fibres. This barrier is both hydrophobic (water-repelling) and oleophobic (oil-repelling), meaning it protects against virtually all common household stains — from coffee and wine to cooking oil and pet accidents.",
+   536→        "Unlike off-the-shelf spray products that wear off after a few washes, Master Guarding is professionally applied by our certified technicians using precision equipment that ensures even coverage and optimal adhesion. The result is 12 months of certified protection that actually works.",
+   537→      ],
+   538→      includes: [
+   539→        { title: "Hydrophobic barrier", description: "Repels water-based liquids — coffee, tea, juice, wine, and water-based spills bead up and wipe away." },
+   540→        { title: "Oleophobic barrier", description: "Repels oil-based substances — cooking oil, butter, salad dressing, and body oils don't penetrate." },
+   541→        { title: "UV fade reduction", description: "Reduces the impact of sunlight on fabric colours, helping curtains and upholstery maintain their vibrancy." },
+   542→        { title: "Professional application", description: "Applied by certified technicians using precision equipment for even, thorough coverage." },
+   543→        { title: "Annual renewal available", description: "Maintain continuous protection with annual reapplication at a discounted rate." },
+   544→      ],
+   545→      processSteps: [
+   546→        { step: 1, title: "Fabric Assessment", description: "We confirm fabric compatibility and ensure the surface is clean and ready for treatment." },
+   547→        { step: 2, title: "Professional Application", description: "Certified technicians apply Master Guarding using precision spray equipment for even coverage." },
+   548→        { step: 3, title: "Curing Time", description: "The treatment bonds to fabric fibres within 1-2 hours. Full protection is active after 24 hours." },
+   549→        { step: 4, title: "Certification", description: "You receive a dated protection certificate valid for 12 months from application." },
+   550→      ],
+   551→      concerns: [
+   552→        { question: "Is it safe for pets and children?", answer: "Yes. Master Guarding is non-toxic once cured and completely safe for homes with children and pets." },
+   553→        { question: "Does it change the feel of the fabric?", answer: "No. The fluoropolymer barrier is invisible and does not alter the texture, breathability, or appearance of your fabrics." },
+   554→        { question: "Can I apply it myself?", answer: "Professional application ensures even coverage and proper adhesion. DIY products cannot match the quality and longevity of professional application." },
+   555→      ],
+   556→    },
+   557→    sidebar: {
+   558→      assessmentHeading: "Free Protection Assessment",
+   559→      assessmentItems: ["Fabric compatibility check", "Protection recommendations", "Written quote", "Annual renewal information"],
+   560→      guarantees: ["12-Month Certification", "Water & Oil Repellent", "UV Fade Reduction", "No Hidden Costs", "Professional Application"],
+   561→    },
+   562→    ctaBand: { heading: "Protect Your Fabrics for 12 Months", subtext: "Add Master Guarding to any cleaning service. Spills bead up, stains wipe away." },
+   563→    newsletter: { heading: "Fabric Protection Tips", subtext: "Subscribe for advice on keeping your fabrics protected and looking new." },
+   564→  },
+   565→  "fire-proofing": {
+   566→    slug: "fire-proofing",
+   567→    metaTitle: "Fire Proofing Curtains Johannesburg | SANS Compliant | On The Spot",
+   568→    metaDescription: "SANS-compliant fire retardant treatment Johannesburg. Fire compliance certificates for hotels, theatres, healthcare, schools. Insurance recognised. Free assessment.",
+   569→    heroTag: "Fire Proofing",
+   570→    heroHeading: "SANS-Compliant Fire Retardant Treatment & Certification",
+   571→    heroSubtext: "Certified protection. Legal compliance. Peace of mind.",
+   572→    heroParagraph: "If you manage a hotel, theatre, healthcare facility, school, or any public venue in Johannesburg, fire safety compliance isn't optional — it's the law. Our SANS-compliant fire retardant treatment is professionally applied to your curtains, drapes, and soft furnishings, and we issue the fire compliance certificates your business needs to operate legally and safely.",
+   573→    trustStrip: ["SANS Compliant", "Fire Certificates Issued", "Insurance Recognised", "5 Industries Served"],
+   574→    guarantees: [
+   575→      { icon: "Shield", label: "SANS Compliant" },
+   576→      { icon: "FileText", label: "Fire Certificates Issued" },
+   577→      { icon: "Building", label: "Insurance Recognised" },
+   578→      { icon: "Clock", label: "After-Hours Available" },
+   579→      { icon: "Award", label: "5-Step Process" },
+   580→    ],
+   581→    mainContent: {
+   582→      heading: "Why Fire Proofing Is Essential for Commercial Venues",
+   583→      paragraphs: [
+   584→        "South African National Standards (SANS) require that curtains and soft furnishings in public spaces meet specific fire retardancy ratings. Non-compliance can result in fines, insurance claim rejections, and — most critically — lives at risk. Our fire proofing service ensures your venue meets or exceeds these requirements.",
+   585→        "Our certified fire retardant treatment is applied on-site, meaning there's no need to remove curtains or disrupt operations. We work after hours for hotels, theatres, and other venues that cannot afford downtime during business hours.",
+   586→      ],
+   587→      includes: [
+   588→        { title: "SANS-compliant treatment", description: "Fire retardant treatment meets or exceeds South African National Standards for public spaces." },
+   589→        { title: "Fire compliance certificates", description: "Official documentation required by insurance companies, regulatory bodies, and municipal authorities." },
+   590→        { title: "On-site application", description: "No removal required. Applied directly to curtains and soft furnishings where they hang." },
+   591→        { title: "After-hours service", description: "Hotels, theatres, and venues can maintain normal operations while we work." },
+   592→        { title: "5 industries served", description: "Hotels, theatres, healthcare, schools, and corporate environments." },
+   593→      ],
+   594→      processSteps: [
+   595→        { step: 1, title: "Compliance Assessment", description: "We assess your current fire safety compliance and identify all items requiring treatment." },
+   596→        { step: 2, title: "Fabric Testing", description: "We test fabric compatibility with fire retardant chemicals to ensure optimal adhesion." },
+   597→        { step: 3, title: "Professional Application", description: "SANS-compliant fire retardant is professionally applied using precision equipment." },
+   598→        { step: 4, title: "Drying & Quality Check", description: "Treatment dries within hours. Our technicians verify complete coverage." },
+   599→        { step: 5, title: "Certificate Issuance", description: "You receive dated fire compliance certificates valid for the regulatory period." },
+   600→      ],
+   601→      concerns: [
+   602→        { question: "How long does fire proofing last?", answer: "Our fire proofing treatment is valid for the period specified by SANS regulations. We provide renewal reminders and discounted reapplication." },
+   603→        { question: "Is it required by law?", answer: "Yes, for most public venues including hotels, theatres, schools, and healthcare facilities. Non-compliance can result in fines and insurance claim rejections." },
+   604→        { question: "Can you work after hours?", answer: "Absolutely. We specialise in after-hours application for hospitality and entertainment venues to ensure zero operational disruption." },
+   605→      ],
+   606→    },
+   607→    sidebar: {
+   608→      assessmentHeading: "Free Fire Safety Assessment",
+   609→      assessmentItems: ["Current compliance review", "Item identification", "Fabric compatibility testing", "Written quote with timeline", "Certificate samples"],
+   610→      guarantees: ["SANS Compliant", "Fire Certificates Issued", "Insurance Recognised", "After-Hours Available", "5-Step Certified Process"],
+   611→    },
+   612→    ctaBand: { heading: "Ensure Your Venue Is Fire Safety Compliant", subtext: "Book your free fire safety assessment today. We'll review your compliance and provide a detailed quote." },
+   613→    newsletter: { heading: "Compliance Updates", subtext: "Subscribe for fire safety regulation updates and compliance reminders." },
+   614→  },
+   615→  "rug-care": {
+   616→    slug: "rug-care",
+   617→    metaTitle: "Persian & Oriental Rug Cleaning Johannesburg | On The Spot",
+   618→    metaDescription: "Expert Persian and Oriental rug cleaning Johannesburg. Dye stability testing, hand-woven specialist care, on-site or collection service. Free assessment. Call 075 011 9200.",
+   619→    heroTag: "Persian & Oriental Rug Care",
+   620→    heroHeading: "Expert Care for Your Most Precious Rugs",
+   621→    heroSubtext: "Hand-woven rugs deserve hand-selected cleaning methods.",
+   622→    heroParagraph: "Persian, Oriental, and hand-woven rugs are works of art — often passed down through generations or acquired at significant expense. They require a completely different approach to standard carpet cleaning. At On The Spot, we understand the construction, dyes, and fibres of these specialist pieces and apply cleaning methods that preserve their beauty, colour, and value.",
+   623→    trustStrip: ["Specialist Rug Care", "Dye Stability Testing", "On-Site or Collection", "Free Assessment Within 48 Hours"],
+   624→    guarantees: [
+   625→      { icon: "Shield", label: "Dye Stability Tested" },
+   626→      { icon: "Heart", label: "Hand-Woven Specialist" },
+   627→      { icon: "Lock", label: "No Hidden Costs" },
+   628→      { icon: "Home", label: "On-Site or Collection" },
+   629→      { icon: "Award", label: "6-Step Process" },
+   630→    ],
+   631→    mainContent: {
+   632→      heading: "Why Hand-Woven Rugs Need Specialist Care",
+   633→      paragraphs: [
+   634→        "Machine-made carpets can withstand aggressive cleaning methods. Hand-woven rugs cannot. The dyes in Persian and Oriental rugs can bleed if exposed to the wrong chemicals or excessive moisture. The natural fibres — wool, silk, cotton — each require specific pH-balanced treatments. The hand-knotted construction can be damaged by heavy equipment.",
+   635→        "That's why our rug care process begins with dye stability testing — we apply a tiny amount of cleaning solution to an inconspicuous area and check for colour movement before we begin. Only when we've confirmed the dyes are stable do we proceed with cleaning.",
+   636→      ],
+   637→      includes: [
+   638→        { title: "Dye stability testing", description: "Every rug is tested for colourfastness before any cleaning begins. We never skip this step." },
+   639→        { title: "Specialist cleaning methods", description: "pH-balanced, fibre-specific solutions matched to wool, silk, cotton, and blended constructions." },
+   640→        { title: "On-site or collection service", description: "Choose the option that suits you — we can clean smaller rugs on-site or arrange collection for larger pieces." },
+   641→        { title: "Expert handling", description: "Our technicians are trained specifically in the care of hand-woven and antique rugs." },
+   642→        { title: "6-step specialist process", description: "A meticulous, multi-stage process designed for the unique needs of valuable rugs." },
+   643→      ],
+   644→      processSteps: [
+   645→        { step: 1, title: "Rug Assessment", description: "Identify construction type, fibre content, and any existing damage or wear patterns." },
+   646→        { step: 2, title: "Dye Stability Test", description: "Apply test solution to inconspicuous area and check for colour movement." },
+   647→        { step: 3, title: "Dust Extraction", description: "Specialist vibration equipment removes deep-set dust and grit from the rug foundation." },
+   648→        { step: 4, title: "Gentle Cleaning", description: "pH-balanced, fibre-specific solutions applied by hand for thorough yet gentle cleaning." },
+   649→        { step: 5, title: "Rinse & Moisture Extraction", description: "Thorough rinse with controlled water extraction to remove all cleaning residue." },
+   650→        { step: 6, title: "Drying & Final Inspection", description: "Flat drying to maintain shape, followed by Kathy's personal inspection of every rug." },
+   651→      ],
+   652→      concerns: [
+   653→        { question: "Will the colours bleed?", answer: "We perform dye stability testing before every clean. If we identify any risk, we adjust our method accordingly. Your rug's colours are protected." },
+   654→        { question: "Can you clean silk rugs?", answer: "Yes. Silk rugs require the most delicate approach, and our technicians are specifically trained in silk rug care." },
+   655→        { question: "Do I need to bring the rug to you?", answer: "No. We offer on-site cleaning for smaller rugs and a collection service for larger pieces that need more intensive treatment." },
+   656→      ],
+   657→      tableData: {
+   658→        headers: ["Rug Type", "Construction"],
+   659→        rows: [
+   660→          ["Persian rugs", "Hand-knotted wool"],
+   661→          ["Oriental rugs", "Hand-knotted silk"],
+   662→          ["Turkish kilims", "Flat-woven wool"],
+   663→          ["Moroccan rugs", "Hand-knotted wool/cotton"],
+   664→          ["Indian dhurries", "Flat-woven cotton"],
+   665→          ["Caucasian rugs", "Hand-knotted wool"],
+   666→          ["Chinese art deco", "Hand-knotted silk/wool"],
+   667→          ["Berber rugs", "Hand-knotted wool"],
+   668→        ],
+   669→      },
+   670→    },
+   671→    sidebar: {
+   672→      assessmentHeading: "Free Rug Assessment",
+   673→      assessmentItems: ["Construction type identification", "Fibre content analysis", "Dye stability pre-test", "Written quote", "Service option recommendation"],
+   674→      guarantees: ["Dye Stability Tested", "Hand-Woven Specialist", "No Hidden Costs", "On-Site or Collection", "6-Step Specialist Process"],
+   675→    },
+   676→    ctaBand: { heading: "Your Rugs Deserve Expert Care", subtext: "Book your free rug assessment today. We'll evaluate your rug and recommend the best treatment approach." },
+   677→    newsletter: { heading: "Rug Care Tips from Kathy", subtext: "Subscribe for seasonal advice on maintaining the beauty and value of your hand-woven rugs." },
+   678→  },
+   679→};
+   680→
+   681→export const SECTOR_LANDING_DATA: Record<string, {
+   682→  slug: string;
+   683→  metaTitle: string;
+   684→  metaDescription: string;
+   685→  heroTag: string;
+   686→  heroHeading: string;
+   687→  heroSubtext: string;
+   688→  heroParagraph: string;
+   689→  color: string;
+   690→  trustStrip: string[];
+   691→  guarantees: { icon: string; label: string }[];
+   692→  keyStats: { label: string; description: string }[];
+   693→  decisionMaker: {
+   694→    role: string;
+   695→    heading: string;
+   696→    paragraphs: string[];
+   697→    ctaBox: { heading: string; items: string[] };
+   698→  };
+   699→  faqs: { question: string; answer: string }[];
+   700→  ctaBand: { heading: string; subtext: string };
+   701→  newsletter: { heading: string; subtext: string };
+   702→}> = {
+   703→  "hotels": {
+   704→    slug: "hotels",
+   705→    metaTitle: "Hotel Curtain Cleaning Johannesburg | Zero Disruption | On The Spot",
+   706→    metaDescription: "Professional on-site hotel curtain cleaning Johannesburg. Zero guest disruption, after-hours available, fire certificate included. Free assessment.",
+   707→    heroTag: "Hotels & Hospitality",
+   708→    heroHeading: "Hotel Curtain Cleaning — Zero Guest Disruption",
+   709→    heroSubtext: "On-site in the room. Same-day return. Fire certificate included.",
+   710→    heroParagraph: "Your hotel's curtains are one of the first things guests notice — and one of the last things that get professionally cleaned. Between high occupancy rates, tight turnaround schedules, and the absolute requirement for zero guest disruption, curtain cleaning often falls to the bottom of the maintenance list. On The Spot changes that completely.",
+   711→    color: "#0A369D",
+   712→    trustStrip: ["Zero Room Downtime", "After-Hours Available", "Fire Certificates Included", "Same-Day Room Return"],
+   713→    guarantees: [
+   714→      { icon: "Shield", label: "100% No-Shrinkage Guarantee" },
+   715→      { icon: "Clock", label: "After-Hours Available" },
+   716→      { icon: "Flame", label: "Fire Certificate Included" },
+   717→      { icon: "CheckCircle", label: "Same-Day Room Return" },
+   718→    ],
+   719→    keyStats: [
+   720→      { label: "Zero Room Downtime", description: "Curtains cleaned in situ. Rooms stay rentable. No revenue loss, no room-blocking headaches." },
+   721→      { label: "After-Hours Service", description: "Our teams work night shifts to clean curtains while guests sleep. Zero disruption to operations." },
+   722→      { label: "Fire Compliance", description: "We issue fire safety certificates required by the hospitality sector. One service, two compliance boxes ticked." },
+   723→      { label: "Same-Day Completion", description: "Curtains are cleaned, fresh, and ready before housekeeping turns the room. No drying time." },
+   724→    ],
+   725→    decisionMaker: {
+   726→      role: "General Manager",
+   727→      heading: "Why General Managers Choose On The Spot",
+   728→      paragraphs: [
+   729→        "As a General Manager, you're accountable for guest satisfaction scores, room revenue, compliance, and operating costs. Traditional curtain cleaning forces you to choose between clean curtains and occupied rooms — On The Spot eliminates that compromise entirely.",
+   730→        "Our on-site dry-cleaning process means curtains are cleaned in the room, while the room remains available. No removing curtains, no bare windows, no out-of-order rooms, no lost revenue. Our teams can work during the day in empty rooms or after hours during full occupancy — whatever suits your property best.",
+   731→        "We also provide the fire compliance certificates that the hospitality sector requires, making us a single-service solution for both cleanliness and compliance. One booking, two boxes ticked.",
+   732→      ],
+   733→      ctaBox: { heading: "Request Your Free Hotel Assessment", items: ["Full property curtain audit", "Room-by-room quote", "Fire compliance review", "After-hours scheduling", "Revenue impact analysis"] },
+   734→    },
+   735→    faqs: [
+   736→      { question: "Can you clean hotel curtains after hours?", answer: "Yes — after-hours service is our standard for the hospitality industry. Our teams work night shifts to ensure zero guest disruption. We coordinate with your front desk and housekeeping schedule." },
+   737→      { question: "Do you issue fire compliance certificates?", answer: "Yes. We provide SANS-compliant fire retardant treatment and issue the necessary certificates recognised by insurance companies and regulatory bodies." },
+   738→      { question: "How many rooms can you clean in one night?", answer: "Depending on curtain type and soiling level, our team can typically clean 8-15 rooms per night shift. We'll provide a detailed schedule during your free assessment." },
+   739→      { question: "What about blackout curtains?", answer: "Blackout-lined curtains are one of our specialities. Our dry-cleaning process won't damage thermal backing or cause peeling and cracking." },
+   740→    ],
+   741→    ctaBand: { heading: "Zero Disruption. Full Compliance. Clean Curtains.", subtext: "Book your free hotel assessment today. We'll audit your property and provide a detailed schedule and quote." },
+   742→    newsletter: { heading: "Hospitality Maintenance Insights", subtext: "Subscribe for seasonal tips on maintaining guest room fabrics and compliance updates." },
+   743→  },
+   744→  "corporate": {
+   745→    slug: "corporate",
+   746→    metaTitle: "Office Curtain Cleaning Johannesburg | Facilities Management | On The Spot",
+   747→    metaDescription: "Professional on-site office curtain cleaning Johannesburg. Quarterly maintenance, indoor air quality reports, minimal disruption. Free assessment.",
+   748→    heroTag: "Corporate Offices",
+   749→    heroHeading: "Office Curtain Cleaning — Facilities Management Made Simple",
+   750→    heroSubtext: "Quarterly programmes. Air quality reports. Minimal disruption.",
+   751→    heroParagraph: "Corporate environments demand a different approach to curtain cleaning. Boardrooms, executive offices, and reception areas project your company's image — and dirty, dusty curtains undermine that image entirely. On The Spot provides scheduled maintenance programmes designed for facilities managers who need reliable, professional service with minimal workplace disruption.",
+   752→    color: "#082D84",
+   753→    trustStrip: ["Quarterly Maintenance", "Air Quality Reports", "Minimal Disruption", "Professional Standards"],
+   754→    guarantees: [
+   755→      { icon: "Shield", label: "No-Shrinkage Guarantee" },
+   756→      { icon: "Clock", label: "After-Hours Available" },
+   757→      { icon: "FileText", label: "Air Quality Reports" },
+   758→      { icon: "Calendar", label: "Quarterly Scheduling" },
+   759→    ],
+   760→    keyStats: [
+   761→      { label: "Quarterly Programmes", description: "Scheduled maintenance ensures your office curtains are always clean. No more forgotten cleaning cycles." },
+   762→      { label: "Indoor Air Quality", description: "We provide before-and-after air quality reports documenting the improvement in your workspace environment." },
+   763→      { label: "Minimal Disruption", description: "We work after hours or during low-occupancy periods. Your business continues uninterrupted." },
+   764→      { label: "Professional Standards", description: "Reception areas, boardrooms, and executive offices maintained to the highest standard." },
+   765→    ],
+   766→    decisionMaker: {
+   767→      role: "Facilities Manager",
+   768→      heading: "Why Facilities Managers Choose On The Spot",
+   769→      paragraphs: [
+   770→        "As a Facilities Manager, you need reliable service providers who deliver on schedule, on budget, and without disruption. On The Spot's quarterly maintenance programmes are designed to integrate seamlessly with your existing building maintenance schedule.",
+   771→        "We provide detailed indoor air quality reports with every service — documentation you can present to management as evidence of a healthier, more productive workspace. Our technicians are professional, uniformed, and trained to work in corporate environments.",
+   772→      ],
+   773→      ctaBox: { heading: "Request Your Free Office Assessment", items: ["Full office curtain audit", "Air quality baseline report", "Quarterly maintenance proposal", "After-hours scheduling", "Budget-friendly pricing"] },
+   774→    },
+   775→    faqs: [
+   776→      { question: "Do you offer quarterly maintenance contracts?", answer: "Yes. Our quarterly programmes include scheduled visits, priority booking, and preferential pricing. Your curtains stay clean year-round." },
+   777→      { question: "Can you work after hours?", answer: "Absolutely. We routinely work after hours in corporate environments to ensure zero disruption to your business operations." },
+   778→      { question: "What are air quality reports?", answer: "We measure airborne allergen and dust levels before and after cleaning, providing you with documented evidence of improved indoor air quality." },
+   779→      { question: "Do you clean boardroom curtains?", answer: "Yes — boardrooms, executive offices, reception areas, and common spaces. We handle all corporate curtain types." },
+   780→    ],
+   781→    ctaBand: { heading: "Professional Curtain Care for Professional Spaces", subtext: "Book your free office assessment. We'll audit your workspace and design a maintenance programme." },
+   782→    newsletter: { heading: "Facilities Management Insights", subtext: "Subscribe for tips on maintaining professional workspaces and indoor air quality." },
+   783→  },
+   784→  "healthcare": {
+   785→    slug: "healthcare",
+   786→    metaTitle: "Hospital Curtain Cleaning Johannesburg | Infection Control | On The Spot",
+   787→    metaDescription: "Clinical-grade hospital curtain cleaning Johannesburg. HAI prevention, infection-control protocols, medical compliance. Free assessment.",
+   788→    heroTag: "Healthcare",
+   789→    heroHeading: "Hospital Curtain Cleaning — Infection Control Compliant",
+   790→    heroSubtext: "Clinical standards. Infection-control protocols. Compliance documentation.",
+   791→    heroParagraph: "Healthcare environments have the highest hygiene standards of any sector — and your curtain cleaning must meet those standards. On The Spot provides clinical-grade curtain cleaning services specifically designed for hospitals, clinics, and medical facilities, with infection-control protocols that align with your facility's hygiene requirements.",
+   792→    color: "#059669",
+   793→    trustStrip: ["Clinical-Grade Sanitisation", "HAI Prevention", "Infection-Control Protocols", "Compliance Documentation"],
+   794→    guarantees: [
+   795→      { icon: "Shield", label: "Infection-Control Compliant" },
+   796→      { icon: "Heart", label: "HAI Prevention" },
+   797→      { icon: "FileText", label: "Compliance Documentation" },
+   798→      { icon: "Clock", label: "Flexible Scheduling" },
+   799→    ],
+   800→    keyStats: [
+   801→      { label: "Clinical-Grade", description: "Our cleaning meets healthcare hygiene standards. Solvent-based dry cleaning eliminates pathogens without introducing moisture." },
+   802→      { label: "HAI Prevention", description: "Healthcare-Associated Infections can be linked to contaminated soft furnishings. Our service is part of your infection-control arsenal." },
+   803→      { label: "Compliance Documentation", description: "Full documentation of cleaning protocols, products used, and schedules maintained for your compliance records." },
+   804→      { label: "Flexible Scheduling", description: "We work around ward schedules, theatre availability, and clinic hours." },
+   805→    ],
+   806→    decisionMaker: {
+   807→      role: "Infection Control Officer",
+   808→      heading: "Why Infection Control Officers Trust On The Spot",
+   809→      paragraphs: [
+   810→        "Infection control is about eliminating vectors — and curtains in patient areas are a documented vector for pathogen transmission. Traditional wet cleaning can introduce moisture that promotes bacterial growth. Our dry-cleaning process eliminates pathogens without creating the damp conditions that bacteria thrive in.",
+   811→        "We provide full documentation of our cleaning protocols, the products used, and the schedule maintained — exactly the kind of records infection control officers need for compliance audits.",
+   812→      ],
+   813→      ctaBox: { heading: "Request Your Free Healthcare Assessment", items: ["Infection-control review", "Protocol documentation", "Compliance gap analysis", "Scheduling plan", "Quote"] },
+
+[showing lines 314-813 of 1176; use offset=814 with limit to continue reading]

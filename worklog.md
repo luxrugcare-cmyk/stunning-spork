@@ -140,3 +140,177 @@ Stage Summary:
 - All interactive elements working
 - Mobile responsive with hamburger menu
 - API routes tested (contact, newsletter, chat)
+
+---
+Task ID: 1
+Agent: site-data-expander
+Task: Expand site-data.ts with comprehensive landing page data for all 18 pages
+
+Work Log:
+- Read existing site-data.ts (313 lines with 9 existing exports: SITE_CONFIG, TRUST_BADGES, SERVICES, SECTORS, AREAS, PROCESS_STEPS, GUARANTEES, COMPARISON_TABLE, FAQS, FOUNDER, NAV_LINKS)
+- Added SERVICE_LANDING_DATA (6 service pages: curtain-blind-cleaning, mattress-sanitisation, upholstery-carpet-cleaning, master-guarding, fire-proofing, rug-care) with full typed Record including meta, hero, trust strip, guarantees, main content (heading, paragraphs, includes, processSteps, concerns, tableData), sidebar, ctaBand, newsletter
+- Added SECTOR_LANDING_DATA (6 sector pages: hotels, corporate, healthcare, education, theatres, residential) with full typed Record including meta, hero, color, trust strip, guarantees, keyStats, decisionMaker (role, heading, paragraphs, ctaBox), faqs, ctaBand, newsletter
+- Added AREA_LANDING_DATA (6 area pages: jhb-north, jhb-east, jhb-south, jhb-west, jhb-central, pretoria-midrand) with full typed Record including meta, hero, suburbs, focus, main content (heading, paragraphs, servicesTable), sidebar (assessment, guarantees, contact), ctaBand, newsletter
+- All existing data preserved intact — no modifications to existing exports
+- Lint passes clean with no TypeScript errors
+- File grew from 313 lines to 1,175 lines
+
+Stage Summary:
+- Three new comprehensive data exports added to site-data.ts
+- SERVICE_LANDING_DATA: 6 service landing pages with detailed content
+- SECTOR_LANDING_DATA: 6 sector landing pages with decision-maker content
+- AREA_LANDING_DATA: 6 area landing pages with local-specific content
+- Total: 18 landing pages of structured content ready for component rendering
+- All TypeScript types validated, lint passes
+
+---
+Task ID: 2-3
+Agent: Subagent (full-stack-developer)
+Task: Update header with dropdown navigation AND create shared landing page components
+
+Work Log:
+- Updated `/src/components/header.tsx` with NavigationMenu dropdown menus for Services (6 items), Sectors (6 items), and Areas (6 items)
+- Each dropdown item shows icon, title, and short description with hover effects (emerald/bronze accent)
+- Primary service (Curtain & Blind) highlighted with border and "Primary" badge in dropdown
+- Desktop nav: NavigationMenu with NavigationMenuContent for 2-column grid dropdowns
+- Mobile nav: Sheet with Collapsible expandable sections for Services, Sectors, Areas
+- Fixed `Curtains` → `Blinds` icon mapping (lucide-react doesn't export `Curtains`)
+- Fixed `setMobileOpenState` → `setMobileOpen` (removed external variable mutation pattern that violated React rules)
+- Added `onClose` prop to MobileNavSection instead of external variable pattern
+- Created `/src/components/landing/landing-hero.tsx` — reusable hero with gradient bg, badge, heading, subtext, paragraph, 2 CTAs, trust strip, decorative gradient orb
+- Created `/src/components/landing/landing-sidebar.tsx` — reusable sidebar with Assessment CTA card (checklist + button), Guarantees card (shield icons), Contact card (phone/email/response time)
+- Created `/src/components/landing/landing-cta.tsx` — reusable CTA band with emerald gradient, heading, subtext, 2 buttons
+- Created `/src/components/landing/landing-newsletter.tsx` — reusable newsletter strip with email input, subscribe button, POPIA note, status feedback
+- All components are 'use client', use proper TypeScript interfaces, responsive, accessible (ARIA labels, roles)
+- Lint passes clean, dev server returns 200
+
+Stage Summary:
+- Header: Full dropdown navigation with icon+description items, mobile collapsible sections
+- Landing Hero: Configurable gradient, tag badge, CTAs, trust strip
+- Landing Sidebar: 3-card layout (assessment, guarantees, contact)
+- Landing CTA: Emerald gradient band with dual CTAs
+- Landing Newsletter: Email capture with POPIA compliance note
+- All 5 components production-ready with responsive design
+
+---
+Task ID: 5
+Agent: Subagent (full-stack-developer)
+Task: Create sector landing page template and route for 6 sector pages
+
+Work Log:
+- Created `/src/app/sectors/[slug]/page.tsx` — server component with generateStaticParams, generateMetadata, and async page rendering
+- Created `/src/app/sectors/[slug]/sector-landing-client.tsx` — comprehensive client component with full sector landing page layout:
+  - LandingHero with sector-specific color gradient
+  - Guarantee Badges section (4 badges in responsive 2x2 / 4-col grid)
+  - Key Stats section (4 stat cards in 2x2 grid with sector-colored icons/accents)
+  - Decision-Maker section (2-column: 2/3 paragraphs + 1/3 CTA box with assessment items and button)
+  - FAQ section (shadcn Accordion with sector-specific FAQs)
+  - LandingNewsletter with sector-specific content
+  - LandingCTA with sector-specific content
+  - Header, Footer, WhatsAppButton, CookieConsent composed correctly
+- Used sector's unique `color` prop throughout for accents, borders, highlights (icon backgrounds, badge borders, CTA box header, stat labels)
+- Mapped guarantee icon strings to lucide-react components (including Theater → Drama)
+- All animations via framer-motion fadeUp variants with staggered delays
+- Fully responsive, accessible (ARIA labels, semantic sections, roles), proper TypeScript types
+- All 6 sector pages return 200: hotels, corporate, healthcare, education, theatres, residential
+- Lint passes clean, dev server running without errors
+
+Stage Summary:
+- Dynamic route `/sectors/[slug]` with SSG via generateStaticParams
+- 6 sector landing pages fully functional with unique colors per sector
+- Page layout: Hero → Guarantees → Key Stats → Decision-Maker → FAQ → Newsletter → CTA
+- Sector color applied throughout for cohesive per-sector branding
+- All pages responsive, accessible, production-quality
+
+---
+Task ID: 6
+Agent: Subagent (full-stack-developer)
+Task: Create area landing page template and route for 6 area pages
+
+Work Log:
+- Created `/src/app/areas/[slug]/page.tsx` — server component with generateStaticParams (6 slugs), generateMetadata (metaTitle, metaDescription, openGraph), and notFound() fallback
+- Created `/src/app/areas/[slug]/area-landing-client.tsx` — client component with full area landing page layout:
+  - Header (shared)
+  - LandingHero — uses heroTag, heroHeading, heroSubtext, heroParagraph from AREA_LANDING_DATA
+  - Focus Badge — centered emerald/bronze badge showing area focus (e.g., "Highveld dust on premium fabrics")
+  - Two-column main content (2/3 + 1/3 on lg):
+    - Left: main heading, paragraphs, services table (shadcn Table component), suburbs section (MapPin badges)
+    - Right: sticky LandingSidebar with assessment, guarantees, contact cards
+  - LandingNewsletter — area-specific heading/subtext
+  - LandingCTA — area-specific heading/subtext
+  - Footer, WhatsAppButton, CookieConsent
+- Derived area name from heroTag for dynamic headings (e.g., "Johannesburg North")
+- All 6 area pages tested: jhb-north, jhb-east, jhb-south, jhb-west, jhb-central, pretoria-midrand → all 200
+- Non-existent slug returns 404
+- Metadata verified: <title> correctly set per area
+- Lint passes clean, dev server compiles without errors
+- Responsive design: single column on mobile, 2/3+1/3 grid on lg+, table description column hidden on small screens
+- Accessibility: ARIA labels, semantic HTML (main, section, aside), role attributes
+- Framer Motion fadeInUp animations on content sections
+
+Stage Summary:
+- Dynamic route `/areas/[slug]` with 6 static params
+- Area landing page template fully composed from shared landing components
+- Services table with price ranges, suburb badges, sticky sidebar
+- SEO metadata generated dynamically per area
+- All 6 pages verified working with 200 status codes
+
+---
+Task ID: 4
+Agent: Subagent (full-stack-developer)
+Task: Create service landing page template and route for 6 service pages
+
+Work Log:
+- Verified all prerequisite components exist: LandingHero, LandingSidebar, LandingCTA, LandingNewsletter, Header, Footer, WhatsAppButton, CookieConsent, Accordion, Table
+- Read SERVICE_LANDING_DATA type structure from site-data.ts (slug, metaTitle, metaDescription, heroTag, heroHeading, heroSubtext, heroParagraph, trustStrip, guarantees, mainContent with includes/processSteps/concerns/tableData, sidebar, ctaBand, newsletter)
+- Created `/src/app/services/[slug]/page.tsx` — server component with:
+  - generateStaticParams() for all 6 service slugs
+  - generateMetadata() with dynamic title, description, openGraph from SERVICE_LANDING_DATA
+  - notFound() fallback for invalid slugs
+  - Async params handling for Next.js 16
+- Created `/src/app/services/[slug]/service-landing-client.tsx` — comprehensive client component with full service landing page layout:
+  - Header (shared)
+  - LandingHero — uses heroTag, heroHeading, heroSubtext, heroParagraph, trustStrip
+  - Guarantee Badges strip — icon+label badges from data.guarantees
+  - Two-column main content (2/3 + 1/3 on lg):
+    - Left: main heading, paragraphs, "What's Included" icon cards (2-col grid), Process Steps (numbered timeline with icons), Common Questions (Accordion), optional Table data
+    - Right: sticky LandingSidebar with assessment, guarantees, contact cards
+  - LandingNewsletter — service-specific heading/subtext
+  - LandingCTA — service-specific heading/subtext
+  - Footer, WhatsAppButton, CookieConsent
+  - JSON-LD structured data: Service schema + FAQPage schema for SEO
+- All 6 service pages tested: curtain-blind-cleaning, mattress-sanitisation, upholstery-carpet-cleaning, master-guarding, fire-proofing, rug-care → all 200
+- Non-existent slug (/services/nonexistent) returns 404
+- Lint passes clean, no TypeScript errors
+- Dev server compiles all service pages without errors
+- Responsive design: single column on mobile, 2/3+1/3 grid on lg+
+- Accessibility: ARIA labels, semantic HTML, role attributes
+- Framer Motion fadeUp animations with staggered delays
+
+Stage Summary:
+- Dynamic route `/services/[slug]` with 6 static params for SSG
+- Service landing page template fully composed from shared landing components
+- Full page layout: Hero → Guarantees → Main Content (includes, process, FAQ, table) → Sidebar → Newsletter → CTA
+- JSON-LD structured data (Service + FAQPage schemas) for SEO
+- All 6 service pages verified working with 200 status codes
+
+---
+Task ID: 7-8
+Agent: Main Orchestrator
+Task: Update home page links and verify all 18 landing pages
+
+Work Log:
+- Updated services-section.tsx: "Learn More" links now point to /services/[id] instead of #contact
+- Updated sectors-section.tsx: "Get a Quote" links now point to /sectors/[id] instead of #contact
+- Rewrote areas-section.tsx: Fixed AreaData type → typeof AREAS[number], fixed area.focusBadge → area.focus, fixed area.suburbs array join, added "Explore This Area" links to /areas/[id], area tag strip now links to landing pages instead of scroll
+- Verified all 18 landing pages with Agent Browser (200 status, unique SEO titles, unique content)
+- Tested dropdown navigation showing all 6 services, 6 sectors, 6 areas
+- Tested mobile responsive views
+- Lint passes clean, dev server running without errors
+
+Stage Summary:
+- All home page cards now link to their respective landing pages
+- 18 unique landing pages verified: 6 services, 6 sectors, 6 areas
+- Dropdown navigation fully functional with links to all landing pages
+- Mobile navigation with collapsible sections for Services, Sectors, Areas
+- All pages responsive, accessible, production-quality

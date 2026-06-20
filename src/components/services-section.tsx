@@ -167,7 +167,7 @@ export default function ServicesSection() {
                       {service.priceRange}
                     </Badge>
                     <Link
-                      href="#contact"
+                      href={`/services/${service.id}`}
                       className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${
                         isPrimary
                           ? "text-brand-bronze-highlight hover:text-white"
