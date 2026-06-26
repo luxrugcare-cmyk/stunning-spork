@@ -44,7 +44,7 @@ export default function Footer() {
               JHB Curtain Cleaning
             </Link>
             <p className="mt-1 text-sm font-medium text-brand-bronze">
-              Curtain Cleaning Specialists
+              Curtain Cleaning
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-emerald-100/80">
               {SITE_CONFIG.tagline} — Johannesburg&apos;s trusted on-site

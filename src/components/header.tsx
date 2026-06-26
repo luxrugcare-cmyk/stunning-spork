@@ -297,7 +297,7 @@ export default function Header() {
               JHB Curtain Cleaning
             </span>
             <span className="hidden text-[10px] font-medium uppercase tracking-wider text-brand-bronze sm:block">
-              Curtain Cleaning Specialists
+              Curtain Cleaning
             </span>
           </div>
         </Link>
@@ -455,7 +455,7 @@ export default function Header() {
                   <div>
                     <p className="font-bold text-primary">JHB Curtain Cleaning</p>
                     <p className="text-xs text-muted-foreground">
-                      Curtain Cleaning Specialists
+                      Curtain Cleaning
                     </p>
                   </div>
                 </div>
