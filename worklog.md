@@ -332,3 +332,29 @@ Stage Summary:
 - 1 exception preserved: "On The Spot No-Shrinkage Guarantee" (branded guarantee name)
 - 1 pronoun fix: "her" → "his" on line 1121 (Stephen Dunlop reference)
 - Total changes: 34 edits across site-data.ts
+---
+Task ID: NAP-UPDATE
+Agent: Main Agent
+Task: Execute all NAP updates per JHB Curtain Cleaning NAP Technical Doc v1.0
+
+Work Log:
+- Read NAP Technical Document from upload folder, extracted exact JSON-LD schema
+- Updated src/lib/site-data.ts: 33 "On The Spot" → "JHB Curtain Cleaning" replacements, 1 pronoun fix (her→his)
+- Updated src/lib/data.ts: 5 edits (Kathy→Stephen, old phone format, old email, "On The Spot" reference)
+- Updated src/app/api/chat/route.ts: address Martha North Rd→10 2nd Ave, phone 075→+27 75
+- Updated src/components/ai-chatbot.tsx: phone number in error message
+- Updated src/app/services/[slug]/service-landing-client.tsx: address in JSON-LD schema
+- Updated src/app/layout.tsx: JSON-LD telephone field to match NAP doc exact format
+- Updated src/components/about-section.tsx: initials KD→SD
+- Updated src/components/faq-section.tsx: pronoun "she's"→"he's" for Stephen
+- Verified: zero remaining references to Kathy, Martha North, curtaincleaning.org, "On The Spot" brand
+- Lint passed clean
+- Browser verification: all contact details correct, footer/address/phone/email match NAP spec
+- Pushed to GitHub: luxrugcare-cmyk/stunning-spork (commit d5c5a0e)
+
+Stage Summary:
+- All NAP updates executed per Technical Document v1.0
+- Business: JHB CURTAIN CLEANING, 10 2nd Ave Florida Roodepoort 1710, +27 75 011 9200
+- Contact person: Stephen Dunlop (he/him pronouns)
+- JSON-LD schema matches NAP doc exactly
+- Code pushed to GitHub, Vercel deployment triggered
