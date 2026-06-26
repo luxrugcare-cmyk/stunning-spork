@@ -121,7 +121,7 @@ export default function AboutSection() {
                 {/* Initials */}
                 <div className="relative flex h-28 w-28 items-center justify-center rounded-full border-4 border-brand-bronze-highlight bg-white/10 shadow-lg sm:h-32 sm:w-32">
                   <span className="font-heading text-5xl font-bold text-brand-bronze-highlight sm:text-6xl">
-                    KD
+                    SD
                   </span>
                 </div>
 

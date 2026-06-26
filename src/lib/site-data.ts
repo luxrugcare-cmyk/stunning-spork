@@ -341,7 +341,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
 }> = {
   "curtain-blind-cleaning": {
     slug: "curtain-blind-cleaning",
-    metaTitle: "Curtain Cleaning Johannesburg | On-Site | No Removal | On The Spot",
+    metaTitle: "Curtain Cleaning Johannesburg | On-Site | No Removal | JHB Curtain Cleaning",
     metaDescription: "Professional on-site curtain cleaning Johannesburg. No removal, no shrinkage. All fabric types — voiles, sheers, velvet, blackout, lined drapes. Hardware inspection & repair included. Free assessment within 48 hours.",
     heroTag: "Curtain & Blind Cleaning",
     heroHeading: "Johannesburg's Trusted On-Site Curtain Cleaning Specialists",
@@ -358,7 +358,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
     mainContent: {
       heading: "What Makes Our On-Site Curtain Cleaning Different",
       paragraphs: [
-        "Unlike traditional curtain cleaners who require you to remove your curtains, transport them to a facility, wait days or weeks, and then rehang them yourself, On The Spot does everything right there in your home or commercial space. Our mobile dry-cleaning equipment is designed to clean curtains and blinds while they remain hanging — meaning zero disruption to your space and zero risk of shrinkage from incorrect handling.",
+        "Unlike traditional curtain cleaners who require you to remove your curtains, transport them to a facility, wait days or weeks, and then rehang them yourself, JHB Curtain Cleaning does everything right there in your home or commercial space. Our mobile dry-cleaning equipment is designed to clean curtains and blinds while they remain hanging — meaning zero disruption to your space and zero risk of shrinkage from incorrect handling.",
       ],
       includes: [
         { title: "Cleaned exactly where they hang", description: "No removal or takedown required. We work around your existing hardware, tracks, and fittings." },
@@ -376,7 +376,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
       ],
       concerns: [
         { question: "Will my curtains shrink?", answer: "Absolutely not. Our 100% no-shrinkage guarantee has never been breached in 15 years. Because we use a dry-cleaning process with no water, there is no fibre contraction." },
-        { question: "Can you clean delicate fabrics?", answer: "Yes. Stephen's background as an interior decorator means she personally trains the team on fabric identification. Delicate sheers, expensive velvet drapes, and fine linen curtains are all handled with specialist care." },
+        { question: "Can you clean delicate fabrics?", answer: "Yes. Stephen's background as an interior decorator means he personally trains the team on fabric identification. Delicate sheers, expensive velvet drapes, and fine linen curtains are all handled with specialist care." },
         { question: "What about blackout lining?", answer: "Blackout-lined curtains are one of our specialities. Dry-cleaning won't damage the thermal backing or cause peeling and cracking that wet cleaning can." },
         { question: "Do I need to take my curtains down?", answer: "Never. That's the whole point of our on-site service. We clean them exactly where they hang." },
       ],
@@ -404,7 +404,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
   },
   "mattress-sanitisation": {
     slug: "mattress-sanitisation",
-    metaTitle: "Mattress Cleaning Johannesburg | Dust Mite Removal | On The Spot",
+    metaTitle: "Mattress Cleaning Johannesburg | Dust Mite Removal | JHB Curtain Cleaning",
     metaDescription: "Deep mattress sanitisation Johannesburg. Clinical dust-mite removal, allergen elimination, and hypoallergenic treatment. Removes 4.5kg of annual skin shedding. Free assessment within 48 hours.",
     heroTag: "Deep Mattress Sanitisation",
     heroHeading: "Clinical Dust-Mite Removal & Hypoallergenic Treatment",
@@ -454,7 +454,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
   },
   "upholstery-carpet-cleaning": {
     slug: "upholstery-carpet-cleaning",
-    metaTitle: "Upholstery Cleaning Johannesburg | Sofa & Carpet | On The Spot",
+    metaTitle: "Upholstery Cleaning Johannesburg | Sofa & Carpet | JHB Curtain Cleaning",
     metaDescription: "Professional upholstery and carpet cleaning Johannesburg. Fabric-safe specialist chemicals, dry & wet cleaning options. Master Guarding available. Free assessment.",
     heroTag: "Upholstery & Carpet Cleaning",
     heroHeading: "Fabric-Safe Cleaning for All Your Upholstered Furniture",
@@ -517,7 +517,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
   },
   "master-guarding": {
     slug: "master-guarding",
-    metaTitle: "Fabric Protection Johannesburg | Master Guarding | On The Spot",
+    metaTitle: "Fabric Protection Johannesburg | Master Guarding | JHB Curtain Cleaning",
     metaDescription: "Master Guarding fabric protection Johannesburg. 12-month stain-repellent coating. Fluoropolymer barrier repels water & oil. Professional application. Free assessment.",
     heroTag: "Master Guarding Protection",
     heroHeading: "12-Month Professional Stain Protection for Your Fabrics",
@@ -566,7 +566,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
   },
   "fire-proofing": {
     slug: "fire-proofing",
-    metaTitle: "Fire Proofing Curtains Johannesburg | SANS Compliant | On The Spot",
+    metaTitle: "Fire Proofing Curtains Johannesburg | SANS Compliant | JHB Curtain Cleaning",
     metaDescription: "SANS-compliant fire retardant treatment Johannesburg. Fire compliance certificates for hotels, theatres, healthcare, schools. Insurance recognised. Free assessment.",
     heroTag: "Fire Proofing",
     heroHeading: "SANS-Compliant Fire Retardant Treatment & Certification",
@@ -616,12 +616,12 @@ export const SERVICE_LANDING_DATA: Record<string, {
   },
   "rug-care": {
     slug: "rug-care",
-    metaTitle: "Persian & Oriental Rug Cleaning Johannesburg | On The Spot",
+    metaTitle: "Persian & Oriental Rug Cleaning Johannesburg | JHB Curtain Cleaning",
     metaDescription: "Expert Persian and Oriental rug cleaning Johannesburg. Dye stability testing, hand-woven specialist care, on-site or collection service. Free assessment. Call +27 75 011 9200.",
     heroTag: "Persian & Oriental Rug Care",
     heroHeading: "Expert Care for Your Most Precious Rugs",
     heroSubtext: "Hand-woven rugs deserve hand-selected cleaning methods.",
-    heroParagraph: "Persian, Oriental, and hand-woven rugs are works of art — often passed down through generations or acquired at significant expense. They require a completely different approach to standard carpet cleaning. At On The Spot, we understand the construction, dyes, and fibres of these specialist pieces and apply cleaning methods that preserve their beauty, colour, and value.",
+    heroParagraph: "Persian, Oriental, and hand-woven rugs are works of art — often passed down through generations or acquired at significant expense. They require a completely different approach to standard carpet cleaning. At JHB Curtain Cleaning, we understand the construction, dyes, and fibres of these specialist pieces and apply cleaning methods that preserve their beauty, colour, and value.",
     trustStrip: ["Specialist Rug Care", "Dye Stability Testing", "On-Site or Collection", "Free Assessment Within 48 Hours"],
     guarantees: [
       { icon: "Shield", label: "Dye Stability Tested" },
@@ -704,12 +704,12 @@ export const SECTOR_LANDING_DATA: Record<string, {
 }> = {
   "hotels": {
     slug: "hotels",
-    metaTitle: "Hotel Curtain Cleaning Johannesburg | Zero Disruption | On The Spot",
+    metaTitle: "Hotel Curtain Cleaning Johannesburg | Zero Disruption | JHB Curtain Cleaning",
     metaDescription: "Professional on-site hotel curtain cleaning Johannesburg. Zero guest disruption, after-hours available, fire certificate included. Free assessment.",
     heroTag: "Hotels & Hospitality",
     heroHeading: "Hotel Curtain Cleaning — Zero Guest Disruption",
     heroSubtext: "On-site in the room. Same-day return. Fire certificate included.",
-    heroParagraph: "Your hotel's curtains are one of the first things guests notice — and one of the last things that get professionally cleaned. Between high occupancy rates, tight turnaround schedules, and the absolute requirement for zero guest disruption, curtain cleaning often falls to the bottom of the maintenance list. On The Spot changes that completely.",
+    heroParagraph: "Your hotel's curtains are one of the first things guests notice — and one of the last things that get professionally cleaned. Between high occupancy rates, tight turnaround schedules, and the absolute requirement for zero guest disruption, curtain cleaning often falls to the bottom of the maintenance list. JHB Curtain Cleaning changes that completely.",
     color: "#0A369D",
     trustStrip: ["Zero Room Downtime", "After-Hours Available", "Fire Certificates Included", "Same-Day Room Return"],
     guarantees: [
@@ -726,9 +726,9 @@ export const SECTOR_LANDING_DATA: Record<string, {
     ],
     decisionMaker: {
       role: "General Manager",
-      heading: "Why General Managers Choose On The Spot",
+      heading: "Why General Managers Choose JHB Curtain Cleaning",
       paragraphs: [
-        "As a General Manager, you're accountable for guest satisfaction scores, room revenue, compliance, and operating costs. Traditional curtain cleaning forces you to choose between clean curtains and occupied rooms — On The Spot eliminates that compromise entirely.",
+        "As a General Manager, you're accountable for guest satisfaction scores, room revenue, compliance, and operating costs. Traditional curtain cleaning forces you to choose between clean curtains and occupied rooms — JHB Curtain Cleaning eliminates that compromise entirely.",
         "Our on-site dry-cleaning process means curtains are cleaned in the room, while the room remains available. No removing curtains, no bare windows, no out-of-order rooms, no lost revenue. Our teams can work during the day in empty rooms or after hours during full occupancy — whatever suits your property best.",
         "We also provide the fire compliance certificates that the hospitality sector requires, making us a single-service solution for both cleanliness and compliance. One booking, two boxes ticked.",
       ],
@@ -745,12 +745,12 @@ export const SECTOR_LANDING_DATA: Record<string, {
   },
   "corporate": {
     slug: "corporate",
-    metaTitle: "Office Curtain Cleaning Johannesburg | Facilities Management | On The Spot",
+    metaTitle: "Office Curtain Cleaning Johannesburg | Facilities Management | JHB Curtain Cleaning",
     metaDescription: "Professional on-site office curtain cleaning Johannesburg. Quarterly maintenance, indoor air quality reports, minimal disruption. Free assessment.",
     heroTag: "Corporate Offices",
     heroHeading: "Office Curtain Cleaning — Facilities Management Made Simple",
     heroSubtext: "Quarterly programmes. Air quality reports. Minimal disruption.",
-    heroParagraph: "Corporate environments demand a different approach to curtain cleaning. Boardrooms, executive offices, and reception areas project your company's image — and dirty, dusty curtains undermine that image entirely. On The Spot provides scheduled maintenance programmes designed for facilities managers who need reliable, professional service with minimal workplace disruption.",
+    heroParagraph: "Corporate environments demand a different approach to curtain cleaning. Boardrooms, executive offices, and reception areas project your company's image — and dirty, dusty curtains undermine that image entirely. JHB Curtain Cleaning provides scheduled maintenance programmes designed for facilities managers who need reliable, professional service with minimal workplace disruption.",
     color: "#082D84",
     trustStrip: ["Quarterly Maintenance", "Air Quality Reports", "Minimal Disruption", "Professional Standards"],
     guarantees: [
@@ -767,9 +767,9 @@ export const SECTOR_LANDING_DATA: Record<string, {
     ],
     decisionMaker: {
       role: "Facilities Manager",
-      heading: "Why Facilities Managers Choose On The Spot",
+      heading: "Why Facilities Managers Choose JHB Curtain Cleaning",
       paragraphs: [
-        "As a Facilities Manager, you need reliable service providers who deliver on schedule, on budget, and without disruption. On The Spot's quarterly maintenance programmes are designed to integrate seamlessly with your existing building maintenance schedule.",
+        "As a Facilities Manager, you need reliable service providers who deliver on schedule, on budget, and without disruption. JHB Curtain Cleaning's quarterly maintenance programmes are designed to integrate seamlessly with your existing building maintenance schedule.",
         "We provide detailed indoor air quality reports with every service — documentation you can present to management as evidence of a healthier, more productive workspace. Our technicians are professional, uniformed, and trained to work in corporate environments.",
       ],
       ctaBox: { heading: "Request Your Free Office Assessment", items: ["Full office curtain audit", "Air quality baseline report", "Quarterly maintenance proposal", "After-hours scheduling", "Budget-friendly pricing"] },
@@ -785,12 +785,12 @@ export const SECTOR_LANDING_DATA: Record<string, {
   },
   "healthcare": {
     slug: "healthcare",
-    metaTitle: "Hospital Curtain Cleaning Johannesburg | Infection Control | On The Spot",
+    metaTitle: "Hospital Curtain Cleaning Johannesburg | Infection Control | JHB Curtain Cleaning",
     metaDescription: "Clinical-grade hospital curtain cleaning Johannesburg. HAI prevention, infection-control protocols, medical compliance. Free assessment.",
     heroTag: "Healthcare",
     heroHeading: "Hospital Curtain Cleaning — Infection Control Compliant",
     heroSubtext: "Clinical standards. Infection-control protocols. Compliance documentation.",
-    heroParagraph: "Healthcare environments have the highest hygiene standards of any sector — and your curtain cleaning must meet those standards. On The Spot provides clinical-grade curtain cleaning services specifically designed for hospitals, clinics, and medical facilities, with infection-control protocols that align with your facility's hygiene requirements.",
+    heroParagraph: "Healthcare environments have the highest hygiene standards of any sector — and your curtain cleaning must meet those standards. JHB Curtain Cleaning provides clinical-grade curtain cleaning services specifically designed for hospitals, clinics, and medical facilities, with infection-control protocols that align with your facility's hygiene requirements.",
     color: "#059669",
     trustStrip: ["Clinical-Grade Sanitisation", "HAI Prevention", "Infection-Control Protocols", "Compliance Documentation"],
     guarantees: [
@@ -807,7 +807,7 @@ export const SECTOR_LANDING_DATA: Record<string, {
     ],
     decisionMaker: {
       role: "Infection Control Officer",
-      heading: "Why Infection Control Officers Trust On The Spot",
+      heading: "Why Infection Control Officers Trust JHB Curtain Cleaning",
       paragraphs: [
         "Infection control is about eliminating vectors — and curtains in patient areas are a documented vector for pathogen transmission. Traditional wet cleaning can introduce moisture that promotes bacterial growth. Our dry-cleaning process eliminates pathogens without creating the damp conditions that bacteria thrive in.",
         "We provide full documentation of our cleaning protocols, the products used, and the schedule maintained — exactly the kind of records infection control officers need for compliance audits.",
@@ -824,12 +824,12 @@ export const SECTOR_LANDING_DATA: Record<string, {
   },
   "education": {
     slug: "education",
-    metaTitle: "School Curtain Cleaning Johannesburg | Holiday Scheduling | On The Spot",
+    metaTitle: "School Curtain Cleaning Johannesburg | Holiday Scheduling | JHB Curtain Cleaning",
     metaDescription: "School curtain cleaning Johannesburg. Holiday scheduling, allergen audits, child-safe products. Free assessment within 48 hours.",
     heroTag: "Schools & Education",
     heroHeading: "School Curtain Cleaning — Holiday Scheduling Available",
     heroSubtext: "Child-safe products. Holiday scheduling. Allergen audits included.",
-    heroParagraph: "Schools, crèches, and universities present unique curtain cleaning challenges: large volumes of fabric, tight term-time schedules, and the absolute requirement for child-safe cleaning products. On The Spot provides scheduled holiday-period cleaning with allergen audit documentation and non-toxic, child-safe cleaning solutions.",
+    heroParagraph: "Schools, crèches, and universities present unique curtain cleaning challenges: large volumes of fabric, tight term-time schedules, and the absolute requirement for child-safe cleaning products. JHB Curtain Cleaning provides scheduled holiday-period cleaning with allergen audit documentation and non-toxic, child-safe cleaning solutions.",
     color: "#D97706",
     trustStrip: ["Holiday Scheduling", "Child-Safe Products", "Allergen Audits", "Term-Time Flexibility"],
     guarantees: [
@@ -846,9 +846,9 @@ export const SECTOR_LANDING_DATA: Record<string, {
     ],
     decisionMaker: {
       role: "Principal / Bursar",
-      heading: "Why Principals and Bursars Choose On The Spot",
+      heading: "Why Principals and Bursars Choose JHB Curtain Cleaning",
       paragraphs: [
-        "School budgets are tight and schedules are inflexible. On The Spot works within your term calendar, scheduling cleanings during holidays when classrooms and halls are empty. Our child-safe cleaning products ensure that when students return, the environment is not just clean — it's healthy.",
+        "School budgets are tight and schedules are inflexible. JHB Curtain Cleaning works within your term calendar, scheduling cleanings during holidays when classrooms and halls are empty. Our child-safe cleaning products ensure that when students return, the environment is not just clean — it's healthy.",
         "We also provide allergen audit documentation that can support your school's health and safety compliance records.",
       ],
       ctaBox: { heading: "Request Your Free School Assessment", items: ["Full curtain audit", "Allergen baseline test", "Holiday scheduling plan", "Child-safe product certification", "Budget-friendly quote"] },
@@ -863,12 +863,12 @@ export const SECTOR_LANDING_DATA: Record<string, {
   },
   "theatres": {
     slug: "theatres",
-    metaTitle: "Theatre Curtain Cleaning Johannesburg | Fire Compliance | On The Spot",
+    metaTitle: "Theatre Curtain Cleaning Johannesburg | Fire Compliance | JHB Curtain Cleaning",
     metaDescription: "Theatre curtain cleaning Johannesburg. Fire certificate compliance, acoustic restoration, dark-week scheduling. Free assessment.",
     heroTag: "Theatres & Venues",
     heroHeading: "Theatre Curtain Cleaning — Acoustic & Fire Compliance",
     heroSubtext: "Fire certificates. Acoustic restoration. Dark-week scheduling.",
-    heroParagraph: "Theatres and performance venues present unique challenges: heavy stage curtains that affect acoustics, strict fire safety regulations, and limited scheduling windows during dark weeks. On The Spot specialises in cleaning the curtains that matter most to your venue's safety, sound quality, and visual impact.",
+    heroParagraph: "Theatres and performance venues present unique challenges: heavy stage curtains that affect acoustics, strict fire safety regulations, and limited scheduling windows during dark weeks. JHB Curtain Cleaning specialises in cleaning the curtains that matter most to your venue's safety, sound quality, and visual impact.",
     color: "#6C3483",
     trustStrip: ["Fire Certificate Compliance", "Acoustic Restoration", "Dark-Week Scheduling", "Stage Curtain Specialists"],
     guarantees: [
@@ -885,7 +885,7 @@ export const SECTOR_LANDING_DATA: Record<string, {
     ],
     decisionMaker: {
       role: "Stage Manager",
-      heading: "Why Stage Managers Trust On The Spot",
+      heading: "Why Stage Managers Trust JHB Curtain Cleaning",
       paragraphs: [
         "Stage curtains are not just window treatments — they're critical to both safety and acoustics. Heavy velvet main curtains, flying legs, and cycloramas require specialist handling that ordinary curtain cleaners cannot provide. Our technicians understand theatre terminology, work around rigging and fly systems, and schedule during your dark weeks.",
         "We also provide fire compliance certificates that are essential for maintaining your venue's operating licence.",
@@ -902,12 +902,12 @@ export const SECTOR_LANDING_DATA: Record<string, {
   },
   "residential": {
     slug: "residential",
-    metaTitle: "Home Curtain Cleaning Johannesburg | No Removal | On The Spot",
+    metaTitle: "Home Curtain Cleaning Johannesburg | No Removal | JHB Curtain Cleaning",
     metaDescription: "Residential curtain cleaning Johannesburg. No removal, no shrinkage guarantee, hardware repair included. Free assessment within 48 hours. Call +27 75 011 9200.",
     heroTag: "Residential",
     heroHeading: "Home Curtain Cleaning — No Removal, No Shrinkage",
     heroSubtext: "Cleaned where they hang. Hardware repair included. 100% guaranteed.",
-    heroParagraph: "Your home deserves the same professional care that we provide to Johannesburg's top hotels and corporate offices — and that's exactly what On The Spot delivers. Our on-site dry-cleaning process means your curtains are cleaned perfectly without ever leaving your windows. No bare rooms, no waiting for curtains to be returned, no risk of shrinkage.",
+    heroParagraph: "Your home deserves the same professional care that we provide to Johannesburg's top hotels and corporate offices — and that's exactly what JHB Curtain Cleaning delivers. Our on-site dry-cleaning process means your curtains are cleaned perfectly without ever leaving your windows. No bare rooms, no waiting for curtains to be returned, no risk of shrinkage.",
     color: "#0A369D",
     trustStrip: ["No Removal Needed", "No-Shrinkage Guarantee", "Hardware Repair Included", "Free Assessment Within 48 Hours"],
     guarantees: [
@@ -924,10 +924,10 @@ export const SECTOR_LANDING_DATA: Record<string, {
     ],
     decisionMaker: {
       role: "Homeowner",
-      heading: "Why 5,000+ Johannesburg Homeowners Trust On The Spot",
+      heading: "Why 5,000+ Johannesburg Homeowners Trust JHB Curtain Cleaning",
       paragraphs: [
         "Your curtains are one of the most significant investments in your home's interior — and conventional cleaning puts that investment at risk. Removing curtains from their tracks can damage hardware, stretch fabric, and introduce shrinkage. Transporting them to a cleaning facility exposes them to damage and loss. Waiting days or weeks for their return leaves your windows bare.",
-        "On The Spot eliminates all of these risks. Our on-site dry-cleaning process means your curtains never leave your home. They're cleaned, refreshed, and looking their best before we leave — typically within 2-4 hours for a standard residential clean.",
+        "JHB Curtain Cleaning eliminates all of these risks. Our on-site dry-cleaning process means your curtains never leave your home. They're cleaned, refreshed, and looking their best before we leave — typically within 2-4 hours for a standard residential clean.",
       ],
       ctaBox: { heading: "Book Your Free Home Assessment", items: ["Fabric type identification", "Hardware condition check", "Written, itemised quote", "Recommended treatment plan", "Scheduling within 48 hours"] },
     },
@@ -968,7 +968,7 @@ export const AREA_LANDING_DATA: Record<string, {
 }> = {
   "jhb-north": {
     slug: "jhb-north",
-    metaTitle: "Curtain Cleaning Johannesburg North | Sandton, Randburg, Fourways | On The Spot",
+    metaTitle: "Curtain Cleaning Johannesburg North | Sandton, Randburg, Fourways | JHB Curtain Cleaning",
     metaDescription: "On-site curtain cleaning Johannesburg North. Sandton, Randburg, Fourways, Bryanston. No removal, no shrinkage. Free assessment within 48 hours.",
     heroTag: "Curtain Cleaning Johannesburg North",
     heroHeading: "Curtain Cleaning Johannesburg North | Free On-Site Assessment",
@@ -980,7 +980,7 @@ export const AREA_LANDING_DATA: Record<string, {
       heading: "The Northern Suburbs Deserve Specialist Curtain Care",
       paragraphs: [
         "Those beautiful floor-to-ceiling fabrics are also the most exposed to the relentless Highveld dust that settles across the northern ridge every single day. Johannesburg sits at 1,753 metres above sea level on the Highveld plateau, and the combination of altitude, dry winters, and persistent wind means that fine dust particles settle on curtains year-round — particularly on the north-facing windows that capture the most sunlight.",
-        "Standard cleaning methods can't remove this dust effectively, and washing premium fabrics risks shrinkage, colour fading, and texture damage. On The Spot's on-site dry-cleaning process is specifically designed for this environment: we remove Highveld dust completely without introducing any moisture that could damage delicate fibres.",
+        "Standard cleaning methods can't remove this dust effectively, and washing premium fabrics risks shrinkage, colour fading, and texture damage. JHB Curtain Cleaning's on-site dry-cleaning process is specifically designed for this environment: we remove Highveld dust completely without introducing any moisture that could damage delicate fibres.",
         "Whether you're in a Sandton penthouse with imported Italian sheers, a Bryanston estate with hand-stitched velvet drapes, or a Fourways family home with practical blackout curtains, we bring the same level of expertise and care to every job.",
       ],
       servicesTable: [
@@ -1003,7 +1003,7 @@ export const AREA_LANDING_DATA: Record<string, {
   },
   "jhb-east": {
     slug: "jhb-east",
-    metaTitle: "Curtain Cleaning Johannesburg East | Bedfordview, Kempton Park | On The Spot",
+    metaTitle: "Curtain Cleaning Johannesburg East | Bedfordview, Kempton Park | JHB Curtain Cleaning",
     metaDescription: "On-site curtain cleaning Johannesburg East. Edenvale, Bedfordview, Boksburg, Kempton Park. No removal, no shrinkage. Free assessment.",
     heroTag: "Curtain Cleaning Johannesburg East",
     heroHeading: "Curtain Cleaning Johannesburg East | O.R. Tambo Corridor Specialists",
@@ -1037,7 +1037,7 @@ export const AREA_LANDING_DATA: Record<string, {
   },
   "jhb-south": {
     slug: "jhb-south",
-    metaTitle: "Curtain Cleaning Johannesburg South | Alberton, Meyersdal | On The Spot",
+    metaTitle: "Curtain Cleaning Johannesburg South | Alberton, Meyersdal | JHB Curtain Cleaning",
     metaDescription: "On-site curtain cleaning Johannesburg South. Alberton, Meyersdal, Glenvista. Heavy drapes specialists. No removal, no shrinkage. Free assessment.",
     heroTag: "Curtain Cleaning Johannesburg South",
     heroHeading: "Curtain Cleaning Johannesburg South | Heavy Drapes Specialists",
@@ -1049,7 +1049,7 @@ export const AREA_LANDING_DATA: Record<string, {
       heading: "Heavy Drapes Need Specialist Handling",
       paragraphs: [
         "Velvet, chenille, and thick thermal curtains are the most challenging fabrics to clean — and the most at risk from conventional wet cleaning. Water causes velvet to crush and lose its pile. Chenille can shrink dramatically. Heavy lined drapes take days to dry, and during that time they can develop mildew.",
-        "On The Spot's dry-cleaning process eliminates all of these risks. No water means no crushing, no shrinkage, no mildew risk, and no drying time. Your heavy drapes are cleaned, refreshed, and looking their best before we leave.",
+        "JHB Curtain Cleaning's dry-cleaning process eliminates all of these risks. No water means no crushing, no shrinkage, no mildew risk, and no drying time. Your heavy drapes are cleaned, refreshed, and looking their best before we leave.",
       ],
       servicesTable: [
         { service: "Curtain & Blind Cleaning", description: "Heavy drapes and velvet specialists", priceRange: "R800–R5,500" },
@@ -1071,7 +1071,7 @@ export const AREA_LANDING_DATA: Record<string, {
   },
   "jhb-west": {
     slug: "jhb-west",
-    metaTitle: "Curtain Cleaning Johannesburg West | Roodepoort, Northcliff | On The Spot",
+    metaTitle: "Curtain Cleaning Johannesburg West | Roodepoort, Northcliff | JHB Curtain Cleaning",
     metaDescription: "On-site curtain cleaning Johannesburg West. Roodepoort, Florida, Northcliff. Mining dust specialists. No removal, no shrinkage. Free assessment.",
     heroTag: "Curtain Cleaning Johannesburg West",
     heroHeading: "Curtain Cleaning Johannesburg West | Mining Dust Specialists",
@@ -1106,7 +1106,7 @@ export const AREA_LANDING_DATA: Record<string, {
   },
   "jhb-central": {
     slug: "jhb-central",
-    metaTitle: "Curtain Cleaning Johannesburg Central | Rosebank, Parktown | On The Spot",
+    metaTitle: "Curtain Cleaning Johannesburg Central | Rosebank, Parktown | JHB Curtain Cleaning",
     metaDescription: "On-site curtain cleaning Johannesburg Central. Rosebank, Parktown, Melville, Greenside. Heritage home specialists. No removal. Free assessment.",
     heroTag: "Curtain Cleaning Johannesburg Central",
     heroHeading: "Curtain Cleaning Johannesburg Central | Heritage Home Specialists",
@@ -1118,7 +1118,7 @@ export const AREA_LANDING_DATA: Record<string, {
       heading: "Heritage Fabrics Demand Heritage Expertise",
       paragraphs: [
         "Original Victorian and Edwardian drapes are often made from fabrics that are no longer manufactured — heavy brocades, damasks, and tapestries that cannot be replaced if damaged. Standard cleaning methods are simply too risky for these irreplaceable fabrics.",
-        "On The Spot's dry-cleaning process is ideal for heritage fabrics. No water means no risk of shrinkage, dye bleeding, or texture damage. Our technicians are trained to identify and handle antique fabrics with the care they deserve, and Stephen's background as an interior decorator gives her particular insight into period-appropriate treatment methods.",
+        "JHB Curtain Cleaning's dry-cleaning process is ideal for heritage fabrics. No water means no risk of shrinkage, dye bleeding, or texture damage. Our technicians are trained to identify and handle antique fabrics with the care they deserve, and Stephen's background as an interior decorator gives his particular insight into period-appropriate treatment methods.",
         "Rosebank's boutique hotels and guest houses also benefit from our after-hours service, ensuring their characterful window treatments are maintained without disrupting the guest experience.",
       ],
       servicesTable: [
@@ -1141,12 +1141,12 @@ export const AREA_LANDING_DATA: Record<string, {
   },
   "pretoria-midrand": {
     slug: "pretoria-midrand",
-    metaTitle: "Curtain Cleaning Pretoria & Midrand | Centurion, Menlyn | On The Spot",
+    metaTitle: "Curtain Cleaning Pretoria & Midrand | Centurion, Menlyn | JHB Curtain Cleaning",
     metaDescription: "On-site curtain cleaning Pretoria & Midrand. Centurion, Menlyn, Waterkloof, Hatfield. Jacaranda pollen specialists. Free assessment.",
     heroTag: "Curtain Cleaning Pretoria & Midrand",
     heroHeading: "Curtain Cleaning Pretoria & Midrand | Jacaranda Pollen Specialists",
     heroSubtext: "Serving Midrand, Centurion, Pretoria East, Menlyn, Waterkloof, Hatfield & more. Diplomatic residence clearance available.",
-    heroParagraph: "Pretoria's famous jacaranda trees create one of the world's most beautiful urban landscapes — and one of the most persistent curtain staining problems. Each spring, millions of blossoms release purple pollen that drifts through open windows and settles on curtains across the city. On The Spot's specialist dry-cleaning process removes jacaranda pollen stains without damaging delicate fabrics.",
+    heroParagraph: "Pretoria's famous jacaranda trees create one of the world's most beautiful urban landscapes — and one of the most persistent curtain staining problems. Each spring, millions of blossoms release purple pollen that drifts through open windows and settles on curtains across the city. JHB Curtain Cleaning's specialist dry-cleaning process removes jacaranda pollen stains without damaging delicate fabrics.",
     suburbs: ["Midrand", "Centurion", "Pretoria East", "Menlyn", "Waterkloof", "Hatfield", "Lynnwood", "Irene", "Silverton", "Groenkloof"],
     focus: "Jacaranda pollen & diplomatic residences",
     mainContent: {

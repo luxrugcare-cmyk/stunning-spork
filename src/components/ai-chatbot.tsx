@@ -90,7 +90,7 @@ export default function AiChatbot() {
           id: `error-${Date.now()}`,
           role: "assistant",
           content:
-            "I'm having trouble connecting right now. Please try again in a moment, or contact us directly at 075 011 9200.",
+            "I'm having trouble connecting right now. Please try again in a moment, or contact us directly at +27 75 011 9200.",
         };
         setMessages((prev) => [...prev, errorMsg]);
       } finally {

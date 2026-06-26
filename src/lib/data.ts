@@ -145,7 +145,7 @@ export const FAQS = [
   {
     question: "How much does curtain cleaning cost in Johannesburg?",
     answer:
-      "The cost of curtain cleaning in Johannesburg depends on several factors: fabric type, curtain size, soiling level, whether you have interlining or blackout backing, and the total number of panels. As a general guide: Small residential jobs (1–2 rooms, standard fabrics): R800 – R1,500. Medium homes (3–4 bedrooms, mixed fabrics): R1,500 – R3,000. Large homes & small offices (5+ rooms or heavily soiled): R3,000 – R5,500. Commercial jobs (hotels, offices, venues): Custom quote based on scope. The only way to give you an accurate price is to assess your curtains in person — which is why we offer a free on-site assessment with a written, no-obligation quote. Kathy visits your property, examines your curtains, and provides transparent pricing within 24 hours. No hidden costs. No surprises.",
+      "The cost of curtain cleaning in Johannesburg depends on several factors: fabric type, curtain size, soiling level, whether you have interlining or blackout backing, and the total number of panels. As a general guide: Small residential jobs (1–2 rooms, standard fabrics): R800 – R1,500. Medium homes (3–4 bedrooms, mixed fabrics): R1,500 – R3,000. Large homes & small offices (5+ rooms or heavily soiled): R3,000 – R5,500. Commercial jobs (hotels, offices, venues): Custom quote based on scope. The only way to give you an accurate price is to assess your curtains in person — which is why we offer a free on-site assessment with a written, no-obligation quote. Stephen visits your property, examines your curtains, and provides transparent pricing within 24 hours. No hidden costs. No surprises.",
   },
   {
     question: "Will my curtains shrink?",
@@ -155,7 +155,7 @@ export const FAQS = [
   {
     question: "Do you really clean curtains without taking them down?",
     answer:
-      "Yes, really. That's exactly what we do, and it's what makes On The Spot different from every other curtain cleaning service in Johannesburg. We arrive at your property with professional-grade, portable cleaning equipment. Your curtains stay exactly where they are — on their tracks, rods, or rails. We apply our specialist dry-cleaning solution section by section. Extraction removes soil and solution — fabric is clean and dry immediately. We inspect and repair hardware (tracks, hooks, rings) before we leave. Your curtains are back in service the same day. No ladders for you to climb. No heavy curtains to wrestle down. No waiting days for drying. No re-hanging struggles. Just clean, fresh curtains with zero inconvenience.",
+      "Yes, really. That's exactly what we do, and it's what makes JHB Curtain Cleaning different from every other curtain cleaning service in Johannesburg. We arrive at your property with professional-grade, portable cleaning equipment. Your curtains stay exactly where they are — on their tracks, rods, or rails. We apply our specialist dry-cleaning solution section by section. Extraction removes soil and solution — fabric is clean and dry immediately. We inspect and repair hardware (tracks, hooks, rings) before we leave. Your curtains are back in service the same day. No ladders for you to climb. No heavy curtains to wrestle down. No waiting days for drying. No re-hanging struggles. Just clean, fresh curtains with zero inconvenience.",
   },
   {
     question: "How long does an on-site curtain clean take?",
@@ -185,7 +185,7 @@ export const FAQS = [
   {
     question: "How do I book a free assessment?",
     answer:
-      "Booking your free assessment is easy — and there's absolutely no obligation. WhatsApp: Send a message to Kathy on 075 011 9200 with your name, suburb, and a photo of your curtains. Phone: Call Kathy on 075 011 9200 (mobile) or 071 622 6723 (office), Monday–Friday 07:00–18:00, Saturday 08:00–14:00. Email: Send details to info@curtaincleaning.org. What happens next: Kathy visits your property within 48 hours, assesses your curtains, fabric type, soiling, and hardware, you receive a written quote within 24 hours, if you're happy, we schedule your clean at a convenient time. If you decide not to proceed — no problem, no charge.",
+      "Booking your free assessment is easy — and there's absolutely no obligation. WhatsApp: Send a message to Stephen on +27 75 011 9200 with your name, suburb, and a photo of your curtains. Phone: Call Stephen on +27 75 011 9200 (mobile) or 071 622 6723 (office), Monday–Friday 07:00–18:00, Saturday 08:00–14:00. Email: Send details to info@jhbcurtaincleaning.co.za. What happens next: Stephen visits your property within 48 hours, assesses your curtains, fabric type, soiling, and hardware, you receive a written quote within 24 hours, if you're happy, we schedule your clean at a convenient time. If you decide not to proceed — no problem, no charge.",
   },
 ];
 
@@ -223,9 +223,9 @@ export const WHY_US = [
     icon: "Clock",
   },
   {
-    title: "Kathy's Personal Expertise",
+    title: "Stephen's Personal Expertise",
     description:
-      "Kathy Dunlop — Interior Decorator, Fabric Expert, and Managing Director — personally assesses every single job. 15+ years of specialist experience means your curtains are in the best hands in Johannesburg.",
+      "Stephen Dunlop — Interior Decorator, Fabric Expert, and Managing Director — personally assesses every single job. 15+ years of specialist experience means your curtains are in the best hands in Johannesburg.",
     icon: "Award",
   },
   {
@@ -241,7 +241,7 @@ export const PROCESS_STEPS = [
     step: 1,
     title: "Free On-Site Assessment",
     description:
-      "Kathy personally visits your property to examine fabric type & construction, soiling level & stain analysis, lining condition, hardware inspection, and environmental factors. Within 24 hours, you receive a detailed written quote with full scope of work, expected outcomes, and transparent pricing.",
+      "Stephen personally visits your property to examine fabric type & construction, soiling level & stain analysis, lining condition, hardware inspection, and environmental factors. Within 24 hours, you receive a detailed written quote with full scope of work, expected outcomes, and transparent pricing.",
     icon: "ClipboardCheck",
   },
   {

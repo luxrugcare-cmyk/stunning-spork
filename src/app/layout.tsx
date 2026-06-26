@@ -81,7 +81,7 @@ export default function RootLayout({
               name: "JHB CURTAIN CLEANING",
               url: "https://www.jhbcurtaincleaning.co.za",
               email: "info@jhbcurtaincleaning.co.za",
-              telephone: "+27750119200",
+              telephone: "+27 75 011 9200",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "10 2nd Ave",

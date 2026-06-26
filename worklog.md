@@ -314,3 +314,21 @@ Stage Summary:
 - Dropdown navigation fully functional with links to all landing pages
 - Mobile navigation with collapsible sections for Services, Sectors, Areas
 - All pages responsive, accessible, production-quality
+
+---
+Task ID: 2
+Agent: Subagent (general-purpose)
+Task: Update site-data.ts NAP refs — replace "On The Spot" with "JHB Curtain Cleaning"
+
+Work Log:
+- Read site-data.ts (1,178 lines) and identified all 34 occurrences of "On The Spot"
+- Used replace_all to change "On The Spot" → "JHB Curtain Cleaning" across the entire file (34 replacements)
+- Restored the branded guarantee name on line 261: "JHB Curtain Cleaning No-Shrinkage Guarantee" → "On The Spot No-Shrinkage Guarantee" (exception per requirements)
+- Fixed pronoun on line 1121: "her particular insight" → "his particular insight" (Stephen is male)
+- Verified final state: only 1 "On The Spot" remains (the guarantee name on line 261), 42 total "JHB Curtain Cleaning" occurrences (including original SITE_CONFIG fields + 33 new replacements + possessive forms)
+
+Stage Summary:
+- 33 occurrences of "On The Spot" replaced with "JHB Curtain Cleaning" in meta titles and content text
+- 1 exception preserved: "On The Spot No-Shrinkage Guarantee" (branded guarantee name)
+- 1 pronoun fix: "her" → "his" on line 1121 (Stephen Dunlop reference)
+- Total changes: 34 edits across site-data.ts

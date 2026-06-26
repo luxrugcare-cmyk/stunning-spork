@@ -120,8 +120,10 @@ export default function ServiceLandingClient({ data }: { data: ServiceLandingDat
       email: SITE_CONFIG.email,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Martha North Rd, Randburg',
-        addressLocality: 'Johannesburg',
+        streetAddress: '10 2nd Ave',
+        addressLocality: 'Florida',
+        addressRegion: 'Roodepoort',
+        postalCode: '1710',
         addressCountry: 'ZA',
       },
       aggregateRating: {
