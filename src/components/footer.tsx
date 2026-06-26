@@ -41,7 +41,7 @@ export default function Footer() {
               className="inline-block text-xl font-bold tracking-tight text-white sm:text-2xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              On The Spot
+              JHB Curtain Cleaning
             </Link>
             <p className="mt-1 text-sm font-medium text-brand-bronze">
               Curtain Cleaning Specialists

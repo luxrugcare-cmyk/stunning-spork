@@ -277,7 +277,7 @@ export default function ContactSection() {
                       Thank You!
                     </h3>
                     <p className="max-w-md text-muted-foreground">
-                      Your assessment request has been received. Kathy or a member of our team will contact you within 24 hours.
+                      Your assessment request has been received. Stephen or a member of our team will contact you within 24 hours.
                     </p>
                   </motion.div>
                 ) : (
@@ -640,7 +640,7 @@ export default function ContactSection() {
                                 htmlFor="popia-consent"
                                 className="text-sm leading-relaxed text-muted-foreground cursor-pointer"
                               >
-                                I consent to On The Spot Curtain Cleaning Specialists collecting and processing my personal information in accordance with the Protection of Personal Information Act (POPIA). My data will only be used to respond to my enquiry and will not be shared with third parties.
+                                I consent to JHB CURTAIN CLEANING collecting and processing my personal information in accordance with the Protection of Personal Information Act (POPIA). My data will only be used to respond to my enquiry and will not be shared with third parties.
                               </Label>
                             </div>
                             {errors.popiaConsent && (
@@ -721,7 +721,7 @@ export default function ContactSection() {
                     <User className="h-8 w-8 text-brand-emerald" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">
-                    Kathy Dunlop
+                    Stephen Dunlop
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     Managing Director

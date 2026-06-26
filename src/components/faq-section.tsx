@@ -156,7 +156,7 @@ export default function FAQSection() {
               Still have questions?
             </h3>
             <p className="mt-2 text-base text-muted-foreground">
-              Contact Kathy directly — she&apos;s happy to help.
+              Contact Stephen directly — she&apos;s happy to help.
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button

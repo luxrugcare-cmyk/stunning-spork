@@ -285,7 +285,7 @@ export default function Header() {
           <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-brand-bronze shadow-md sm:h-12 sm:w-12">
             <Image
               src="/brand/logo.png"
-              alt="On The Spot bronze seal logo"
+              alt="JHB Curtain Cleaning bronze seal logo"
               fill
               className="object-cover"
               sizes="48px"
@@ -294,7 +294,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold leading-tight text-primary sm:text-xl">
-              On The Spot
+              JHB Curtain Cleaning
             </span>
             <span className="hidden text-[10px] font-medium uppercase tracking-wider text-brand-bronze sm:block">
               Curtain Cleaning Specialists
@@ -446,14 +446,14 @@ export default function Header() {
                   <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-brand-bronze">
                     <Image
                       src="/brand/logo.png"
-                      alt="On The Spot logo"
+                      alt="JHB Curtain Cleaning logo"
                       fill
                       className="object-cover"
                       sizes="40px"
                     />
                   </div>
                   <div>
-                    <p className="font-bold text-primary">On The Spot</p>
+                    <p className="font-bold text-primary">JHB Curtain Cleaning</p>
                     <p className="text-xs text-muted-foreground">
                       Curtain Cleaning Specialists
                     </p>

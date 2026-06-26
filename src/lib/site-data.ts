@@ -1,33 +1,35 @@
 export const SITE_CONFIG = {
-  name: "On The Spot Curtain Cleaning Specialists",
-  shortName: "On The Spot",
+  name: "JHB CURTAIN CLEANING",
+  shortName: "JHB Curtain Cleaning",
   tagline: "Professional On-Site Curtain Cleaning",
-  domain: "curtaincleaning.org",
-  phone: "075 011 9200",
+  domain: "jhbcurtaincleaning.co.za",
+  phone: "+27 75 011 9200",
   phoneRaw: "+27750119200",
   phoneLink: "+27750119200",
   officePhone: "071 622 6723",
   officePhoneLink: "+27716226723",
-  email: "info@curtaincleaning.org",
-  address: "Martha North Rd, Randburg, Johannesburg 2194, South Africa",
-  whatsapp: "075 011 9200",
+  email: "info@jhbcurtaincleaning.co.za",
+  address: "10 2nd Ave, Florida, Roodepoort, 1710, South Africa",
+  whatsapp: "+27 75 011 9200",
   whatsappLink: "https://wa.me/27750119200",
   googleRating: 4.9,
   reviewCount: 500,
   clientsServed: "5,000+",
   yearsExperience: "15+",
+  contactPerson: "Stephen Dunlop",
+  contactPersonNote: "Available via Call & WhatsApp",
   hours: {
     weekday: "Mon–Fri 07:00–18:00",
     saturday: "Sat 08:00–14:00",
   },
   social: {
-    facebook: "https://facebook.com/curtaincleaning",
-    instagram: "https://instagram.com/curtaincleaning",
-    youtube: "https://youtube.com/@curtaincleaning",
-    linkedin: "https://linkedin.com/company/curtaincleaning",
-    tiktok: "https://tiktok.com/@curtaincleaning",
-    pinterest: "https://pinterest.com/curtaincleaning",
-    twitter: "https://twitter.com/curtaincleaning",
+    facebook: "https://facebook.com/jhbcurtaincleaning",
+    instagram: "https://instagram.com/jhbcurtaincleaning",
+    youtube: "https://youtube.com/@jhbcurtaincleaning",
+    linkedin: "https://linkedin.com/company/jhbcurtaincleaning",
+    tiktok: "https://tiktok.com/@jhbcurtaincleaning",
+    pinterest: "https://pinterest.com/jhbcurtaincleaning",
+    twitter: "https://twitter.com/jhbcurtaincleaning",
   },
 };
 
@@ -252,7 +254,7 @@ export const COMPARISON_TABLE = {
 export const FAQS = [
   {
     question: "How much does curtain cleaning cost?",
-    answer: "Residential curtain cleaning ranges from R800 to R5,500 depending on the number of windows, curtain type, and fabric. Large homes with heavy drapes sit at the higher end. Commercial projects are quoted individually. We provide a free, no-obligation assessment — call 075 011 9200 or WhatsApp us to book yours.",
+    answer: "Residential curtain cleaning ranges from R800 to R5,500 depending on the number of windows, curtain type, and fabric. Large homes with heavy drapes sit at the higher end. Commercial projects are quoted individually. We provide a free, no-obligation assessment — call +27 75 011 9200 or WhatsApp us to book yours.",
   },
   {
     question: "Will my curtains shrink?",
@@ -284,15 +286,15 @@ export const FAQS = [
   },
   {
     question: "How do I book a cleaning?",
-    answer: "Three easy ways: WhatsApp us at 075 011 9200, call our office on 071 622 6723, or email info@curtaincleaning.org. Kathy Dunlop, our Managing Director, personally oversees every booking. Your free assessment can usually be scheduled within 48 hours.",
+    answer: "Three easy ways: WhatsApp us at +27 75 011 9200, call our office on 071 622 6723, or email info@jhbcurtaincleaning.co.za. Stephen Dunlop, our Managing Director, personally oversees every booking. Your free assessment can usually be scheduled within 48 hours.",
   },
 ];
 
 export const FOUNDER = {
-  name: "Kathy Dunlop",
+  name: "Stephen Dunlop",
   title: "Managing Director",
-  credentials: "Interior Decorator & Fabric Expert",
-  bio: "Kathy founded On The Spot Curtain Cleaning Specialists on a simple principle: curtains should be cleaned where they hang. As an interior decorator with over 15 years of fabric expertise, she saw clients repeatedly told to remove, transport, and rehang their curtains — only to have them shrink in the wash. She built South Africa's premier on-site curtain cleaning service to solve that problem permanently. Today, Kathy personally oversees every project and guarantees every result.",
+  credentials: "Curtain Cleaning & Fabric Expert",
+  bio: "Stephen founded JHB Curtain Cleaning on a simple principle: curtains should be cleaned where they hang. With over 15 years of on-site fabric expertise, he saw clients repeatedly told to remove, transport, and rehang their curtains — only to have them shrink in the wash. He built South Africa's premier on-site curtain cleaning service to solve that problem permanently. Today, Stephen personally oversees every project and guarantees every result.",
   stats: [
     { value: "15+", label: "Years Experience" },
     { value: "5,000+", label: "Clients Served" },
@@ -344,7 +346,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
     heroTag: "Curtain & Blind Cleaning",
     heroHeading: "Johannesburg's Trusted On-Site Curtain Cleaning Specialists",
     heroSubtext: "Cleaned exactly where they hang — no removal, no downtime, no fuss.",
-    heroParagraph: "For over 15 years, Kathy Dunlop and the team at On The Spot Curtain Cleaning Specialists have been transforming tired, dusty curtains and blinds into fresh, clean window treatments — all without ever taking them down. Our on-site dry-cleaning process means your windows are never bare, your rooms never exposed, and your life never interrupted.",
+    heroParagraph: "For over 15 years, Stephen Dunlop and the team at JHB CURTAIN CLEANING have been transforming tired, dusty curtains and blinds into fresh, clean window treatments — all without ever taking them down. Our on-site dry-cleaning process means your windows are never bare, your rooms never exposed, and your life never interrupted.",
     trustStrip: ["15+ Years Experience", "5,000+ Happy Clients", "100% No-Shrinkage Guarantee", "Free On-Site Assessment Within 48 Hours"],
     guarantees: [
       { icon: "Shield", label: "100% No-Shrinkage Guarantee" },
@@ -374,7 +376,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
       ],
       concerns: [
         { question: "Will my curtains shrink?", answer: "Absolutely not. Our 100% no-shrinkage guarantee has never been breached in 15 years. Because we use a dry-cleaning process with no water, there is no fibre contraction." },
-        { question: "Can you clean delicate fabrics?", answer: "Yes. Kathy's background as an interior decorator means she personally trains the team on fabric identification. Delicate sheers, expensive velvet drapes, and fine linen curtains are all handled with specialist care." },
+        { question: "Can you clean delicate fabrics?", answer: "Yes. Stephen's background as an interior decorator means she personally trains the team on fabric identification. Delicate sheers, expensive velvet drapes, and fine linen curtains are all handled with specialist care." },
         { question: "What about blackout lining?", answer: "Blackout-lined curtains are one of our specialities. Dry-cleaning won't damage the thermal backing or cause peeling and cracking that wet cleaning can." },
         { question: "Do I need to take my curtains down?", answer: "Never. That's the whole point of our on-site service. We clean them exactly where they hang." },
       ],
@@ -397,8 +399,8 @@ export const SERVICE_LANDING_DATA: Record<string, {
       assessmentItems: ["Fabric type identification", "Hardware condition check", "Scope of work confirmation", "Written, itemised quote", "Recommended treatment plan", "Timeline confirmation"],
       guarantees: ["100% No-Shrinkage Guarantee", "Same-Day Completion", "No Hidden Costs", "Fabric-Safe Methods", "Hardware Checked"],
     },
-    ctaBand: { heading: "Ready for Fresh, Clean Curtains Without the Hassle?", subtext: "Book your free on-site assessment today. Kathy will visit your property anywhere in Johannesburg within 48 hours." },
-    newsletter: { heading: "Stay Fresh — Curtain Care Tips & Special Offers", subtext: "Subscribe for seasonal curtain care advice, special offers, and updates from Kathy and the team." },
+    ctaBand: { heading: "Ready for Fresh, Clean Curtains Without the Hassle?", subtext: "Book your free on-site assessment today. Stephen will visit your property anywhere in Johannesburg within 48 hours." },
+    newsletter: { heading: "Stay Fresh — Curtain Care Tips & Special Offers", subtext: "Subscribe for seasonal curtain care advice, special offers, and updates from Stephen and the team." },
   },
   "mattress-sanitisation": {
     slug: "mattress-sanitisation",
@@ -434,7 +436,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
         { step: 2, title: "Stain Treatment", description: "Visible stains treated with fabric-safe, enzyme-based solutions that break down organic matter." },
         { step: 3, title: "Clinical Sanitisation", description: "Medical-grade sanitising treatment applied evenly, penetrating deep into fibres to neutralise bacteria, dust mites, and allergens." },
         { step: 4, title: "Hypoallergenic Treatment", description: "Non-toxic, hypoallergenic treatment creates a protective barrier that discourages dust mite recolonisation." },
-        { step: 5, title: "Drying & Final Inspection", description: "Mattress left to dry naturally — typically ready for use the same evening. Kathy personally inspects every job." },
+        { step: 5, title: "Drying & Final Inspection", description: "Mattress left to dry naturally — typically ready for use the same evening. Stephen personally inspects every job." },
       ],
       concerns: [
         { question: "Is the treatment safe for children?", answer: "Absolutely. Our hypoallergenic treatment is non-toxic and specifically designed to be safe for asthma and allergy sufferers, including children." },
@@ -448,7 +450,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
       guarantees: ["Clinical-Grade Results", "Safe for Allergy Sufferers", "No Hidden Costs", "Same-Day Service", "Experienced Technicians"],
     },
     ctaBand: { heading: "Sleep Healthier Tonight — Book Your Mattress Sanitisation", subtext: "Don't let dust mites and allergens steal another night's rest. Book your free on-site assessment today." },
-    newsletter: { heading: "Healthier Home Tips from Kathy", subtext: "Subscribe for seasonal advice on keeping your home allergen-free and exclusive offers." },
+    newsletter: { heading: "Healthier Home Tips from Stephen", subtext: "Subscribe for seasonal advice on keeping your home allergen-free and exclusive offers." },
   },
   "upholstery-carpet-cleaning": {
     slug: "upholstery-carpet-cleaning",
@@ -470,7 +472,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
       heading: "Specialist Upholstery Cleaning — Not Just a Standard Wash",
       paragraphs: [
         "Upholstery fabrics are vastly different from one another. A linen sofa requires a completely different approach to a leather armchair or a velvet ottoman. Using the wrong cleaning chemical or method can cause discolouration, shrinkage, texture damage, or water staining that permanently ruins expensive furniture.",
-        "That's why Kathy personally trains every technician in fabric identification and appropriate treatment selection. Before any cleaning begins, we identify your upholstery fabric type, test a small inconspicuous area, and select the optimal cleaning method.",
+        "That's why Stephen personally trains every technician in fabric identification and appropriate treatment selection. Before any cleaning begins, we identify your upholstery fabric type, test a small inconspicuous area, and select the optimal cleaning method.",
       ],
       includes: [
         { title: "Sofas, chairs, all upholstered pieces", description: "Comprehensive fabric care for every upholstered item — three-piece suites, dining chairs, ottomans, and headboards." },
@@ -510,8 +512,8 @@ export const SERVICE_LANDING_DATA: Record<string, {
       assessmentItems: ["Furniture type identification", "Fabric testing", "Stain assessment", "Written, itemised quote", "Recommended treatment plan"],
       guarantees: ["Fabric-Safe Methods", "All Fabric Types", "No Hidden Costs", "Flexible Scheduling", "Master Guarding Available"],
     },
-    ctaBand: { heading: "Restore Your Furniture to Its Best", subtext: "Book your free on-site upholstery assessment today. Kathy will evaluate your furniture and provide a detailed written quote." },
-    newsletter: { heading: "Furniture Care Tips from Kathy", subtext: "Subscribe for seasonal advice on keeping your furniture looking its best and exclusive offers." },
+    ctaBand: { heading: "Restore Your Furniture to Its Best", subtext: "Book your free on-site upholstery assessment today. Stephen will evaluate your furniture and provide a detailed written quote." },
+    newsletter: { heading: "Furniture Care Tips from Stephen", subtext: "Subscribe for seasonal advice on keeping your furniture looking its best and exclusive offers." },
   },
   "master-guarding": {
     slug: "master-guarding",
@@ -615,7 +617,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
   "rug-care": {
     slug: "rug-care",
     metaTitle: "Persian & Oriental Rug Cleaning Johannesburg | On The Spot",
-    metaDescription: "Expert Persian and Oriental rug cleaning Johannesburg. Dye stability testing, hand-woven specialist care, on-site or collection service. Free assessment. Call 075 011 9200.",
+    metaDescription: "Expert Persian and Oriental rug cleaning Johannesburg. Dye stability testing, hand-woven specialist care, on-site or collection service. Free assessment. Call +27 75 011 9200.",
     heroTag: "Persian & Oriental Rug Care",
     heroHeading: "Expert Care for Your Most Precious Rugs",
     heroSubtext: "Hand-woven rugs deserve hand-selected cleaning methods.",
@@ -647,7 +649,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
         { step: 3, title: "Dust Extraction", description: "Specialist vibration equipment removes deep-set dust and grit from the rug foundation." },
         { step: 4, title: "Gentle Cleaning", description: "pH-balanced, fibre-specific solutions applied by hand for thorough yet gentle cleaning." },
         { step: 5, title: "Rinse & Moisture Extraction", description: "Thorough rinse with controlled water extraction to remove all cleaning residue." },
-        { step: 6, title: "Drying & Final Inspection", description: "Flat drying to maintain shape, followed by Kathy's personal inspection of every rug." },
+        { step: 6, title: "Drying & Final Inspection", description: "Flat drying to maintain shape, followed by Stephen's personal inspection of every rug." },
       ],
       concerns: [
         { question: "Will the colours bleed?", answer: "We perform dye stability testing before every clean. If we identify any risk, we adjust our method accordingly. Your rug's colours are protected." },
@@ -674,7 +676,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
       guarantees: ["Dye Stability Tested", "Hand-Woven Specialist", "No Hidden Costs", "On-Site or Collection", "6-Step Specialist Process"],
     },
     ctaBand: { heading: "Your Rugs Deserve Expert Care", subtext: "Book your free rug assessment today. We'll evaluate your rug and recommend the best treatment approach." },
-    newsletter: { heading: "Rug Care Tips from Kathy", subtext: "Subscribe for seasonal advice on maintaining the beauty and value of your hand-woven rugs." },
+    newsletter: { heading: "Rug Care Tips from Stephen", subtext: "Subscribe for seasonal advice on maintaining the beauty and value of your hand-woven rugs." },
   },
 };
 
@@ -901,7 +903,7 @@ export const SECTOR_LANDING_DATA: Record<string, {
   "residential": {
     slug: "residential",
     metaTitle: "Home Curtain Cleaning Johannesburg | No Removal | On The Spot",
-    metaDescription: "Residential curtain cleaning Johannesburg. No removal, no shrinkage guarantee, hardware repair included. Free assessment within 48 hours. Call 075 011 9200.",
+    metaDescription: "Residential curtain cleaning Johannesburg. No removal, no shrinkage guarantee, hardware repair included. Free assessment within 48 hours. Call +27 75 011 9200.",
     heroTag: "Residential",
     heroHeading: "Home Curtain Cleaning — No Removal, No Shrinkage",
     heroSubtext: "Cleaned where they hang. Hardware repair included. 100% guaranteed.",
@@ -935,7 +937,7 @@ export const SECTOR_LANDING_DATA: Record<string, {
       { question: "How long does it take?", answer: "A standard residential clean takes 2-4 hours for an average home. Your windows are never bare." },
       { question: "What does the hardware check include?", answer: "We inspect tracks, rods, rings, pulleys, and mechanisms. Minor repairs like replacing rings or lubricating tracks are included at no extra charge." },
     ],
-    ctaBand: { heading: "Fresh Curtains Without the Fuss", subtext: "Book your free home assessment today. Kathy will visit within 48 hours." },
+    ctaBand: { heading: "Fresh Curtains Without the Fuss", subtext: "Book your free home assessment today. Stephen will visit within 48 hours." },
     newsletter: { heading: "Home Fabric Care Tips", subtext: "Subscribe for seasonal curtain care advice and exclusive offers for Johannesburg homeowners." },
   },
 };
@@ -994,7 +996,7 @@ export const AREA_LANDING_DATA: Record<string, {
       assessmentHeading: "Free Assessment in Johannesburg North",
       assessmentItems: ["Fabric type identification", "Hardware condition check", "Written quote", "Scheduling within 48 hours"],
       guarantees: ["No-Shrinkage Guarantee", "No Fabric Damage", "100% Satisfaction", "On-Time Guarantee", "Price Lock Promise"],
-      contact: { phone: "075 011 9200", email: "info@curtaincleaning.org", response: "Within 48 hours" },
+      contact: { phone: "+27 75 011 9200", email: "info@jhbcurtaincleaning.co.za", response: "Within 48 hours" },
     },
     ctaBand: { heading: "Johannesburg North's Trusted Curtain Cleaning Specialists", subtext: "Book your free on-site assessment today. We serve all northern suburbs." },
     newsletter: { heading: "Highveld Home Care Tips", subtext: "Subscribe for seasonal advice on protecting your curtains from Highveld dust." },
@@ -1028,7 +1030,7 @@ export const AREA_LANDING_DATA: Record<string, {
       assessmentHeading: "Free Assessment in Johannesburg East",
       assessmentItems: ["Industrial dust evaluation", "Hotel scheduling review", "Written quote", "After-hours availability"],
       guarantees: ["No-Shrinkage Guarantee", "After-Hours Available", "Fire Certificates", "Same-Day Completion"],
-      contact: { phone: "075 011 9200", email: "info@curtaincleaning.org", response: "Within 48 hours" },
+      contact: { phone: "+27 75 011 9200", email: "info@jhbcurtaincleaning.co.za", response: "Within 48 hours" },
     },
     ctaBand: { heading: "East Johannesburg's Curtain Cleaning Experts", subtext: "Hotel after-hours service. Industrial dust specialists. Book your free assessment." },
     newsletter: { heading: "East JHB Home & Hotel Care", subtext: "Subscribe for maintenance tips specific to Johannesburg East properties." },
@@ -1062,7 +1064,7 @@ export const AREA_LANDING_DATA: Record<string, {
       assessmentHeading: "Free Assessment in Johannesburg South",
       assessmentItems: ["Heavy fabric evaluation", "Lining condition check", "Written quote", "Same-day service available"],
       guarantees: ["No-Shrinkage Guarantee", "Velvet Safe", "Chenille Specialists", "Same-Day Completion"],
-      contact: { phone: "075 011 9200", email: "info@curtaincleaning.org", response: "Within 48 hours" },
+      contact: { phone: "+27 75 011 9200", email: "info@jhbcurtaincleaning.co.za", response: "Within 48 hours" },
     },
     ctaBand: { heading: "Southern Suburbs' Heavy Drapes Specialists", subtext: "Book your free assessment. Velvet, chenille, and thermal curtains handled with expert care." },
     newsletter: { heading: "Heavy Drapery Care Tips", subtext: "Subscribe for advice on maintaining velvet, chenille, and heavy curtains." },
@@ -1097,7 +1099,7 @@ export const AREA_LANDING_DATA: Record<string, {
       assessmentHeading: "Free Assessment in Johannesburg West",
       assessmentItems: ["Mining dust evaluation", "UV damage assessment", "Written quote", "UV protection options"],
       guarantees: ["No-Shrinkage Guarantee", "Mining Dust Extraction", "UV Protection", "Same-Day Completion"],
-      contact: { phone: "075 011 9200", email: "info@curtaincleaning.org", response: "Within 48 hours" },
+      contact: { phone: "+27 75 011 9200", email: "info@jhbcurtaincleaning.co.za", response: "Within 48 hours" },
     },
     ctaBand: { heading: "West Rand's Mining Dust Extraction Experts", subtext: "Book your free assessment. We remove what ordinary cleaning can't." },
     newsletter: { heading: "West Rand Home Care", subtext: "Subscribe for tips on dealing with mining dust and UV exposure." },
@@ -1116,7 +1118,7 @@ export const AREA_LANDING_DATA: Record<string, {
       heading: "Heritage Fabrics Demand Heritage Expertise",
       paragraphs: [
         "Original Victorian and Edwardian drapes are often made from fabrics that are no longer manufactured — heavy brocades, damasks, and tapestries that cannot be replaced if damaged. Standard cleaning methods are simply too risky for these irreplaceable fabrics.",
-        "On The Spot's dry-cleaning process is ideal for heritage fabrics. No water means no risk of shrinkage, dye bleeding, or texture damage. Our technicians are trained to identify and handle antique fabrics with the care they deserve, and Kathy's background as an interior decorator gives her particular insight into period-appropriate treatment methods.",
+        "On The Spot's dry-cleaning process is ideal for heritage fabrics. No water means no risk of shrinkage, dye bleeding, or texture damage. Our technicians are trained to identify and handle antique fabrics with the care they deserve, and Stephen's background as an interior decorator gives her particular insight into period-appropriate treatment methods.",
         "Rosebank's boutique hotels and guest houses also benefit from our after-hours service, ensuring their characterful window treatments are maintained without disrupting the guest experience.",
       ],
       servicesTable: [
@@ -1132,7 +1134,7 @@ export const AREA_LANDING_DATA: Record<string, {
       assessmentHeading: "Free Heritage Assessment",
       assessmentItems: ["Antique fabric identification", "Condition assessment", "Heritage-appropriate treatment plan", "Written quote"],
       guarantees: ["No-Shrinkage Guarantee", "Heritage Fabric Safe", "Antique Care Trained", "Period-Appropriate Methods"],
-      contact: { phone: "075 011 9200", email: "info@curtaincleaning.org", response: "Within 48 hours" },
+      contact: { phone: "+27 75 011 9200", email: "info@jhbcurtaincleaning.co.za", response: "Within 48 hours" },
     },
     ctaBand: { heading: "Central Johannesburg's Heritage Fabric Specialists", subtext: "Book your free assessment. Your home's history deserves expert care." },
     newsletter: { heading: "Heritage Home Care", subtext: "Subscribe for advice on maintaining period property fabrics." },
@@ -1167,7 +1169,7 @@ export const AREA_LANDING_DATA: Record<string, {
       assessmentHeading: "Free Assessment in Pretoria & Midrand",
       assessmentItems: ["Jacaranda pollen evaluation", "Pollen stain assessment", "Written quote", "Post-season scheduling"],
       guarantees: ["No-Shrinkage Guarantee", "Pollen Stain Removal", "Diplomatic Clearance", "Same-Day Completion"],
-      contact: { phone: "075 011 9200", email: "info@curtaincleaning.org", response: "Within 48 hours" },
+      contact: { phone: "+27 75 011 9200", email: "info@jhbcurtaincleaning.co.za", response: "Within 48 hours" },
     },
     ctaBand: { heading: "Pretoria & Midrand's Jacaranda Pollen Specialists", subtext: "Book your free assessment. Post-jacaranda season scheduling available." },
     newsletter: { heading: "Pretoria Home Care Tips", subtext: "Subscribe for jacaranda season care reminders and maintenance advice." },

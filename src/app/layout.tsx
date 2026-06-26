@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Professional Curtain Cleaning Johannesburg | On The Spot — Free Assessment",
+  title: "Professional Curtain Cleaning Johannesburg | JHB Curtain Cleaning — Free Assessment",
   description:
     "Professional on-site curtain cleaning Johannesburg. No removal, no shrinkage guarantee. Free assessment. Serving Sandton, Randburg, Fourways & all JHB suburbs.",
   keywords: [
@@ -30,23 +30,24 @@ export const metadata: Metadata = {
     "blind cleaning Johannesburg",
     "curtain cleaning Fourways",
     "curtain cleaning Rosebank",
+    "JHB curtain cleaning",
   ],
-  authors: [{ name: "On The Spot Curtain Cleaning Specialists" }],
+  authors: [{ name: "JHB CURTAIN CLEANING" }],
   icons: {
     icon: "/brand/bronze-seal.png",
   },
   openGraph: {
-    title: "Professional Curtain Cleaning Johannesburg | On The Spot",
+    title: "Professional Curtain Cleaning Johannesburg | JHB Curtain Cleaning",
     description:
       "Professional on-site curtain cleaning Johannesburg. No removal, no shrinkage guarantee. Free assessment. Serving Sandton, Randburg, Fourways & all JHB suburbs.",
-    url: "https://curtaincleaning.org",
-    siteName: "On The Spot Curtain Cleaning",
+    url: "https://www.jhbcurtaincleaning.co.za",
+    siteName: "JHB Curtain Cleaning",
     type: "website",
     locale: "en_ZA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Curtain Cleaning Johannesburg | On The Spot",
+    title: "Professional Curtain Cleaning Johannesburg | JHB Curtain Cleaning",
     description:
       "Professional on-site curtain cleaning Johannesburg. No removal, no shrinkage guarantee.",
   },
@@ -77,25 +78,22 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://curtaincleaning.org",
-              name: "On The Spot Curtain Cleaning Specialists",
-              description:
-                "Professional on-site curtain cleaning in Johannesburg. No removal, no shrinkage guarantee. Serving Sandton, Randburg, Fourways & all JHB suburbs.",
-              url: "https://curtaincleaning.org",
+              name: "JHB CURTAIN CLEANING",
+              url: "https://www.jhbcurtaincleaning.co.za",
+              email: "info@jhbcurtaincleaning.co.za",
               telephone: "+27750119200",
-              email: "info@curtaincleaning.org",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Martha North Road",
-                addressLocality: "Randburg",
-                addressRegion: "Gauteng",
-                postalCode: "2194",
+                streetAddress: "10 2nd Ave",
+                addressLocality: "Florida",
+                addressRegion: "Roodepoort",
+                postalCode: "1710",
                 addressCountry: "ZA",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: -26.0991,
-                longitude: 27.9962,
+                latitude: -26.1752726,
+                longitude: 27.9233293,
               },
               openingHoursSpecification: [
                 {
@@ -118,7 +116,7 @@ export default function RootLayout({
                 },
               ],
               priceRange: "R800-R5500",
-              image: "https://curtaincleaning.org/brand/bronze-seal.png",
+              image: "https://www.jhbcurtaincleaning.co.za/brand/bronze-seal.png",
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Curtain & Fabric Care Services",

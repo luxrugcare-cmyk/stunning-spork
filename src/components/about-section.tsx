@@ -84,7 +84,7 @@ export default function AboutSection() {
             id="about-heading"
             className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
           >
-            About On The Spot
+            About JHB Curtain Cleaning
           </h2>
           <div
             className="mx-auto mt-4 h-1 w-24 rounded-full bg-brand-bronze"
