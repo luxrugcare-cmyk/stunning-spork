@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=720px">
+<title>AI-SEO & AEO Audit Report — JHB Curtain Cleaning</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+@page {
+    size: 720px 1020px;
+    margin: 0;
+}
+:root {
+    --emerald: #064e3b;
+    --emerald-light: #0d7a5f;
+    --emerald-dark: #022c22;
+    --bronze: #a87d43;
+    --bronze-light: #c9a45c;
+    --critical: #dc2626;
+    --critical-bg: #fef2f2;
+    --warning: #d97706;
+    --warning-bg: #fffbeb;
+    --pass: #059669;
+    --pass-bg: #ecfdf5;
+    --medium-bg: #fefce8;
+    --low-bg: #f0fdf4;
+    --bg: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --code-bg: #f1f5f9;
+    --code-text: #334155;
+    --border: #e2e8f0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 720px;
+    background: #ffffff;
+    color: var(--text);
+    font-family: 'Inter', 'Liberation Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+@media screen {
+    html {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background: #e2e8f0;
+    }
+    body {
+        transform-origin: top center;
+        margin: 20px auto;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+}
+
+/* Cover */
+.cover {
+    width: 720px;
+    height: 1020px;
+    box-sizing: border-box;
+    break-after: page;
+    overflow: hidden;
+    background: var(--emerald);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 70px;
+    position: relative;
+}
+.cover-decor-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--bronze), var(--bronze-light), var(--bronze));
+}
+.cover-decor-circle {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(168,125,67,0.3);
+    border-radius: 50%;
+}
+.cover-decor-circle2 {
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(168,125,67,0.2);
+    border-radius: 50%;
+}
+.cover-badge {
+    display: inline-block;
+    background: rgba(168,125,67,0.2);
+    border: 1px solid var(--bronze);
+    color: var(--bronze-light);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 28px;
+    margin-bottom: 40px;
+}
+.cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 30px 0;
+    letter-spacing: -0.5px;
+}
+.cover-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--bronze-light);
+    margin: 0 0 44px 0;
+}
+.cover-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    margin-bottom: 50px;
+}
+.cover-meta {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.cover-meta-line {
+    line-height: 2.6;
+}
+.cover-meta strong {
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+}
+.cover-bottom-line {
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+    right: 70px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--bronze), transparent);
+}
+
+/* Main content */
+.main-content {
+    padding: 50px 60px 40px 60px;
+}
+
+/* Chapter headers */
+.chapter-header {
+    break-after: avoid;
+    break-inside: avoid;
+    margin-top: 28px;
+}
+.chapter-tag {
+    display: inline-block;
+    background: var(--emerald);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    margin-bottom: 8px;
+}
+.chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--emerald);
+    line-height: 1.25;
+    margin: 0 0 4px 0;
+}
+.chapter-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--bronze);
+    margin: 10px 0 18px 0;
+}
+
+/* Body text */
+.body-text {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+.body-text strong {
+    color: var(--emerald-dark);
+    font-weight: 600;
+}
+
+/* Severity badges */
+.badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+.badge-critical {
+    background: var(--critical);
+    color: #ffffff;
+}
+.badge-high {
+    background: var(--warning);
+    color: #ffffff;
+}
+.badge-medium {
+    background: #eab308;
+    color: #422006;
+}
+.badge-low {
+    background: var(--pass);
+    color: #ffffff;
+}
+.badge-good {
+    background: var(--pass);
+    color: #ffffff;
+}
+
+/* Cards */
+.finding-card {
+    break-inside: avoid;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    background: #ffffff;
+}
+.finding-card-critical {
+    border-left: 4px solid var(--critical);
+    background: var(--critical-bg);
+}
+.finding-card-high {
+    border-left: 4px solid var(--warning);
+    background: var(--warning-bg);
+}
+.finding-card-medium {
+    border-left: 4px solid #eab308;
+    background: var(--medium-bg);
+}
+.finding-card-low {
+    border-left: 4px solid var(--pass);
+    background: var(--low-bg);
+}
+.finding-card-good {
+    border-left: 4px solid var(--pass);
+    background: var(--pass-bg);
+}
+.finding-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+.finding-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #475569;
+}
+
+/* Code blocks */
+.code-block {
+    break-inside: avoid;
+    background: var(--code-bg);
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    font-family: 'Liberation Mono', 'DejaVu Sans Mono', monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--code-text);
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Tables */
+.data-table {
+    break-inside: avoid;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+    font-size: 11.5px;
+}
+.data-table th {
+    background: var(--emerald);
+    color: #ffffff;
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 10.5px;
+    letter-spacing: 0.5px;
+}
+.data-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    line-height: 1.45;
+    vertical-align: top;
+}
+.data-table tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* Step list */
+.step-list {
+    margin: 0 0 12px 0;
+    padding: 0;
+    list-style: none;
+}
+.step-list li {
+    break-inside: avoid;
+    position: relative;
+    padding: 6px 0 6px 28px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #475569;
+}
+.step-list li::before {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    background: var(--emerald);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    content: attr(data-step);
+}
+.step-list li strong {
+    color: var(--text);
+}
+
+/* Score block */
+.score-block {
+    break-inside: avoid;
+    text-align: center;
+    padding: 20px;
+    margin: 16px 0;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: #f8fafc;
+}
+.score-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--critical);
+    line-height: 1;
+}
+.score-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+/* Sub-section heading */
+.sub-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--emerald);
+    margin: 16px 0 8px 0;
+    break-after: avoid;
+}
+
+/* NAP comparison box */
+.nap-compare {
+    break-inside: avoid;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.nap-col {
+    flex: 1;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 11.5px;
+    line-height: 1.55;
+}
+.nap-col-wrong {
+    background: var(--critical-bg);
+    border: 1px solid #fca5a5;
+}
+.nap-col-right {
+    background: var(--pass-bg);
+    border: 1px solid #6ee7b7;
+}
+.nap-col-title {
+    font-weight: 700;
+    font-size: 10.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+/* Cluster map */
+.cluster-tree {
+    break-inside: avoid;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-family: 'Liberation Mono', monospace;
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--code-text);
+    white-space: pre-wrap;
+}
+
+/* Phase card */
+.phase-card {
+    break-inside: avoid;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.phase-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--emerald);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+}
+.phase-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--emerald);
+}
+.phase-timeline {
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+.phase-list {
+    margin: 0;
+    padding: 0 0 0 18px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #475569;
+}
+.phase-list li {
+    margin-bottom: 2px;
+}
+
+/* Ending page */
+.ending {
+    width: 720px;
+    height: 1020px;
+    box-sizing: border-box;
+    break-before: page;
+    overflow: hidden;
+    background: var(--emerald);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 70px;
+    position: relative;
+}
+.ending-decor-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--bronze), var(--bronze-light), var(--bronze));
+}
+.ending-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.ending-sub {
+    font-size: 15px;
+    color: var(--bronze-light);
+    line-height: 1.6;
+    max-width: 480px;
+}
+.ending-contact {
+    margin-top: 40px;
+    padding: 20px 30px;
+    border: 1px solid rgba(168,125,67,0.4);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    line-height: 2;
+}
+.ending-bottom-line {
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+    right: 70px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--bronze), transparent);
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<div class="cover">
+    <div class="cover-decor-top"></div>
+    <div class="cover-decor-circle"></div>
+    <div class="cover-decor-circle2"></div>
+    <div class="cover-badge">COMPREHENSIVE 15-TASK DIGITAL AUDIT</div>
+    <div class="cover-title">AI-SEO &amp; AEO<br>AUDIT REPORT</div>
+    <div class="cover-subtitle">JHB Curtain Cleaning &nbsp;|&nbsp; jhbcurtaincleaning.co.za</div>
+    <div class="cover-tag">Critical NAP Data Corruption Identified &mdash; 47/100</div>
+    <div class="cover-meta">
+        <div class="cover-meta-line"><strong>Date:</strong> June 2026</div>
+        <div class="cover-meta-line"><strong>Auditor:</strong> GLM-5.2 AI-SEO Strategist</div>
+        <div class="cover-meta-line"><strong>Target:</strong> jhbcurtaincleaning.co.za</div>
+        <div class="cover-meta-line"><strong>Tech Stack:</strong> Next.js 16 &bull; TypeScript 5 &bull; Tailwind CSS 4 &bull; shadcn/ui</div>
+    </div>
+    <div class="cover-bottom-line"></div>
+</div>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<div class="main-content">
+
+<!-- ====== EXECUTIVE SUMMARY ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Executive Summary</div>
+    <div class="chapter-title">Audit Overview &amp; Critical Findings</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="body-text">
+    JHB Curtain Cleaning (jhbcurtaincleaning.co.za) has a solid technical foundation built on Next.js 16 with Static Site Generation (SSG), well-structured JSON-LD schema on the homepage and landing pages, and good core page speed metrics. The site's 18 landing pages &mdash; spanning services, sectors, and Johannesburg service areas &mdash; provide excellent topical authority potential and represent a thoughtful content architecture that few competitors in this niche can match.
+</div>
+
+<div class="body-text">
+    <strong>However, the audit reveals a catastrophic NAP data corruption issue</strong> that undermines virtually every SEO and local visibility signal. The entire codebase has reverted to the old brand identity: "On The Spot Curtain Cleaning Specialists" with the old domain (curtaincleaning.org), old address (Martha North Rd, Randburg), wrong founder (Kathy Dunlop), and wrong contact details. This data appears in over 70 instances across site-data.ts, layout.tsx, JSON-LD schemas, meta tags, FAQ content, and component files. Google's Knowledge Graph may be creating duplicate or conflicting entities as a result, effectively destroying local ranking authority.
+</div>
+
+<div class="body-text">
+    Beyond the NAP crisis, the site is missing critical SEO infrastructure: no XML sitemap, no canonical tags, no blog/content hub for AEO optimization, no Organization schema, and no hreflang or locale targeting. Image assets are nearly non-existent (only 2 logo PNGs on the entire site), and there are no before/after photos &mdash; the single most important trust signal for a cleaning service. Internal linking between the 18 landing pages is absent in body content, preventing link equity flow and semantic context from connecting related services, sectors, and areas.
+</div>
+
+<div class="body-text">
+    The 18 landing pages provide a strong topical cluster foundation, but they need AEO optimization (direct-answer formatting, conversational keyword targeting, pricing transparency) and cross-linking to realize their potential. With immediate NAP correction and the implementation roadmap outlined in this report, the site can realistically achieve a score of 75+ within 60 days.
+</div>
+
+<div class="score-block">
+    <div class="score-number">47</div>
+    <div class="score-label">Overall Score &mdash; Out of 100</div>
+</div>
+
+<!-- ====== TASK 1 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 1 /ai-seo</div>
+    <div class="chapter-title">AI Search Engine Optimization Strategy</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Entity Identity Crisis</div>
+    <div class="finding-desc">The JSON-LD schema in layout.tsx still references "On The Spot Curtain Cleaning Specialists" with URL "curtaincleaning.org" and address "Martha North Road, Randburg." AI systems cannot confidently match this business to real-world entities. The @id field still points to curtaincleaning.org. Google's Knowledge Graph may create duplicate or conflicting entities.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No Organization Schema</div>
+    <div class="finding-desc">The site lacks a top-level Organization schema. AI crawlers use this to understand corporate entity, founding, and authority. Without it, the business has no verified organizational identity in knowledge graphs.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No BreadcrumbList Schema</div>
+    <div class="finding-desc">The 18 landing pages have no breadcrumb markup. AI systems use breadcrumbs to understand page hierarchy and topical relationships.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Insufficient Direct Answers</div>
+    <div class="finding-desc">FAQ content is buried inside accordion components. While text is crawlable, AI Overviews prefer content that answers questions in the first 1-2 sentences before expanding. Current FAQ answers are long-form paragraphs.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;No Speakable Specification</div>
+    <div class="finding-desc">No speakable schema markup exists, which tells voice assistants and AI which content is suitable for audio playback.</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Fix NAP data across ALL files</strong> immediately. JSON-LD @id, name, url, telephone, email, and address must match canonical NAP format exactly.</li>
+    <li data-step="2"><strong>Add Organization schema</strong> to layout.tsx alongside the existing LocalBusiness with @id, name, url, logo, sameAs, founder (Stephen Dunlop), and foundingDate (2009).</li>
+    <li data-step="3"><strong>Add BreadcrumbList schema</strong> to every landing page with Home / Services (or Sectors/Areas) / Page Name hierarchy.</li>
+    <li data-step="4"><strong>Restructure FAQ answers</strong> to lead with a direct 1-2 sentence answer, then expand. Example: "Can you clean curtains without taking them down? Yes. We clean curtains exactly where they hang using on-site dry-cleaning equipment."</li>
+    <li data-step="5"><strong>Add speakable schema</strong> to FAQ items for voice search optimization.</li>
+</ol>
+
+<div class="code-block">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.jhbcurtaincleaning.co.za/#organization",
+  "name": "JHB CURTAIN CLEANING",
+  "url": "https://www.jhbcurtaincleaning.co.za",
+  "logo": "https://www.jhbcurtaincleaning.co.za/brand/bronze-seal.png",
+  "sameAs": [
+    "https://facebook.com/jhbcurtaincleaning",
+    "https://instagram.com/jhbcurtaincleaning",
+    "https://youtube.com/@jhbcurtaincleaning",
+    "https://linkedin.com/company/jhbcurtaincleaning"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Stephen Dunlop",
+    "jobTitle": "Managing Director"
+  },
+  "foundingDate": "2009"
+}</div>
+
+<!-- ====== TASK 2 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 2 /seo-page</div>
+    <div class="chapter-title">On-Page SEO Analysis</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-good">
+    <div class="finding-title"><span class="badge badge-good">Good</span> &nbsp;H1 Tag</div>
+    <div class="finding-desc">Homepage has a single, keyword-rich H1: "Professional Curtain Cleaning Johannesburg" &mdash; this is strong.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;H2 Hierarchy Needs Fix</div>
+    <div class="finding-desc">"About On The Spot" should be "About JHB Curtain Cleaning"; "How It Works" should be "How On-Site Curtain Cleaning Works"; "FAQ" should be "Curtain Cleaning FAQ &mdash; Johannesburg".</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Meta Title Wrong Brand</div>
+    <div class="finding-desc">Layout.tsx shows "Professional Curtain Cleaning Johannesburg | On The Spot &mdash; Free Assessment" &mdash; the old brand name persists. Should be "Professional Curtain Cleaning Johannesburg | JHB Curtain Cleaning &mdash; Free Assessment".</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Meta Description Missing Location</div>
+    <div class="finding-desc">Current description mentions "Sandton, Randburg, Fourways" but not "Florida, Roodepoort" where the business is actually located. Should include primary service area AND actual location.</div>
+</div>
+<div class="finding-card finding-card-good">
+    <div class="finding-title"><span class="badge badge-good">Good</span> &nbsp;URL Structure</div>
+    <div class="finding-desc">Clean slug-based URLs: /services/curtain-blind-cleaning, /sectors/hospitality, /areas/jhb-north &mdash; these are SEO-friendly.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Keyword Density Imbalance</div>
+    <div class="finding-desc">"On The Spot" (old brand) appears 30+ times, diluting the actual brand keyword. "Curtain cleaning Johannesburg" and "on-site curtain cleaning" &mdash; the highest-value local+service combos &mdash; are underrepresented.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;All 18 Landing Page Meta Titles Wrong</div>
+    <div class="finding-desc">All 18 landing pages still use "On The Spot" in their meta titles instead of "JHB Curtain Cleaning".</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Replace ALL "On The Spot"</strong> brand references with "JHB Curtain Cleaning" across meta titles, H2s, body copy.</li>
+    <li data-step="2"><strong>Homepage meta title:</strong> "Curtain Cleaning Johannesburg | On-Site | No Removal | JHB Curtain Cleaning"</li>
+    <li data-step="3"><strong>Homepage meta description:</strong> "Professional on-site curtain cleaning in Johannesburg. No removal, no shrinkage guarantee. Free assessment. Based in Florida, Roodepoort &mdash; serving Sandton, Randburg, Fourways, Pretoria &amp; all JHB suburbs. +27 75 011 9200"</li>
+    <li data-step="4"><strong>Update H2 hierarchy</strong> on homepage with keyword-rich headings.</li>
+    <li data-step="5"><strong>Add "curtain cleaning Johannesburg"</strong> and "on-site curtain cleaning" as primary keyword targets in the first 100 words of every landing page hero paragraph.</li>
+</ol>
+
+<!-- ====== TASK 3 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 3 /seo-audit</div>
+    <div class="chapter-title">Technical SEO &amp; Site Health</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No XML Sitemap</div>
+    <div class="finding-desc">There is no sitemap.xml or app/sitemap.ts file. Search engines have no structured map of the 19 pages. This directly impacts crawl efficiency and indexation speed.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No Canonical Tags</div>
+    <div class="finding-desc">No canonical URL tags exist on any page. Without canonicals, search engines may treat www/non-www, http/https, and trailing-slash variants as duplicate content.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;next.config.ts Issues</div>
+    <div class="finding-desc">typescript: { ignoreBuildErrors: true } masks type errors. reactStrictMode: false disables React strict mode. No image optimization configuration (formats, sizes).</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;No Custom 404 or Error Boundary</div>
+    <div class="finding-desc">No custom not-found.tsx exists. No error.tsx at the app level. Runtime errors show a blank page.</div>
+</div>
+<div class="finding-card finding-card-good">
+    <div class="finding-title"><span class="badge badge-good">Good</span> &nbsp;Font Loading &amp; Mobile Responsiveness</div>
+    <div class="finding-desc">Inter and Playfair Display use display: 'swap' &mdash; eliminates FOIT. Tailwind responsive prefixes used throughout. All grids collapse to single column on mobile.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;Lang Attribute Wrong</div>
+    <div class="finding-desc">&lt;html lang="en"&gt; should be &lt;html lang="en-ZA"&gt; for South African English locale targeting.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Page Speed Concerns</div>
+    <div class="finding-desc">The 844-line contact-section.tsx and 605-line header.tsx are large client components. Framer Motion adds ~45KB to the bundle. No code splitting optimization visible.</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Create src/app/sitemap.ts</strong> with all static pages, service pages, sector pages, and area pages. Include lastModified, changeFrequency, and priority values.</li>
+    <li data-step="2"><strong>Add canonical URLs</strong> to layout.tsx metadata: metadataBase, alternates: { canonical: '/' }. And to each landing page generateMetadata.</li>
+    <li data-step="3"><strong>Fix html lang</strong> attribute from "en" to "en-ZA".</li>
+    <li data-step="4"><strong>Create custom not-found.tsx</strong> and error.tsx pages.</li>
+    <li data-step="5"><strong>Update next.config.ts</strong> &mdash; remove ignoreBuildErrors, enable reactStrictMode, add image config with formats: ['image/avif', 'image/webp'].</li>
+</ol>
+
+<div class="code-block">import { MetadataRoute } from 'next'
+
+const BASE_URL = 'https://www.jhbcurtaincleaning.co.za'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticPages = [
+    { url: BASE_URL, lastModified: new Date(),
+      changeFrequency: 'weekly', priority: 1.0 }
+  ]
+  // ...service, sector, and area pages
+  return [...staticPages, ...servicePages, ...sectorPages, ...areaPages]
+}</div>
+
+<!-- ====== TASK 4 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 4 /seo-images</div>
+    <div class="chapter-title">Visual Asset Optimization</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Only 2 Images on Entire Site</div>
+    <div class="finding-desc">The only images are the logo (bronze-seal.png and logo.png) in the header. The hero section uses CSS gradients and SVG shapes &mdash; no real photographs. The about section uses initials "KD" &mdash; no photo of Stephen Dunlop. Landing pages have zero images.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No Alt Text Strategy</div>
+    <div class="finding-desc">The two existing images have alt text "On The Spot bronze seal logo" and "On The Spot logo" &mdash; using the OLD brand name and not descriptive enough for image search.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;No WebP/AVIF Optimization</div>
+    <div class="finding-desc">Logo files are PNG format. Next.js Image component can auto-serve WebP/AVIF, but it's not configured in next.config.ts.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No Before/After Gallery</div>
+    <div class="finding-desc">For a cleaning service, before/after photos are the #1 trust signal and a major image search opportunity. None exist.</div>
+</div>
+<div class="finding-card finding-card-low">
+    <div class="finding-title"><span class="badge badge-low">Low</span> &nbsp;Decorative SVGs Missing Titles</div>
+    <div class="finding-desc">The hero SVG curtain drapes have no &lt;title&gt; element for accessibility.</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Configure Next.js image optimization</strong> in next.config.ts with formats: ['image/avif', 'image/webp'].</li>
+    <li data-step="2"><strong>Update alt text</strong> on existing images to include brand name and descriptive keywords.</li>
+    <li data-step="3"><strong>Add before/after gallery</strong> section to homepage with 6-8 high-quality images with descriptive alt text.</li>
+    <li data-step="4"><strong>Add real photograph</strong> of Stephen Dunlop to the About section, replacing "SD" initials circle.</li>
+    <li data-step="5"><strong>Add service-specific images</strong> to each of the 6 landing pages (at least 2-3 per page).</li>
+    <li data-step="6"><strong>Add &lt;title&gt; elements</strong> to decorative SVGs for accessibility compliance.</li>
+</ol>
+
+<!-- ====== TASK 5 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 5 /seo-fundamentals</div>
+    <div class="chapter-title">Foundational SEO Alignment</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;robots.txt Needs Update</div>
+    <div class="finding-desc">Current robots.txt is minimal &mdash; no Sitemap reference, no crawl-delay, no disallow rules for API routes or private paths.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No XML Sitemap &amp; No Canonical Tags</div>
+    <div class="finding-desc">As detailed in Task 3 &mdash; no sitemap exists and no canonical URLs are set. These are foundational SEO requirements.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Open Graph URL Points to Wrong Domain</div>
+    <div class="finding-desc">layout.tsx openGraph.url is set to "https://curtaincleaning.org" instead of "https://www.jhbcurtaincleaning.co.za".</div>
+</div>
+<div class="finding-card finding-card-low">
+    <div class="finding-title"><span class="badge badge-low">Low</span> &nbsp;No hreflang Tags</div>
+    <div class="finding-desc">Not critical for a single-language South African site, but best practice for en-ZA locale targeting.</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Update robots.txt</strong> with Sitemap reference, disallow /api/, and proper Allow rules.</li>
+    <li data-step="2"><strong>Create sitemap.ts</strong> as described in Task 3.</li>
+    <li data-step="3"><strong>Add canonical tags</strong> as described in Task 3.</li>
+    <li data-step="4"><strong>Fix all URL references</strong> from curtaincleaning.org to www.jhbcurtaincleaning.co.za.</li>
+    <li data-step="5"><strong>Add metadataBase</strong> to layout.tsx: new URL('https://www.jhbcurtaincleaning.co.za').</li>
+</ol>
+
+<div class="code-block">User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://www.jhbcurtaincleaning.co.za/sitemap.xml</div>
+
+<!-- ====== TASK 6 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 6 /seo-aeo-blog-writer</div>
+    <div class="chapter-title">Answer Engine Blog Architecture</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No Blog Exists</div>
+    <div class="finding-desc">The site has zero blog content. There is no /blog route, no article pages, no content marketing infrastructure. This is the single biggest gap for AEO &mdash; AI systems prioritize sites with deep, authoritative content libraries.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No Content Hub</div>
+    <div class="finding-desc">Without a blog, the site cannot rank for informational queries like "how to clean curtains without removing them" or "can curtains shrink in the wash" &mdash; these are high-volume queries that feed AI Overviews.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No Author Schema</div>
+    <div class="finding-desc">Without blog posts, there are no Article schemas with author attribution &mdash; a key E-E-A-T signal.</div>
+</div>
+
+<div class="sub-heading">6 Initial AEO-Optimized Blog Posts</div>
+<table class="data-table">
+    <tr><th>#</th><th>Post Title</th><th>Target Query</th></tr>
+    <tr><td>1</td><td>How to Clean Curtains Without Taking Them Down &mdash; Complete Guide</td><td>"how to clean curtains without removing"</td></tr>
+    <tr><td>2</td><td>Can Curtains Shrink When Washed? The Science Explained</td><td>"do curtains shrink"</td></tr>
+    <tr><td>3</td><td>On-Site vs Off-Site Curtain Cleaning: What Johannesburg Residents Need to Know</td><td>"curtain cleaning Johannesburg"</td></tr>
+    <tr><td>4</td><td>How Often Should You Clean Your Curtains? A Room-by-Room Guide</td><td>"how often clean curtains"</td></tr>
+    <tr><td>5</td><td>Fire Proofing Curtains for South African Hotels: SANS Compliance Guide</td><td>"fire proofing curtains South Africa"</td></tr>
+    <tr><td>6</td><td>Dust Mites in Curtains: Health Risks and Professional Removal</td><td>"dust mites curtains"</td></tr>
+</table>
+
+<div class="sub-heading">AEO Blog Post Structure</div>
+<ol class="step-list">
+    <li data-step="1"><strong>H1 with exact question</strong> as title</li>
+    <li data-step="2"><strong>First paragraph: Direct answer</strong> in 1-2 sentences (the "extractable answer")</li>
+    <li data-step="3"><strong>Subheadings as questions</strong> (H2, H3)</li>
+    <li data-step="4"><strong>FAQ section</strong> at the bottom</li>
+    <li data-step="5"><strong>Article schema</strong> with author (Stephen Dunlop), publisher, datePublished, dateModified</li>
+    <li data-step="6"><strong>FAQPage schema</strong> for the FAQ section</li>
+</ol>
+
+<!-- ====== TASK 7 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 7 /seo-content-auditor</div>
+    <div class="chapter-title">Semantic Content Audit</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;Keyword Cannibalization Risk</div>
+    <div class="finding-desc">The homepage and /services/curtain-blind-cleaning both target "curtain cleaning Johannesburg" as a primary keyword. They compete for the same search intent rather than differentiating (homepage = brand/navigational, landing page = transactional).</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Content Depth Imbalance</div>
+    <div class="finding-desc">The 18 landing pages have substantial content (800-1200 words each), but the homepage sections are thin &mdash; the Services section has only card titles and 1-line descriptions.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Old Brand Name Contamination</div>
+    <div class="finding-desc">"On The Spot" appears 30+ times in site-data.ts, "Kathy Dunlop" appears in FAQ answers and hero paragraphs, and "curtaincleaning.org" appears in email references. This creates semantic confusion for search engines and AI systems.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No Semantic Variation</div>
+    <div class="finding-desc">Content heavily uses "curtain cleaning" but lacks semantic variants: "drapery cleaning," "curtain sanitisation," "window treatment cleaning," "drape cleaning service." These LSI keywords help search engines understand topical breadth.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;Duplicate FAQ Content</div>
+    <div class="finding-desc">The FAQ section on the homepage and the concerns section on the curtain-blind-cleaning landing page both answer "Will my curtains shrink?" with similar content.</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Differentiate homepage vs landing page targeting:</strong> Homepage = brand/navigational; Service pages = transactional; Sector pages = industry-specific; Area pages = hyperlocal.</li>
+    <li data-step="2"><strong>Expand homepage service cards</strong> from 1-line descriptions to 2-3 sentences with LSI keywords.</li>
+    <li data-step="3"><strong>Replace ALL old brand references</strong> across all content files.</li>
+    <li data-step="4"><strong>Add semantic keyword variations</strong> naturally: "drapery cleaning," "window treatment cleaning," "curtain sanitisation," "fabric cleaning service."</li>
+    <li data-step="5"><strong>De-duplicate FAQ content</strong> &mdash; homepage FAQ for general questions, landing page concerns for service-specific questions.</li>
+</ol>
+
+<!-- ====== TASK 8 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 8 /local-legal-seo-audit</div>
+    <div class="chapter-title">Local Visibility &amp; Industry Compliance</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical &mdash; 10/10</span> &nbsp;NAP Consistency FAILURE</div>
+    <div class="finding-desc">This is the most severe issue on the entire site. The NAP data is catastrophically inconsistent. The business may appear as TWO different entities in Google's Knowledge Graph, destroying local ranking authority.</div>
+</div>
+
+<div class="nap-compare">
+    <div class="nap-col nap-col-wrong">
+        <div class="nap-col-title" style="color:var(--critical);">Current (WRONG)</div>
+        <strong>Name:</strong> On The Spot Curtain Cleaning Specialists<br>
+        <strong>Address:</strong> Martha North Rd, Randburg, Johannesburg 2194<br>
+        <strong>Phone:</strong> 075 011 9200 (no country code)<br>
+        <strong>Email:</strong> info@curtaincleaning.org<br>
+        <strong>URL:</strong> curtaincleaning.org<br>
+        <strong>Founder:</strong> Kathy Dunlop<br>
+        <strong>Geo:</strong> -26.0991, 27.9962
+    </div>
+    <div class="nap-col nap-col-right">
+        <div class="nap-col-title" style="color:var(--pass);">Correct (Per Tech Doc v1.0)</div>
+        <strong>Name:</strong> JHB CURTAIN CLEANING<br>
+        <strong>Address:</strong> 10 2nd Ave, Florida, Roodepoort, 1710, South Africa<br>
+        <strong>Phone:</strong> +27 75 011 9200<br>
+        <strong>Email:</strong> info@jhbcurtaincleaning.co.za<br>
+        <strong>URL:</strong> https://www.jhbcurtaincleaning.co.za<br>
+        <strong>Founder:</strong> Stephen Dunlop<br>
+        <strong>Geo:</strong> -26.1752726, 27.9233293
+    </div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Google Business Profile Mismatch</div>
+    <div class="finding-desc">If the GBP is updated to the new NAP but the website still shows old data, Google will detect the inconsistency and may suppress local pack rankings.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;JSON-LD Schema Mismatch</div>
+    <div class="finding-desc">The LocalBusiness schema in layout.tsx has the old name, old URL, old address, old phone, old email, and wrong geo coordinates. This is the #1 signal Google uses for local entity resolution &mdash; and it's wrong.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;No GBP Link &amp; POPIA Text Wrong</div>
+    <div class="finding-desc">The site doesn't link to its Google Business Profile. The POPIA checkbox text says "On The Spot Curtain Cleaning Specialists" &mdash; wrong legal entity name.</div>
+</div>
+
+<div class="sub-heading">Files Requiring NAP Update</div>
+<table class="data-table">
+    <tr><th>File</th><th>Changes Needed</th></tr>
+    <tr><td>src/lib/site-data.ts</td><td>name, shortName, domain, phone, email, address, whatsapp, social URLs</td></tr>
+    <tr><td>src/lib/data.ts</td><td>FAQ answers referencing Kathy, old phone, old email, "On The Spot"</td></tr>
+    <tr><td>src/app/layout.tsx</td><td>Metadata title, description, authors, OG tags, Twitter tags, JSON-LD schema</td></tr>
+    <tr><td>src/app/api/chat/route.ts</td><td>System prompt: business name, address, phone, email, website</td></tr>
+    <tr><td>src/components/header.tsx</td><td>Brand text, alt text</td></tr>
+    <tr><td>src/components/footer.tsx</td><td>Brand text</td></tr>
+    <tr><td>src/components/about-section.tsx</td><td>"About On The Spot" heading, initials KD to SD</td></tr>
+    <tr><td>src/components/contact-section.tsx</td><td>POPIA consent text</td></tr>
+    <tr><td>src/components/ai-chatbot.tsx</td><td>Phone in error message</td></tr>
+    <tr><td>src/app/services/[slug]/service-landing-client.tsx</td><td>JSON-LD address</td></tr>
+</table>
+
+<!-- ====== TASK 9 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 9 /seo-aeo-content-cluster</div>
+    <div class="chapter-title">Topical Authority Architecture</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-good">
+    <div class="finding-title"><span class="badge badge-good">Good</span> &nbsp;Solid Cluster Foundation</div>
+    <div class="finding-desc">The 18 landing pages create a natural pillar-cluster structure: 6 Service clusters, 6 Sector clusters, 6 Area clusters. This is a strong foundation that few competitors in this niche can match.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Missing Pillar Pages</div>
+    <div class="finding-desc">No dedicated pillar/hub pages tie the clusters together. A user searching "curtain cleaning Johannesburg" should land on a comprehensive pillar page that links to all related services, sectors, and areas.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No Cross-Linking Between Clusters</div>
+    <div class="finding-desc">Service pages don't link to related sector pages. Area pages don't link to services available in that area. This prevents link equity and semantic context from flowing between related content.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No Blog Content Hub</div>
+    <div class="finding-desc">As noted in Task 6, no blog exists to provide informational depth that supports the transactional landing pages.</div>
+</div>
+
+<div class="sub-heading">Content Cluster Map</div>
+<div class="cluster-tree">Primary Pillar: "Curtain Cleaning Johannesburg" (homepage)
++-- Service Cluster
+|   +-- /services/curtain-blind-cleaning (primary service)
+|   +-- /services/mattress-sanitisation
+|   +-- /services/upholstery-cleaning
+|   +-- /services/master-guarding
+|   +-- /services/fire-proofing
+|   +-- /services/rug-care
++-- Sector Cluster
+|   +-- /sectors/hospitality
+|   +-- /sectors/corporate
+|   +-- /sectors/healthcare
+|   +-- /sectors/education
+|   +-- /sectors/venues
+|   +-- /sectors/residential
++-- Area Cluster
+|   +-- /areas/jhb-north
+|   +-- /areas/jhb-east
+|   +-- /areas/jhb-south
+|   +-- /areas/jhb-west
+|   +-- /areas/jhb-central
+|   +-- /areas/pretoria-midrand
++-- Blog Cluster (TO CREATE)
+    +-- /blog/how-to-clean-curtains-without-removing
+    +-- /blog/do-curtains-shrink-when-washed
+    +-- /blog/how-often-clean-curtains
+    +-- /blog/dust-mites-in-curtains-health-risks
+    +-- /blog/fire-proofing-curtains-sans-compliance
+    +-- /blog/onsite-vs-offsite-curtain-cleaning</div>
+
+<!-- ====== TASK 10 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 10 /seo-aeo-keyword-research</div>
+    <div class="chapter-title">Intent &amp; Conversational Keywords</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Missing Conversational Keywords</div>
+    <div class="finding-desc">The site doesn't target question-format queries that AI systems prefer: "Who cleans curtains without taking them down near me?", "How much does curtain cleaning cost in Johannesburg?", "Can you dry clean curtains on-site?"</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;Missing Long-Tail Variations</div>
+    <div class="finding-desc">High-intent long-tail keywords are not targeted: "curtain dry cleaning Sandton price", "hotel curtain cleaning service Johannesburg", "fire retardant curtain treatment South Africa".</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;No Keyword Mapping Document</div>
+    <div class="finding-desc">There's no explicit mapping of which keyword targets which page.</div>
+</div>
+
+<div class="sub-heading">Primary Keyword Targets by Page Type</div>
+<table class="data-table">
+    <tr><th>Page Type</th><th>Primary Keyword</th><th>Conversational Query</th></tr>
+    <tr><td>Homepage</td><td>curtain cleaning Johannesburg</td><td>"Who does curtain cleaning in Johannesburg?"</td></tr>
+    <tr><td>/services/curtain-blind-cleaning</td><td>curtain blind cleaning Johannesburg</td><td>"Can you clean curtains without taking them down?"</td></tr>
+    <tr><td>/services/mattress-sanitisation</td><td>mattress cleaning Johannesburg</td><td>"How do I get rid of dust mites in my mattress?"</td></tr>
+    <tr><td>/services/upholstery-cleaning</td><td>upholstery cleaning Johannesburg</td><td>"Who cleans sofas and upholstery in Johannesburg?"</td></tr>
+    <tr><td>/services/master-guarding</td><td>fabric protection Johannesburg</td><td>"How do I protect my curtains from stains?"</td></tr>
+    <tr><td>/services/fire-proofing</td><td>fire proofing curtains Johannesburg</td><td>"Do hotel curtains need fire proofing in South Africa?"</td></tr>
+    <tr><td>/services/rug-care</td><td>rug cleaning Johannesburg</td><td>"Who cleans Persian rugs in Johannesburg?"</td></tr>
+    <tr><td>/sectors/hospitality</td><td>hotel curtain cleaning Johannesburg</td><td>"How do hotels clean curtains without disturbing guests?"</td></tr>
+    <tr><td>/sectors/corporate</td><td>office curtain cleaning Johannesburg</td><td>"What curtain cleaning service works after hours?"</td></tr>
+    <tr><td>/sectors/healthcare</td><td>hospital curtain cleaning Johannesburg</td><td>"How are hospital curtains cleaned for infection control?"</td></tr>
+    <tr><td>/areas/jhb-north</td><td>curtain cleaning Sandton</td><td>"Where can I get curtains cleaned in Sandton?"</td></tr>
+    <tr><td>/areas/jhb-west</td><td>curtain cleaning Roodepoort</td><td>"Curtain cleaning service in Roodepoort?"</td></tr>
+    <tr><td>/areas/pretoria-midrand</td><td>curtain cleaning Pretoria</td><td>"Curtain cleaning in Pretoria?"</td></tr>
+</table>
+
+<!-- ====== TASK 11 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 11 /seo-aeo-schema-generator</div>
+    <div class="chapter-title">Advanced Structured Data</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;LocalBusiness Schema Wrong</div>
+    <div class="finding-desc">Present in layout.tsx but has old name, old URL, old address, old phone, old email, wrong geo coordinates. This is the #1 signal for local entity resolution.</div>
+</div>
+<div class="finding-card finding-card-good">
+    <div class="finding-title"><span class="badge badge-good">Good</span> &nbsp;Service &amp; FAQPage Schema Exist</div>
+    <div class="finding-desc">Service schema present on service landing pages. FAQPage schema present on landing pages with concerns &mdash; good structure.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Missing Multiple Schema Types</div>
+    <div class="finding-desc">No Organization, BreadcrumbList, Article, Review/AggregateRating (individual pages), ImageObject, HowTo, or PriceSpecification schemas exist.</div>
+</div>
+
+<div class="sub-heading">Schema Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Organization schema</strong> &mdash; add to layout.tsx with @id, name, url, logo, sameAs, founder (Stephen Dunlop), foundingDate, foundingLocation, contactPoint.</li>
+    <li data-step="2"><strong>HowTo schema</strong> for the 4-step process on homepage: Free Assessment, Pre-Treatment, Deep Clean, Protect &amp; Finish.</li>
+    <li data-step="3"><strong>BreadcrumbList schema</strong> on every landing page with Home / Category / Page hierarchy.</li>
+    <li data-step="4"><strong>Review schema</strong> with individual reviews on homepage.</li>
+    <li data-step="5"><strong>Fix LocalBusiness schema</strong> with correct NAP data per Technical Document v1.0.</li>
+</ol>
+
+<!-- ====== TASK 12 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 12 /seo-aeo-internal-linking</div>
+    <div class="chapter-title">Contextual Link Graph</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-good">
+    <div class="finding-title"><span class="badge badge-good">Good</span> &nbsp;Navigation Links</div>
+    <div class="finding-desc">Header dropdown menus link to all 18 landing pages. Footer has sectors and services columns with links. This provides basic discoverability.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No In-Content Links</div>
+    <div class="finding-desc">Landing page body content has ZERO internal links. The 800+ word paragraphs on each page contain no contextual links to related pages. This is a major missed opportunity for both link equity flow and semantic context.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No "Related Services" Section</div>
+    <div class="finding-desc">Landing pages don't have a "Related Services" or "You May Also Need" section that cross-links between services (e.g., curtain cleaning to Master Guarding protection).</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;No Area-Service Intersection Links</div>
+    <div class="finding-desc">Area pages don't link to specific services available in that area. Service pages don't mention which areas they serve with links.</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Add "Related Services" link block</strong> to every landing page sidebar (below the existing guarantees card).</li>
+    <li data-step="2"><strong>Add "Areas We Serve" link block</strong> to service and sector landing pages.</li>
+    <li data-step="3"><strong>Add inline contextual links</strong> within body paragraphs: "curtain cleaning" to /services/curtain-blind-cleaning, "fire compliance" to /services/fire-proofing, etc.</li>
+    <li data-step="4"><strong>Make homepage service cards clickable</strong> (link to landing pages).</li>
+    <li data-step="5"><strong>Add "Sectors We Serve" section</strong> at the bottom of each service landing page with icon links.</li>
+</ol>
+
+<!-- ====== TASK 13 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 13 /seo-aeo-landing-page-writer</div>
+    <div class="chapter-title">High-Conversion AEO Landing Pages</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-good">
+    <div class="finding-title"><span class="badge badge-good">Good</span> &nbsp;Landing Page Structure</div>
+    <div class="finding-desc">Pages follow a solid template: Hero, Guarantee Strip, Two-Column Content + Sidebar, Newsletter, CTA. This is a well-structured conversion funnel.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Direct Answer Placement</div>
+    <div class="finding-desc">Hero paragraph is narrative-style ("For over 15 years, Kathy Dunlop and the team...") instead of leading with a direct answer to the user's search query. AI Overviews extract the first 1-2 sentences.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Missing "What You'll Pay" Section</div>
+    <div class="finding-desc">No pricing information on landing pages. AI Overviews frequently extract pricing data. A "Typical Pricing" section with ranges would be both a conversion tool and an AEO extractable answer.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Missing Social Proof Module</div>
+    <div class="finding-desc">No customer testimonials, Google review excerpts, or trust badges beyond the guarantee strip. E-E-A-T requires evidence of real customer experiences.</div>
+</div>
+
+<div class="sub-heading">Hero Paragraph Restructure Example</div>
+<div class="code-block">BEFORE: "For over 15 years, Kathy Dunlop and the team at On The Spot
+Curtain Cleaning Specialists have been transforming tired, dusty curtains..."
+
+AFTER: "JHB Curtain Cleaning provides professional on-site curtain and blind
+cleaning in Johannesburg &mdash; without removing your curtains. Our dry-cleaning
+process eliminates dust, allergens, and stains with zero shrinkage risk,
+and your curtains are clean and dry before we leave."</div>
+
+<div class="sub-heading">Pricing Guide Card (Add to Sidebar)</div>
+<table class="data-table">
+    <tr><th>Scope</th><th>Price Range</th></tr>
+    <tr><td>Small (1-2 rooms)</td><td>R800 &ndash; R1,500</td></tr>
+    <tr><td>Medium (3-4 rooms)</td><td>R1,500 &ndash; R3,000</td></tr>
+    <tr><td>Large (5+ rooms)</td><td>R3,000 &ndash; R5,500</td></tr>
+    <tr><td>Commercial</td><td>Custom quote</td></tr>
+</table>
+
+<!-- ====== TASK 14 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 14 /seo-aeo-content-quality-auditor</div>
+    <div class="chapter-title">E-E-A-T &amp; Value Assessment</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Experience &mdash; Weak</div>
+    <div class="finding-desc">The site claims "15+ years experience" and "5,000+ clients served" but provides no evidence. No case studies, no before/after photos, no specific project examples. Google's Quality Raters look for demonstrated experience, not just claims.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;Expertise &mdash; Moderate</div>
+    <div class="finding-desc">The founder bio mentions "interior decorator" and "fabric expert" credentials, but no certifications, training, or professional affiliations are listed. No visible credential verification.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Authoritativeness &mdash; Weak</div>
+    <div class="finding-desc">No external authority signals: no press mentions, no industry association memberships, no guest articles, no partnerships. Low domain authority (new domain). No backlink strategy exists.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;Trustworthiness &mdash; Moderate</div>
+    <div class="finding-desc">Physical address exists (but shows old address), phone number exists. Google rating (4.9) is claimed but not verified with a link to actual reviews. No SSL certificate information displayed.</div>
+</div>
+<div class="finding-card finding-card-medium">
+    <div class="finding-title"><span class="badge badge-medium">Medium</span> &nbsp;YMYL Concern &mdash; Fire Proofing</div>
+    <div class="finding-desc">The fire proofing service falls under "Your Money or Your Life" &mdash; it involves safety compliance. This page needs the strongest E-E-A-T signals: SANS certification numbers, compliance documentation, and professional credentials.</div>
+</div>
+
+<div class="sub-heading">Implementation Plan</div>
+<ol class="step-list">
+    <li data-step="1"><strong>Add "Verified Credentials" section</strong> to About page with certifications, Master Guarding details, SANS compliance reference, professional associations.</li>
+    <li data-step="2"><strong>Add "Case Studies" section</strong> with 3-4 specific project examples with before/after photos and client permission.</li>
+    <li data-step="3"><strong>Link to actual Google Business Profile</strong> reviews page so users can verify the 4.9 rating claim.</li>
+    <li data-step="4"><strong>On fire proofing landing page,</strong> add SANS standard reference numbers, certificate example image, compliance documentation, professional accreditation logos.</li>
+    <li data-step="5"><strong>Create author bio box</strong> for Stephen Dunlop that appears on blog content with credentials, photo, and links.</li>
+</ol>
+
+<!-- ====== TASK 15 ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Task 15 /seo-aeo-meta-description-generator</div>
+    <div class="chapter-title">CTR &amp; Snippet Optimization</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;Homepage Meta Title Wrong</div>
+    <div class="finding-desc">"Professional Curtain Cleaning Johannesburg | On The Spot &mdash; Free Assessment" &mdash; old brand name persists.</div>
+</div>
+<div class="finding-card finding-card-high">
+    <div class="finding-title"><span class="badge badge-high">High</span> &nbsp;Homepage Meta Description Incomplete</div>
+    <div class="finding-desc">Missing actual location (Florida, Roodepoort), missing phone number, missing brand name.</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;All 18 Landing Page Meta Titles Wrong</div>
+    <div class="finding-desc">All use "On The Spot" instead of "JHB Curtain Cleaning".</div>
+</div>
+<div class="finding-card finding-card-critical">
+    <div class="finding-title"><span class="badge badge-critical">Critical</span> &nbsp;No Landing Page Meta Descriptions</div>
+    <div class="finding-desc">generateMetadata functions only set title and description from data, but the descriptions are optimized for on-page content, not for search snippet CTR. They're too long and lack a CTA.</div>
+</div>
+
+<div class="sub-heading">Recommended Meta Tags</div>
+<table class="data-table">
+    <tr><th>Page</th><th>Title</th><th>Description</th></tr>
+    <tr><td>Homepage</td><td>Curtain Cleaning Johannesburg | On-Site | No Removal | JHB Curtain Cleaning</td><td>Professional on-site curtain cleaning in Johannesburg. No removal, no shrinkage guarantee. Free assessment. Florida, Roodepoort &mdash; serving Sandton, Randburg, Fourways, Pretoria. Call +27 75 011 9200.</td></tr>
+    <tr><td>curtain-blind-cleaning</td><td>Curtain &amp; Blind Cleaning Johannesburg | On-Site | JHB Curtain Cleaning</td><td>Professional on-site curtain &amp; blind cleaning. No removal, zero shrinkage guarantee. R800&ndash;R5,500. Free assessment. +27 75 011 9200</td></tr>
+    <tr><td>mattress-sanitisation</td><td>Mattress Cleaning Johannesburg | Dust Mite Removal | JHB Curtain Cleaning</td><td>Deep mattress sanitisation in Johannesburg. 99.9% allergen removal. R600&ndash;R2,200. Free assessment. +27 75 011 9200</td></tr>
+    <tr><td>upholstery-cleaning</td><td>Upholstery Cleaning Johannesburg | Sofa &amp; Carpet | JHB Curtain Cleaning</td><td>Professional upholstery &amp; carpet cleaning. Fabric-specific deep cleaning. R500&ndash;R3,500. Free assessment. +27 75 011 9200</td></tr>
+    <tr><td>master-guarding</td><td>Fabric Protection Johannesburg | Master Guarding | JHB Curtain Cleaning</td><td>12-month certified stain protection for curtains &amp; upholstery. R450&ndash;R1,800. Applied on-site. +27 75 011 9200</td></tr>
+    <tr><td>fire-proofing</td><td>Fire Proofing Curtains Johannesburg | SANS Compliant | JHB Curtain Cleaning</td><td>SANS-compliant fire retardant treatment for curtains. Full certification provided. R1,200&ndash;R4,500. +27 75 011 9200</td></tr>
+    <tr><td>rug-care</td><td>Persian &amp; Oriental Rug Cleaning Johannesburg | JHB Curtain Cleaning</td><td>Expert Persian &amp; Oriental rug cleaning. Fibre-specific solutions, dye stability testing. R900&ndash;R6,000. Free assessment. +27 75 011 9200</td></tr>
+</table>
+
+<!-- ====== SEVERITY SUMMARY ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Summary</div>
+    <div class="chapter-title">Severity Summary &amp; Issue Count</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<table class="data-table">
+    <tr><th>Severity</th><th>Count</th><th>Key Issues</th></tr>
+    <tr>
+        <td><span class="badge badge-critical">Critical</span></td>
+        <td style="font-weight:700;font-size:16px;color:var(--critical);">5</td>
+        <td>NAP data corruption, no XML sitemap, no blog, no Organization schema, no canonical tags</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-high">High</span></td>
+        <td style="font-weight:700;font-size:16px;color:var(--warning);">7</td>
+        <td>No images/gallery, no cross-linking, wrong meta titles, no pricing, weak E-E-A-T, no internal links, missing direct answers</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-medium">Medium</span></td>
+        <td style="font-weight:700;font-size:16px;color:#ca8a04;">6</td>
+        <td>Thin homepage content, keyword cannibalization, no 404 page, no semantic keywords, no error boundary, lang attribute wrong</td>
+    </tr>
+    <tr>
+        <td><span class="badge badge-low">Low</span></td>
+        <td style="font-weight:700;font-size:16px;color:var(--pass);">3</td>
+        <td>SVG accessibility, no hreflang, no GBP link</td>
+    </tr>
+</table>
+
+<!-- ====== PRIORITY ROADMAP ====== -->
+<div class="chapter-header">
+    <div class="chapter-tag">Roadmap</div>
+    <div class="chapter-title">Priority Implementation Roadmap</div>
+    <div class="chapter-divider"></div>
+</div>
+
+<div class="phase-card">
+    <div class="phase-header">
+        <span class="phase-num">1</span>
+        <div>
+            <div class="phase-title">IMMEDIATE &mdash; This Week</div>
+            <div class="phase-timeline">Critical fixes that block all other progress</div>
+        </div>
+    </div>
+    <ol class="phase-list">
+        <li>Fix ALL NAP data across all files (10+ files, 70+ instances)</li>
+        <li>Create XML sitemap (src/app/sitemap.ts)</li>
+        <li>Add canonical tags to all pages</li>
+        <li>Fix all meta titles and descriptions (homepage + 18 landing pages)</li>
+        <li>Update JSON-LD schema with correct NAP data</li>
+    </ol>
+</div>
+
+<div class="phase-card">
+    <div class="phase-header">
+        <span class="phase-num">2</span>
+        <div>
+            <div class="phase-title">Week 2</div>
+            <div class="phase-timeline">Structural SEO improvements</div>
+        </div>
+    </div>
+    <ol class="phase-list">
+        <li>Add Organization schema to layout.tsx</li>
+        <li>Add BreadcrumbList schema to all landing pages</li>
+        <li>Add HowTo schema to homepage</li>
+        <li>Implement cross-linking between landing pages</li>
+        <li>Add "Related Services" and "Areas We Serve" sidebar blocks</li>
+        <li>Fix html lang attribute to en-ZA</li>
+        <li>Create custom 404 and error pages</li>
+    </ol>
+</div>
+
+<div class="phase-card">
+    <div class="phase-header">
+        <span class="phase-num">3</span>
+        <div>
+            <div class="phase-title">Weeks 3&ndash;4</div>
+            <div class="phase-timeline">AEO content &amp; trust building</div>
+        </div>
+    </div>
+    <ol class="phase-list">
+        <li>Launch blog with 6 AEO-optimized posts</li>
+        <li>Add Article schema to blog posts</li>
+        <li>Add before/after gallery with optimized images</li>
+        <li>Add pricing guide to landing page sidebars</li>
+        <li>Add customer review excerpts</li>
+    </ol>
+</div>
+
+<div class="phase-card">
+    <div class="phase-header">
+        <span class="phase-num">4</span>
+        <div>
+            <div class="phase-title">Month 2</div>
+            <div class="phase-timeline">Authority &amp; competitive edge</div>
+        </div>
+    </div>
+    <ol class="phase-list">
+        <li>Build backlink strategy</li>
+        <li>Add case studies section</li>
+        <li>Create E-E-A-T credential verification</li>
+        <li>Expand semantic keyword coverage</li>
+        <li>Add HowTo video content</li>
+    </ol>
+</div>
+
+</div>
+<!-- end main-content -->
+
+<!-- ==================== ENDING ==================== -->
+<div class="ending">
+    <div class="ending-decor-top"></div>
+    <div class="ending-text">From 47 to 75+<br>in 60 Days</div>
+    <div class="ending-sub">JHB Curtain Cleaning has a strong Next.js foundation and excellent topical cluster architecture. The catastrophic NAP data corruption must be fixed immediately &mdash; it undermines every other SEO effort. With the implementation roadmap in this report, the site can achieve significant ranking improvements within 60 days.</div>
+    <div class="ending-contact">
+        <strong>Prepared by:</strong> GLM-5.2 AI-SEO Strategist<br>
+        <strong>Date:</strong> June 2026<br>
+        <strong>Target:</strong> jhbcurtaincleaning.co.za<br>
+        <strong>Scope:</strong> 15-Task AI-SEO &amp; AEO Comprehensive Audit
+    </div>
+    <div class="ending-bottom-line"></div>
+</div>
+
+</body>
+</html>

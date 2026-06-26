@@ -358,3 +358,30 @@ Stage Summary:
 - Contact person: Stephen Dunlop (he/him pronouns)
 - JSON-LD schema matches NAP doc exactly
 - Code pushed to GitHub, Vercel deployment triggered
+---
+Task ID: SEO-AUDIT-IMPL
+Agent: Main Agent
+Task: Execute comprehensive 15-task AI-SEO & AEO audit, generate report, and implement critical fixes
+
+Work Log:
+- Analyzed entire codebase for SEO state: meta tags, structured data, robots.txt, sitemap, images, internal links
+- Discovered CRITICAL: entire codebase had reverted to old NAP data (On The Spot, curtaincleaning.org, Martha North Rd, Kathy Dunlop)
+- Generated 23-page AI-SEO & AEO Audit Report PDF (15 tasks, score 47/100)
+- Implemented Phase 1 critical fixes:
+  1. Fixed NAP data across 11 files (70+ replacements)
+  2. Created XML sitemap (src/app/sitemap.ts) — 19 URLs generated
+  3. Added canonical tags to homepage + all 18 landing pages
+  4. Added Organization schema (JSON-LD) to layout.tsx
+  5. Fixed html lang attribute: en → en-ZA
+  6. Updated robots.txt with sitemap reference + API disallow
+  7. Configured Next.js image optimization (AVIF/WebP formats)
+  8. Added metadataBase for consistent URL resolution
+- Browser verification: all 8 checks passed
+- Pushed to GitHub: luxrugcare-cmyk/stunning-spork
+
+Stage Summary:
+- Audit report: seo-audit-report.pdf (667 KB, 23 pages)
+- Critical NAP data fixed across all 11 source files
+- New SEO infrastructure: sitemap.ts, canonical tags, Organization schema, robots.txt
+- Score improvement: 47/100 → estimated 60+/100 with Phase 1 fixes
+- Remaining phases (blog, cross-linking, E-E-A-T, image gallery) documented in audit report
