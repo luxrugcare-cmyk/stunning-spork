@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=720">
+<title>JHB Curtain Cleaning - Website Build Specification</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+@page {
+    size: 720px 1020px;
+    margin: 0 0 40px 0;
+    @bottom-center {
+        content: counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        color: #94a3b8;
+    }
+}
+@page :first {
+    margin: 0;
+    @bottom-center {
+        content: none;
+    }
+}
+:root {
+    --emerald: #064e3b;
+    --emerald-light: #059669;
+    --emerald-bg: #f0fdf4;
+    --bronze: #a87d43;
+    --bronze-light: #d4a574;
+    --bronze-bg: #fef3c7;
+    --text: #1e293b;
+    --text-muted: #475569;
+    --surface: #f1f5f9;
+    --ivory: #fefce8;
+    --white: #ffffff;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 720px;
+    background: #ffffff;
+    color: var(--text);
+    font-family: 'Inter', 'Liberation Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+@media screen {
+    html {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background: #ffffff;
+    }
+    body {
+        transform-origin: top center;
+        margin: 20px auto;
+    }
+}
+
+/* ── Cover Page ── */
+.cover {
+    width: 720px;
+    height: 1020px;
+    box-sizing: border-box;
+    break-after: page;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--emerald);
+    color: var(--white);
+    position: relative;
+    padding: 60px 65px;
+    gap: 0;
+}
+.cover-circle-1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(168,125,67,0.15);
+    border: 2px solid rgba(168,125,67,0.25);
+}
+.cover-circle-2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(168,125,67,0.1);
+    border: 2px solid rgba(168,125,67,0.2);
+}
+/* decorative lines removed to avoid overlap */
+.cover-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--bronze-light);
+    margin-bottom: 55px;
+    text-align: center;
+}
+.cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 45px;
+    letter-spacing: -1px;
+}
+.cover-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    margin-bottom: 55px;
+}
+.cover-badge {
+    display: inline-block;
+    background: rgba(168,125,67,0.2);
+    border: 1px solid var(--bronze);
+    color: var(--bronze-light);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 28px;
+    border-radius: 4px;
+    margin-bottom: 60px;
+}
+.cover-meta {
+    position: absolute;
+    bottom: 70px;
+    left: 65px;
+    right: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+}
+.cover-meta-left {
+    text-align: left;
+}
+.cover-meta-right {
+    text-align: right;
+}
+
+/* ── Main Content ── */
+.main-content {
+    padding: 50px 60px 40px 60px;
+}
+.chapter-header {
+    break-after: avoid;
+    break-inside: avoid;
+    margin-top: 28px;
+    margin-bottom: 16px;
+}
+.chapter-header:first-child {
+    margin-top: 0;
+}
+.section-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin-bottom: 6px;
+}
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--emerald);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.divider {
+    width: 50px;
+    height: 10px;
+    background: var(--bronze);
+    border-radius: 3px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* ── Body Text ── */
+.body-text {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text);
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.body-text-muted {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* ── Tables ── */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+    margin-bottom: 14px;
+    break-inside: avoid;
+}
+.data-table th {
+    background: var(--emerald);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 10.5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 9px 10px;
+    text-align: left;
+}
+.data-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.data-table tr:nth-child(even) td {
+    background: #f8fafc;
+}
+.data-table code {
+    font-family: 'Liberation Mono', monospace;
+    font-size: 10.5px;
+    background: var(--surface);
+    padding: 1px 4px;
+    border-radius: 2px;
+    color: var(--emerald);
+}
+
+/* ── Cards ── */
+.card {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+.card-emerald {
+    border-left: 3px solid var(--emerald);
+}
+.card-bronze {
+    border-left: 3px solid var(--bronze);
+}
+.card-title {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--emerald);
+    margin-bottom: 4px;
+}
+
+/* ── Diagram Nodes ── */
+.diagram {
+    break-inside: avoid;
+    margin-bottom: 14px;
+}
+.diagram-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.diagram-node {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 80px;
+    max-width: 200px;
+}
+.diagram-node emerald {
+    background: var(--emerald-bg);
+    border-color: #86efac;
+    color: var(--emerald);
+}
+.diagram-node.bronze-node {
+    background: var(--bronze-bg);
+    border-color: #fcd34d;
+    color: #92400e;
+}
+.diagram-node.neutral {
+    background: var(--surface);
+    border-color: #94a3b8;
+    color: var(--text);
+}
+.diagram-node.primary {
+    background: var(--emerald);
+    color: var(--white);
+    border-color: var(--emerald);
+}
+.diagram-connector {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1;
+    margin: 2px 0;
+}
+.diagram-connector svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ── Component Tree ── */
+.tree {
+    font-family: 'Liberation Mono', monospace;
+    font-size: 10.5px;
+    line-height: 1.7;
+    color: var(--text);
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    break-inside: avoid;
+    margin-bottom: 14px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.tree-key { color: var(--emerald); font-weight: 600; }
+.tree-comment { color: #94a3b8; font-style: italic; }
+
+/* ── Layout Diagram ── */
+.layout-diagram {
+    break-inside: avoid;
+    margin-bottom: 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.layout-row {
+    display: flex;
+    border-bottom: 1px solid #e2e8f0;
+    min-height: 28px;
+}
+.layout-row:last-child { border-bottom: none; }
+.layout-cell {
+    padding: 6px 10px;
+    font-size: 10.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.layout-cell-header {
+    background: var(--emerald);
+    color: var(--white);
+    width: 100%;
+    justify-content: center;
+}
+.layout-cell-hero {
+    background: #ecfdf5;
+    color: var(--emerald);
+    width: 100%;
+    justify-content: center;
+}
+.layout-cell-section {
+    background: var(--white);
+    color: var(--text);
+    width: 100%;
+    padding: 8px 10px;
+}
+.layout-cell-2-3 {
+    background: #f0fdf4;
+    color: var(--emerald);
+    width: 66.6%;
+    border-right: 1px solid #e2e8f0;
+}
+.layout-cell-1-3 {
+    background: #fef3c7;
+    color: #92400e;
+    width: 33.3%;
+}
+.layout-cell-cta {
+    background: var(--bronze-bg);
+    color: #92400e;
+    width: 100%;
+    justify-content: center;
+}
+.layout-cell-footer {
+    background: var(--emerald);
+    color: rgba(255,255,255,0.85);
+    width: 100%;
+    justify-content: center;
+}
+
+/* ── Code Block ── */
+.code-block {
+    background: #1e293b;
+    color: #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-family: 'Liberation Mono', monospace;
+    font-size: 10px;
+    line-height: 1.55;
+    break-inside: avoid;
+    margin-bottom: 12px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.code-block .key { color: #7dd3fc; }
+.code-block .str { color: #86efac; }
+.code-block .num { color: #fbbf24; }
+
+/* ── Slug Lists ── */
+.slug-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+.slug-chip {
+    background: var(--emerald-bg);
+    color: var(--emerald);
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid #86efac;
+}
+.slug-chip-bronze {
+    background: var(--bronze-bg);
+    color: #92400e;
+    border-color: #fcd34d;
+}
+
+/* ── Ending Page ── */
+.ending {
+    width: 720px;
+    height: 1020px;
+    box-sizing: border-box;
+    break-before: page;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--emerald);
+    color: var(--white);
+    position: relative;
+    padding: 60px 65px;
+}
+.ending-line {
+    width: 60px;
+    height: 10px;
+    background: var(--bronze);
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+.ending-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+.ending-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ── TOC ── */
+.toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 1px dotted #e2e8f0;
+    font-size: 12.5px;
+}
+.toc-item:last-child { border-bottom: none; }
+.toc-label { color: var(--text); font-weight: 500; }
+.toc-page { color: var(--text-muted); font-size: 11px; font-weight: 600; }
+
+/* ── Misc ── */
+.inline-code {
+    font-family: 'Liberation Mono', monospace;
+    font-size: 10.5px;
+    background: var(--surface);
+    padding: 1px 4px;
+    border-radius: 2px;
+    color: var(--emerald);
+}
+.label-small {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+.color-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 4px;
+    border: 1px solid #e2e8f0;
+}
+.highlight-box {
+    background: var(--emerald-bg);
+    border: 1px solid #86efac;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    break-inside: avoid;
+}
+.highlight-box-bronze {
+    background: var(--bronze-bg);
+    border: 1px solid #fcd34d;
+}
+.two-col {
+    display: flex;
+    gap: 14px;
+}
+.two-col > div { flex: 1; }
+p, td, li, .content {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ COVER PAGE ═══════════════════ -->
+<div class="cover">
+    <div class="cover-circle-1"></div>
+    <div class="cover-circle-2"></div>
+
+    <div class="cover-tag">Technical Documentation</div>
+    <div class="cover-title">JHB CURTAIN<br>CLEANING</div>
+    <div class="cover-subtitle">Website Build Specification Document</div>
+    <div class="cover-badge">Version 2.0</div>
+    <div class="cover-meta">
+        <div class="cover-meta-left">Z.ai Development Team<br>June 2026</div>
+        <div class="cover-meta-right">jhbcurtaincleaning.co.za<br>Confidential</div>
+    </div>
+</div>
+
+<!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
+<div class="main-content">
+
+<!-- ── Table of Contents ── -->
+<div class="chapter-header" style="margin-top:0">
+    <div class="section-tag">Contents</div>
+    <div class="section-title">Table of Contents</div>
+    <div class="divider"></div>
+</div>
+
+<div class="toc-item"><span class="toc-label">1. Project Overview</span><span class="toc-page">3</span></div>
+<div class="toc-item"><span class="toc-label">2. Technology Stack</span><span class="toc-page">4</span></div>
+<div class="toc-item"><span class="toc-label">3. Site Architecture</span><span class="toc-page">5</span></div>
+<div class="toc-item"><span class="toc-label">4. Route Map</span><span class="toc-page">7</span></div>
+<div class="toc-item"><span class="toc-label">5. Component Architecture</span><span class="toc-page">8</span></div>
+<div class="toc-item"><span class="toc-label">6. Homepage Layout Specification</span><span class="toc-page">10</span></div>
+<div class="toc-item"><span class="toc-label">7. Landing Page Layout Specification</span><span class="toc-page">12</span></div>
+<div class="toc-item"><span class="toc-label">8. Data Architecture</span><span class="toc-page">14</span></div>
+<div class="toc-item"><span class="toc-label">9. Design System</span><span class="toc-page">16</span></div>
+<div class="toc-item"><span class="toc-label">10. SEO &amp; Structured Data</span><span class="toc-page">18</span></div>
+<div class="toc-item"><span class="toc-label">11. API Endpoints</span><span class="toc-page">20</span></div>
+<div class="toc-item"><span class="toc-label">12. AI Chatbot Integration</span><span class="toc-page">21</span></div>
+<div class="toc-item"><span class="toc-label">13. NAP Standardization</span><span class="toc-page">22</span></div>
+<div class="toc-item"><span class="toc-label">14. Navigation Architecture</span><span class="toc-page">23</span></div>
+<div class="toc-item"><span class="toc-label">15. Contact Form System</span><span class="toc-page">24</span></div>
+<div class="toc-item"><span class="toc-label">16. Compliance &amp; Security</span><span class="toc-page">25</span></div>
+<div class="toc-item"><span class="toc-label">17. Deployment &amp; Infrastructure</span><span class="toc-page">26</span></div>
+<div class="toc-item"><span class="toc-label">18. File Manifest</span><span class="toc-page">27</span></div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 1: PROJECT OVERVIEW                        -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 01</div>
+    <div class="section-title">Project Overview</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">JHB CURTAIN CLEANING is Johannesburg's premier on-site curtain and blind cleaning service, serving the greater Gauteng region with professional, non-destructive cleaning solutions. The company has built a strong reputation over more than fifteen years, becoming the go-to provider for residential and commercial clients who demand museum-grade care for their window treatments. With a 4.9-star Google rating across 500+ reviews and over 5,000 clients served, the brand represents trust, quality, and deep domain expertise.</p>
+
+<p class="body-text">Founded by Stephen Dunlop, a certified cleaning specialist with over fifteen years of hands-on experience, JHB Curtain Cleaning has grown from a one-man operation into a full-service enterprise covering six core service categories, six industry sectors, and six geographic areas across Johannesburg and Pretoria. Stephen's personal involvement in every major project ensures that the company's exacting standards are maintained consistently, from initial consultation to final inspection.</p>
+
+<p class="body-text">The website, hosted at <strong>jhbcurtaincleaning.co.za</strong>, is built on a modern technology stack featuring Next.js 16 with the App Router, TypeScript 5, and Tailwind CSS 4. The site comprises 19 statically generated routes: one homepage, six service landing pages, six sector landing pages, and six area landing pages. All pages are pre-rendered at build time using Static Site Generation (SSG) via <span class="inline-code">generateStaticParams</span>, ensuring blazing-fast load times and excellent SEO performance.</p>
+
+<p class="body-text">Deployment is handled through Vercel's edge network, connected to a GitHub repository for continuous deployment. The architecture leverages shadcn/ui components, Framer Motion animations, and an AI-powered chatbot built on the z-ai-web-dev-sdk. A comprehensive data layer in <span class="inline-code">site-data.ts</span> centralizes all content, ensuring consistency across every page and component. This specification documents every facet of the build, from technology choices to component architecture, data structures, SEO strategy, and deployment infrastructure.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 2: TECHNOLOGY STACK                        -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 02</div>
+    <div class="section-title">Technology Stack</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The technology stack was selected for maximum developer productivity, runtime performance, and long-term maintainability. Every dependency serves a specific architectural purpose, and the stack is optimized for static site generation with selective client-side interactivity.</p>
+
+<table class="data-table">
+    <thead>
+        <tr><th>Category</th><th>Technology</th><th>Version</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Framework</td><td>Next.js (App Router)</td><td>16.1.1</td></tr>
+        <tr><td>Language</td><td>TypeScript</td><td>5.x</td></tr>
+        <tr><td>Styling</td><td>Tailwind CSS</td><td>4.x</td></tr>
+        <tr><td>UI Library</td><td>shadcn/ui (New York)</td><td>48 components</td></tr>
+        <tr><td>Animations</td><td>Framer Motion</td><td>12.40.0</td></tr>
+        <tr><td>Forms</td><td>React Hook Form + Zod</td><td>7.60.0 / 4.0.2</td></tr>
+        <tr><td>ORM</td><td>Prisma</td><td>6.11.1</td></tr>
+        <tr><td>State</td><td>Zustand + TanStack Query</td><td>5.0.6 / 5.82.0</td></tr>
+        <tr><td>AI SDK</td><td>z-ai-web-dev-sdk</td><td>0.0.18</td></tr>
+        <tr><td>Auth</td><td>NextAuth.js</td><td>4.24.11</td></tr>
+        <tr><td>Runtime</td><td>Bun</td><td>Latest</td></tr>
+        <tr><td>Icons</td><td>Lucide React</td><td>1.21.0</td></tr>
+        <tr><td>Charts</td><td>Recharts</td><td>2.15.4</td></tr>
+    </tbody>
+</table>
+
+<p class="body-text-muted">Next.js 16 with App Router provides the foundation for SSG, with each landing page pre-rendered at build time via <span class="inline-code">generateStaticParams</span>. shadcn/ui offers 48 pre-built components following the New York design variant, ensuring visual consistency. Framer Motion powers scroll-triggered animations and page transitions. The z-ai-web-dev-sdk enables the AI chatbot feature, while React Hook Form with Zod handles multi-step form validation with type-safe schemas.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 3: SITE ARCHITECTURE                       -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 03</div>
+    <div class="section-title">Site Architecture</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The site follows a flat SSG architecture where all content pages are statically generated at build time. The Next.js App Router defines three dynamic route segments — services, sectors, and areas — each rendering landing pages from centralized data constants. There is no database dependency at runtime; all content is sourced from TypeScript data files.</p>
+
+<!-- Architecture Diagram -->
+<div class="diagram">
+    <div class="diagram-row">
+        <div class="diagram-node primary" style="width:240px;">Next.js App (Port 3000)</div>
+    </div>
+    <div class="diagram-connector">
+        <svg width="40" height="20"><line x1="20" y1="0" x2="20" y2="20" stroke="#94a3b8" stroke-width="1.5"/></svg>
+    </div>
+    <div class="diagram-row">
+        <div class="diagram-node emerald-node" style="width:140px;">Homepage<br><span style="font-size:10px;font-weight:400;">/ (SSG)</span></div>
+        <div class="diagram-node emerald-node" style="width:140px;">Services<br><span style="font-size:10px;font-weight:400;">/[slug]</span></div>
+        <div class="diagram-node bronze-node" style="width:140px;">Sectors<br><span style="font-size:10px;font-weight:400;">/[slug]</span></div>
+    </div>
+    <div class="diagram-connector">
+        <svg width="40" height="20"><line x1="20" y1="0" x2="20" y2="20" stroke="#94a3b8" stroke-width="1.5"/></svg>
+    </div>
+    <div class="diagram-row">
+        <div class="diagram-node emerald-node" style="width:140px;">Areas<br><span style="font-size:10px;font-weight:400;">/[slug]</span></div>
+        <div class="diagram-node neutral" style="width:140px;">API Routes<br><span style="font-size:10px;font-weight:400;">/api/*</span></div>
+        <div class="diagram-node bronze-node" style="width:140px;">Landing Pages<br><span style="font-size:10px;font-weight:400;">18 pages</span></div>
+    </div>
+    <div class="diagram-connector">
+        <svg width="40" height="20"><line x1="20" y1="0" x2="20" y2="20" stroke="#94a3b8" stroke-width="1.5"/></svg>
+    </div>
+    <div class="diagram-row">
+        <div class="diagram-node neutral" style="width:440px;">Shared Components: Header | Footer | Sidebar | CTA | WhatsApp | Chatbot</div>
+    </div>
+</div>
+
+<p class="body-text">Each dynamic route uses <span class="inline-code">generateStaticParams</span> to pre-render all slug variants at build time. For example, the services route iterates over the SERVICES array to generate six static HTML pages, one for each service offering. The <span class="inline-code">generateMetadata</span> function dynamically produces meta tags for each page, including Open Graph and Twitter Card data, ensuring comprehensive SEO coverage without any runtime computation.</p>
+
+<p class="body-text">The architecture is intentionally stateless at the edge. API routes handle contact form submissions, newsletter signups, and AI chatbot interactions, but none persist data in a database at this time. The Prisma ORM is configured but primarily reserved for future administrative features. The entire site, including all 19 HTML pages, is served from Vercel's CDN as static assets, guaranteeing sub-100ms Time to First Byte globally.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 4: ROUTE MAP                               -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 04</div>
+    <div class="section-title">Route Map</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The site defines 19 routes across four page types and three API endpoints. Each route is statically generated from centralized data, ensuring consistency and eliminating runtime data-fetching overhead. The route patterns follow a clean URL structure optimized for both SEO and user navigation.</p>
+
+<table class="data-table">
+    <thead>
+        <tr><th>Route Pattern</th><th>Pages</th><th>Type</th><th>Data Source</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>/</td><td>1</td><td>Homepage</td><td>SITE_CONFIG, SERVICES, SECTORS, AREAS, FOUNDER, FAQS</td></tr>
+        <tr><td>/services/[slug]</td><td>6</td><td>Service Landing</td><td>SERVICE_LANDING_DATA</td></tr>
+        <tr><td>/sectors/[slug]</td><td>6</td><td>Sector Landing</td><td>SECTOR_LANDING_DATA</td></tr>
+        <tr><td>/areas/[slug]</td><td>6</td><td>Area Landing</td><td>AREA_LANDING_DATA</td></tr>
+        <tr><td>/api/chat</td><td>&mdash;</td><td>API Route</td><td>z-ai-web-dev-sdk</td></tr>
+        <tr><td>/api/contact</td><td>&mdash;</td><td>API Route</td><td>Form handler</td></tr>
+        <tr><td>/api/newsletter</td><td>&mdash;</td><td>API Route</td><td>Newsletter handler</td></tr>
+    </tbody>
+</table>
+
+<div class="label-small">Service Slugs (6)</div>
+<div class="slug-list">
+    <span class="slug-chip">curtain-blind-cleaning</span>
+    <span class="slug-chip">mattress-sanitisation</span>
+    <span class="slug-chip">upholstery-cleaning</span>
+    <span class="slug-chip">master-guarding</span>
+    <span class="slug-chip">fire-proofing</span>
+    <span class="slug-chip">rug-care</span>
+</div>
+
+<div class="label-small">Sector Slugs (6)</div>
+<div class="slug-list">
+    <span class="slug-chip-bronze slug-chip">hospitality</span>
+    <span class="slug-chip-bronze slug-chip">corporate</span>
+    <span class="slug-chip-bronze slug-chip">healthcare</span>
+    <span class="slug-chip-bronze slug-chip">education</span>
+    <span class="slug-chip-bronze slug-chip">venues</span>
+    <span class="slug-chip-bronze slug-chip">residential</span>
+</div>
+
+<div class="label-small">Area Slugs (6)</div>
+<div class="slug-list">
+    <span class="slug-chip">jhb-north</span>
+    <span class="slug-chip">jhb-east</span>
+    <span class="slug-chip">jhb-south</span>
+    <span class="slug-chip">jhb-west</span>
+    <span class="slug-chip">jhb-central</span>
+    <span class="slug-chip">pretoria-midrand</span>
+</div>
+
+<p class="body-text-muted">Each slug corresponds to a fully realized landing page with hero section, service details, process steps, FAQs, sidebar CTAs, and structured data. The URL pattern <span class="inline-code">/services/curtain-blind-cleaning</span> is both human-readable and search-engine-optimized, with the slug directly mapping to a key in the SERVICE_LANDING_DATA object for O(1) content lookup.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 5: COMPONENT ARCHITECTURE                  -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 05</div>
+    <div class="section-title">Component Architecture</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The component tree follows a strict hierarchy: RootLayout provides global structure (JSON-LD schema, fonts, metadata), while the Header and Footer wrap all pages. The homepage composes nine section components in vertical flow, and landing pages use a shared template with a two-column layout. Floating widgets (WhatsApp, AI Chatbot, Cookie Consent) exist outside the main flow.</p>
+
+<div class="tree">
+<span class="tree-key">RootLayout</span><br>
+├── JSON-LD Schema (LocalBusiness)<br>
+├── <span class="tree-key">Header</span> <span class="tree-comment">(sticky, glass effect)</span><br>
+│&nbsp;&nbsp; ├── Logo + Brand<br>
+│&nbsp;&nbsp; ├── NavigationMenu (Desktop)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── Services Dropdown (6 items)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── Sectors Dropdown (6 items)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── Areas Dropdown (6 items)<br>
+│&nbsp;&nbsp; ├── CTA Button + Phone<br>
+│&nbsp;&nbsp; └── Sheet (Mobile Menu)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── Collapsible Sections<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── WhatsApp + Phone CTA<br>
+├── &lt;main&gt;<br>
+│&nbsp;&nbsp; ├── <span class="tree-key">Homepage Sections:</span><br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── HeroSection<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── ServicesSection (6 cards)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── ProcessSection (4 steps)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── SectorsSection (6 cards)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── AreasSection (6 cards)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── AboutSection (2-col, founder)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── FAQSection (9 items)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── NewsletterStrip<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── ContactSection (4-step form)<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── CTASection<br>
+│&nbsp;&nbsp; └── <span class="tree-key">Landing Page Template:</span><br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── LandingHero<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── Guarantee Strip<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── Two-Column Layout<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── Main Content (2/3)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; └── LandingSidebar (1/3, sticky)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── LandingNewsletter<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── LandingCTA<br>
+├── <span class="tree-key">Footer</span> (4 columns)<br>
+├── WhatsAppButton <span class="tree-comment">(floating)</span><br>
+├── CookieConsent <span class="tree-comment">(POPIA)</span><br>
+└── AIChatbot <span class="tree-comment">(floating widget)</span>
+</div>
+
+<p class="body-text">The component architecture follows a "smart page, dumb component" philosophy. Page-level components (<span class="inline-code">page.tsx</span>) handle data fetching and composition, while section components are purely presentational, receiving all data via props. Client components are marked with the <span class="inline-code">"use client"</span> directive and are limited to interactive elements (Header, ContactSection, AIChatbot, FAQSection). The majority of the site renders as Server Components, minimizing the JavaScript bundle shipped to the client.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 6: HOMEPAGE LAYOUT SPECIFICATION           -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 06</div>
+    <div class="section-title">Homepage Layout Specification</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The homepage is a single-page design composed of ten vertical sections, each occupying the full viewport width with consistent horizontal padding. The sections flow in a carefully designed sequence that moves from awareness (Hero, Services) through credibility (Process, Sectors, About) to conversion (FAQ, Contact, CTA). Every section is a standalone React component.</p>
+
+<div class="layout-diagram">
+    <div class="layout-row"><div class="layout-cell layout-cell-header">HEADER (sticky) &mdash; Logo | Nav Dropdowns | CTA</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-hero">HERO SECTION &mdash; Tag + Heading + CTA | Trust Strip (5 badges)</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-section">SERVICES SECTION &mdash; 6 service cards in 3x2 grid</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-section">PROCESS SECTION &mdash; 4 numbered steps in timeline layout</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-section">SECTORS SECTION &mdash; 6 sector cards in 3x2 grid</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-section">AREAS SECTION &mdash; 6 area cards in 3x2 grid</div></div>
+    <div class="layout-row">
+        <div class="layout-cell layout-cell-2-3">ABOUT SECTION<br><span style="font-size:10px;font-weight:400;">2-col: Founder image | Bio + Stats</span></div>
+        <div class="layout-cell layout-cell-1-3">Stats Panel</div>
+    </div>
+    <div class="layout-row"><div class="layout-cell layout-cell-section">FAQ SECTION &mdash; 9 accordion items</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-cta">NEWSLETTER STRIP &mdash; Email signup + value proposition</div></div>
+    <div class="layout-row">
+        <div class="layout-cell layout-cell-2-3">CONTACT SECTION<br><span style="font-size:10px;font-weight:400;">4-step form</span></div>
+        <div class="layout-cell layout-cell-1-3">Contact Sidebar</div>
+    </div>
+    <div class="layout-row"><div class="layout-cell layout-cell-cta">CTA SECTION &mdash; Full-width bronze CTA band</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-footer">FOOTER &mdash; 4 columns: Brand | Sectors | Services | Contact</div></div>
+</div>
+
+<div class="highlight-box">
+    <div class="card-title">Floating Widgets (position: fixed)</div>
+    <span class="slug-chip" style="margin-right:6px;">WhatsApp Button</span>
+    <span class="slug-chip">AI Chatbot</span>
+    <span class="slug-chip-bronze slug-chip" style="margin-left:6px;">Cookie Consent</span>
+</div>
+
+<p class="body-text-muted">The Hero section anchors the page with a compelling tagline, primary CTA button, and a trust strip displaying five credibility badges (Google Rating, Clients Served, Years Experience, etc.). The Services and Sectors sections use identical 3x2 card grids with hover animations, while the Process section uses a horizontal timeline with four numbered steps. The About section features a two-column layout with the founder's profile on the left and biographical content plus statistics on the right. The Contact section implements a multi-step form with smooth slide transitions between steps.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 7: LANDING PAGE LAYOUT SPECIFICATION        -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 07</div>
+    <div class="section-title">Landing Page Layout Specification</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">All 18 landing pages (6 services, 6 sectors, 6 areas) share a common two-column template that maximizes both SEO content depth and conversion potential. The main content column (2/3 width) houses detailed service descriptions, feature grids, process steps, and FAQs, while the sidebar (1/3 width, sticky) provides persistent calls-to-action including an assessment form, guarantees card, and contact information.</p>
+
+<div class="layout-diagram">
+    <div class="layout-row"><div class="layout-cell layout-cell-header">HEADER (sticky)</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-hero">LANDING HERO &mdash; Tag | Heading | Subtext | CTA</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-cta">GUARANTEE STRIP</div></div>
+    <div class="layout-row">
+        <div class="layout-cell layout-cell-2-3" style="flex-direction:column;align-items:stretch;padding:10px;">
+            <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:10px;">Heading</div>
+            <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:10px;">Paragraphs (rich content)</div>
+            <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:10px;">What's Included (2-col grid)</div>
+            <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:10px;">Process Steps</div>
+            <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:10px;">Common Questions (FAQ)</div>
+            <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:4px;padding:6px 8px;font-size:10px;">Table Data (optional)</div>
+        </div>
+        <div class="layout-cell layout-cell-1-3" style="flex-direction:column;align-items:stretch;padding:10px;">
+            <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:10px;">Assessment CTA Card</div>
+            <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:10px;">Guarantees Card</div>
+            <div style="background:#fef3c7;border:1px solid #fcd34d;border-radius:4px;padding:6px 8px;font-size:10px;">Contact Card</div>
+        </div>
+    </div>
+    <div class="layout-row"><div class="layout-cell layout-cell-cta">NEWSLETTER BAND</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-cta">CTA BAND</div></div>
+    <div class="layout-row"><div class="layout-cell layout-cell-footer">FOOTER</div></div>
+</div>
+
+<p class="body-text">The template is parameterized through data objects: SERVICE_LANDING_DATA, SECTOR_LANDING_DATA, and AREA_LANDING_DATA. Each data object contains all the content needed for a specific landing page, including hero text, features, process steps, FAQs, and sidebar configuration. The client-side components (<span class="inline-code">service-landing-client.tsx</span>, <span class="inline-code">sector-landing-client.tsx</span>, <span class="inline-code">area-landing-client.tsx</span>) receive this data as props and render the appropriate content blocks. This approach ensures visual consistency across all 18 landing pages while allowing each page to have unique, SEO-optimized content.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 8: DATA ARCHITECTURE                       -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 08</div>
+    <div class="section-title">Data Architecture</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The data layer is centralized in <span class="inline-code">src/lib/site-data.ts</span> (~1,175 lines), which exports all content constants used across the site. This single-file approach ensures NAP (Name, Address, Phone) consistency, eliminates duplicate content, and makes updates trivial — change one constant, and every page reflecting that data updates automatically on the next build.</p>
+
+<div class="card card-emerald">
+    <div class="card-title">SITE_CONFIG &mdash; Central Configuration</div>
+    <p class="body-text-muted" style="margin-bottom:4px;">The master configuration object containing: <span class="inline-code">name</span>, <span class="inline-code">shortName</span>, <span class="inline-code">tagline</span>, <span class="inline-code">domain</span>, <span class="inline-code">phone</span>, <span class="inline-code">phoneRaw</span>, <span class="inline-code">phoneLink</span>, <span class="inline-code">officePhone</span>, <span class="inline-code">email</span>, <span class="inline-code">address</span>, <span class="inline-code">whatsapp</span>, <span class="inline-code">whatsappLink</span>, <span class="inline-code">googleRating</span>, <span class="inline-code">reviewCount</span>, <span class="inline-code">clientsServed</span>, <span class="inline-code">yearsExperience</span>, <span class="inline-code">contactPerson</span>, <span class="inline-code">contactPersonNote</span>, <span class="inline-code">hours</span> (weekday/saturday), and <span class="inline-code">social</span> (7 platforms).</p>
+</div>
+
+<div class="label-small">Content Data Arrays</div>
+
+<table class="data-table">
+    <thead>
+        <tr><th>Data Constant</th><th>Count</th><th>Key Fields</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>SERVICES</td><td>6</td><td>id, title, shortDesc, icon, isPrimary, features[]</td></tr>
+        <tr><td>SECTORS</td><td>6</td><td>id, title, shortDesc, icon, features[]</td></tr>
+        <tr><td>AREAS</td><td>6</td><td>id, title, focus, suburbs[]</td></tr>
+        <tr><td>SERVICE_LANDING_DATA</td><td>6</td><td>Full page content objects (hero, features, process, faqs)</td></tr>
+        <tr><td>SECTOR_LANDING_DATA</td><td>6</td><td>Full page content objects</td></tr>
+        <tr><td>AREA_LANDING_DATA</td><td>6</td><td>Full page content objects</td></tr>
+        <tr><td>FAQS</td><td>9</td><td>question, answer pairs</td></tr>
+        <tr><td>FOUNDER</td><td>1</td><td>name, title, credentials, bio, stats</td></tr>
+    </tbody>
+</table>
+
+<div class="card card-bronze">
+    <div class="card-title">Supporting Data</div>
+    <p class="body-text-muted" style="margin-bottom:0;">TRUST_BADGES (5) &mdash; credibility indicators displayed in the hero section. GUARANTEES (5) &mdash; satisfaction and quality guarantees shown in landing page sidebars. PROCESS_STEPS (4) &mdash; the four-step cleaning process displayed on both the homepage and landing pages. All arrays are typed with TypeScript interfaces for compile-time safety.</p>
+</div>
+
+<p class="body-text">The SERVICE_LANDING_DATA, SECTOR_LANDING_DATA, and AREA_LANDING_DATA objects are the most complex data structures, each containing complete page content including hero text, feature lists, process step descriptions, FAQ entries, sidebar configuration, and metadata. These objects are indexed by slug (e.g., <span class="inline-code">"curtain-blind-cleaning"</span>) for O(1) lookup in dynamic route handlers.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 9: DESIGN SYSTEM                           -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 09</div>
+    <div class="section-title">Design System</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The design system is built on Tailwind CSS 4 with custom theme tokens for brand colors, typography, and spacing. The palette centers on emerald green (trust, professionalism) and bronze (warmth, premium quality), with carefully chosen highlight and surface variants for interactive states and background differentiation.</p>
+
+<div class="label-small">Color Palette</div>
+
+<table class="data-table">
+    <thead>
+        <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>brand-emerald</td><td><span class="color-swatch" style="background:#064e3b;"></span> #064e3b</td><td>Primary brand, headers, CTAs</td></tr>
+        <tr><td>brand-bronze</td><td><span class="color-swatch" style="background:#a87d43;"></span> #a87d43</td><td>Accent, highlights, secondary CTAs</td></tr>
+        <tr><td>brand-emerald-highlight</td><td><span class="color-swatch" style="background:#059669;"></span> #059669</td><td>Hover states, links, interactive elements</td></tr>
+        <tr><td>brand-bronze-highlight</td><td><span class="color-swatch" style="background:#d4a574;"></span> #d4a574</td><td>Light accent, subtle highlights</td></tr>
+        <tr><td>brand-surface-ivory</td><td><span class="color-swatch" style="background:#fefce8;"></span> #fefce8</td><td>About section background, warm surfaces</td></tr>
+    </tbody>
+</table>
+
+<div class="label-small">Typography</div>
+
+<table class="data-table">
+    <thead>
+        <tr><th>Role</th><th>Font</th><th>Weight</th><th>Size</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Body</td><td>Inter</td><td>400</td><td>16px</td></tr>
+        <tr><td>Heading</td><td>Playfair Display</td><td>700</td><td>2xl &ndash; 5xl</td></tr>
+        <tr><td>Navigation</td><td>Inter</td><td>500</td><td>14px</td></tr>
+        <tr><td>Label</td><td>Inter</td><td>600</td><td>12px uppercase</td></tr>
+    </tbody>
+</table>
+
+<div class="label-small">Responsive Breakpoints</div>
+
+<table class="data-table">
+    <thead>
+        <tr><th>Breakpoint</th><th>Width</th><th>Columns</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Mobile</td><td>&lt;640px</td><td>1</td></tr>
+        <tr><td>sm</td><td>640px+</td><td>1&ndash;2</td></tr>
+        <tr><td>md</td><td>768px+</td><td>2&ndash;3</td></tr>
+        <tr><td>lg</td><td>1024px+</td><td>3&ndash;4</td></tr>
+        <tr><td>xl</td><td>1280px+</td><td>4</td></tr>
+    </tbody>
+</table>
+
+<p class="body-text">The two-font system (Inter for body, Playfair Display for headings) creates a sophisticated typographic hierarchy that balances professionalism with warmth. The responsive grid system ensures content remains readable and visually balanced across all device sizes, with mobile-first design ensuring the single-column mobile experience is not an afterthought but the primary layout.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 10: SEO & STRUCTURED DATA                  -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 10</div>
+    <div class="section-title">SEO &amp; Structured Data</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The site implements three layers of structured data using JSON-LD schemas, complemented by dynamic metadata generation via <span class="inline-code">generateMetadata</span>. This multi-layered approach ensures rich search result snippets, voice search compatibility, and knowledge graph inclusion.</p>
+
+<div class="card card-emerald">
+    <div class="card-title">1. LocalBusiness Schema (layout.tsx &mdash; site-wide)</div>
+    <p class="body-text-muted" style="margin-bottom:6px;">Injected in the root layout, this schema provides Google with complete business identity information. Key fields include name, URL, email, telephone, postal address (10 2nd Ave, Florida, Roodepoort, 1710, ZA), geo coordinates (-26.1752726, 27.9233293), opening hours, price range (R800&ndash;R5500), an offer catalog with six services, and an aggregate rating (4.9 stars from 500 reviews).</p>
+    <div class="code-block">
+{<br>
+&nbsp;&nbsp;<span class="key">"@context"</span>: <span class="str">"https://schema.org"</span>,<br>
+&nbsp;&nbsp;<span class="key">"@type"</span>: <span class="str">"LocalBusiness"</span>,<br>
+&nbsp;&nbsp;<span class="key">"name"</span>: <span class="str">"JHB CURTAIN CLEANING"</span>,<br>
+&nbsp;&nbsp;<span class="key">"url"</span>: <span class="str">"https://www.jhbcurtaincleaning.co.za"</span>,<br>
+&nbsp;&nbsp;<span class="key">"telephone"</span>: <span class="str">"+27 75 011 9200"</span>,<br>
+&nbsp;&nbsp;<span class="key">"address"</span>: { <span class="key">"@type"</span>: <span class="str">"PostalAddress"</span>, ... },<br>
+&nbsp;&nbsp;<span class="key">"geo"</span>: { <span class="key">"@type"</span>: <span class="str">"GeoCoordinates"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"latitude"</span>: <span class="num">-26.1752726</span>, <span class="key">"longitude"</span>: <span class="num">27.9233293</span> },<br>
+&nbsp;&nbsp;<span class="key">"hasOfferCatalog"</span>: { <span class="num">6 services</span> },<br>
+&nbsp;&nbsp;<span class="key">"aggregateRating"</span>: { <span class="key">"ratingValue"</span>: <span class="str">"4.9"</span>, <span class="key">"reviewCount"</span>: <span class="str">"500"</span> }<br>
+}
+    </div>
+</div>
+
+<div class="card card-emerald">
+    <div class="card-title">2. Service Schema (per landing page)</div>
+    <p class="body-text-muted">Each service landing page includes a Service schema referencing the LocalBusiness as provider and specifying Johannesburg as the area served. This enables service-specific rich results in search, including price ranges and availability.</p>
+</div>
+
+<div class="card card-emerald">
+    <div class="card-title">3. FAQPage Schema (per landing page with concerns)</div>
+    <p class="body-text-muted" style="margin-bottom:0;">Landing pages that include FAQ content also inject a FAQPage schema with Question/Answer pairs. This enables FAQ rich results in Google search, where individual questions and answers appear directly in the search snippet, dramatically increasing click-through rates.</p>
+</div>
+
+<div class="highlight-box">
+    <div class="card-title">Additional SEO Measures</div>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>generateMetadata</strong> &mdash; Each route dynamically generates meta titles, descriptions, Open Graph tags, and Twitter Card tags from data constants.</p>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>robots.txt</strong> &mdash; Configured to allow all crawlers, with sitemap reference for comprehensive indexation.</p>
+    <p class="body-text-muted" style="margin-bottom:0;"><strong>Semantic HTML</strong> &mdash; Proper use of &lt;main&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;, and &lt;footer&gt; elements for accessibility and SEO.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 11: API ENDPOINTS                          -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 11</div>
+    <div class="section-title">API Endpoints</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The site exposes three API routes, all implemented as Next.js Route Handlers with POST methods. These endpoints handle the site's interactive features: AI-powered chat, contact form submissions, and newsletter subscriptions. All endpoints are stateless and return JSON responses.</p>
+
+<div class="card card-emerald">
+    <div class="card-title">POST /api/chat &mdash; AI Chatbot</div>
+    <table class="data-table" style="margin-bottom:4px;">
+        <tbody>
+            <tr><td style="width:100px;font-weight:600;">Request</td><td>{ message: string, history: Message[] }</td></tr>
+            <tr><td style="font-weight:600;">Response</td><td>{ message: string }</td></tr>
+            <tr><td style="font-weight:600;">SDK</td><td>z-ai-web-dev-sdk LLM completions</td></tr>
+            <tr><td style="font-weight:600;">System Prompt</td><td>Includes all company info, services, pricing ranges, and operational details</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="card card-emerald">
+    <div class="card-title">POST /api/contact &mdash; Contact Form</div>
+    <table class="data-table" style="margin-bottom:4px;">
+        <tbody>
+            <tr><td style="width:100px;font-weight:600;">Request</td><td>FormData: sector, area, name, email, phone, propertyType, windowCount, notes, popiaConsent</td></tr>
+            <tr><td style="font-weight:600;">Response</td><td>{ success: boolean, message: string }</td></tr>
+            <tr><td style="font-weight:600;">Validation</td><td>Zod schema with required field checks, email format, POPIA consent</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="card card-emerald">
+    <div class="card-title">POST /api/newsletter &mdash; Newsletter Signup</div>
+    <table class="data-table" style="margin-bottom:0;">
+        <tbody>
+            <tr><td style="width:100px;font-weight:600;">Request</td><td>{ email: string }</td></tr>
+            <tr><td style="font-weight:600;">Response</td><td>{ success: boolean, message: string }</td></tr>
+            <tr><td style="font-weight:600;">Validation</td><td>Email format validation via Zod</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 12: AI CHATBOT INTEGRATION                 -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 12</div>
+    <div class="section-title">AI Chatbot Integration</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The AI chatbot is a floating widget positioned at the bottom-right of the viewport, above the WhatsApp button. It provides visitors with instant, contextual answers about services, pricing, coverage areas, and booking processes. The chatbot is powered by the z-ai-web-dev-sdk, which handles LLM completions through the <span class="inline-code">/api/chat</span> endpoint.</p>
+
+<p class="body-text">The chatbot widget opens as an expandable chat panel with a message history display. It sends user messages along with conversation history to the API endpoint, which constructs a system prompt containing all company information, service descriptions, pricing ranges, sector details, and area coverage. The AI responds contextually, directing users to the contact form or phone number when appropriate. Suggested quick actions are displayed as clickable chips for common queries like "What services do you offer?" and "How much does curtain cleaning cost?"</p>
+
+<div class="highlight-box highlight-box-bronze">
+    <div class="card-title">Error Handling &amp; Fallback</div>
+    <p class="body-text-muted" style="margin-bottom:0;">If the AI chatbot encounters an error (network failure, API limit, etc.), it displays a fallback message with the company phone number and a prompt to call for immediate assistance. This ensures no visitor is left without a path to contact, even during service disruptions.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 13: NAP STANDARDIZATION                    -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 13</div>
+    <div class="section-title">NAP Standardization</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">NAP (Name, Address, Phone) consistency is critical for local SEO. The site implements the NAP Technical Doc v1.0 standard, ensuring that business identity information is byte-identical across all surfaces: JSON-LD schema, footer, contact section, and any other references. All NAP data is sourced from the SITE_CONFIG constant, eliminating the possibility of typographic drift.</p>
+
+<div class="card card-emerald">
+    <div class="card-title">NAP Format Standards</div>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>Multi-line format</strong> &mdash; Used in footer and contact page. Each element (name, address, phone) on its own line, with proper line breaks and consistent punctuation.</p>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>Single-line format</strong> &mdash; Used in social profiles and directory listings. Compressed format with pipe separators for space-constrained contexts.</p>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>JSON-LD byte-identical</strong> &mdash; The structured data schema contains the exact same text strings as the visible frontend content, ensuring Google's Knowledge Graph parser sees consistent signals.</p>
+    <p class="body-text-muted" style="margin-bottom:0;"><strong>Contact person separation</strong> &mdash; Stephen Dunlop's name and credentials are stored separately from core NAP fields, allowing them to be displayed contextually without polluting the standard NAP triplet.</p>
+</div>
+
+<div class="highlight-box">
+    <div class="card-title">Geo Coordinates</div>
+    <p class="body-text-muted" style="margin-bottom:0;">Latitude: -26.1752726, Longitude: 27.9233293. These coordinates are used in the LocalBusiness JSON-LD schema and correspond to the physical business address at 10 2nd Ave, Florida, Roodepoort, 1710, South Africa.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 14: NAVIGATION ARCHITECTURE                -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 14</div>
+    <div class="section-title">Navigation Architecture</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The navigation system provides distinct desktop and mobile experiences while maintaining information parity. On desktop, a sticky NavigationMenu offers three dropdown panels (Services, Sectors, Areas), each containing a two-column grid with icons, titles, and descriptions. On mobile, a Sheet (slide-in panel) with Collapsible sections provides the same content in a touch-friendly format.</p>
+
+<div class="two-col">
+    <div>
+        <div class="card card-emerald" style="min-height:120px;">
+            <div class="card-title">Desktop Navigation</div>
+            <p class="body-text-muted" style="margin-bottom:0;">NavigationMenu with 3 dropdown panels. Each panel: 2-column grid with icon + title + description per item. Glass morphism effect on scroll (backdrop-blur). Active section highlighting via IntersectionObserver. Smooth scroll to #sections on homepage.</p>
+        </div>
+    </div>
+    <div>
+        <div class="card card-bronze" style="min-height:120px;">
+            <div class="card-title">Mobile Navigation</div>
+            <p class="body-text-muted" style="margin-bottom:0;">Sheet (slide-in from right) with Collapsible accordion sections. Same content as desktop but vertically stacked. WhatsApp and Phone CTA buttons at bottom of sheet. Touch-optimized tap targets (min 44px).</p>
+        </div>
+    </div>
+</div>
+
+<p class="body-text">The header transitions from transparent to a glass morphism effect on scroll, using <span class="inline-code">backdrop-filter: blur()</span> with a semi-transparent background. An IntersectionObserver tracks which homepage section is currently in view and highlights the corresponding navigation item. On the homepage, clicking any navigation item triggers a smooth scroll to the corresponding section using native <span class="inline-code">scrollIntoView({ behavior: 'smooth' })</span>.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 15: CONTACT FORM SYSTEM                    -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 15</div>
+    <div class="section-title">Contact Form System</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The contact form is a four-step wizard built with React Hook Form and validated with Zod schemas. Each step presents a focused set of inputs, reducing cognitive load and increasing completion rates. Transitions between steps use Framer Motion slide animations (left for forward, right for backward).</p>
+
+<div class="diagram">
+    <div class="diagram-row">
+        <div class="diagram-node emerald-node" style="width:140px;min-height:60px;">
+            Step 1<br><span style="font-size:10px;font-weight:400;">Select Sector</span><br><span style="font-size:10px;font-weight:400;">6 radio options</span>
+        </div>
+        <div class="diagram-node emerald-node" style="width:140px;min-height:60px;">
+            Step 2<br><span style="font-size:10px;font-weight:400;">Select Area</span><br><span style="font-size:10px;font-weight:400;">Dropdown (filtered)</span>
+        </div>
+        <div class="diagram-node emerald-node" style="width:140px;min-height:60px;">
+            Step 3<br><span style="font-size:10px;font-weight:400;">Your Details</span><br><span style="font-size:10px;font-weight:400;">Name, email, phone, etc.</span>
+        </div>
+    </div>
+    <div class="diagram-connector">
+        <svg width="40" height="20"><line x1="20" y1="0" x2="20" y2="20" stroke="#94a3b8" stroke-width="1.5"/></svg>
+    </div>
+    <div class="diagram-row">
+        <div class="diagram-node bronze-node" style="width:200px;min-height:50px;">
+            Step 4: Confirmation<br><span style="font-size:10px;font-weight:400;">Review all details before submit</span>
+        </div>
+    </div>
+</div>
+
+<div class="card card-emerald">
+    <div class="card-title">Step Details</div>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>Step 1 &mdash; Select Sector:</strong> Six radio button options with icons (Hospitality, Corporate, Healthcare, Education, Venues, Residential). Visual selection with active state highlighting.</p>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>Step 2 &mdash; Select Area:</strong> Dropdown menu of six Johannesburg areas, dynamically filtered based on the sector selected in Step 1.</p>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>Step 3 &mdash; Your Details:</strong> Name, email, phone, property type (dropdown), window count (number input), and notes (textarea). All fields validated with Zod schemas in real-time.</p>
+    <p class="body-text-muted" style="margin-bottom:0;"><strong>Step 4 &mdash; Confirmation:</strong> Summary review of all entered details. POPIA consent checkbox (required). Final submit button with loading state.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 16: COMPLIANCE & SECURITY                  -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 16</div>
+    <div class="section-title">Compliance &amp; Security</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The site is designed to comply with South Africa's Protection of Personal Information Act (POPIA), which governs how personal data must be collected, processed, and stored. POPIA compliance measures are integrated throughout the user experience, not relegated to a separate privacy page.</p>
+
+<div class="card card-emerald">
+    <div class="card-title">POPIA Compliance Measures</div>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>Cookie Consent Banner:</strong> A dismissible banner at the bottom of the viewport informs visitors about cookie usage and provides a link to the privacy policy. The banner persists until explicitly dismissed.</p>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>Privacy Policy Link:</strong> Present in the footer on every page, providing continuous access to the full privacy policy document.</p>
+    <p class="body-text-muted" style="margin-bottom:4px;"><strong>POPIA Consent Checkbox:</strong> Required checkbox on the contact form (Step 4) that must be checked before submission. Labeled with clear consent language.</p>
+    <p class="body-text-muted" style="margin-bottom:0;"><strong>POPIA Compliant Badge:</strong> A green badge displayed in the footer, signaling compliance to visitors and building trust.</p>
+</div>
+
+<div class="highlight-box">
+    <div class="card-title">Data Handling Policy</div>
+    <p class="body-text-muted" style="margin-bottom:0;">All API routes are stateless &mdash; no personal data is persisted in any database. Contact form submissions and newsletter signups are processed in real-time without storage. This architecture choice eliminates data breach risk and simplifies POPIA compliance, as there is no stored personal information to protect beyond the transient request lifecycle.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 17: DEPLOYMENT & INFRASTRUCTURE            -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 17</div>
+    <div class="section-title">Deployment &amp; Infrastructure</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The site is deployed on Vercel's edge network, connected to a GitHub repository for continuous deployment. Every push to the main branch triggers an automatic build and deployment cycle. The SSG architecture means the build process generates all 19 HTML pages as static assets, which are then distributed globally via Vercel's CDN.</p>
+
+<table class="data-table">
+    <thead>
+        <tr><th>Component</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Platform</td><td>Vercel (auto-deploy from GitHub)</td></tr>
+        <tr><td>Repository</td><td>luxrugcare-cmyk/stunning-spork</td></tr>
+        <tr><td>Domain</td><td>jhbcurtaincleaning.co.za (via Vercel DNS)</td></tr>
+        <tr><td>Build</td><td>Next.js SSG (static generation at build time)</td></tr>
+        <tr><td>CDN</td><td>Vercel Edge Network (global distribution)</td></tr>
+        <tr><td>SSL</td><td>Automatic via Vercel (HTTPS enforced)</td></tr>
+        <tr><td>Runtime</td><td>Bun (package manager &amp; build tool)</td></tr>
+        <tr><td>Monitoring</td><td>Vercel Analytics + Web Vitals</td></tr>
+    </tbody>
+</table>
+
+<p class="body-text">The deployment pipeline is fully automated: code changes push to GitHub, Vercel detects the change, runs <span class="inline-code">next build</span> (which executes <span class="inline-code">generateStaticParams</span> for all routes), and deploys the resulting static assets to edge servers worldwide. SSL certificates are automatically provisioned and renewed by Vercel. The build process also generates a sitemap and robots.txt for search engine crawling. Rollback to any previous deployment is available with a single click in the Vercel dashboard.</p>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- SECTION 18: FILE MANIFEST                          -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="chapter-header">
+    <div class="section-tag">Section 18</div>
+    <div class="section-title">File Manifest</div>
+    <div class="divider"></div>
+</div>
+
+<p class="body-text">The following table lists all custom source files in the project, their purpose, and approximate line counts. Generated files (shadcn/ui components, Prisma client, Next.js internals) are excluded. The manifest reflects the final production codebase as deployed.</p>
+
+<table class="data-table">
+    <thead>
+        <tr><th>File</th><th>Purpose</th><th style="width:55px;">Lines</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>src/app/layout.tsx</td><td>Root layout + JSON-LD</td><td>~230</td></tr>
+        <tr><td>src/app/page.tsx</td><td>Homepage composition</td><td>~41</td></tr>
+        <tr><td>src/app/api/chat/route.ts</td><td>AI chatbot endpoint</td><td>~92</td></tr>
+        <tr><td>src/app/api/contact/route.ts</td><td>Contact form handler</td><td>~60</td></tr>
+        <tr><td>src/app/api/newsletter/route.ts</td><td>Newsletter signup</td><td>~40</td></tr>
+        <tr><td>src/app/services/[slug]/page.tsx</td><td>Service SSG page</td><td>~30</td></tr>
+        <tr><td>src/app/services/[slug]/service-landing-client.tsx</td><td>Service landing client</td><td>~444</td></tr>
+        <tr><td>src/app/sectors/[slug]/page.tsx</td><td>Sector SSG page</td><td>~30</td></tr>
+        <tr><td>src/app/sectors/[slug]/sector-landing-client.tsx</td><td>Sector landing client</td><td>~350</td></tr>
+        <tr><td>src/app/areas/[slug]/page.tsx</td><td>Area SSG page</td><td>~30</td></tr>
+        <tr><td>src/app/areas/[slug]/area-landing-client.tsx</td><td>Area landing client</td><td>~350</td></tr>
+        <tr><td>src/lib/site-data.ts</td><td>Central data constants</td><td>~1,175</td></tr>
+        <tr><td>src/lib/data.ts</td><td>Legacy data constants</td><td>~288</td></tr>
+        <tr><td>src/lib/db.ts</td><td>Prisma client</td><td>~10</td></tr>
+        <tr><td>src/lib/utils.ts</td><td>Utility functions</td><td>~10</td></tr>
+        <tr><td>src/components/header.tsx</td><td>Sticky header + nav</td><td>~605</td></tr>
+        <tr><td>src/components/hero-section.tsx</td><td>Homepage hero</td><td>~150</td></tr>
+        <tr><td>src/components/services-section.tsx</td><td>Services grid</td><td>~120</td></tr>
+        <tr><td>src/components/process-section.tsx</td><td>Process timeline</td><td>~100</td></tr>
+        <tr><td>src/components/sectors-section.tsx</td><td>Sectors grid</td><td>~100</td></tr>
+        <tr><td>src/components/areas-section.tsx</td><td>Areas grid</td><td>~100</td></tr>
+        <tr><td>src/components/about-section.tsx</td><td>Founder story</td><td>~257</td></tr>
+        <tr><td>src/components/faq-section.tsx</td><td>FAQ accordion</td><td>~198</td></tr>
+        <tr><td>src/components/contact-section.tsx</td><td>Multi-step form</td><td>~844</td></tr>
+        <tr><td>src/components/newsletter-strip.tsx</td><td>Newsletter signup</td><td>~80</td></tr>
+        <tr><td>src/components/cta-section.tsx</td><td>CTA band</td><td>~60</td></tr>
+        <tr><td>src/components/footer.tsx</td><td>4-column footer</td><td>~186</td></tr>
+        <tr><td>src/components/ai-chatbot.tsx</td><td>AI chat widget</td><td>~254</td></tr>
+        <tr><td>src/components/whatsapp-button.tsx</td><td>WhatsApp float</td><td>~60</td></tr>
+        <tr><td>src/components/cookie-consent.tsx</td><td>POPIA consent</td><td>~80</td></tr>
+        <tr><td>src/components/landing/landing-hero.tsx</td><td>Landing hero</td><td>~80</td></tr>
+        <tr><td>src/components/landing/landing-sidebar.tsx</td><td>Landing sidebar</td><td>~128</td></tr>
+        <tr><td>src/components/landing/landing-cta.tsx</td><td>Landing CTA</td><td>~60</td></tr>
+        <tr><td>src/components/landing/landing-newsletter.tsx</td><td>Landing newsletter</td><td>~60</td></tr>
+    </tbody>
+</table>
+
+<p class="body-text">The total custom codebase comprises approximately 6,500 lines across 34 source files. The largest files are the contact section (844 lines, due to the multi-step form logic), the header (605 lines, due to desktop/mobile navigation), and the central data file (1,175 lines, containing all site content). The average component is ~150 lines, reflecting a preference for focused, single-responsibility components.</p>
+
+</div><!-- /main-content -->
+
+<!-- ═══════════════════ ENDING PAGE ═══════════════════ -->
+<div class="ending">
+    <div class="cover-circle-1"></div>
+    <div class="cover-circle-2"></div>
+    <div class="ending-line"></div>
+    <div class="ending-text">Built with precision.<br>Powered by AI.</div>
+    <div class="ending-sub">JHB Curtain Cleaning &nbsp;|&nbsp; Z.ai Development</div>
+</div>
+
+</body>
+</html>
