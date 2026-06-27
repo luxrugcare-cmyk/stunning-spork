@@ -10,6 +10,10 @@ import LandingHero from '@/components/landing/landing-hero'
 import LandingSidebar from '@/components/landing/landing-sidebar'
 import LandingCTA from '@/components/landing/landing-cta'
 import LandingNewsletter from '@/components/landing/landing-newsletter'
+import Breadcrumbs from '@/components/breadcrumbs'
+import RelatedLinks from '@/components/related-links'
+import { getRelatedLinks } from '@/lib/cross-links'
+import { SITE_CONFIG } from '@/lib/site-data'
 import { Badge } from '@/components/ui/badge'
 import {
   Table,
@@ -67,10 +71,27 @@ function deriveAreaName(heroTag: string): string {
 /* ── Client Component ───────────────────────────────────────── */
 export default function AreaLandingClient({ data }: AreaLandingClientProps) {
   const areaName = deriveAreaName(data.heroTag)
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Areas', item: `${SITE_CONFIG.siteUrl}/#areas` },
+      { '@type': 'ListItem', position: 3, name: data.heroTag, item: `${SITE_CONFIG.siteUrl}/areas/${data.slug}` },
+    ],
+  }
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: 'Areas', href: '/#areas' }, { label: data.heroTag }]} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <main className="flex-1">
         {/* 1. Hero */}
@@ -202,13 +223,19 @@ export default function AreaLandingClient({ data }: AreaLandingClientProps) {
           </div>
         </section>
 
-        {/* 4. Newsletter */}
+        {/* 4. Related Cross-Links */}
+        <RelatedLinks
+          heading={`Related Services for ${areaName}`}
+          items={getRelatedLinks({ type: 'area', slug: data.slug })}
+        />
+
+        {/* 5. Newsletter */}
         <LandingNewsletter
           heading={data.newsletter.heading}
           subtext={data.newsletter.subtext}
         />
 
-        {/* 5. CTA Band */}
+        {/* 6. CTA Band */}
         <LandingCTA
           heading={data.ctaBand.heading}
           subtext={data.ctaBand.subtext}

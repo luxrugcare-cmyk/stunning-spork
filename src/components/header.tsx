@@ -242,11 +242,22 @@ export default function Header() {
     }
   }, [])
 
-  // Smooth scroll handler
+  // Smooth scroll handler for home-page section anchors.
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      const isRootAnchor = href.startsWith('/#')
+      const isLocalAnchor = href.startsWith('#')
+      if (!isRootAnchor && !isLocalAnchor) {
+        setMobileOpen(false)
+        return
+      }
+      if (isRootAnchor && window.location.pathname !== '/') {
+        setMobileOpen(false)
+        return
+      }
+
       e.preventDefault()
-      const id = href.replace('#', '')
+      const id = href.replace('/#', '').replace('#', '')
       const element = document.getElementById(id)
       if (element) {
         const headerOffset = 80
@@ -254,15 +265,18 @@ export default function Header() {
         const offsetPosition = elementPosition + window.scrollY - headerOffset
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
       }
-      setMobileOpenState(false)
+      setMobileOpen(false)
     },
     []
   )
 
-  const simpleLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'Contact' },
+  const simpleLinks: { href: string; label: string; sectionId?: string }[] = [
+    { href: '/about', label: 'About' },
+    { href: '/guides', label: 'Guides' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/#faq', label: 'FAQ', sectionId: 'faq' },
+    { href: '/#contact', label: 'Contact', sectionId: 'contact' },
   ]
 
   return (
@@ -368,7 +382,7 @@ export default function Header() {
 
               {/* Simple Links: About, FAQ, Contact */}
               {simpleLinks.map((link) => {
-                const sectionId = link.href.replace('#', '')
+                const sectionId = link.sectionId
                 const isActive = activeSection === sectionId
                 return (
                   <NavigationMenuItem key={link.href}>
@@ -412,7 +426,7 @@ export default function Header() {
             asChild
             className="bg-brand-bronze text-white shadow-md hover:bg-brand-bronze/90 transition-all duration-200"
           >
-            <Link href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>
+            <Link href="/#contact" onClick={(e) => handleNavClick(e, '/#contact')}>
               Book Free Assessment
             </Link>
           </Button>
@@ -527,7 +541,7 @@ export default function Header() {
 
                     {/* Simple Links */}
                     {simpleLinks.map((link, index) => {
-                      const sectionId = link.href.replace('#', '')
+                      const sectionId = link.sectionId
                       const isActive = activeSection === sectionId
                       return (
                         <motion.li
@@ -565,8 +579,8 @@ export default function Header() {
                     size="lg"
                   >
                     <Link
-                      href="#contact"
-                      onClick={(e) => handleNavClick(e, '#contact')}
+                      href="/#contact"
+                      onClick={(e) => handleNavClick(e, '/#contact')}
                     >
                       Book Free Assessment
                     </Link>

@@ -16,7 +16,7 @@ import {
   PinterestIcon,
   TwitterIcon,
 } from "@/components/social-icons";
-import { SITE_CONFIG, SECTORS, SERVICES } from "@/lib/site-data";
+import { SITE_CONFIG, SECTORS, SERVICES, AREAS } from "@/lib/site-data";
 
 const socialLinks = [
   { icon: FacebookIcon, href: SITE_CONFIG.social.facebook, label: "Facebook" },
@@ -33,7 +33,7 @@ export default function Footer() {
     <footer className="mt-auto bg-[#064e3b] text-white">
       {/* Main footer content */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
           {/* Column 1 — Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link
@@ -48,7 +48,7 @@ export default function Footer() {
             </p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-emerald-100/80">
               {SITE_CONFIG.tagline} — Johannesburg&apos;s trusted on-site
-              service since 2009. No removal, no shrinkage, guaranteed.
+              service since 2010. No removal, no shrinkage, guaranteed.
             </p>
 
             {/* Social icons */}
@@ -106,7 +106,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 — Contact */}
+          {/* Column 4 — Areas */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-brand-bronze">
+              Service Areas
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              {AREAS.map((area) => (
+                <li key={area.id}>
+                  <Link
+                    href={`/areas/${area.id}`}
+                    className="text-sm text-emerald-100/80 transition-colors hover:text-white focus-visible:text-white"
+                  >
+                    {area.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Column 5 — Contact */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-brand-bronze">
               Contact Us
@@ -165,17 +183,42 @@ export default function Footer() {
           <p className="text-xs text-emerald-100/60">
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}.
           </p>
-          <div className="flex items-center gap-4 text-xs text-emerald-100/60">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-emerald-100/60">
             <span className="inline-flex items-center gap-1">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-green-400" />
               POPIA Compliant
             </span>
-            <span className="text-white/20">|</span>
-            <Link
-              href="#"
-              className="transition-colors hover:text-white"
-            >
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/" className="transition-colors hover:text-white">
+              Home
+            </Link>
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/#contact" className="transition-colors hover:text-white">
+              Contact
+            </Link>
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/privacy-policy" className="transition-colors hover:text-white">
               Privacy Policy
+            </Link>
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/terms-of-service" className="transition-colors hover:text-white">
+              Terms of Service
+            </Link>
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/about" className="transition-colors hover:text-white">
+              About Us
+            </Link>
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/gallery" className="transition-colors hover:text-white">
+              Gallery
+            </Link>
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/blog" className="transition-colors hover:text-white">
+              Blog
+            </Link>
+            <span className="text-white/20" aria-hidden="true">|</span>
+            <Link href="/guides" className="transition-colors hover:text-white">
+              Guides
             </Link>
           </div>
         </div>

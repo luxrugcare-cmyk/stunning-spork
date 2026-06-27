@@ -36,6 +36,10 @@ import CookieConsent from '@/components/cookie-consent'
 import LandingHero from '@/components/landing/landing-hero'
 import LandingNewsletter from '@/components/landing/landing-newsletter'
 import LandingCTA from '@/components/landing/landing-cta'
+import Breadcrumbs from '@/components/breadcrumbs'
+import RelatedLinks from '@/components/related-links'
+import { getRelatedLinks } from '@/lib/cross-links'
+import { SITE_CONFIG } from '@/lib/site-data'
 
 /* ── Types ─────────────────────────────────────────────────── */
 interface SectorData {
@@ -94,10 +98,43 @@ const fadeUp = {
 /* ── Component ─────────────────────────────────────────────── */
 export default function SectorLandingClient({ data }: SectorLandingClientProps) {
   const { color } = data
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Sectors', item: `${SITE_CONFIG.siteUrl}/#sectors` },
+      { '@type': 'ListItem', position: 3, name: data.heroTag, item: `${SITE_CONFIG.siteUrl}/sectors/${data.slug}` },
+    ],
+  }
+
+  const faqJsonLd = data.faqs && data.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: 'Sectors', href: '/#sectors' }, { label: data.heroTag }]} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <main className="flex-1">
         {/* ── 1. Hero ─────────────────────────────────────── */}
@@ -326,13 +363,19 @@ export default function SectorLandingClient({ data }: SectorLandingClientProps) 
           </div>
         </section>
 
-        {/* ── 6. Newsletter ───────────────────────────────── */}
+        {/* ── 6. Related Cross-Links ───────────────────────── */}
+        <RelatedLinks
+          heading="Related Services & Local Curtain Cleaning Pages"
+          items={getRelatedLinks({ type: 'sector', slug: data.slug })}
+        />
+
+        {/* ── 7. Newsletter ───────────────────────────────── */}
         <LandingNewsletter
           heading={data.newsletter.heading}
           subtext={data.newsletter.subtext}
         />
 
-        {/* ── 7. CTA Band ─────────────────────────────────── */}
+        {/* ── 8. CTA Band ─────────────────────────────────── */}
         <LandingCTA
           heading={data.ctaBand.heading}
           subtext={data.ctaBand.subtext}

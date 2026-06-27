@@ -44,6 +44,7 @@ export default function NewsletterStrip() {
 
   return (
     <section
+      id="newsletter"
       aria-label="Newsletter signup"
       className="relative w-full overflow-hidden"
     >

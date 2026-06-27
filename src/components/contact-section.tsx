@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm, useWatch, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion, AnimatePresence } from "framer-motion";
@@ -154,8 +154,8 @@ export default function ContactSection() {
     mode: "onChange",
   });
 
-  const { control, trigger, watch, formState: { errors }, getValues } = form;
-  const watchedValues = watch();
+  const { control, trigger, formState: { errors }, getValues } = form;
+  const watchedValues = useWatch({ control });
 
   // ── Step validation ──
   const validateStep = async (step: number): Promise<boolean> => {
