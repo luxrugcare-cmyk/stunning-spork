@@ -1,4 +1,4 @@
-import { SERVICES, SECTORS, AREAS, BLOG_POSTS } from "./site-data";
+import { SERVICES, SECTORS, AREAS } from "./site-data";
 
 export interface CrossLink {
   label: string;
@@ -48,16 +48,6 @@ export function getRelatedLinks(current: {
       description: `On-site service across ${a.suburbs.slice(0, 4).join(", ")} and surrounding suburbs.`,
     });
   });
-
-  // Add 1 related blog post
-  const blog = BLOG_POSTS[0];
-  if (blog) {
-    links.push({
-      label: `Read: ${blog.title}`,
-      href: `/blog/${blog.slug}`,
-      description: blog.excerpt,
-    });
-  }
 
   return links.slice(0, 6);
 }

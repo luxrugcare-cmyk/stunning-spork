@@ -3,6 +3,7 @@ export const SITE_CONFIG = {
   shortName: "JHB Curtain Cleaning",
   tagline: "Professional On-Site Curtain Cleaning",
   domain: "jhbcurtaincleaning.co.za",
+  siteUrl: "https://www.jhbcurtaincleaning.co.za",
   phone: "+27 75 011 9200",
   phoneRaw: "+27750119200",
   phoneLink: "+27750119200",
