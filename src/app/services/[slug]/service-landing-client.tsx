@@ -24,6 +24,9 @@ import LandingHero from '@/components/landing/landing-hero'
 import LandingSidebar from '@/components/landing/landing-sidebar'
 import LandingCTA from '@/components/landing/landing-cta'
 import LandingNewsletter from '@/components/landing/landing-newsletter'
+import Breadcrumbs from '@/components/breadcrumbs'
+import RelatedLinks from '@/components/related-links'
+import { getRelatedLinks } from '@/lib/cross-links'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -218,6 +221,9 @@ export default function ServiceLandingClient({ data }: { data: ServiceLandingDat
       />
 
       <Header />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: 'Services', href: '/#services' }, { label: data.heroTag }]} />
 
       {/* Hero */}
       <LandingHero
@@ -479,6 +485,12 @@ export default function ServiceLandingClient({ data }: { data: ServiceLandingDat
           </div>
         </div>
       </section>
+
+      {/* Related Cross-Links */}
+      <RelatedLinks
+        heading="Related Services & Local Curtain Cleaning Pages"
+        items={getRelatedLinks({ type: 'service', slug: data.slug })}
+      />
 
       {/* Newsletter */}
       <LandingNewsletter heading={newsletter.heading} subtext={newsletter.subtext} />

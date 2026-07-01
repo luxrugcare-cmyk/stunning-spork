@@ -43,7 +43,7 @@ export function getRelatedLinks(current: {
   // Add 1-2 areas
   AREAS.slice(0, 2).forEach((a) => {
     links.push({
-      label: `Curtain Cleaning in ${a.name}`,
+      label: `Curtain Cleaning in ${a.title}`,
       href: `/areas/${a.id}`,
       description: `On-site service across ${a.suburbs.slice(0, 4).join(", ")} and surrounding suburbs.`,
     });

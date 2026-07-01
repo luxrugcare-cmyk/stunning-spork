@@ -449,3 +449,29 @@ Stage Summary:
 - 2 new error handling pages (404 + error boundary)
 - 3 H2 headings optimized for keywords
 - 1 hero paragraph restructured for AEO
+---
+Task ID: SEO-UPGRADES-IMPL
+Agent: Main Agent
+Task: Implement Phase 2 SEO upgrades from audit report
+
+Work Log:
+- Fixed duplicate breadcrumbJsonLd declaration in area-landing-client.tsx (build error)
+- Fixed a.name → a.title in cross-links.ts (AREAS uses 'title' not 'name')
+- Added Breadcrumbs + RelatedLinks imports and usage to service-landing-client.tsx
+- Verified all 3 landing clients have breadcrumbs, sidebar pricing, related services, areas we serve, and related cross-links sections
+- All routes return 200 (home, services, sectors, areas, sitemap)
+- 404 page returns 404 status with styled custom page
+- Browser verification: all 6 SEO upgrade checks passed
+
+Stage Summary:
+- Phase 2 SEO upgrades complete:
+  1. BreadcrumbList JSON-LD schema on all 18 landing pages
+  2. Visible breadcrumbs UI on all landing pages
+  3. Pricing guide in all landing page sidebars
+  4. Related Services cross-links in all landing page sidebars
+  5. Areas We Serve links in all landing page sidebars
+  6. RelatedLinks section before newsletter on all landing pages
+  7. Custom 404 page (not-found.tsx)
+  8. Custom error boundary (error.tsx)
+- Combined with Phase 1: sitemap, canonical tags, Organization schema, NAP fix
+- Score improvement: 47/100 → estimated 65+/100

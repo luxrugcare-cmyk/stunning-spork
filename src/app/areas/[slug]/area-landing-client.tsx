@@ -81,17 +81,6 @@ export default function AreaLandingClient({ data }: AreaLandingClientProps) {
     ],
   }
 
-  // BreadcrumbList JSON-LD
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.jhbcurtaincleaning.co.za' },
-      { '@type': 'ListItem', position: 2, name: 'Areas', item: 'https://www.jhbcurtaincleaning.co.za/#areas' },
-      { '@type': 'ListItem', position: 3, name: data.heroTag },
-    ],
-  }
-
   // Pricing guide data for sidebar
   const pricingGuide = [
     { range: 'R800 – R1,500', description: 'Small (1–2 rooms)' },
@@ -120,11 +109,6 @@ export default function AreaLandingClient({ data }: AreaLandingClientProps) {
 
       {/* Breadcrumbs */}
       <Breadcrumbs items={[{ label: 'Areas', href: '/#areas' }, { label: data.heroTag }]} />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
 
       <main className="flex-1">
         {/* 1. Hero */}
