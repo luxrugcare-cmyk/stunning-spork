@@ -418,3 +418,34 @@ Stage Summary:
 - All existing consumers of LandingSidebar (service, sector, area landing pages) continue to work unchanged since all new props are optional
 - TypeScript and ESLint both pass clean for this file
 
+---
+Task ID: SEO-PHASE-2
+Agent: Main Agent
+Task: Implement SEO audit Phase 2 upgrades (schema, cross-linking, 404, H2 optimization)
+
+Work Log:
+- Added BreadcrumbList JSON-LD schema to all 18 landing pages (service/sector/area)
+- Added HowTo JSON-LD schema to homepage process section (4 steps)
+- Added FAQPage JSON-LD schema to sector landing pages
+- Upgraded landing sidebar with 3 new cards:
+  * Pricing Guide (R800-R5,500 ranges)
+  * Related Services (cross-links to other services)
+  * Areas We Serve (6 area links, always shown)
+- Added "Services for [Sector]" cross-linking section to sector pages
+- Restructured curtain cleaning hero paragraph for AEO (direct answer first)
+- Updated H2 headings for keyword optimization:
+  * "How It Works" → "How On-Site Curtain Cleaning Works"
+  * "Frequently Asked Questions" → "Curtain Cleaning FAQ — Johannesburg"
+  * "About" → "About JHB Curtain Cleaning"
+- Created custom 404 not-found.tsx (branded, with CTAs)
+- Created error.tsx error boundary (with retry button)
+- Browser verification: all 7 checks passed
+- Pushed to GitHub: luxrugcare-cmyk/stunning-spork
+
+Stage Summary:
+- 4 new JSON-LD schemas added (BreadcrumbList ×18, HowTo, FAQPage ×6)
+- 3 new sidebar cards with cross-linking on all landing pages
+- 1 new cross-linking section on sector pages
+- 2 new error handling pages (404 + error boundary)
+- 3 H2 headings optimized for keywords
+- 1 hero paragraph restructured for AEO
