@@ -155,6 +155,50 @@ export default function ServiceLandingClient({ data }: { data: ServiceLandingDat
         }
       : null
 
+  // BreadcrumbList JSON-LD
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.jhbcurtaincleaning.co.za',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://www.jhbcurtaincleaning.co.za/#services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: data.heroTag,
+      },
+    ],
+  }
+
+  // Pricing guide data for sidebar
+  const pricingGuide = [
+    { range: 'R800 – R1,500', description: 'Small (1–2 rooms)' },
+    { range: 'R1,500 – R3,000', description: 'Medium (3–4 rooms)' },
+    { range: 'R3,000 – R5,500', description: 'Large (5+ rooms)' },
+    { range: 'Custom', description: 'Commercial / bulk' },
+  ]
+
+  // Related services for cross-linking (all services except current)
+  const allServiceLinks = [
+    { title: 'Curtain & Blind Cleaning', href: '/services/curtain-blind-cleaning' },
+    { title: 'Mattress Sanitisation', href: '/services/mattress-sanitisation' },
+    { title: 'Upholstery & Carpet Cleaning', href: '/services/upholstery-carpet-cleaning' },
+    { title: 'Master Guarding Protection', href: '/services/master-guarding' },
+    { title: 'Fire Proofing (SANS)', href: '/services/fire-proofing' },
+    { title: 'Persian & Oriental Rug Care', href: '/services/rug-care' },
+  ]
+  const relatedServices = allServiceLinks.filter((_, i) => allServiceLinks[i].href !== `/services/${data.slug}`)
+
   return (
     <>
       {/* JSON-LD Structured Data */}
@@ -168,6 +212,10 @@ export default function ServiceLandingClient({ data }: { data: ServiceLandingDat
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <Header />
 
@@ -422,6 +470,9 @@ export default function ServiceLandingClient({ data }: { data: ServiceLandingDat
                   assessmentHeading={sidebar.assessmentHeading}
                   assessmentItems={sidebar.assessmentItems}
                   guarantees={sidebar.guarantees}
+                  pricingGuide={pricingGuide}
+                  relatedServices={relatedServices}
+                  pageType="service"
                 />
               </div>
             </div>

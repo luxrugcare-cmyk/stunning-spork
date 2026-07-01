@@ -347,7 +347,7 @@ export const SERVICE_LANDING_DATA: Record<string, {
     heroTag: "Curtain & Blind Cleaning",
     heroHeading: "Johannesburg's Trusted On-Site Curtain Cleaning Specialists",
     heroSubtext: "Cleaned exactly where they hang — no removal, no downtime, no fuss.",
-    heroParagraph: "For over 15 years, Stephen Dunlop and the team at JHB CURTAIN CLEANING have been transforming tired, dusty curtains and blinds into fresh, clean window treatments — all without ever taking them down. Our on-site dry-cleaning process means your windows are never bare, your rooms never exposed, and your life never interrupted.",
+    heroParagraph: "JHB Curtain Cleaning provides professional on-site curtain and blind cleaning in Johannesburg — without removing your curtains. Our dry-cleaning process eliminates dust, allergens, and stains with zero shrinkage risk, and your curtains are clean and dry before we leave. For over 15 years, Stephen Dunlop and our team have been transforming tired, dusty curtains into fresh, clean window treatments — all without taking them down.",
     trustStrip: ["15+ Years Experience", "5,000+ Happy Clients", "100% No-Shrinkage Guarantee", "Free On-Site Assessment Within 48 Hours"],
     guarantees: [
       { icon: "Shield", label: "100% No-Shrinkage Guarantee" },

@@ -98,7 +98,7 @@ export default function FAQSection() {
               id="faq-heading"
               className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
             >
-              Frequently Asked Questions
+              Curtain Cleaning FAQ — Johannesburg
             </h2>
             <div
               className="mx-auto mt-4 h-1 w-24 rounded-full bg-brand-bronze"

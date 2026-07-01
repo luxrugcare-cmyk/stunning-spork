@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Mail, Clock, Shield, CheckCircle2 } from 'lucide-react'
+import { Phone, Mail, Clock, Shield, CheckCircle2, Tag, Sparkles, MapPin, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -15,6 +15,12 @@ interface LandingSidebarProps {
     email: string
     response: string
   }
+  // NEW: Pricing guide items
+  pricingGuide?: { range: string; description: string }[]
+  // NEW: Related services for cross-linking
+  relatedServices?: { title: string; href: string }[]
+  // NEW: Type of page (for "Areas We Serve" heading context)
+  pageType?: 'service' | 'sector' | 'area'
 }
 
 export default function LandingSidebar({
@@ -22,6 +28,9 @@ export default function LandingSidebar({
   assessmentItems,
   guarantees,
   contact,
+  pricingGuide,
+  relatedServices,
+  pageType,
 }: LandingSidebarProps) {
   const contactInfo = contact ?? {
     phone: SITE_CONFIG.phone,
@@ -120,6 +129,106 @@ export default function LandingSidebar({
               <p className="text-xs text-muted-foreground">Typical response time</p>
             </div>
           </div>
+        </CardContent>
+      </Card>
+
+      {/* Pricing Guide Card */}
+      {pricingGuide && pricingGuide.length > 0 && (
+        <Card className="border-brand-emerald/15">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-base">
+              <Tag className="h-5 w-5 text-brand-emerald" />
+              Typical Pricing
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="px-6 pb-6 space-y-3">
+            {pricingGuide.map((item, i) => (
+              <div key={i} className="flex justify-between items-baseline gap-3 text-sm">
+                <span className="text-foreground/70">{item.description}</span>
+                <span className="font-semibold text-brand-emerald whitespace-nowrap">{item.range}</span>
+              </div>
+            ))}
+            <p className="text-xs text-muted-foreground pt-2 border-t border-border">
+              Final pricing confirmed after free on-site assessment.
+            </p>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Related Services Card */}
+      {relatedServices && relatedServices.length > 0 && (
+        <Card className="border-brand-bronze/15">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-base">
+              <Sparkles className="h-5 w-5 text-brand-bronze" />
+              Related Services
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="px-6 pb-6">
+            <ul className="space-y-2" role="list">
+              {relatedServices.map((service, i) => (
+                <li key={i}>
+                  <Link
+                    href={service.href}
+                    className="group flex items-center justify-between gap-2 text-sm text-foreground/80 transition-colors hover:text-brand-emerald"
+                  >
+                    <span>{service.title}</span>
+                    <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-brand-emerald" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Areas We Serve Card */}
+      <Card className="border-brand-emerald/15">
+        <CardHeader className="pb-3">
+          <CardTitle className="flex items-center gap-2 text-base">
+            <MapPin className="h-5 w-5 text-brand-emerald" />
+            Areas We Serve
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="px-6 pb-6">
+          <ul className="space-y-2" role="list">
+            <li>
+              <Link href="/areas/jhb-north" className="group flex items-center justify-between gap-2 text-sm text-foreground/80 transition-colors hover:text-brand-emerald">
+                <span>Johannesburg North</span>
+                <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-brand-emerald" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/areas/jhb-east" className="group flex items-center justify-between gap-2 text-sm text-foreground/80 transition-colors hover:text-brand-emerald">
+                <span>Johannesburg East</span>
+                <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-brand-emerald" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/areas/jhb-south" className="group flex items-center justify-between gap-2 text-sm text-foreground/80 transition-colors hover:text-brand-emerald">
+                <span>Johannesburg South</span>
+                <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-brand-emerald" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/areas/jhb-west" className="group flex items-center justify-between gap-2 text-sm text-foreground/80 transition-colors hover:text-brand-emerald">
+                <span>Johannesburg West</span>
+                <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-brand-emerald" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/areas/jhb-central" className="group flex items-center justify-between gap-2 text-sm text-foreground/80 transition-colors hover:text-brand-emerald">
+                <span>Johannesburg Central</span>
+                <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-brand-emerald" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/areas/pretoria-midrand" className="group flex items-center justify-between gap-2 text-sm text-foreground/80 transition-colors hover:text-brand-emerald">
+                <span>Pretoria & Midrand</span>
+                <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-brand-emerald" />
+              </Link>
+            </li>
+          </ul>
         </CardContent>
       </Card>
     </aside>

@@ -146,12 +146,31 @@ function ProcessStepMobile({
 
 // ── Main component ──
 export default function ProcessSection() {
+  // HowTo JSON-LD schema for AI search optimization
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How On-Site Curtain Cleaning Works",
+    "description": "Professional on-site curtain cleaning in Johannesburg in 4 steps — no removal required, zero shrinkage risk.",
+    "step": PROCESS_STEPS.map((step) => ({
+      "@type": "HowToStep",
+      "position": step.step,
+      "name": step.title,
+      "text": step.description,
+    })),
+  }
+
   return (
     <section
       id="process"
       aria-labelledby="process-heading"
       className="relative w-full bg-white py-20 md:py-28"
     >
+      {/* HowTo JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* ── Heading ── */}
         <div className="mb-14 text-center">
@@ -159,7 +178,7 @@ export default function ProcessSection() {
             id="process-heading"
             className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
           >
-            How It Works
+            How On-Site Curtain Cleaning Works
           </h2>
           <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-brand-bronze" aria-hidden="true" />
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">

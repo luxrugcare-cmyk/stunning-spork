@@ -385,3 +385,36 @@ Stage Summary:
 - New SEO infrastructure: sitemap.ts, canonical tags, Organization schema, robots.txt
 - Score improvement: 47/100 → estimated 60+/100 with Phase 1 fixes
 - Remaining phases (blog, cross-linking, E-E-A-T, image gallery) documented in audit report
+---
+Task ID: 4
+Agent: Subagent (general-purpose)
+Task: Upgrade landing sidebar with cross-links (Pricing Guide, Related Services, Areas We Serve)
+
+Work Log:
+- Read existing `/src/components/landing/landing-sidebar.tsx` (3 cards: Assessment CTA, Guarantees, Contact, 127 lines)
+- Read existing `/home/z/my-project/worklog.md` for context (prior tasks 1-7-8, NAP updates, SEO audit implementation)
+- Extended `LandingSidebarProps` interface with 3 new optional props:
+  - `pricingGuide?: { range: string; description: string }[]` (per SEO audit Task 13)
+  - `relatedServices?: { title: string; href: string }[]` (per SEO audit Task 12 cross-linking)
+  - `pageType?: 'service' | 'sector' | 'area'` (heading context)
+- Destructured new props in function signature
+- Added 4 new imports from `lucide-react`: `Tag`, `Sparkles`, `MapPin`, `ArrowRight`
+- Added Pricing Guide card AFTER Contact card (conditionally rendered when `pricingGuide` provided, emerald border, Tag icon, range/description pairs, "Final pricing confirmed after free on-site assessment" disclaimer)
+- Added Related Services card AFTER Pricing card (conditionally rendered when `relatedServices` provided, bronze border, Sparkles icon, list of internal Links with hover ArrowRight reveal)
+- Added Areas We Serve card AFTER Related Services card (always rendered, no conditional, emerald border, MapPin icon, 6 hardcoded area Links: jhb-north, jhb-east, jhb-south, jhb-west, jhb-central, pretoria-midrand)
+- All 3 new cards use existing shadcn/ui Card/CardContent/CardHeader/CardTitle components
+- Preserved the original 3 cards (Assessment, Guarantees, Contact) exactly as they were — no modifications to their markup, classes, or behavior
+- All new Links use `text-brand-emerald` hover state with `ArrowRight` opacity transition for cross-link affordance
+- Verified: `npx tsc --noEmit` shows ZERO errors in landing-sidebar.tsx (pre-existing errors in unrelated files about-section.tsx, examples/, skills/ remain but are not introduced by this task)
+- Verified: `npx eslint src/components/landing/landing-sidebar.tsx` passes clean with no warnings or errors
+
+Stage Summary:
+- Sidebar upgraded from 3 cards → 6 cards (Assessment, Guarantees, Contact, Pricing, Related Services, Areas We Serve)
+- File grew from 127 lines → 237 lines
+- New optional props enable per-page customization: pricing ranges, related service cross-links, page type context
+- "Areas We Serve" card provides consistent cross-linking to all 6 area landing pages from every page using LandingSidebar
+- "Related Services" card enables inter-service cross-linking (per SEO audit Task 12)
+- "Pricing Guide" card surfaces pricing transparency (per SEO audit Task 13)
+- All existing consumers of LandingSidebar (service, sector, area landing pages) continue to work unchanged since all new props are optional
+- TypeScript and ESLint both pass clean for this file
+
